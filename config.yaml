@@ -77,3 +77,23 @@ reddit:
     - should I continue SIP
   posts_per_query: 25
   max_comments_per_post: 60
+
+# Reddit through Apify (collect/reddit_apify.py). Pay-per-result, so every run has a hard spending cap.
+reddit_apify:
+  actor: trudax/reddit-scraper-lite
+  subreddits: [IndiaInvestments, mutualfunds, personalfinanceindia]
+  queries:
+    - stopped my SIP
+    - paused SIP
+    - SIP autopay failed
+    - SIP mandate
+    - first SIP negative
+    - should I stop SIP
+    - SIP irregular income
+  post_date_limit: "2021-01-01"   # posts and comments from this date on
+  min_year: 2021
+  max_comments: 30                # per post (test run only)
+  test_max_items: 30
+  budget_total_usd: 3.50           # all Reddit runs together, including the test; no run starts if it could pass this
+  posts_stage_max_items: 150      # step 1: posts only
+  comments_stage_max_comments: 15 # step 3: per shortlisted post

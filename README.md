@@ -139,6 +139,22 @@ streamlit run app/streamlit_app.py
 For "Ask the data" locally the Groq key is read from `.env` (never printed). Pages: overview and how it works, opportunity ranking,
 the nine brief questions, metric tree, segments and sources, evidence explorer, ask the data, validation and limitations.
 
+### Reddit through Apify (paid per result, so it has cost guards)
+
+Reddit's own API needs approval, so Reddit is collected with the Apify actor `trudax/reddit-scraper-lite` ($4.00 per 1,000 results). Put `APIFY_TOKEN` in `.env`.
+
+```
+python -m collect.reddit_apify --pricing                       # price and spending so far; runs nothing
+python -m collect.reddit_apify --stage posts                   # step 1: posts only (no comments), about 150 posts
+python -m collect.reddit_apify --stage shortlist               # step 2: free, plain code: keep posts about stopping / failing / etc.
+python -m collect.reddit_apify --stage comments --approved     # step 3: 15 comments for the shortlisted threads, within the budget
+```
+
+`budget_total_usd` in `config.yaml` is the limit for all runs together; a ledger (`data/raw/apify_reddit_ledger.json`) adds them up and no run starts if
+it could pass the limit. Your own thread URLs can go in `data/manual/reddit_threads.txt` (one per line); they are fetched first.
+Usernames are never saved: author fields are dropped and usernames inside text and links are masked before anything is written.
+If a run finishes on Apify but the script stopped, `--recover <run id> <label>` takes it over without paying again.
+
 ### Staff replies and human corrections
 
 - TradingQ&A replies written by the platform's own staff are excluded from every count. If you collect TradingQ&A again, run

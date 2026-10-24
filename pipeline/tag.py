@@ -513,7 +513,8 @@ def sample_items(tagger: str | None = None) -> list[dict]:
     for r in in_scope:
         r["relevance"] = labels[r["id"]]["relevant"] if r["id"] in labels else "pending"
 
-    priority = [r for r in in_scope if has_priority_word(r["text"])]
+    # Reddit items come first of all (the tag prompt flags relevance itself, so they do not wait for the quick filter)
+    priority = [r for r in in_scope if r["source"] == "reddit" or has_priority_word(r["text"])]
     taken = {r["id"] for r in priority}
     rest = [r for r in in_scope if r["id"] not in taken and r["relevance"] in ("yes", "unsure")]
     youtube_room = YOUTUBE_SAMPLE - sum(r["source"] == "youtube" for r in priority)
@@ -521,7 +522,7 @@ def sample_items(tagger: str | None = None) -> list[dict]:
     items = priority + [r for r in rest if r["source"] != "youtube"] + rest_yt
 
     def order(r):
-        return (r["id"] not in taken, (r.get("year") or 0) < MAIN_WINDOW_FROM, -(r.get("year") or 0))
+        return (r["source"] != "reddit", r["id"] not in taken, (r.get("year") or 0) < MAIN_WINDOW_FROM, -(r.get("year") or 0))
     items.sort(key=order)
     return [r for r in items if tagger is None or tagger_of(r["id"]) == tagger]
 

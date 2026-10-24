@@ -77,7 +77,7 @@ def render(over: dict, posts: pd.DataFrame) -> None:
                      "Relevant (analysed)": f"{v['relevant']:,}",
                      "First post": v["first_date"] or "n/a", "Latest post": v["last_date"] or "n/a"})
     st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
-    st.caption("Reddit is not included yet: new API access needs approval, so a hand-collected file is planned. "
+    st.caption("Reddit is a curated sample, not all of Reddit: 35 threads about stopping, pausing or failing SIPs, picked from search results in r/IndiaInvestments, r/mutualfunds and r/personalfinanceindia and collected through a third-party scraper (Apify). It is first in the tagging queue, but tagging runs under free daily limits, so it fills in over several days. "
                "Counts follow the definitions above: \"Relevant\" is what the rest of the dashboard uses.")
 
     st.subheader("The AI models and what each one does")

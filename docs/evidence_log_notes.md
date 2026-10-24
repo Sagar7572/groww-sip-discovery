@@ -380,3 +380,37 @@ Result: 9 of the 23 tags were removed (the 7 clearly wrong, plus the 2 arguable 
 **Human correction file.** `data/manual/corrections.csv` (columns: id, field, corrected_value, reason) is applied at every export; the original value is kept and both are shown on the Validation page. First use: the one remaining wrong "market fell" tag from Entry 10 (a review about an 11% gain that became an 11% loss at redemption) was corrected to `underwhelming_returns | trust_concern` on the user's instruction. This is a human correction of AI output, separate from the code rule in Entry 10. "Market fell" now stands at 13 posts.
 
 **Q9 (unmet needs).** The word-count chart was removed: counting words in AI-written sentences said little. The AI instead groups the 120 one-line unmet needs (one per post, written by the tagger) into 7 plain-English themes, shown with counts and one quote each. First try picked quotes that did not illustrate their themes (a tax quote under "guidance"); the quote is now the verified quote from a post inside the theme that shares the most words with that post's unmet-need sentence. One theme asks for investment guidance, which the product is not allowed to give; the page says so.
+
+---
+
+## Entry 14: Privacy issue found in the Reddit test run and fixed before the full run (2026-10-24)
+
+**What happened.** The first test run of the Reddit scraper (Apify, 29 items) was checked before anything was scaled up. The scraper does not return a separate author field on the items I looked at, and the code dropped every key with "user", "author" or "flair" in its name. But the scraper also writes each comment's `title` as `/u/<username> on <post title>`, and the post's quoted text can contain `u/<name>` mentions and profile links. Those usernames passed straight through the key filter and into the saved raw test file. My own sample printout in the terminal then displayed them too.
+
+**Why it matters.** The project rule is that usernames and handles are never stored. They are public Reddit handles and the file is git-ignored, so nothing left the laptop, but the rule was broken.
+
+**Fix (before any further paid run).**
+- Every string in the raw output, not only the field names, now has usernames masked (`/u/<name> on ` is removed from comment titles; `u/name` and reddit.com/user links become `[USER]`) before anything is written to disk; the redundant `html` field is dropped.
+- The saved test file was rewritten through the same filter without a new paid run, then checked: 0 `u/` strings left.
+- HTML entities in the text (for example `&#39;`) are now decoded.
+- Lesson recorded for any future scraper: filter values as well as keys, and print only sanitised samples.
+
+---
+
+## Entry 15: Reddit collected through Apify, in three cheap stages (2026-10-24)
+
+**Tool.** Apify actor `trudax/reddit-scraper-lite` (Reddit Scraper Lite), pay per result: $0.004 per result stored ($4.00 per 1,000) plus $0.02 per GB of memory per run start (2 GB, so $0.04 a run), read from Apify's API before anything ran. Free credit: $5.00 a month; budget set for all Reddit runs together: $3.50. A hard per-run charge cap was set on every run and a ledger blocked any run that could pass the budget. Reddit's own API needs approval that was not available, so this is a third-party scraper.
+
+**How threads were chosen (the first plan was rejected).**
+- *Test run* (max 30 items, one search in r/IndiaInvestments): 29 items, $0.156. This also found the username problem in Entry 14. The search returned a general beginner guide and its comments, which showed that search results alone were too noisy for a full run, so the planned 800-item run was not done.
+- *Step 1, posts only (no comments):* seven searches ("stopped my SIP", "paused SIP", "SIP autopay failed", "SIP mandate", "first SIP negative", "should I stop SIP", "SIP irregular income") in r/IndiaInvestments, r/mutualfunds and r/personalfinanceindia, 2021 onward. 3 runs, 127 posts (42 + 44 + 41 items), $0.628.
+- *Step 2, free, plain code:* kept posts whose title or text mention stop / pause / cancel / autopay / mandate / failed / bounce / skip / first SIP / negative / loss / "should I continue" / irregular income / salary: 105 of 127. Of these, 101 were also about SIPs or mutual funds (I added that second condition because "salary" and "loss" alone pull in bike loans and stock-market threads). The budget left bought comments for about 35 threads, so threads were ranked by stop / failure / SIP words in the **title** and only 41 with such a word were eligible; the top 35 were fetched.
+- *Step 3, comments for the 35 shortlisted threads* (up to 15 per post): 384 items, $1.576.
+
+**Volumes and cost.** 374 raw records saved (35 posts, 339 comments), dated 2021 (27), 2022 (40), 2023 (19), 2024 (27), 2025 (22), 2026 (239). After cleaning (duplicates and tiny comments such as "I agree.") 335 Reddit items remain. Total credit used by all Reddit runs: **$2.36 of the $3.50 budget** (test $0.156, step 1 $0.628, step 3 $1.576). Reddit items were put at the front of the tagging queue (they do not wait for the quick relevance filter) and both taggers were restarted; tagging runs under the free daily limits, so Reddit appears in the dashboard over the next days.
+
+**Problems met on the way.**
+- Status polling of a billed run timed out and crashed the script mid-run; the run itself finished fine on Apify. The script now retries, saves each subreddit as it finishes, and has a `--recover` option; the two finished runs were recovered without paying twice.
+- Two threads that are not about SIPs (a bike purchase on a salary, budgeting for a college student) passed the title rule and were fetched, which cost about $0.13; the AI relevance check will drop them.
+
+**Limitations.** This is a curated sample of 35 threads chosen by keywords from search results, not all of Reddit and not random: it over-represents people who write about stopping or failing SIPs. It was collected through a third-party scraper, so what it returns depends on that scraper's search and on Reddit's search ranking. Reddit skews towards experienced investors. First-time status is only inferable. Usernames were never stored (Entry 14).

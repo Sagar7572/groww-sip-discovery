@@ -116,7 +116,7 @@
   "App-store reviews skew negative and short; many are generic praise.",
   "TradingQ&A is a Zerodha community, so posters are not necessarily Groww users.",
   "YouTube comments are noisy: very short, many in Hindi or Hinglish, and they react to the video, not to Groww.",
-  "Reddit is not included yet (no API access; a hand-filled file is planned).",
+  "Reddit is a curated sample, not all of Reddit: 35 threads chosen by keyword from search results in three subreddits, collected through a third-party scraper (Apify), so it is neither complete nor random.",
   "Results are partial: tagging is still running, one free daily allowance at a time.",
   "Whether a SIP lapse is a failure or the person's choice depends heavily on the source (roughly three quarters failures in Play Store reviews, mostly own choice in YouTube comments), so no single split is a general fact.",
   "Age, income and source of money are almost never stated in public posts, so segment findings use proxies and are validated through interviews.",

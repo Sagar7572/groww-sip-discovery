@@ -104,13 +104,25 @@ def build_context(rows: list[dict]) -> None:
     for r in rows:
         if r["source"] == "tradingqna" and r["source_detail"] == "question":
             question[thread_key(r)] = r["text"]
+    reddit_post = {}                                   # Reddit thread -> the original post (title + text)
+    for r in rows:
+        if r["source"] == "reddit" and (r["source_detail"] or "").endswith("post"):
+            reddit_post[reddit_thread(r)] = ((r.get("title") or "") + ". " + r["text"]).strip(". ")
     for r in rows:
         r["context"] = ""
-        if r["source"] == "tradingqna" and r["source_detail"] == "reply":
+        if r["source"] == "reddit" and (r["source_detail"] or "").endswith("comment"):
+            q = reddit_post.get(reddit_thread(r), "") or (r.get("title") or "")
+            r["context"] = q[:CONTEXT_CHARS] + ("..." if len(q) > CONTEXT_CHARS else "")
+        elif r["source"] == "tradingqna" and r["source_detail"] == "reply":
             q = question.get(thread_key(r), "")
             r["context"] = q[:CONTEXT_CHARS] + ("..." if len(q) > CONTEXT_CHARS else "")
         elif r["source"] == "youtube":
             r["context"] = r.get("title") or ""
+
+
+def reddit_thread(r: dict) -> str:
+    m = re.search(r"/comments/([a-z0-9]+)", r.get("url") or "")
+    return m.group(1) if m else (r.get("url") or "")
 
 
 def thread_key(r: dict) -> str:

@@ -1,6 +1,6 @@
 {
  "as_of": "2026-10-24",
- "exported_at": "2026-10-24T13:11+00:00",
+ "exported_at": "2026-10-24T14:02+00:00",
  "sources": {
   "play_store": {
    "raw_pulled": 32786,
@@ -66,8 +66,8 @@
    "raw_pulled": 5837,
    "raw_kept_by_keywords": 5837,
    "clean": 3806,
-   "filter_labelled": 174,
-   "filter_kept": 82,
+   "filter_labelled": 249,
+   "filter_kept": 128,
    "tagged": 131,
    "relevant": 109,
    "first_date": "2019-01-30",
@@ -86,23 +86,30 @@
   "reddit": {
    "raw_pulled": null,
    "raw_kept_by_keywords": null,
-   "clean": 0,
+   "clean": 335,
    "filter_labelled": 0,
    "filter_kept": 0,
    "tagged": 0,
    "relevant": 0,
-   "first_date": null,
-   "last_date": null,
-   "by_year": {}
+   "first_date": "2021-05-08",
+   "last_date": "2026-10-24",
+   "by_year": {
+    "2021": 27,
+    "2022": 39,
+    "2023": 15,
+    "2024": 22,
+    "2025": 21,
+    "2026": 211
+   }
   }
  },
  "staff_excluded": 197,
  "funnel": {
   "raw_pulled": 40548,
-  "clean": 5574,
-  "filter_labelled": 1498,
-  "filter_kept": 948,
-  "in_tagging_queue": 1181,
+  "clean": 5909,
+  "filter_labelled": 1573,
+  "filter_kept": 994,
+  "in_tagging_queue": 1523,
   "tag_attempted": 406,
   "tagged_ok": 399,
   "relevant_tagged": 339,
@@ -147,7 +154,7 @@
   }
  ],
  "relevance_progress": {
-  "labelled": 1498,
-  "of": 5574
+  "labelled": 1573,
+  "of": 5909
  }
 }
