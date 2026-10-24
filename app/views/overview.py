@@ -18,6 +18,7 @@ def render(over: dict, posts: pd.DataFrame) -> None:
     d = over.get("definitions", {})
     st.info(f"**Two words used the same way on every page.** **Tagged** = {d.get('tagged', '')}  \n"
             f"**Relevant** = {d.get('relevant', '')}  \n"
+            f"**Staff replies** = {d.get('staff', '')} ({over.get('staff_excluded', 0):,} such posts are excluded.)  \n"
             f"Right now: **{f['tagged_ok']:,} tagged**, of which **{f['relevant_tagged']:,} relevant** and {f['tagged_not_relevant']:,} not.")
 
     dot = f'''digraph G {{

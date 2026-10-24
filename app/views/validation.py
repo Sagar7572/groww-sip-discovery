@@ -69,6 +69,17 @@ def render(over: dict, posts: pd.DataFrame) -> None:
     corr = val.get("corrections", [])
     if corr:
         st.table(pd.DataFrame(corr).rename(columns={"what_ai_did": "What the AI did", "correction": "What was changed", "why": "Why"}))
+    hc = val.get("human_corrections", [])
+    st.subheader("Corrections made by a person")
+    if hc:
+        st.caption("Each row is a tag the AI got wrong and a person corrected by hand (the list is a file, data/manual/corrections.csv, applied every time the data is exported). "
+                   "The dashboard uses the corrected value everywhere.")
+        st.table(pd.DataFrame([{"Post (start of text)": c["post"][:140] + ("..." if len(c["post"]) > 140 else ""), "Field": c["field"],
+                                "AI said": ", ".join(map(C.nice, c["original"])) if isinstance(c["original"], list) else str(c["original"]),
+                                "Corrected to": ", ".join(map(C.nice, c["corrected"])) if isinstance(c["corrected"], list) else str(c["corrected"]),
+                                "Why": c["reason"]} for c in hc]))
+    else:
+        st.caption("No human corrections have been recorded yet.")
     log = (C.EXPORT / "evidence_log.md")
     if log.exists():
         entries = [e for e in log_entries(log.read_text(encoding="utf-8")) if re.search(r"Entry [5-9]|Entry \d{2}", e[0])]

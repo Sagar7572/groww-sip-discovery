@@ -1,72 +1,100 @@
 {
  "clusters": [
   {
-   "cluster": 9,
-   "label": "bank, account, coin, zerodha, mandate",
-   "size": 50,
-   "share": 0.144,
-   "with_named_trigger": 0.58,
-   "avg_severity": 1.46,
+   "cluster": 2,
+   "label": "sips, coin, amc, initial, account",
+   "size": 55,
+   "share": 0.162,
+   "with_named_trigger": 0.673,
+   "avg_severity": 1.31,
    "example_ids": [
-    "tradingqna_eaf8136a432c",
-    "tradingqna_d26d52271d8e",
-    "tradingqna_a5a71a7a807b"
+    "tradingqna_d56985e27ca1",
+    "tradingqna_a87c26140dcb",
+    "tradingqna_a0863ed26207"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     18
+    ],
+    [
+     "mandate_payment_issue",
+     12
+    ],
+    [
+     "social_influence",
+     7
+    ]
+   ],
+   "name": "SIP autopay feature feedback"
+  },
+  {
+   "cluster": 3,
+   "label": "cancel, sips, autopay, stop, band",
+   "size": 55,
+   "share": 0.162,
+   "with_named_trigger": 0.545,
+   "avg_severity": 1.44,
+   "example_ids": [
+    "youtube_48dde4514569",
+    "youtube_5097dbe68b6c",
+    "youtube_ea59950266fa"
    ],
    "top_triggers": [
     [
      "mandate_payment_issue",
-     14
+     12
     ],
     [
      "app_experience",
-     7
+     10
     ],
     [
      "trust_concern",
      3
     ]
    ],
-   "name": "SIP schedule and pause options"
-  },
-  {
-   "cluster": 7,
-   "label": "band, autopay, mandate, nikal, krne",
-   "size": 49,
-   "share": 0.141,
-   "with_named_trigger": 0.429,
-   "avg_severity": 1.31,
-   "example_ids": [
-    "youtube_66348e0c345a",
-    "play_store_4d3cabf0a420",
-    "youtube_7dca35cde09f"
-   ],
-   "top_triggers": [
-    [
-     "mandate_payment_issue",
-     6
-    ],
-    [
-     "app_experience",
-     4
-    ],
-    [
-     "underwhelming_returns",
-     3
-    ]
-   ],
-   "name": "Manual SIP vs autopay mandate"
+   "name": "Stopping or cancelling SIPs"
   },
   {
    "cluster": 4,
-   "label": "year, plan, equity, direct, coin",
-   "size": 44,
-   "share": 0.127,
-   "with_named_trigger": 0.477,
-   "avg_severity": 1.25,
+   "label": "direct, plan, regular, years, year",
+   "size": 38,
+   "share": 0.112,
+   "with_named_trigger": 0.474,
+   "avg_severity": 1.29,
    "example_ids": [
+    "tradingqna_7ab6240b553c",
+    "tradingqna_aa0e75c22bed",
+    "tradingqna_81ad3893c112"
+   ],
+   "top_triggers": [
+    [
+     "tax_or_lockin",
+     5
+    ],
+    [
+     "mandate_payment_issue",
+     4
+    ],
+    [
+     "confusing_numbers",
+     4
+    ]
+   ],
+   "name": "Direct vs regular plan advice"
+  },
+  {
+   "cluster": 1,
+   "label": "year, returns, pm, invested, equity",
+   "size": 32,
+   "share": 0.094,
+   "with_named_trigger": 0.562,
+   "avg_severity": 1.44,
+   "example_ids": [
+    "tradingqna_dc77e1295362",
     "tradingqna_8c5e60f65029",
-    "tradingqna_81ad3893c112",
-    "tradingqna_299c9c58454d"
+    "tradingqna_380ab1caea11"
    ],
    "top_triggers": [
     [
@@ -74,119 +102,35 @@
      9
     ],
     [
-     "market_fall",
+     "trust_concern",
      4
     ],
     [
-     "confusing_numbers",
-     3
-    ]
-   ],
-   "name": "Direct plan SIP decisions"
-  },
-  {
-   "cluster": 8,
-   "label": "autopay, mandate, auto, auto pay, pay",
-   "size": 41,
-   "share": 0.118,
-   "with_named_trigger": 0.537,
-   "avg_severity": 1.24,
-   "example_ids": [
-    "tradingqna_fdca95ebb8e1",
-    "tradingqna_333942466eae",
-    "tradingqna_ad8a879b6ff0"
-   ],
-   "top_triggers": [
-    [
-     "mandate_payment_issue",
-     14
-    ],
-    [
-     "app_experience",
-     8
-    ],
-    [
-     "confusing_numbers",
-     3
-    ]
-   ],
-   "name": "Mandate fees and autopay limits"
-  },
-  {
-   "cluster": 6,
-   "label": "market, portfolio, smallcases, loss, stocks",
-   "size": 38,
-   "share": 0.11,
-   "with_named_trigger": 0.447,
-   "avg_severity": 1.32,
-   "example_ids": [
-    "tradingqna_cfd4ef548caa",
-    "tradingqna_5d5b89b0efa9",
-    "tradingqna_8115de6c7a42"
-   ],
-   "top_triggers": [
-    [
      "market_fall",
-     8
-    ],
-    [
-     "underwhelming_returns",
-     5
-    ],
-    [
-     "trust_concern",
-     5
+     4
     ]
    ],
-   "name": "Market loss and smallcase rebalancing"
-  },
-  {
-   "cluster": 1,
-   "label": "sips, amc, coin, amc sips, pause",
-   "size": 34,
-   "share": 0.098,
-   "with_named_trigger": 0.588,
-   "avg_severity": 1.38,
-   "example_ids": [
-    "tradingqna_94a3c8daa33f",
-    "tradingqna_d55df9caf132",
-    "tradingqna_1b1c0edaa12b"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     14
-    ],
-    [
-     "mandate_payment_issue",
-     5
-    ],
-    [
-     "life_event",
-     2
-    ]
-   ],
-   "name": "AMC SIP modification limitations"
+   "name": "Investment returns and portfolio issues"
   },
   {
    "cluster": 5,
-   "label": "sips, market, nifty, based, income",
-   "size": 34,
-   "share": 0.098,
-   "with_named_trigger": 0.529,
-   "avg_severity": 1.18,
+   "label": "redemption, service, customer, redeem, account",
+   "size": 32,
+   "share": 0.094,
+   "with_named_trigger": 0.688,
+   "avg_severity": 1.91,
    "example_ids": [
-    "tradingqna_a87c26140dcb",
-    "tradingqna_a0863ed26207",
-    "tradingqna_d56985e27ca1"
+    "play_store_8db945386f04",
+    "play_store_e184623e329a",
+    "play_store_0e01b46b9d64"
    ],
    "top_triggers": [
     [
-     "social_influence",
-     7
+     "app_experience",
+     15
     ],
     [
-     "app_experience",
+     "trust_concern",
      6
     ],
     [
@@ -194,91 +138,143 @@
      5
     ]
    ],
-   "name": "Autopay issues for SIPs"
+   "name": "Redemption delays and amount mismatches"
+  },
+  {
+   "cluster": 7,
+   "label": "mandate, upi, autopay, bank, pay",
+   "size": 30,
+   "share": 0.088,
+   "with_named_trigger": 0.7,
+   "avg_severity": 1.4,
+   "example_ids": [
+    "tradingqna_fdca95ebb8e1",
+    "tradingqna_577bd77e81b4",
+    "tradingqna_f9db4c35d1d5"
+   ],
+   "top_triggers": [
+    [
+     "mandate_payment_issue",
+     15
+    ],
+    [
+     "app_experience",
+     6
+    ],
+    [
+     "confusing_numbers",
+     3
+    ]
+   ],
+   "name": "UPI mandate creation errors"
+  },
+  {
+   "cluster": 8,
+   "label": "smallcases, market, portfolio, loss, returns",
+   "size": 30,
+   "share": 0.088,
+   "with_named_trigger": 0.433,
+   "avg_severity": 1.33,
+   "example_ids": [
+    "tradingqna_cfd4ef548caa",
+    "tradingqna_8115de6c7a42",
+    "tradingqna_5d5b89b0efa9"
+   ],
+   "top_triggers": [
+    [
+     "market_fall",
+     7
+    ],
+    [
+     "expectation_mismatch",
+     5
+    ],
+    [
+     "underwhelming_returns",
+     4
+    ]
+   ],
+   "name": "Portfolio losses and rebalancing"
+  },
+  {
+   "cluster": 9,
+   "label": "band, open ended, ended, ennu, din",
+   "size": 29,
+   "share": 0.086,
+   "with_named_trigger": 0.448,
+   "avg_severity": 1.31,
+   "example_ids": [
+    "youtube_d17fc3dc7067",
+    "youtube_40d39af4119d",
+    "youtube_7dca35cde09f"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     6
+    ],
+    [
+     "goal_change",
+     3
+    ],
+    [
+     "cash_flow_strain",
+     2
+    ]
+   ],
+   "name": "Stopping SIP and withdrawing funds"
   },
   {
    "cluster": 0,
-   "label": "interface, colour, children, friendly, application",
-   "size": 23,
-   "share": 0.066,
-   "with_named_trigger": 0.435,
-   "avg_severity": 1.48,
+   "label": "auto, autopay, auto pay, pay, setup",
+   "size": 20,
+   "share": 0.059,
+   "with_named_trigger": 0.4,
+   "avg_severity": 1.1,
    "example_ids": [
-    "app_store_0738d1ef5a91",
-    "play_store_1dd6d633a413",
-    "play_store_05600122c308"
+    "youtube_76778572fc0f",
+    "youtube_e3576b242d5c",
+    "youtube_649f4a98046b"
    ],
    "top_triggers": [
-    [
-     "app_experience",
-     7
-    ],
     [
      "mandate_payment_issue",
-     3
+     4
     ],
     [
-     "trust_concern",
-     2
+     "app_experience",
+     4
     ]
    ],
-   "name": "User-friendly app interface"
+   "name": "Setting up SIP autopay"
   },
   {
-   "cluster": 2,
-   "label": "redemption, days, customer, redeem, poor",
-   "size": 20,
-   "share": 0.058,
-   "with_named_trigger": 0.55,
-   "avg_severity": 1.95,
+   "cluster": 6,
+   "label": "trading, zerodha coin, zerodha, interface, children",
+   "size": 18,
+   "share": 0.053,
+   "with_named_trigger": 0.222,
+   "avg_severity": 1.17,
    "example_ids": [
-    "play_store_81742d92342d",
-    "play_store_8db945386f04",
-    "play_store_42f1ea42deb8"
+    "play_store_1dd6d633a413",
+    "play_store_ed5b6772286e",
+    "app_store_51f38d566627"
    ],
    "top_triggers": [
     [
      "app_experience",
-     7
+     4
     ],
     [
      "trust_concern",
-     3
+     1
     ],
     [
-     "goal_change",
-     2
-    ]
-   ],
-   "name": "Delayed redemption processing"
-  },
-  {
-   "cluster": 3,
-   "label": "redemption, account, demat, coin, settlement time",
-   "size": 14,
-   "share": 0.04,
-   "with_named_trigger": 0.5,
-   "avg_severity": 1.57,
-   "example_ids": [
-    "tradingqna_387ebd9ee7d1",
-    "tradingqna_4406a8ca0e49",
-    "tradingqna_edd90d121c7b"
-   ],
-   "top_triggers": [
-    [
-     "trust_concern",
-     3
-    ],
-    [
-     "app_experience",
-     3
-    ],
-    [
-     "goal_change",
+     "underwhelming_returns",
      1
     ]
    ],
-   "name": "Redemption and fund transfer questions"
+   "name": "Positive app interface reviews"
   }
  ],
  "k": 10,

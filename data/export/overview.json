@@ -1,6 +1,6 @@
 {
  "as_of": "2026-10-24",
- "exported_at": "2026-10-24T12:10+00:00",
+ "exported_at": "2026-10-24T13:11+00:00",
  "sources": {
   "play_store": {
    "raw_pulled": 32786,
@@ -8,8 +8,8 @@
    "clean": 613,
    "filter_labelled": 603,
    "filter_kept": 440,
-   "tagged": 102,
-   "relevant": 89,
+   "tagged": 103,
+   "relevant": 90,
    "first_date": "2018-12-16",
    "last_date": "2026-10-22",
    "by_year": {
@@ -41,35 +41,35 @@
   "tradingqna": {
    "raw_pulled": 1425,
    "raw_kept_by_keywords": 1425,
-   "clean": 1324,
-   "filter_labelled": 820,
-   "filter_kept": 500,
-   "tagged": 184,
-   "relevant": 147,
+   "clean": 1127,
+   "filter_labelled": 693,
+   "filter_kept": 411,
+   "tagged": 155,
+   "relevant": 131,
    "first_date": "2014-12-11",
    "last_date": "2026-10-19",
    "by_year": {
     "2014": 2,
-    "2017": 190,
-    "2018": 154,
-    "2019": 130,
-    "2020": 44,
-    "2021": 175,
-    "2022": 146,
-    "2023": 168,
-    "2024": 170,
-    "2025": 58,
-    "2026": 87
+    "2017": 161,
+    "2018": 132,
+    "2019": 118,
+    "2020": 34,
+    "2021": 144,
+    "2022": 127,
+    "2023": 150,
+    "2024": 139,
+    "2025": 48,
+    "2026": 72
    }
   },
   "youtube": {
    "raw_pulled": 5837,
    "raw_kept_by_keywords": 5837,
    "clean": 3806,
-   "filter_labelled": 124,
-   "filter_kept": 68,
-   "tagged": 124,
-   "relevant": 102,
+   "filter_labelled": 174,
+   "filter_kept": 82,
+   "tagged": 131,
+   "relevant": 109,
    "first_date": "2019-01-30",
    "last_date": "2026-10-24",
    "by_year": {
@@ -96,29 +96,31 @@
    "by_year": {}
   }
  },
+ "staff_excluded": 197,
  "funnel": {
   "raw_pulled": 40548,
-  "clean": 5771,
-  "filter_labelled": 1575,
-  "filter_kept": 1023,
-  "in_tagging_queue": 1299,
-  "tag_attempted": 427,
-  "tagged_ok": 420,
-  "relevant_tagged": 347,
-  "tagged_not_relevant": 73
+  "clean": 5574,
+  "filter_labelled": 1498,
+  "filter_kept": 948,
+  "in_tagging_queue": 1181,
+  "tag_attempted": 406,
+  "tagged_ok": 399,
+  "relevant_tagged": 339,
+  "tagged_not_relevant": 60
  },
  "definitions": {
   "tagged": "A post the AI tagger has read and filled in the codebook for (it can still turn out not to be about SIPs).",
   "relevant": "A tagged post that the tagger confirmed is about starting, continuing, pausing or stopping a SIP, or first-time mutual fund investing. Every count, chart, quote and answer in the dashboard uses relevant tagged posts only.",
+  "staff": "TradingQ&A replies written by the platform's own staff are not investors: they are left out of every count and kept only as context for the thread.",
   "quick_filter": "An earlier, cheaper AI step that screens all cleaned posts. It decides which posts get tagged; it is not the same as 'relevant'."
  },
  "by_tagger": {
   "gpt-oss-120b": {
-   "tagged": 150,
+   "tagged": 156,
    "failed": 0
   },
   "qwen": {
-   "tagged": 302,
+   "tagged": 273,
    "failed": 8
   }
  },
@@ -145,7 +147,7 @@
   }
  ],
  "relevance_progress": {
-  "labelled": 1575,
-  "of": 5771
+  "labelled": 1498,
+  "of": 5574
  }
 }

@@ -1,0 +1,111 @@
+{
+ "themes": [
+  {
+   "theme": "Faster, clearer redemptions",
+   "n": 23,
+   "share_of_needs": 0.192,
+   "example_need": "need timely credit of redeemed funds",
+   "quotes": [
+    {
+     "id": "play_store_3505c85fe391",
+     "quote": "there is no redemption option against the MF... not user friendly to use this app",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "avg_severity": 2.09
+  },
+  {
+   "theme": "Investment guidance and reassurance",
+   "n": 22,
+   "share_of_needs": 0.183,
+   "example_need": "Reassurance on fund safety and redemption process",
+   "quotes": [
+    {
+     "id": "play_store_941330607ac2",
+     "quote": "There should be a review section for mutual funds with categories like 'In-form', 'On-track', and 'Out-of-form'",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "avg_severity": 1.41
+  },
+  {
+   "theme": "Reliable autopay and mandates",
+   "n": 21,
+   "share_of_needs": 0.175,
+   "example_need": "Explanation of mandate date fields",
+   "quotes": [
+    {
+     "id": "tradingqna_a0863ed26207",
+     "quote": "sad to see that Autopay Isn’t available for quantity based SIP, Still have to manage with bank mandates and those charges of insufficient balance😭",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/introducing-updated-stock-sip-experience-on-kite-web/195837/9"
+    }
+   ],
+   "avg_severity": 1.48
+  },
+  {
+   "theme": "Flexible SIP management controls",
+   "n": 18,
+   "share_of_needs": 0.15,
+   "example_need": "Ability to pause SIP without cancelling it",
+   "quotes": [
+    {
+     "id": "play_store_9336bd1fa593",
+     "quote": "skills switch option nahi hai isme only pause option hai isme sudarna karni chahiye",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "avg_severity": 1.33
+  },
+  {
+   "theme": "Accurate data and app reliability",
+   "n": 16,
+   "share_of_needs": 0.133,
+   "example_need": "Display of XIRR instead of absolute returns",
+   "quotes": [
+    {
+     "id": "play_store_ff86f17c9e7e",
+     "quote": "App takes more Time in Showing Daily Gain/Loss of Mutual Funds.",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "avg_severity": 1.81
+  },
+  {
+   "theme": "Clear fees and refund policies",
+   "n": 13,
+   "share_of_needs": 0.108,
+   "example_need": "Clarity on penalty charges and pause mechanics",
+   "quotes": [
+    {
+     "id": "play_store_e24002834a10",
+     "quote": "after SIP canceled still take charge for SIP bounce.",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "avg_severity": 1.85
+  },
+  {
+   "theme": "Something else",
+   "n": 7,
+   "share_of_needs": 0.058,
+   "example_need": "Clarification on tax liability for fund transfer",
+   "quotes": [
+    {
+     "id": "tradingqna_82543297230e",
+     "quote": "please also include this - for tax loss harvesting in the console, consider the mutual fund portfolio",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/10-reasons-why-i-havent-yet-considered-zerodha-coin-for-mutual-fund-investments/59511/8"
+    }
+   ],
+   "avg_severity": 1.29
+  }
+ ],
+ "posts_with_need": 120,
+ "grouped": 120
+}

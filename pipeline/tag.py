@@ -32,7 +32,7 @@ from rapidfuzz.fuzz import partial_ratio_alignment
 from dotenv import load_dotenv
 
 from collect.common import ROOT, build_keyword_matcher
-from pipeline.clean import PROCESSED_DIR
+from pipeline.clean import PROCESSED_DIR, staff_ids
 from pipeline.filter import API_URL, LONG_WAIT_SECONDS, DailyLimit, RESULT_FILE, parse_duration
 
 # Two taggers, each with its own Groq allowance and its own output file (so two processes never write
@@ -508,7 +508,8 @@ def sample_items(tagger: str | None = None) -> list[dict]:
     clean_yt = sorted((r for r in clean if r["source"] == "youtube" and (r.get("year") or 0) >= MAIN_WINDOW_FROM),
                       key=lambda r: hashlib.sha1(("yt-sample-v1" + r["id"]).encode()).hexdigest())
     cohort_ids = {r["id"] for r in clean_yt[:YOUTUBE_COHORT]}
-    in_scope = [r for r in clean if r["source"] != "youtube" or r["id"] in cohort_ids]
+    staff = staff_ids()      # the platform's own replies are not investors: never tagged, never counted
+    in_scope = [r for r in clean if (r["source"] != "youtube" or r["id"] in cohort_ids) and r["id"] not in staff]
     for r in in_scope:
         r["relevance"] = labels[r["id"]]["relevant"] if r["id"] in labels else "pending"
 

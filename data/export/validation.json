@@ -53,18 +53,18 @@
   }
  ],
  "agreement": {
-  "n_items": 32,
+  "n_items": 30,
   "fields": {
-   "investor_type": 84,
-   "journey_stage": 59,
-   "sip_action": 88,
-   "lapse_type": 69,
+   "investor_type": 87,
+   "journey_stage": 63,
+   "sip_action": 87,
+   "lapse_type": 67,
    "stated_triggers": 53,
    "checking_behaviour": 100,
-   "what_they_check": 88,
-   "emotion": 75,
-   "outside_app_actions": 84,
-   "severity": 78,
+   "what_they_check": 87,
+   "emotion": 77,
+   "outside_app_actions": 83,
+   "severity": 80,
    "income_stability": 100,
    "age_band": 100,
    "money_source": 100,
@@ -98,7 +98,7 @@
   },
   {
    "what_ai_did": "The tagger used the reason 'market fell' for 23 posts; on reading all 23, 7 were clearly wrong (redemption delays, a duplicate order, a missing app section, a wrong amount) and 2 were arguable.",
-   "correction": "Code now keeps 'market fell' only when the post uses market or loss language, and drops it from posts the AI placed under getting money out. 9 tags were removed; one wrong tag it cannot catch remains.",
+   "correction": "Code now keeps 'market fell' only when the post uses market or loss language, and drops it from posts the AI placed under getting money out. 9 tags were removed; one more wrong tag that a word rule cannot catch was then corrected by hand (see the corrections below).",
    "why": "Counting redemption and trust complaints as 'the market fell' would have fed the framing the brief warns against."
   },
   {
@@ -118,10 +118,29 @@
   "YouTube comments are noisy: very short, many in Hindi or Hinglish, and they react to the video, not to Groww.",
   "Reddit is not included yet (no API access; a hand-filled file is planned).",
   "Results are partial: tagging is still running, one free daily allowance at a time.",
-  "Whether a SIP lapse is a failure or the person's choice depends heavily on the source (about 73% failures in Play Store reviews, about 71% own choice in YouTube comments), so no single split is a general fact.",
+  "Whether a SIP lapse is a failure or the person's choice depends heavily on the source (roughly three quarters failures in Play Store reviews, mostly own choice in YouTube comments), so no single split is a general fact.",
   "Age, income and source of money are almost never stated in public posts, so segment findings use proxies and are validated through interviews.",
   "First-time-investor status and journey stage are often only inferable, so 'unclear' is common.",
   "The two taggers differ (70% exact agreement on the six core fields in a 29-post check); the second one under-detects payment failures.",
   "Opportunity scores rest on written-down judgements (branch weights, solvable weights); a sensitivity view is shown."
+ ],
+ "human_corrections": [
+  {
+   "id": "play_store_9051f4885dd2",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "underwhelming_returns",
+    "market_fall",
+    "trust_concern"
+   ],
+   "corrected": [
+    "underwhelming_returns",
+    "trust_concern"
+   ],
+   "reason": "Human review: the review complains that the app showed an 11% gain that became an 11% loss at redemption. That is a display / trust problem, not the market falling. The AI had added 'market_fall' because the post contains the word 'loss'.",
+   "post": "FUNDS NOT SAFE..CHECK YOUR FUNDS AND ORDER EVERYDAY..LOOSE LOT OF MONEY N NO HELP BUT GROWW BLAME US. WRONG INFO. GIVEN. BIG CHEAT. Even Mutual Funds, price shows 11% increase and when you Redeem, it shows 11% loss. Check price of LIC MF GO"
+  }
  ]
 }

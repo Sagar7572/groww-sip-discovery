@@ -56,13 +56,15 @@ def collect() -> dict:
         slug = topic.get("slug", "")
         for p in topic.get("post_stream", {}).get("posts", []):
             text = clean_html(p.get("cooked", ""))
-            kept.append(make_record(
+            rec = make_record(
                 "tradingqna", p["id"], text,
                 title=title,
                 source_detail="question" if p.get("post_number") == 1 else "reply",
                 url=f"{base}/t/{slug}/{tid}/{p.get('post_number', 1)}",
                 created_at=p.get("created_at"),
-            ))
+            )
+            rec["is_staff"] = bool(p.get("staff") or p.get("moderator") or p.get("admin"))   # the platform's own replies
+            kept.append(rec)
         if i % 10 == 0:
             print(f"    fetched {i}/{len(topic_ids)} threads")
         time.sleep(1.5)

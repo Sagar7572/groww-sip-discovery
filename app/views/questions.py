@@ -158,13 +158,20 @@ def render(over: dict, posts: pd.DataFrame) -> None:
 
     # Q9 ------------------------------------------------------------------
     with st.expander("9. What unmet needs appear consistently?"):
-        needs = posts[~posts.unmet_need.str.lower().str.contains(r"^(?:none|unclear|not stated|no need)", regex=True, na=True)]
-        metric_row([("Posts that state an unmet need", f"{len(needs):,}", None), ("Share of relevant tagged posts", C.pct(len(needs), n), None)])
-        words = Counter(w for t in needs.unmet_need for w in re.findall(r"[a-z]{4,}", t.lower()) if w not in STOP_WORDS)
-        if words:
-            wdf = pd.DataFrame(words.most_common(10), columns=["label", "n"])
-            st.altair_chart(C.hbar(wdf, title="Words most used when describing what was missing"), width="stretch")
-        st.markdown("**Examples of what people needed (written by the AI from the post):**")
-        for t in needs.unmet_need.value_counts().head(5).index:
-            st.markdown(f"- {t}")
-        C.show_quotes(needs, 2)
+        un = C.load_json("unmet_needs")
+        themes = un.get("themes", [])
+        k = un.get("posts_with_need", 0)
+        metric_row([("Posts that state an unmet need", f"{k:,}", "The tagger writes one short sentence per post about what was missing."),
+                    ("Share of relevant tagged posts", C.pct(k, n), None), ("Themes", f"{len(themes)}", None)])
+        if themes:
+            tdf = pd.DataFrame({"label": [t["theme"] for t in themes], "n": [t["n"] for t in themes]})
+            st.altair_chart(C.hbar(tdf, total=un.get("grouped") or k, color=C.BLUE, title="Posts in this theme (% of posts that state a need)"), width="stretch")
+            for t in themes:
+                st.markdown(f"**{t['theme']}** · {t['n']} posts · e.g. “{t['example_need']}” (AI wording)")
+                for q in t["quotes"]:
+                    link = f" [open post]({q['url']})" if q.get("url") else ""
+                    st.markdown(f"> “{q['quote']}”  \n> <small>{C.SOURCE_NAMES.get(q['source'], q['source'])}{link}</small>", unsafe_allow_html=True)
+            st.caption("The AI first wrote one short need per post, then grouped those sentences into themes; each quote comes from a post in that theme. "
+                       "Some needs, such as being told which fund to pick, are outside what the product is allowed to do.")
+        else:
+            st.caption("Unmet needs are not grouped yet.")

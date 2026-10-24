@@ -28,8 +28,8 @@ from datetime import datetime, timezone
 import numpy as np
 
 from collect.common import RAW_DIR, ROOT
-from pipeline.clean import PROCESSED_DIR
-from pipeline.subthemes import AREAS, label_problem_areas, name_themes
+from pipeline.clean import PROCESSED_DIR, staff_ids
+from pipeline.subthemes import AREAS, group_needs, label_problem_areas, name_themes
 from pipeline.tag import (CODEBOOK_FILE, MAIN_WINDOW_FROM, PILOT_FILE, TAG_PROMPT_VERSION, TAGGERS,
                           field_values, load_codebook, load_jsonl, results_for, sample_items)
 
@@ -78,6 +78,8 @@ SOLVABLE = {
 }
 SOLVABLE_WEIGHT = {"yes": 1.0, "partly": 0.5, "no": 0.0}
 NOT_A_THEME = {"none", "other"}
+CORRECTIONS_FILE = ROOT / "data" / "manual" / "corrections.csv"     # human corrections: id, field, corrected_value, reason
+LIST_FIELDS = {"triggers", "checks", "outside"}                    # in the csv a list is written with | between values
 # "Market fell" is kept only when the post uses market-fall language. In a check of every tagged market_fall post
 # (docs/evidence_log_notes.md, Entry 10) the AI had used it for redemption delays, wrong amounts and trust complaints.
 MARKET_WORDS = re.compile(r"\bmarkets?\b|crash|covid|corona|nifty|sensex|correction|\bdips?\b|volatil|\bbear|\bfell\b|"
@@ -114,9 +116,10 @@ def load_tagged() -> tuple[list[dict], dict]:
     """Current-prompt tag records from both taggers. gpt-oss-120b is the primary tagger for an item that both
     models tagged. Returns (records, extra) where extra holds per-tagger counts and the shared-item pairs."""
     by_tagger = {}
+    staff = staff_ids()
     for name, cfg in TAGGERS.items():
         recs = [r for r in load_jsonl(PROCESSED_DIR / cfg["file"])
-                if r.get("tag_prompt_version") == TAG_PROMPT_VERSION and r.get("model") == cfg["model"]]
+                if r.get("tag_prompt_version") == TAG_PROMPT_VERSION and r.get("model") == cfg["model"] and r["id"] not in staff]
         by_tagger[name] = {r["id"]: r for r in recs}
     primary = {}
     for name in ("gpt-oss-120b", "qwen"):
@@ -160,6 +163,30 @@ def build_posts(records: list[dict], by_tagger: dict) -> list[dict]:
             "quote_display": r.get("quote_display"), "needs_review": bool(r.get("needs_review")),
         })
     return out
+
+
+def apply_corrections(posts: list[dict]) -> list[dict]:
+    """Apply the human corrections in data/manual/corrections.csv (columns: id, field, corrected_value, reason).
+    Each applied correction keeps the original value, so it can be shown and audited. Returns the log."""
+    import csv
+    if not CORRECTIONS_FILE.exists():
+        return []
+    byid = {p["id"]: p for p in posts}
+    log = []
+    with open(CORRECTIONS_FILE, newline="", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            p, field = byid.get((row.get("id") or "").strip()), (row.get("field") or "").strip()
+            if p is None or field not in p:
+                print(f"  correction skipped (post not in the relevant tagged posts, or unknown field): {row.get('id')} {field}")
+                continue
+            raw = (row.get("corrected_value") or "").strip()
+            old = p[field]
+            new = [x.strip() for x in raw.split("|") if x.strip()] if field in LIST_FIELDS else (int(raw) if isinstance(old, int) else raw)
+            p[field] = new
+            p.setdefault("human_corrected", []).append(field)
+            log.append({"id": p["id"], "source": p["source"], "url": p.get("url"), "field": field, "original": old, "corrected": new,
+                        "reason": (row.get("reason") or "").strip(), "post": p["text"][:240]})
+    return log
 
 
 # ---------------------------------------------------------------------------
@@ -356,9 +383,11 @@ def opportunities(posts: list[dict], label_info: dict) -> dict:
 # overview, validation
 # ---------------------------------------------------------------------------
 def overview(posts: list[dict], records: list[dict], by_tagger: dict) -> dict:
-    clean = load_jsonl(PROCESSED_DIR / "clean.jsonl")
+    staff = staff_ids()
+    all_clean = load_jsonl(PROCESSED_DIR / "clean.jsonl")
+    clean = [r for r in all_clean if r["id"] not in staff]
     summary = json.loads((RAW_DIR / "collection_summary.json").read_text()) if (RAW_DIR / "collection_summary.json").exists() else {}
-    labels = results_for("v3")
+    labels = {i: v for i, v in results_for("v3").items() if i not in staff}
     queue = sample_items()
     tagged_ids = {r["id"] for r in records}
     ok_ids = {r["id"] for r in records if r["status"] == "ok"}
@@ -380,6 +409,7 @@ def overview(posts: list[dict], records: list[dict], by_tagger: dict) -> dict:
         "as_of": (max(stamps)[:10] if stamps else datetime.now(timezone.utc).date().isoformat()),
         "exported_at": datetime.now(timezone.utc).isoformat(timespec="minutes"),
         "sources": sources,
+        "staff_excluded": len(all_clean) - len(clean),
         "funnel": {
             "raw_pulled": sum(s["raw_pulled"] or 0 for s in sources.values()),
             "clean": len(clean), "filter_labelled": len(labels),
@@ -392,6 +422,7 @@ def overview(posts: list[dict], records: list[dict], by_tagger: dict) -> dict:
             "tagged": "A post the AI tagger has read and filled in the codebook for (it can still turn out not to be about SIPs).",
             "relevant": "A tagged post that the tagger confirmed is about starting, continuing, pausing or stopping a SIP, or first-time mutual fund investing. "
                         "Every count, chart, quote and answer in the dashboard uses relevant tagged posts only.",
+            "staff": "TradingQ&A replies written by the platform's own staff are not investors: they are left out of every count and kept only as context for the thread.",
             "quick_filter": "An earlier, cheaper AI step that screens all cleaned posts. It decides which posts get tagged; it is not the same as 'relevant'.",
         },
         "by_tagger": {n: {"tagged": len([1 for r in d.values() if r["status"] == "ok"]),
@@ -404,6 +435,35 @@ def overview(posts: list[dict], records: list[dict], by_tagger: dict) -> dict:
         ],
         "relevance_progress": {"labelled": len(labels), "of": len(clean)},
     }
+
+
+def need_quote(items: list[dict], theme: str) -> list[dict]:
+    """One verified quote per theme: the quote that shares the most words with what the AI wrote as that post's unmet need
+    and with the theme name, so the quote illustrates the need and not just any complaint."""
+    words = lambda t: {w for w in re.findall(r"[a-z]{4,}", (t or "").lower()) if w not in {"need", "needs", "with", "that", "this", "from", "clear", "better"}}
+    cands = [p for p in items if p["quote_display"] and 25 <= len(p["quote_display"]) <= 220]
+    if not cands:
+        return []
+    best = max(cands, key=lambda p: (len(words(p["quote_display"]) & (words(p["unmet_need"]) | words(theme))), p["severity"], -len(p["quote_display"])))
+    return [{"id": best["id"], "quote": best["quote_display"], "source": best["source"], "url": best["url"]}]
+
+
+def unmet_needs(posts: list[dict]) -> dict:
+    """The AI-written unmet needs grouped into 6-8 plain-English themes, with a count and one verified quote each.
+    The quote comes from a post that is itself in the theme."""
+    themes, assign, info = group_needs(posts)
+    for p in posts:
+        p["need_theme"] = themes[assign[p["id"]]] if p["id"] in assign else None
+    rows = []
+    for idx, name in enumerate(themes):
+        items = [p for p in posts if assign.get(p["id"]) == idx]
+        if not items:
+            continue
+        rows.append({"theme": name, "n": len(items), "share_of_needs": round(len(items) / max(info["grouped"], 1), 3),
+                     "example_need": sorted((p["unmet_need"] for p in items), key=len)[len(items) // 2],
+                     "quotes": need_quote(items, name), "avg_severity": round(float(np.mean([p["severity"] for p in items])), 2)})
+    rows.sort(key=lambda r: (r["theme"] == "Something else", -r["n"]))
+    return {"themes": rows, **info}
 
 
 def per_field_agreement(by_tagger: dict) -> dict:
@@ -467,7 +527,7 @@ def validation(by_tagger: dict) -> dict:
              "correction": "Quotes are repaired in code; if the repair is not close enough (score under 80) the quote is flagged and never shown.",
              "why": "A quote shown to a reader must be real text from the post."},
             {"what_ai_did": "The tagger used the reason 'market fell' for 23 posts; on reading all 23, 7 were clearly wrong (redemption delays, a duplicate order, a missing app section, a wrong amount) and 2 were arguable.",
-             "correction": "Code now keeps 'market fell' only when the post uses market or loss language, and drops it from posts the AI placed under getting money out. 9 tags were removed; one wrong tag it cannot catch remains.",
+             "correction": "Code now keeps 'market fell' only when the post uses market or loss language, and drops it from posts the AI placed under getting money out. 9 tags were removed; one more wrong tag that a word rule cannot catch was then corrected by hand (see the corrections below).",
              "why": "Counting redemption and trust complaints as 'the market fell' would have fed the framing the brief warns against."},
             {"what_ai_did": "In the second AI pass that sorts 'hard to use the app' posts into sub-themes, 2 of 24 hand-checked labels were wrong (plain questions labelled as problems) and 3 had a doubtful sub-type.",
              "correction": "Kept, with the accuracy stated; posts the AI judged to be praise, questions or staff replies are not ranked.",
@@ -481,7 +541,7 @@ def validation(by_tagger: dict) -> dict:
             "YouTube comments are noisy: very short, many in Hindi or Hinglish, and they react to the video, not to Groww.",
             "Reddit is not included yet (no API access; a hand-filled file is planned).",
             "Results are partial: tagging is still running, one free daily allowance at a time.",
-            "Whether a SIP lapse is a failure or the person's choice depends heavily on the source (about 73% failures in Play Store reviews, about 71% own choice in YouTube comments), so no single split is a general fact.",
+            "Whether a SIP lapse is a failure or the person's choice depends heavily on the source (roughly three quarters failures in Play Store reviews, mostly own choice in YouTube comments), so no single split is a general fact.",
             "Age, income and source of money are almost never stated in public posts, so segment findings use proxies and are validated through interviews.",
             "First-time-investor status and journey stage are often only inferable, so 'unclear' is common.",
             "The two taggers differ (70% exact agreement on the six core fields in a 29-post check); the second one under-detects payment failures.",
@@ -511,11 +571,15 @@ def main() -> None:
             p["triggers_removed"] = sorted(set(p["triggers_removed"]) | {"market_fall"})
     print(f"  problem areas: {label_info['labelled']} of {label_info['candidates']} candidate posts labelled "
           f"({label_info['new_this_run']} new, {label_info['failed_this_run']} not labelled this run)")
+    human = apply_corrections(posts)
+    print(f"  human corrections applied: {len(human)}")
     emb = embed_posts(posts)
     themes = find_themes(posts, embed_for_themes(posts))
+    needs = unmet_needs(posts)
     opp = opportunities(posts, label_info)
     over = overview(posts, records, by_tagger)
     val = validation(by_tagger)
+    val["human_corrections"] = human
 
     with open(EXPORT_DIR / "posts.jsonl", "w", encoding="utf-8") as f:
         for p in posts:
@@ -523,7 +587,7 @@ def main() -> None:
     if emb is not None:
         np.save(EXPORT_DIR / "embeddings.npy", emb.astype(np.float16))
         (EXPORT_DIR / "embedding_ids.json").write_text(json.dumps([p["id"] for p in posts]))
-    for name, data in (("overview", over), ("opportunities", opp), ("themes", themes), ("validation", val)):
+    for name, data in (("overview", over), ("unmet_needs", needs), ("opportunities", opp), ("themes", themes), ("validation", val)):
         (EXPORT_DIR / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
     shutil.copy(ROOT / "docs" / "evidence_log_notes.md", EXPORT_DIR / "evidence_log.md")
     f = over["funnel"]

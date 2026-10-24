@@ -4,8 +4,8 @@
    "key": "mandate_payment_issue",
    "kind": "reason",
    "label": null,
-   "n": 50,
-   "share_of_tagged": 0.1441,
+   "n": 54,
+   "share_of_tagged": 0.1593,
    "avg_severity": 1.74,
    "branch": "B",
    "branch_name": "B. Involuntary lapse",
@@ -13,15 +13,15 @@
    "solvable": "yes",
    "solvable_why": "Reliable debits, clear failure messages and easy fixes need no advice and no pressure.",
    "solvable_weight": 1.0,
-   "score": 87.0,
-   "score_equal_weights": 87.0,
+   "score": 94.0,
+   "score_equal_weights": 94.0,
    "low_confidence": false,
-   "lapse_story_share": 0.54,
+   "lapse_story_share": 0.593,
    "sources": {
-    "tradingqna": 17,
     "youtube": 12,
     "app_store": 3,
-    "play_store": 18
+    "play_store": 19,
+    "tradingqna": 20
    },
    "quotes": [
     {
@@ -45,23 +45,23 @@
    "key": "autopay_setup",
    "kind": "app_sub_theme",
    "label": "App: autopay / mandate set-up and changes",
-   "n": 13,
-   "share_of_tagged": 0.0375,
-   "avg_severity": 1.92,
+   "n": 15,
+   "share_of_tagged": 0.0442,
+   "avg_severity": 1.93,
    "branch": "B",
    "branch_name": "B. Involuntary lapse",
    "branch_weight": 1.0,
    "solvable": "yes",
    "solvable_why": "Clear set-up steps and failure messages for autopay need no advice and no pressure.",
    "solvable_weight": 1.0,
-   "score": 25.0,
-   "score_equal_weights": 25.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.615,
+   "score": 29.0,
+   "score_equal_weights": 29.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.667,
    "sources": {
     "app_store": 3,
     "play_store": 5,
-    "tradingqna": 3,
+    "tradingqna": 5,
     "youtube": 2
    },
    "quotes": [
@@ -79,15 +79,15 @@
     }
    ],
    "rank": 2,
-   "rank_equal_weights": 3,
-   "score_index": 29
+   "rank_equal_weights": 2,
+   "score_index": 31
   },
   {
    "key": "expectation_mismatch",
    "kind": "reason",
    "label": null,
    "n": 10,
-   "share_of_tagged": 0.0288,
+   "share_of_tagged": 0.0295,
    "avg_severity": 2.0,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -120,14 +120,14 @@
    ],
    "rank": 3,
    "rank_equal_weights": 6,
-   "score_index": 16
+   "score_index": 15
   },
   {
    "key": "app_bugs",
    "kind": "app_sub_theme",
    "label": "App: app updates, bugs and slowness",
    "n": 7,
-   "share_of_tagged": 0.0202,
+   "share_of_tagged": 0.0206,
    "avg_severity": 1.86,
    "branch": "A",
    "branch_name": "A. Getting going",
@@ -160,14 +160,14 @@
    ],
    "rank": 4,
    "rank_equal_weights": 10,
-   "score_index": 13
+   "score_index": 12
   },
   {
    "key": "sip_controls",
    "kind": "app_sub_theme",
    "label": "App: cannot pause, skip, edit or cancel a SIP easily",
    "n": 10,
-   "share_of_tagged": 0.0288,
+   "share_of_tagged": 0.0295,
    "avg_severity": 1.6,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -200,14 +200,14 @@
    ],
    "rank": 5,
    "rank_equal_weights": 7,
-   "score_index": 13
+   "score_index": 12
   },
   {
    "key": "confusing_numbers",
    "kind": "reason",
    "label": null,
    "n": 13,
-   "share_of_tagged": 0.0375,
+   "share_of_tagged": 0.0383,
    "avg_severity": 1.08,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -240,14 +240,14 @@
    ],
    "rank": 6,
    "rank_equal_weights": 8,
-   "score_index": 11
+   "score_index": 10
   },
   {
    "key": "trust_concern",
    "kind": "reason",
    "label": null,
    "n": 13,
-   "share_of_tagged": 0.0375,
+   "share_of_tagged": 0.0383,
    "avg_severity": 2.0,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -279,28 +279,27 @@
     }
    ],
    "rank": 7,
-   "rank_equal_weights": 2,
+   "rank_equal_weights": 3,
    "score_index": 10
   },
   {
    "key": "market_fall",
    "kind": "reason",
    "label": null,
-   "n": 14,
-   "share_of_tagged": 0.0403,
-   "avg_severity": 1.79,
+   "n": 13,
+   "share_of_tagged": 0.0383,
+   "avg_severity": 1.77,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "partly",
    "solvable_why": "Calm, factual context; fear-based or urgency nudges are not allowed.",
    "solvable_weight": 0.5,
-   "score": 8.75,
-   "score_equal_weights": 25.0,
+   "score": 8.05,
+   "score_equal_weights": 23.0,
    "low_confidence": true,
-   "lapse_story_share": 0.357,
+   "lapse_story_share": 0.385,
    "sources": {
-    "play_store": 1,
     "youtube": 2,
     "tradingqna": 11
    },
@@ -320,14 +319,14 @@
    ],
    "rank": 8,
    "rank_equal_weights": 4,
-   "score_index": 10
+   "score_index": 9
   },
   {
    "key": "underwhelming_returns",
    "kind": "reason",
    "label": null,
    "n": 11,
-   "share_of_tagged": 0.0317,
+   "share_of_tagged": 0.0324,
    "avg_severity": 2.0,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -360,14 +359,54 @@
    ],
    "rank": 9,
    "rank_equal_weights": 5,
-   "score_index": 9
+   "score_index": 8
+  },
+  {
+   "key": "cash_flow_strain",
+   "kind": "reason",
+   "label": null,
+   "n": 7,
+   "share_of_tagged": 0.0206,
+   "avg_severity": 1.86,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
+   "solvable_weight": 0.5,
+   "score": 4.55,
+   "score_equal_weights": 13.0,
+   "low_confidence": true,
+   "lapse_story_share": 0.857,
+   "sources": {
+    "play_store": 2,
+    "youtube": 2,
+    "tradingqna": 3
+   },
+   "quotes": [
+    {
+     "id": "tradingqna_57b8b7ee3734",
+     "quote": "Banks are charging arm and a leg for unfilled SIP transactions",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/an-appeal-to-zerodha-investor-awareness/168343/1"
+    },
+    {
+     "id": "play_store_494d59e487b1",
+     "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "rank": 10,
+   "rank_equal_weights": 11,
+   "score_index": 5
   },
   {
    "key": "missing_feature",
    "kind": "app_sub_theme",
    "label": "App: a feature the person wants is missing",
    "n": 10,
-   "share_of_tagged": 0.0288,
+   "share_of_tagged": 0.0295,
    "avg_severity": 1.4,
    "branch": "D",
    "branch_name": "D. Disengagement",
@@ -397,16 +436,16 @@
      "url": "https://tradingqna.com/t/stock-sip-missing-upi-autopay/189232/1"
     }
    ],
-   "rank": 10,
+   "rank": 11,
    "rank_equal_weights": 9,
-   "score_index": 5
+   "score_index": 4
   },
   {
    "key": "social_influence",
    "kind": "reason",
    "label": null,
    "n": 10,
-   "share_of_tagged": 0.0288,
+   "share_of_tagged": 0.0295,
    "avg_severity": 1.1,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -436,46 +475,6 @@
      "url": "https://www.youtube.com/watch?v=3NeW1eAqI3I"
     }
    ],
-   "rank": 11,
-   "rank_equal_weights": 11,
-   "score_index": 4
-  },
-  {
-   "key": "cash_flow_strain",
-   "kind": "reason",
-   "label": null,
-   "n": 5,
-   "share_of_tagged": 0.0144,
-   "avg_severity": 2.0,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
-   "solvable_weight": 0.5,
-   "score": 3.5,
-   "score_equal_weights": 10.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.8,
-   "sources": {
-    "play_store": 2,
-    "youtube": 1,
-    "tradingqna": 2
-   },
-   "quotes": [
-    {
-     "id": "tradingqna_57b8b7ee3734",
-     "quote": "Banks are charging arm and a leg for unfilled SIP transactions",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/an-appeal-to-zerodha-investor-awareness/168343/1"
-    },
-    {
-     "id": "play_store_494d59e487b1",
-     "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
-     "source": "play_store",
-     "url": null
-    }
-   ],
    "rank": 12,
    "rank_equal_weights": 12,
    "score_index": 4
@@ -485,7 +484,7 @@
    "kind": "app_sub_theme",
    "label": "App: support is unreachable or unhelpful",
    "n": 4,
-   "share_of_tagged": 0.0115,
+   "share_of_tagged": 0.0118,
    "avg_severity": 2.5,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -519,11 +518,50 @@
    "score_index": 4
   },
   {
+   "key": "tax_or_lockin",
+   "kind": "reason",
+   "label": null,
+   "n": 7,
+   "share_of_tagged": 0.0206,
+   "avg_severity": 1.29,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
+   "solvable_weight": 0.5,
+   "score": 3.15,
+   "score_equal_weights": 9.0,
+   "low_confidence": true,
+   "lapse_story_share": 0.286,
+   "sources": {
+    "tradingqna": 6,
+    "youtube": 1
+   },
+   "quotes": [
+    {
+     "id": "tradingqna_61319bb3aa28",
+     "quote": "I don’t want to give ltgc tax so to get exact 1 lac capital gain",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/mutual-fund-regular-to-direct/168641/1"
+    },
+    {
+     "id": "youtube_3a9671613c41",
+     "quote": "I want stop my Elss sip because there no option to reduce amount so can I stop current and need to start new with lesser amount?",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=qxu7CBYR864"
+    }
+   ],
+   "rank": 14,
+   "rank_equal_weights": 14,
+   "score_index": 3
+  },
+  {
    "key": "returns_display",
    "kind": "app_sub_theme",
    "label": "App: portfolio and returns shown wrongly or slowly",
    "n": 3,
-   "share_of_tagged": 0.0086,
+   "share_of_tagged": 0.0088,
    "avg_severity": 1.67,
    "branch": "D",
    "branch_name": "D. Disengagement",
@@ -552,47 +590,8 @@
      "url": null
     }
    ],
-   "rank": 14,
-   "rank_equal_weights": 16,
-   "score_index": 3
-  },
-  {
-   "key": "tax_or_lockin",
-   "kind": "reason",
-   "label": null,
-   "n": 6,
-   "share_of_tagged": 0.0173,
-   "avg_severity": 1.33,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
-   "solvable_weight": 0.5,
-   "score": 2.8,
-   "score_equal_weights": 8.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.167,
-   "sources": {
-    "tradingqna": 5,
-    "youtube": 1
-   },
-   "quotes": [
-    {
-     "id": "tradingqna_61319bb3aa28",
-     "quote": "I don’t want to give ltgc tax so to get exact 1 lac capital gain",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/mutual-fund-regular-to-direct/168641/1"
-    },
-    {
-     "id": "youtube_3a9671613c41",
-     "quote": "I want stop my Elss sip because there no option to reduce amount so can I stop current and need to start new with lesser amount?",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=qxu7CBYR864"
-    }
-   ],
    "rank": 15,
-   "rank_equal_weights": 14,
+   "rank_equal_weights": 17,
    "score_index": 3
   },
   {
@@ -600,7 +599,7 @@
    "kind": "reason",
    "label": null,
    "n": 2,
-   "share_of_tagged": 0.0058,
+   "share_of_tagged": 0.0059,
    "avg_severity": 2.0,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -631,7 +630,7 @@
    ],
    "rank": 16,
    "rank_equal_weights": 18,
-   "score_index": 2
+   "score_index": 1
   },
   {
    "key": "disengaged_forgot",
@@ -669,9 +668,9 @@
    "key": "goal_change",
    "kind": "reason",
    "label": null,
-   "n": 4,
-   "share_of_tagged": 0.0115,
-   "avg_severity": 1.25,
+   "n": 7,
+   "share_of_tagged": 0.0206,
+   "avg_severity": 1.14,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
@@ -679,11 +678,12 @@
    "solvable_why": "Often a valid reason to withdraw; the product should only make restarting easy.",
    "solvable_weight": 0.0,
    "score": 0.0,
-   "score_equal_weights": 5.0,
+   "score_equal_weights": 8.0,
    "low_confidence": true,
-   "lapse_story_share": 0.75,
+   "lapse_story_share": 0.857,
    "sources": {
-    "youtube": 4
+    "youtube": 5,
+    "tradingqna": 2
    },
    "quotes": [
     {
@@ -693,14 +693,14 @@
      "url": "https://www.youtube.com/watch?v=phs3OUy7ZWI"
     },
     {
-     "id": "youtube_33026fa55c45",
-     "quote": "just want to withdraw after some x years but want to stop sip",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=pRWyIzahtzw"
+     "id": "tradingqna_d66a7b204f89",
+     "quote": "Hi Nithin, If i have completed 3 years ELSS SIP and i have stopped SIP now...",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/transfer-of-elss-mutual-funds-from-mirae-asset-to-zerodha-coin/165950/3"
     }
    ],
    "rank": 18,
-   "rank_equal_weights": 17,
+   "rank_equal_weights": 15,
    "score_index": 0
   },
   {
@@ -708,7 +708,7 @@
    "kind": "reason",
    "label": null,
    "n": 4,
-   "share_of_tagged": 0.0115,
+   "share_of_tagged": 0.0118,
    "avg_severity": 1.75,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -740,7 +740,7 @@
     }
    ],
    "rank": 19,
-   "rank_equal_weights": 15,
+   "rank_equal_weights": 16,
    "score_index": 0
   }
  ],
@@ -750,7 +750,7 @@
    "kind": "after_stop",
    "label": "Redemption, withdrawal or refund is slow or stuck",
    "n": 11,
-   "share_of_tagged": 0.0317,
+   "share_of_tagged": 0.0324,
    "avg_severity": 2.18,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -782,7 +782,7 @@
    "kind": "after_stop",
    "label": "Cannot find or complete a redemption",
    "n": 10,
-   "share_of_tagged": 0.0288,
+   "share_of_tagged": 0.0295,
    "avg_severity": 2.2,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -821,7 +821,7 @@
    "kind": "after_stop",
    "label": "Amount received differs from what the app showed",
    "n": 7,
-   "share_of_tagged": 0.0202,
+   "share_of_tagged": 0.0206,
    "avg_severity": 2.43,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -849,13 +849,13 @@
    "score_index": 71
   }
  ],
- "n_tagged": 347,
- "app_posts_total": 68,
- "app_posts_not_ranked": 13,
+ "n_tagged": 339,
+ "app_posts_total": 74,
+ "app_posts_not_ranked": 17,
  "exit_posts": 28,
  "label_info": {
-  "candidates": 122,
-  "labelled": 122,
+  "candidates": 124,
+  "labelled": 124,
   "new_this_run": 0,
   "failed_this_run": 0
  },

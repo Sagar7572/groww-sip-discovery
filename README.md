@@ -139,6 +139,15 @@ streamlit run app/streamlit_app.py
 For "Ask the data" locally the Groq key is read from `.env` (never printed). Pages: overview and how it works, opportunity ranking,
 the nine brief questions, metric tree, segments and sources, evidence explorer, ask the data, validation and limitations.
 
+### Staff replies and human corrections
+
+- TradingQ&A replies written by the platform's own staff are excluded from every count. If you collect TradingQ&A again, run
+  `python -m collect.tradingqna_flags` once afterwards (it re-reads only the staff / moderator / admin true-false flags, never usernames).
+- To correct a wrong AI tag by hand, add a row to `data/manual/corrections.csv` (columns `id, field, corrected_value, reason`; write a list with `|`
+  between values, for example `underwhelming_returns|trust_concern`). It is applied at every export and listed on the Validation page.
+- If the free Groq models are at their daily limit when you export, add `--wait-for-ai 30` and the export keeps retrying for up to 30 minutes
+  (it needs them for the problem-area labels, theme names and unmet-need themes; results are cached in `data/processed/`).
+
 ### Running the AI steps over several days (free daily limits)
 
 Each free model has its own daily allowance that rolls over 24 hours. These commands wait for Groq's stated reset time and

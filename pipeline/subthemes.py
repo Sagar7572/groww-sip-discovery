@@ -203,3 +203,61 @@ def name_themes(groups: list[dict]) -> dict[int, str]:
                 cache[keys[gid]] = name
         THEME_NAME_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=1))
     return names
+
+
+# ---------------------------------------------------------------------------
+# 3. unmet needs, grouped into a handful of plain-English themes
+# ---------------------------------------------------------------------------
+NEED_FILE = PROCESSED_DIR / "need_themes.json"
+NEED_NONE = re.compile(r"^(?:none|unclear|not stated|no need)", re.I)
+
+NEED_THEME_SYSTEM = (
+    "You group short 'unmet need' statements, each written about one public post on SIPs or mutual fund investing in India. "
+    "Propose between 6 and 8 themes that together cover the statements, each with a short plain-English name (2 to 6 words) "
+    "such as 'Faster, clearer redemptions'. Describe the need only: no advice, no fear or urgency words. Include one last theme "
+    "named 'Something else' for statements that fit nowhere. "
+    'Answer ONLY with JSON: {"themes":["name 1","name 2", ...]}.')
+
+
+def need_assign_system(themes: list[str]) -> str:
+    return ("Assign each numbered 'unmet need' statement to exactly ONE of these themes, using the theme's number:\n"
+            + "\n".join(f"{i}: {t}" for i, t in enumerate(themes))
+            + '\nAnswer ONLY with JSON: {"a":[{"n":1,"t":<theme number>}, ...]} with one entry per statement, in order.')
+
+
+def has_need(p: dict) -> bool:
+    return bool(p.get("unmet_need")) and not NEED_NONE.search(p["unmet_need"].strip())
+
+
+def group_needs(posts: list[dict], batch_size: int = 40) -> tuple[list[str], dict, dict]:
+    """Returns (theme names, {post id: theme index}, info). The theme list is created once from the first
+    statements seen and kept in data/processed/need_themes.json (delete that file to regroup from scratch);
+    later posts are assigned to the existing themes."""
+    needy = [p for p in posts if has_need(p)]
+    cache = json.loads(NEED_FILE.read_text()) if NEED_FILE.exists() else {"themes": [], "assign": {}}
+    if not cache["themes"] and needy:
+        sample = needy[:150]
+        out = _parse(_ask(NEED_THEME_SYSTEM, "Statements:\n" + "\n".join(f"- {p['unmet_need']}" for p in sample)))
+        themes = [str(t).strip().strip(".") for t in (out or {}).get("themes", []) if str(t).strip()]
+        if 5 <= len(themes) <= 9:
+            cache["themes"] = themes if themes[-1].lower().startswith("something else") else themes + ["Something else"]
+    if cache["themes"]:
+        todo = [p for p in needy if p["id"] not in cache["assign"]]
+        for i in range(0, len(todo), batch_size):
+            batch = todo[i:i + batch_size]
+            user = "Statements:\n" + "\n".join(f"[{n}] {p['unmet_need']}" for n, p in enumerate(batch, 1))
+            out = _parse(_ask(need_assign_system(cache["themes"]), user))
+            items = (out or {}).get("a") or []
+            numbers = [x.get("n") if isinstance(x, dict) else None for x in items]
+            use_order = len(items) == len(batch) and sorted(map(str, numbers)) != sorted(str(n) for n in range(1, len(batch) + 1))
+            for pos, x in enumerate(items, 1):
+                try:
+                    n = pos if use_order else int(x["n"])
+                    t = int(x["t"])
+                except (KeyError, TypeError, ValueError):
+                    continue
+                if 1 <= n <= len(batch) and 0 <= t < len(cache["themes"]):
+                    cache["assign"][batch[n - 1]["id"]] = t
+        NEED_FILE.write_text(json.dumps(cache, ensure_ascii=False, indent=1))
+    assign = {p["id"]: cache["assign"][p["id"]] for p in needy if p["id"] in cache["assign"]}
+    return cache["themes"], assign, {"posts_with_need": len(needy), "grouped": len(assign)}

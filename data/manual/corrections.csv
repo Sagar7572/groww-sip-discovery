@@ -1,0 +1,2 @@
+id,field,corrected_value,reason
+play_store_9051f4885dd2,triggers,underwhelming_returns|trust_concern,"Human review: the review complains that the app showed an 11% gain that became an 11% loss at redemption. That is a display / trust problem, not the market falling. The AI had added 'market_fall' because the post contains the word 'loss'."

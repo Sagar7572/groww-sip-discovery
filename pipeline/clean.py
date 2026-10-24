@@ -184,3 +184,12 @@ def report(raw_counts, after_dedupe, clean, short_dropped) -> None:
 
 if __name__ == "__main__":
     main()
+
+
+def staff_ids() -> set[str]:
+    """TradingQ&A posts written by the platform's own staff / moderators / admins (flag fetched by
+    `python -m collect.tradingqna_flags`). They are left out of every count and kept only as thread context."""
+    f = RAW_DIR / "tradingqna_staff.json"
+    if not f.exists():
+        return set()
+    return {i for i, v in json.loads(f.read_text()).items() if v}
