@@ -1,0 +1,31 @@
+# Secrets: never commit these
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python / system
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+*.log
+
+# Working notes for the coding assistant (project brief), not part of the public repo
+CLAUDE.md
+
+# Raw scraped data and hand-filled files stay on the laptop (only the small collection summary is kept)
+data/raw/*
+!data/raw/collection_summary.json
+data/manual/reddit_manual.csv
+
+# Processed data stays on the laptop: cleaned post text, AI labels, backups and logs are NOT published.
+# Only data/export/ (what the dashboard reads) is committed. Rebuild processed data with the pipeline commands in the README.
+data/processed/*
+!data/processed/.gitkeep
+
+# data/export (what the dashboard reads) IS committed
+
+# local review screenshots
+docs/screenshots/

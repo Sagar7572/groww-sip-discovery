@@ -1,0 +1,28 @@
+{
+  "play_store": {
+    "source": "play_store",
+    "pulled": 32786,
+    "kept": 621,
+    "run_at": "2026-10-23T14:49:11.598981+00:00"
+  },
+  "app_store": {
+    "source": "app_store",
+    "pulled": 500,
+    "kept": 31,
+    "run_at": "2026-10-23T14:53:13.040634+00:00"
+  },
+  "tradingqna": {
+    "source": "tradingqna",
+    "pulled": 1425,
+    "kept": 1425,
+    "threads": 160,
+    "run_at": "2026-10-23T14:58:17.677940+00:00"
+  },
+  "youtube": {
+    "source": "youtube",
+    "pulled": 5837,
+    "kept": 5837,
+    "videos": 27,
+    "run_at": "2026-10-24T06:16:29.346521+00:00"
+  }
+}

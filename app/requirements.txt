@@ -1,0 +1,7 @@
+# Dashboard only (Streamlit Community Cloud reads this file). The data-collection tools have their own
+# list in the top-level requirements.txt.
+streamlit>=1.40
+pandas>=2.1
+numpy>=1.26
+requests>=2.31
+fastembed>=0.4

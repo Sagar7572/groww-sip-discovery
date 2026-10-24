@@ -1,0 +1,14 @@
+# --- Data collection (runs on your laptop) ---
+google-play-scraper==1.2.7
+requests>=2.31
+praw>=7.7            # only needed if your Reddit API access is approved
+google-api-python-client>=2.120
+python-dotenv>=1.0
+pyyaml>=6.0
+pandas>=2.1
+rapidfuzz>=3.6      # near-duplicate removal in pipeline/clean.py
+
+# --- Pipeline and dashboard export (clean, filter, tag, export) ---
+scikit-learn>=1.4   # theme clustering in pipeline/export.py
+fastembed>=0.4      # free local embeddings
+streamlit>=1.40     # the dashboard (the hosted app uses app/requirements.txt)

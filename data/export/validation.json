@@ -1,0 +1,127 @@
+{
+ "relevance_pilot": [
+  {
+   "prompt": "v1: first prompt",
+   "yes": 54,
+   "no": 46,
+   "unsure": 0,
+   "rescued_by_rules": 0
+  },
+  {
+   "prompt": "v2: examples + rules",
+   "yes": 53,
+   "no": 45,
+   "unsure": 2,
+   "rescued_by_rules": 0
+  },
+  {
+   "prompt": "v3: recall-first + safety nets",
+   "yes": 61,
+   "no": 28,
+   "unsure": 11,
+   "rescued_by_rules": 9
+  }
+ ],
+ "relevance_pilot_n": 100,
+ "tagging_pilot": [
+  {
+   "prompt": "t1: first prompt",
+   "items": 50,
+   "failed": 2,
+   "judged_relevant": 12,
+   "judged_not_relevant": 36,
+   "quote_mismatch_pct": 17,
+   "tokens_per_item": 632
+  },
+  {
+   "prompt": "t2: no early exit",
+   "items": 50,
+   "failed": 0,
+   "judged_relevant": 47,
+   "judged_not_relevant": 3,
+   "quote_mismatch_pct": 11,
+   "tokens_per_item": 536
+  },
+  {
+   "prompt": "t3: tag what is implied",
+   "items": 50,
+   "failed": 0,
+   "judged_relevant": 49,
+   "judged_not_relevant": 1,
+   "quote_mismatch_pct": 14,
+   "tokens_per_item": 644
+  }
+ ],
+ "agreement": {
+  "n_items": 32,
+  "fields": {
+   "investor_type": 84,
+   "journey_stage": 59,
+   "sip_action": 88,
+   "lapse_type": 69,
+   "stated_triggers": 53,
+   "checking_behaviour": 100,
+   "what_they_check": 88,
+   "emotion": 75,
+   "outside_app_actions": 84,
+   "severity": 78,
+   "income_stability": 100,
+   "age_band": 100,
+   "money_source": 100,
+   "influenced_by": 97
+  },
+  "involuntary_flagged": {
+   "gpt-oss-120b": 6,
+   "qwen": 4
+  }
+ },
+ "corrections": [
+  {
+   "what_ai_did": "Relevance prompt v1 never answered 'unsure' (0 of 100) and labelled a demat-charge reply as a mutual fund question.",
+   "correction": "Prompt v2 with worked examples, then v3 'when in doubt choose unsure' plus two plain-code safety nets.",
+   "why": "A wrong 'no' loses data for good; a wrong 'yes' is caught by the tagging step."
+  },
+  {
+   "what_ai_did": "Tagging prompt t1 let the model skip items: it called 36 of 50 relevant posts 'not relevant', e.g. 'unable to setup autopay for SIP'.",
+   "correction": "Prompt t2/t3: no early exit; relevance is only a flag; broader relevance wording in the codebook (v0.2).",
+   "why": "The codebook's narrow wording plus a cheap 'skip' answer made the model drop real SIP problems."
+  },
+  {
+   "what_ai_did": "In t3 every answer came back numbered '1', so answers could attach to the wrong post; 50 records were discarded.",
+   "correction": "Matching now trusts the model's numbers only when they are valid, otherwise uses order, and retries missing items.",
+   "why": "Wrong post-to-tag matches would silently corrupt every count."
+  },
+  {
+   "what_ai_did": "14% of the model's evidence quotes were not an exact copy of the post (some contained words that were not there).",
+   "correction": "Quotes are repaired in code; if the repair is not close enough (score under 80) the quote is flagged and never shown.",
+   "why": "A quote shown to a reader must be real text from the post."
+  },
+  {
+   "what_ai_did": "The tagger used the reason 'market fell' for 23 posts; on reading all 23, 7 were clearly wrong (redemption delays, a duplicate order, a missing app section, a wrong amount) and 2 were arguable.",
+   "correction": "Code now keeps 'market fell' only when the post uses market or loss language, and drops it from posts the AI placed under getting money out. 9 tags were removed; one wrong tag it cannot catch remains.",
+   "why": "Counting redemption and trust complaints as 'the market fell' would have fed the framing the brief warns against."
+  },
+  {
+   "what_ai_did": "In the second AI pass that sorts 'hard to use the app' posts into sub-themes, 2 of 24 hand-checked labels were wrong (plain questions labelled as problems) and 3 had a doubtful sub-type.",
+   "correction": "Kept, with the accuracy stated; posts the AI judged to be praise, questions or staff replies are not ranked.",
+   "why": "A label that is 80% exact is fine for ranking areas but not for counting single posts."
+  },
+  {
+   "what_ai_did": "The 'confidence' field was never below 0.8.",
+   "correction": "Not used anywhere in the analysis.",
+   "why": "A score that never varies cannot tell good tags from bad ones."
+  }
+ ],
+ "limitations": [
+  "App-store reviews skew negative and short; many are generic praise.",
+  "TradingQ&A is a Zerodha community, so posters are not necessarily Groww users.",
+  "YouTube comments are noisy: very short, many in Hindi or Hinglish, and they react to the video, not to Groww.",
+  "Reddit is not included yet (no API access; a hand-filled file is planned).",
+  "Results are partial: tagging is still running, one free daily allowance at a time.",
+  "Whether a SIP lapse is a failure or the person's choice depends heavily on the source (about 73% failures in Play Store reviews, about 71% own choice in YouTube comments), so no single split is a general fact.",
+  "Age, income and source of money are almost never stated in public posts, so segment findings use proxies and are validated through interviews.",
+  "First-time-investor status and journey stage are often only inferable, so 'unclear' is common.",
+  "The two taggers differ (70% exact agreement on the six core fields in a 29-post check); the second one under-detects payment failures.",
+  "Opportunity scores rest on written-down judgements (branch weights, solvable weights); a sensitivity view is shown."
+ ]
+}

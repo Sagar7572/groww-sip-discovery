@@ -1,0 +1,79 @@
+# Settings for data collection. Edit here instead of in the code.
+
+app:
+  play_store_package: com.nextbillion.groww   # Groww on Google Play
+  app_store_search_term: groww                # App Store id is looked up automatically
+  app_store_id: null                          # set manually if the lookup picks the wrong app
+  country: in
+
+play_store:
+  max_reviews: 30000         # newest reviews pulled before keyword filtering
+  languages: [en, hi]
+
+app_store:
+  max_pages: 10              # Apple's feed returns ~50 reviews per page, 10 pages max
+
+# Keyword filter: an item is kept only if it mentions at least one of these.
+# Plain code does this, so it costs nothing and cuts volume before any AI step.
+keywords:
+  - sip
+  - systematic investment
+  - mutual fund
+  - mf
+  - autopay
+  - auto pay
+  - mandate
+  - e-mandate
+  - emandate
+  - instalment
+  - installment
+  - nav
+  - xirr
+  - redeem
+  - redemption
+  - pause
+  - stopped investing
+  - first investment
+
+tradingqna:
+  base_url: https://tradingqna.com
+  queries:
+    - stop sip
+    - pause sip
+    - sip mandate failed
+    - first sip
+    - sip negative returns
+    - should i continue sip
+    - sip skipped
+    - sip bounce
+  max_topics_per_query: 25
+
+youtube:
+  # Each search costs 100 of your 10,000 free daily units; comments cost 1 per page.
+  search_queries:
+    - should I stop my SIP
+    - SIP negative returns what to do
+    - first SIP mistakes beginners
+    - Groww SIP tutorial
+    - SIP pause or stop
+    - mutual fund SIP loss new investor
+  videos_per_query: 5
+  max_comment_pages_per_video: 10     # 100 comments per page
+  extra_video_ids: []                 # paste video IDs here if you find good ones manually
+
+reddit:
+  subreddits:
+    - IndiaInvestments
+    - mutualfunds
+    - personalfinanceindia
+    - IndianStreetBets
+  queries:
+    - stopped SIP
+    - pause SIP
+    - first SIP
+    - SIP negative
+    - Groww SIP
+    - SIP failed
+    - should I continue SIP
+  posts_per_query: 25
+  max_comments_per_post: 60

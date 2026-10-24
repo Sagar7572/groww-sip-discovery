@@ -1,0 +1,151 @@
+{
+ "as_of": "2026-10-24",
+ "exported_at": "2026-10-24T12:10+00:00",
+ "sources": {
+  "play_store": {
+   "raw_pulled": 32786,
+   "raw_kept_by_keywords": 621,
+   "clean": 613,
+   "filter_labelled": 603,
+   "filter_kept": 440,
+   "tagged": 102,
+   "relevant": 89,
+   "first_date": "2018-12-16",
+   "last_date": "2026-10-22",
+   "by_year": {
+    "2018": 1,
+    "2019": 2,
+    "2020": 7,
+    "2021": 3,
+    "2022": 1,
+    "2023": 4,
+    "2024": 5,
+    "2025": 2,
+    "2026": 588
+   }
+  },
+  "app_store": {
+   "raw_pulled": 500,
+   "raw_kept_by_keywords": 31,
+   "clean": 28,
+   "filter_labelled": 28,
+   "filter_kept": 15,
+   "tagged": 10,
+   "relevant": 9,
+   "first_date": "2026-09-02",
+   "last_date": "2026-10-21",
+   "by_year": {
+    "2026": 28
+   }
+  },
+  "tradingqna": {
+   "raw_pulled": 1425,
+   "raw_kept_by_keywords": 1425,
+   "clean": 1324,
+   "filter_labelled": 820,
+   "filter_kept": 500,
+   "tagged": 184,
+   "relevant": 147,
+   "first_date": "2014-12-11",
+   "last_date": "2026-10-19",
+   "by_year": {
+    "2014": 2,
+    "2017": 190,
+    "2018": 154,
+    "2019": 130,
+    "2020": 44,
+    "2021": 175,
+    "2022": 146,
+    "2023": 168,
+    "2024": 170,
+    "2025": 58,
+    "2026": 87
+   }
+  },
+  "youtube": {
+   "raw_pulled": 5837,
+   "raw_kept_by_keywords": 5837,
+   "clean": 3806,
+   "filter_labelled": 124,
+   "filter_kept": 68,
+   "tagged": 124,
+   "relevant": 102,
+   "first_date": "2019-01-30",
+   "last_date": "2026-10-24",
+   "by_year": {
+    "2019": 84,
+    "2020": 71,
+    "2021": 59,
+    "2022": 67,
+    "2023": 368,
+    "2024": 565,
+    "2025": 443,
+    "2026": 2149
+   }
+  },
+  "reddit": {
+   "raw_pulled": null,
+   "raw_kept_by_keywords": null,
+   "clean": 0,
+   "filter_labelled": 0,
+   "filter_kept": 0,
+   "tagged": 0,
+   "relevant": 0,
+   "first_date": null,
+   "last_date": null,
+   "by_year": {}
+  }
+ },
+ "funnel": {
+  "raw_pulled": 40548,
+  "clean": 5771,
+  "filter_labelled": 1575,
+  "filter_kept": 1023,
+  "in_tagging_queue": 1299,
+  "tag_attempted": 427,
+  "tagged_ok": 420,
+  "relevant_tagged": 347,
+  "tagged_not_relevant": 73
+ },
+ "definitions": {
+  "tagged": "A post the AI tagger has read and filled in the codebook for (it can still turn out not to be about SIPs).",
+  "relevant": "A tagged post that the tagger confirmed is about starting, continuing, pausing or stopping a SIP, or first-time mutual fund investing. Every count, chart, quote and answer in the dashboard uses relevant tagged posts only.",
+  "quick_filter": "An earlier, cheaper AI step that screens all cleaned posts. It decides which posts get tagged; it is not the same as 'relevant'."
+ },
+ "by_tagger": {
+  "gpt-oss-120b": {
+   "tagged": 150,
+   "failed": 0
+  },
+  "qwen": {
+   "tagged": 302,
+   "failed": 8
+  }
+ },
+ "models": [
+  {
+   "stage": "Relevance filter",
+   "model": "openai/gpt-oss-20b (Groq, free tier)",
+   "job": "Says yes / no / unsure: is this post about SIP or mutual fund investing? Two plain-code safety nets turn risky 'no' answers into 'unsure'."
+  },
+  {
+   "stage": "Tagging",
+   "model": "openai/gpt-oss-120b (Groq, free tier)",
+   "job": "Fills in the codebook for each post: journey stage, what happened to the SIP, voluntary or involuntary, stated triggers, deeper reason, emotion, severity, an exact quote."
+  },
+  {
+   "stage": "Second tagger",
+   "model": "qwen/qwen3.8-27b (Groq, free tier)",
+   "job": "Tags a different random half of the posts in parallel, and the same 30 posts as the first tagger for an agreement check."
+  },
+  {
+   "stage": "Themes and search",
+   "model": "paraphrase-multilingual-MiniLM (fastembed, free, local)",
+   "job": "Turns each post into numbers so similar posts can be grouped (themes) and found ('Ask the data')."
+  }
+ ],
+ "relevance_progress": {
+  "labelled": 1575,
+  "of": 5771
+ }
+}

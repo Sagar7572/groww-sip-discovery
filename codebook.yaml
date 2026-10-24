@@ -1,0 +1,169 @@
+# CODEBOOK: the fixed form the AI fills in for every post.
+# Each field maps to a question in the brief or a branch of the metric tree.
+# Rule for every field: tag what the post states OR plainly implies; answer "unclear" only when the
+# post gives nothing to go on. Do not invent details that neither appear nor follow plainly.
+
+version: 0.2   # 0.2: broader is_relevant wording; 3 more worked examples; tag what the text states or plainly implies
+
+fields:
+
+  is_relevant:
+    type: boolean
+    question: Is this about mutual fund / SIP investing in any way? Yes (true) for anything about
+      starting, continuing, pausing, changing or stopping a SIP; SIP autopay or mandate problems;
+      redemptions, holdings or statements; returns or NAV; or being a new investor. False only if it
+      is clearly nothing to do with mutual funds - only stocks, F&O, IPOs, demat or brokerage
+      charges, spam, or praise with no content. It is a flag only; every field is still filled.
+
+  investor_type:
+    type: one
+    options:
+      first_time: Says or clearly implies this is their first SIP / first year of investing.
+      experienced: Mentions years of investing, many funds, past cycles.
+      unclear: Not stated.
+
+  journey_stage:
+    type: one
+    question: Where in the journey is the person talking from?
+    options:
+      before_start: Deciding whether / how to start.
+      month_0_1: Just started, setting up, first instalment.
+      month_1_3: Early months.
+      month_4_12: Later in the first year.
+      after_stop: Has already stopped or paused.
+      over_12_months: Investing more than a year.
+      unclear: Not stated.
+
+  sip_action:
+    type: one
+    question: What happened to the SIP?
+    options:
+      started: Started a SIP.
+      continuing: Still investing.
+      considering_stop: Thinking about pausing or stopping.
+      paused: Used pause / skip.
+      reduced: Lowered the amount.
+      stopped: Cancelled / stopped.
+      instalment_failed: A debit failed or a SIP stopped without the person deciding.
+      increased: Raised the amount or added SIPs.
+      none: No SIP action mentioned.
+
+  lapse_type:
+    type: one
+    question: If the SIP stopped or is at risk, was it the person's choice?
+    options:
+      voluntary: The person chose to pause, reduce or stop.
+      involuntary: Payment failed, mandate expired/rejected, bank changed, insufficient balance,
+        app/technical issue - the person did not intend to stop.
+      both: Elements of both.
+      not_applicable: No lapse or risk mentioned.
+      unclear: Can't tell.
+
+  stated_triggers:
+    type: many
+    question: What reasons does the person themselves give? Pick all that apply.
+    options:
+      cash_flow_strain: Money tight this month, expenses, EMI, rent.
+      irregular_income: Freelance / gig / commission / variable salary timing.
+      life_event: Job loss, job change, marriage, medical, relocation, studies.
+      underwhelming_returns: Returns small, flat or slower than expected.
+      market_fall: Portfolio red, market crash, loss.
+      expectation_mismatch: Expected quick or guaranteed growth; investing "not working".
+      confusing_numbers: Doesn't understand NAV, units, XIRR, absolute vs annual returns, statements.
+      mandate_payment_issue: Autopay, e-mandate, UPI mandate, bank debit, failed instalment.
+      app_experience: Hard to find / change / pause / modify SIP in the app, bugs.
+      trust_concern: Doubts about the platform, fund house, safety of money.
+      social_influence: Friend, family, finfluencer, YouTube or Reddit told them to start/stop/switch.
+      goal_change: Goal done, changed, or needs the money now (withdrawal).
+      disengaged_forgot: Stopped looking, forgot, lost interest.
+      fund_switching: Stopping to move to a "better" fund.
+      tax_or_lockin: ELSS lock-in, exit load, tax.
+      other: Something else (explain in unmet_need).
+      none: No reason given.
+
+  underlying_reason:
+    type: text
+    question: In one short line, what seems to be the deeper reason behind the stated trigger?
+      Example - stated "market fell", underlying "expected steady growth, nobody explained early
+      volatility". Write "unclear" if the post doesn't support an inference.
+
+  checking_behaviour:
+    type: one
+    question: How often do they say they check their investments?
+    options: [daily_or_more, weekly, monthly, rarely, only_when_worried, not_mentioned]
+
+  what_they_check:
+    type: many
+    options: [portfolio_value, returns_percent, profit_loss_amount, nav, xirr, statement_email,
+              market_news, not_mentioned]
+
+  emotion:
+    type: one
+    options: [anxious, regretful, confused, frustrated, disappointed, indifferent, calm_confident,
+              hopeful, neutral]
+
+  outside_app_actions:
+    type: many
+    question: What did they do outside the app when unsure?
+    options: [asked_friend_family, watched_youtube_finfluencer, posted_reddit_forum, searched_google,
+              asked_advisor, contacted_support, asked_ai_chatbot, none_mentioned]
+
+  segment_signals:
+    type: group
+    note: Only fill what the post states or makes very obvious. Otherwise "unclear".
+    income_stability: [salaried_stable, irregular_freelance_gig, student_no_income, business_owner, unclear]
+    age_band: [under_24, age_24_32, age_33_45, over_45, unclear]
+    money_source: [salary, pocket_money_or_gift, savings_or_bonus, unclear]
+    influenced_by: [self, friend_family, finfluencer_youtube, employer_colleague, app_or_ad, unclear]
+
+  unmet_need:
+    type: text
+    question: In under 15 words, what did this person need that they did not get?
+
+  severity:
+    type: one
+    options:
+      1: Mild annoyance or question.
+      2: Caused doubt, a pause, a reduction, or a complaint.
+      3: Caused stopping, money lost, or leaving the platform.
+
+  evidence_quote:
+    type: text
+    question: Copy up to 25 words from the post that best support the tags. Exact words only.
+
+  confidence:
+    type: number
+    question: 0 to 1 - how confident are you in these tags overall?
+
+# Worked examples the AI sees before tagging (kept short on purpose).
+examples:
+  - text: "SIP band kar diya, 6 mahine se kuch ho hi nahi raha tha, returns -2% dikha raha hai"
+    tags: {is_relevant: true, investor_type: first_time, journey_stage: after_stop, sip_action: stopped,
+           lapse_type: voluntary, stated_triggers: [underwhelming_returns, market_fall],
+           underlying_reason: "Expected visible growth within months; no sense of normal early volatility",
+           emotion: disappointed}
+  - text: "Great app 👏 my SIP failed 3 times because autopay never worked. Now it's cancelled."
+    tags: {is_relevant: true, sip_action: instalment_failed, lapse_type: involuntary,
+           stated_triggers: [mandate_payment_issue], emotion: frustrated, severity: 3}
+  - text: "I'm a freelancer, some months I just don't have 5k on the 5th. Paused twice already."
+    tags: {is_relevant: true, sip_action: paused, lapse_type: voluntary,
+           stated_triggers: [irregular_income, cash_flow_strain],
+           segment_signals: {income_stability: irregular_freelance_gig},
+           underlying_reason: "Fixed debit date and amount don't fit variable income"}
+  - text: "Options trading on Groww is the best, superfast execution"
+    tags: {is_relevant: false}
+  - text: "23 months into my SIP and it shows -0.3%. Everyone says investing always pays off, so what am I missing?"
+    tags: {is_relevant: true, journey_stage: over_12_months, sip_action: continuing,
+           lapse_type: not_applicable, stated_triggers: [underwhelming_returns, expectation_mismatch],
+           underlying_reason: "Expected steady gains after almost two years; a flat return feels like it is not working",
+           emotion: disappointed, severity: 2}
+  - text: "Bought a fund through my bank branch last year. How do I see it in this app? Do I need to do something?"
+    tags: {is_relevant: true, sip_action: none, lapse_type: not_applicable,
+           stated_triggers: [app_experience],
+           underlying_reason: "Cannot find an investment made elsewhere inside the app and is unsure what to do",
+           emotion: confused, severity: 1}
+  - text: "Third month in a row the SIP date came and my account was empty, so it bounced again."
+    tags: {is_relevant: true, journey_stage: month_1_3, sip_action: instalment_failed,
+           lapse_type: involuntary, stated_triggers: [cash_flow_strain, mandate_payment_issue],
+           underlying_reason: "Fixed debit date does not match when the money is available",
+           emotion: frustrated, severity: 2}

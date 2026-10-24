@@ -1,0 +1,6 @@
+# Colour-blind-safe accent (blue) instead of Streamlit's default red.
+[theme]
+primaryColor = "#2a78d6"
+
+[browser]
+gatherUsageStats = false
