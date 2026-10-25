@@ -41,13 +41,13 @@ groww-sip-discovery/
    ```
    python -m venv .venv
    .venv\Scripts\activate
-   pip install -r requirements.txt
+   pip install -r requirements-pipeline.txt
    ```
    Mac / Linux
    ```
    python3 -m venv .venv
    source .venv/bin/activate
-   pip install -r requirements.txt
+   pip install -r requirements-pipeline.txt
    ```
 5. **Add your keys.** Copy `.env.example`, rename the copy to `.env`, open it in Notepad
    and paste your YouTube key after `YOUTUBE_API_KEY=`. Add Reddit keys only if Reddit approved you.
@@ -132,7 +132,7 @@ python -m pipeline.export
 Run the dashboard on your own computer:
 
 ```
-pip install -r app/requirements.txt
+pip install -r requirements.txt
 streamlit run app/streamlit_app.py
 ```
 
