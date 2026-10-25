@@ -1,2 +1,3 @@
 id,field,corrected_value,reason
 play_store_9051f4885dd2,triggers,underwhelming_returns|trust_concern,"Human review: the review complains that the app showed an 11% gain that became an 11% loss at redemption. That is a display / trust problem, not the market falling. The AI had added 'market_fall' because the post contains the word 'loss'."
+tradingqna_e45f14885793,investor_type,unclear,"Human review: the post pastes a news article about first-time investors in general (Moneycontrol, 2019); the writer does not say they are a first-time investor. Found while reading the quotes in the first-time-investor box on the Segments page."

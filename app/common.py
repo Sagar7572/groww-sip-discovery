@@ -192,3 +192,14 @@ def hbar(df: pd.DataFrame, total: int | None = None, color: str = BLUE, title: s
 
 def small_group_note(n: int) -> str:
     return " (low confidence: fewer than 15 posts)" if n < 15 else ""
+
+
+REDDIT_NOTE = ("Reddit threads were picked because they mention stopping, failing or autopay, so they inflate the lapse and autopay counts; "
+               "switch this on to see the same view without them.")
+
+
+def reddit_toggle() -> bool:
+    """One switch shared by the Opportunity and Metric-tree pages (same key, so it stays set when you move between them)."""
+    on = st.toggle("Exclude curated Reddit", value=False, key="excl_reddit")
+    st.caption(REDDIT_NOTE)
+    return on

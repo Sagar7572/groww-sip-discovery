@@ -21,6 +21,10 @@ def split_counts(df: pd.DataFrame) -> dict:
 
 
 def render(over: dict, posts: pd.DataFrame) -> None:
+    title_slot = st.container()
+    if C.reddit_toggle():
+        posts = posts[posts.source != "reddit"]
+        st.info(f"Showing this page **without Reddit**: {len(posts):,} relevant tagged posts.")
     n = len(posts)
     lapse = posts[posts.lapse_story]
     s = split_counts(posts)
@@ -29,11 +33,11 @@ def render(over: dict, posts: pd.DataFrame) -> None:
     fail_src = max(ok_src, key=lambda k: ok_src[k]["inv_only"] / ok_src[k]["lapse"], default=None)
     choice_src = max(ok_src, key=lambda k: ok_src[k]["vol_only"] / ok_src[k]["lapse"], default=None)
     if fail_src and choice_src and fail_src != choice_src:
-        st.title(f"Whether a lapse is a failure or a choice depends on the source: {C.pct(ok_src[fail_src]['inv_only'], ok_src[fail_src]['lapse'])} of "
+        title_slot.title(f"Whether a lapse is a failure or a choice depends on the source: {C.pct(ok_src[fail_src]['inv_only'], ok_src[fail_src]['lapse'])} of "
                  f"lapse stories in {C.SOURCE_NAMES[fail_src]} are failures, {C.pct(ok_src[choice_src]['vol_only'], ok_src[choice_src]['lapse'])} of "
                  f"those in {C.SOURCE_NAMES[choice_src]} are the person's own choice")
     else:
-        st.title("Whether a lapse is a failure or a choice cannot be stated for all investors: it depends on the source of the post")
+        title_slot.title("Whether a lapse is a failure or a choice cannot be stated for all investors: it depends on the source of the post")
     st.write("The metric is: **of first-time mutual fund investors, the share who still have an active SIP 12 months after starting.** "
              "The tree below splits what goes wrong into branches. A *lapse story* is a post where a SIP stopped, is at risk, or a payment failed.")
 

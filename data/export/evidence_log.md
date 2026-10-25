@@ -414,3 +414,31 @@ Result: 9 of the 23 tags were removed (the 7 clearly wrong, plus the 2 arguable 
 - Two threads that are not about SIPs (a bike purchase on a salary, budgeting for a college student) passed the title rule and were fetched, which cost about $0.13; the AI relevance check will drop them.
 
 **Limitations.** This is a curated sample of 35 threads chosen by keywords from search results, not all of Reddit and not random: it over-represents people who write about stopping or failing SIPs. It was collected through a third-party scraper, so what it returns depends on that scraper's search and on Reddit's search ranking. Reddit skews towards experienced investors. First-time status is only inferable. Usernames were never stored (Entry 14).
+
+---
+
+## Entry 16: Reddit selection-bias switch, a first-time-investor finding to test, and explorer defaults (2026-10-25)
+
+Snapshot: 856 tagged, 730 relevant posts (Reddit 296, TradingQ&A 167, YouTube 148, Play Store 105, App Store 14).
+
+**Reddit selection bias, and a switch to check it.** The 35 Reddit threads were chosen because their titles mention stopping, failing or autopay, so Reddit inflates lapse and autopay counts. The Opportunity and Metric-tree pages now have a switch, "Exclude curated Reddit" (default: include; one shared switch, with a one-line note). Result for the headline question:
+- "Autopay / payment problem" **stays number 1 without Reddit**: 73 of 434 posts (16.8%) against 127 of 730 (17.4%) with it. Its share of posts barely changes; only the counts fall. Number 2 is also unchanged ("App: autopay / mandate set-up and changes", 18 posts without Reddit, 21 with). Lower ranks reshuffle a little (for example "expected faster growth" is 3rd with Reddit and 4th without). The after-stopping table is nearly unchanged (14/11/8 with, 12/10/8 without), because Reddit adds few money-out complaints.
+- The failure-versus-choice split by source does not need the switch, because the chart already shows each source separately (Reddit: 63 lapse stories, 68% failures, 29% own choice).
+
+**Finding to test in interviews: first-time investors lapse by their own choice far more often than they fail.** (Segments page, highlighted box.)
+
+| Group | Posts | Lapse stories | Failure, not their choice | Their own choice |
+|---|---|---|---|---|
+| Clearly first-time investors | 62 | 16 | 0% (0 of 16) | 94% (15 of 16) |
+| Everyone else | 668 | 154 | 60% (93) | 34% (53) |
+| First-time, without Reddit | 41 | 13 (under 15: low confidence) | 0% | 100% |
+| Everyone else, without Reddit | 393 | 94 | 53% | 39% |
+
+- Their top stated reasons (out of 62 posts): influenced by others 7, hard to use the app 6, expected faster growth 6, confusing numbers 6, autopay / payment problem 6 (about 10% each). Among everyone else the two most common are "hard to use the app" (20%) and "autopay / payment problem" (19%): first-time posts name app and payment problems about half as often.
+- The 62 posts come from Reddit 21, YouTube 18, TradingQ&A 15, Play Store 7, App Store 1.
+- **Strong caution.** First-time status is only detected when the person says so ("my first SIP"). People who say it are often deliberating ("should I stop?"), while people whose payment simply failed rarely mention being new. So the 0% versus 60% gap may come largely from who announces being a first-timer, not from how first-timers behave. 16 lapse stories is a small base. The "everyone else" group also contains first-timers.
+- **To test in interviews:** (1) among people who started their first SIP in the last 12 months and have stopped, ask who stopped on purpose and who found it had stopped (failed instalments, mandate expiry), and whether they noticed; (2) ask first-time investors what they would do if an instalment failed. If the real first-time split is nearer the "everyone else" row, the engine's first-time flag was a selection effect.
+
+**Human correction (second row in `data/manual/corrections.csv`).** While reading the quotes in the new box, one "first-time investor" quote was a pasted 2019 news article about first-time investors in general, not a person describing themselves. Its `investor_type` was corrected from first_time to unclear (reason recorded in the file and shown on the Validation page). It had counted as a first-time lapse story (n went from 63 to 62, lapse stories from 17 to 16).
+
+**Evidence explorer defaults.** It now opens on 2021 onward (clear the year filter for older posts) and is sorted by severity, highest first, then newest year first.

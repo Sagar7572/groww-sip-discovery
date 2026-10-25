@@ -577,6 +577,8 @@ def main() -> None:
     themes = find_themes(posts, embed_for_themes(posts))
     needs = unmet_needs(posts)
     opp = opportunities(posts, label_info)
+    # the Reddit threads were picked for stop / failure / autopay words, so the dashboard can also show the ranking without them
+    opp["without_reddit"] = opportunities([p for p in posts if p["source"] != "reddit"], label_info)
     over = overview(posts, records, by_tagger)
     val = validation(by_tagger)
     val["human_corrections"] = human

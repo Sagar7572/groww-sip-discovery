@@ -141,6 +141,16 @@
    ],
    "reason": "Human review: the review complains that the app showed an 11% gain that became an 11% loss at redemption. That is a display / trust problem, not the market falling. The AI had added 'market_fall' because the post contains the word 'loss'.",
    "post": "FUNDS NOT SAFE..CHECK YOUR FUNDS AND ORDER EVERYDAY..LOOSE LOT OF MONEY N NO HELP BUT GROWW BLAME US. WRONG INFO. GIVEN. BIG CHEAT. Even Mutual Funds, price shows 11% increase and when you Redeem, it shows 11% loss. Check price of LIC MF GO"
+  },
+  {
+   "id": "tradingqna_e45f14885793",
+   "source": "tradingqna",
+   "url": "https://tradingqna.com/t/has-the-recent-market-volatility-spooked-you-heres-why-you-should-stick-around/53063/1",
+   "field": "investor_type",
+   "original": "first_time",
+   "corrected": "unclear",
+   "reason": "Human review: the post pastes a news article about first-time investors in general (Moneycontrol, 2019); the writer does not say they are a first-time investor. Found while reading the quotes in the first-time-investor box on the Segments page.",
+   "post": "The last one year has been nothing short of a roller-coaster ride in the markets. Here’s how they have fared image 1274×593 70.9 KB Plenty of first-time investors who started in the last couple of years might very well have stopped investin"
   }
  ]
 }

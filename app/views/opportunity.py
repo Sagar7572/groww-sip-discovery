@@ -58,12 +58,18 @@ def quote_expanders(areas: list[dict]) -> None:
 
 def render(over: dict, posts: pd.DataFrame) -> None:
     opp, themes = C.load_json("opportunities"), C.load_json("themes")
+    title_slot = st.container()
+    excl = C.reddit_toggle()
+    if excl:
+        opp = opp.get("without_reddit", opp)
     causes, after = opp.get("causes", []), opp.get("after_stop", [])
     if not causes:
         st.info("Not enough relevant tagged posts yet to rank opportunities.")
         return
     top = causes[0]
-    st.title(f"Among causes, “{name_of(top)}” ranks first: {top['n']:,} posts ({100 * top['share_of_tagged']:.0f}% of {opp['n_tagged']:,} relevant tagged posts), "
+    if excl:
+        st.info(f"Showing the ranking **without Reddit**: {opp['n_tagged']:,} relevant tagged posts. The themes at the bottom of the page still use all posts.")
+    title_slot.title(f"Among causes, “{name_of(top)}” ranks first: {top['n']:,} posts ({100 * top['share_of_tagged']:.0f}% of {opp['n_tagged']:,} relevant tagged posts), "
              f"and it is {FIX[top['solvable']]}")
     st.write("Each problem area is scored as **number of posts × average severity × how directly it moves the 12-month metric × "
              "whether the product can fix it without giving fund advice or using fear, FOMO or urgency**. "

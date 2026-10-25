@@ -53,6 +53,40 @@ def show_group(df: pd.DataFrame, title: str, by: str, labels: dict | None = None
                        "Groups with no lapse story are not shown.")
 
 
+def lapse_split(df: pd.DataFrame) -> dict:
+    l = df[df.lapse_story]
+    n = len(l)
+    inv_only, vol_only = int((l.involuntary & ~l.voluntary).sum()), int((l.voluntary & ~l.involuntary).sum())
+    return {"posts": len(df), "lapse": n, "fail": inv_only, "choice": vol_only, "other": n - inv_only - vol_only}
+
+
+def first_time_box(posts: pd.DataFrame) -> None:
+    """Highlighted finding: how first-time investors (the brief's target group) differ from everyone else."""
+    ft, rest = posts[posts.first_time], posts[~posts.first_time]
+    a, b = lapse_split(ft), lapse_split(rest)
+    with st.container(border=True):
+        st.markdown(f"<div style='border-left:6px solid {C.ORANGE};padding-left:12px;font-size:1.15rem'><b>Finding to test in interviews: "
+                    f"first-time investors</b></div>", unsafe_allow_html=True)
+        low = " **Low confidence: under 15 lapse stories.**" if a["lapse"] < MIN_GROUP else ""
+        st.markdown(f"**n = {a['posts']} posts** from people who say they are first-time investors ({C.pct(a['posts'], len(posts))} of {len(posts):,} relevant tagged posts); "
+                    f"**{a['lapse']} are lapse stories.**{low}")
+        c1, c2 = st.columns(2)
+        c1.metric("First-time: failures, not their choice", C.pct(a["fail"], a["lapse"]), help=f"{a['fail']} of {a['lapse']} lapse stories")
+        c1.metric("First-time: their own choice", C.pct(a["choice"], a["lapse"]), help=f"{a['choice']} of {a['lapse']} lapse stories")
+        c2.metric("Everyone else: failures", C.pct(b["fail"], b["lapse"]), help=f"{b['fail']} of {b['lapse']} lapse stories ({b['posts']:,} posts)")
+        c2.metric("Everyone else: own choice", C.pct(b["choice"], b["lapse"]), help=f"{b['choice']} of {b['lapse']} lapse stories")
+        st.markdown("**Their top 5 stated reasons** (posts out of " + f"{a['posts']}):")
+        top = C.explode_counts(ft, "triggers", drop=("none", "other")).head(5)
+        if len(top):
+            st.altair_chart(C.hbar(top[["label", "n"]], total=a["posts"], color=C.ORANGE, title="First-time posts mentioning this"), width="stretch")
+        mix = ft.source.value_counts()
+        st.caption("Where these posts come from: " + ", ".join(f"{C.SOURCE_NAMES.get(s, s)} {k}" for s, k in mix.items()) + ".")
+        st.markdown("**In their words:**")
+        C.show_quotes(ft[ft.lapse_story] if ft.lapse_story.sum() >= 3 else ft, 3)
+        st.warning("**Caution:** first-time status is only detected when a person says so (for example \"my first SIP\"). Many first-time investors never say it, "
+                   "and those who do may differ from those who don't, so the \"everyone else\" group also contains first-timers. Treat this as a question to test, not a result.")
+
+
 def render(over: dict, posts: pd.DataFrame) -> None:
     n = len(posts)
     irr = posts[posts.irregular_income]
@@ -70,6 +104,7 @@ def render(over: dict, posts: pd.DataFrame) -> None:
                 else "enough to look at on the Evidence explorer (page 6)."))
     st.caption("A group needs at least 15 lapse stories (posts where a SIP stopped, is at risk, or a payment failed) to be read with confidence; smaller groups are marked low confidence.")
 
+    first_time_box(posts)
     show_group(posts, "First-time investors against others", "investor_type", order=["First-time investor", "Experienced investor", "Not stated"])
     show_group(posts, "Source by source", "source", labels=C.SOURCE_NAMES)
     show_group(posts, "Journey stage", "stage", order=[C.nice(s) for s in C.STAGE_ORDER])

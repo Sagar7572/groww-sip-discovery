@@ -19,7 +19,8 @@ def render(over: dict, posts: pd.DataFrame) -> None:
 
     c1, c2, c3, c4 = st.columns(4)
     source = c1.multiselect("Source", opts("source"), format_func=lambda x: C.SOURCE_NAMES.get(x, x))
-    year = c2.multiselect("Year", sorted(posts.year.dropna().astype(int).unique(), reverse=True))
+    years = sorted(posts.year.dropna().astype(int).unique(), reverse=True)
+    year = c2.multiselect("Year (default: 2021 onward; clear it to see older posts)", years, default=[y for y in years if y >= 2021])
     stage = c3.multiselect("Journey stage", [s for s in C.STAGE_ORDER if s in set(posts.stage)], format_func=C.nice)
     action = c4.multiselect("What happened to the SIP", opts("action"), format_func=C.nice_action)
     c5, c6, c7, c8 = st.columns(4)
@@ -39,7 +40,8 @@ def render(over: dict, posts: pd.DataFrame) -> None:
     if search:
         df = df[df.text.str.contains(search, case=False, regex=False)]
 
-    st.write(f"**{len(df):,} posts match.**" + (" Showing the first 500." if len(df) > 500 else ""))
+    df = df.sort_values(["severity", "year"], ascending=[False, False], kind="stable")        # most severe first, then newest
+    st.write(f"**{len(df):,} posts match**, most severe first, then newest." + (" Showing the first 500." if len(df) > 500 else ""))
     show = df.head(500)
     table = pd.DataFrame({
         "Source": show.source.map(lambda s: C.SOURCE_NAMES.get(s, s)), "Year": show.year, "Post": show.text.str.slice(0, 280),
