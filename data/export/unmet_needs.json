@@ -2,84 +2,84 @@
  "themes": [
   {
    "theme": "Investment guidance and reassurance",
-   "n": 27,
-   "share_of_needs": 0.206,
-   "example_need": "Clarification on SIP strategy during market highs",
+   "n": 62,
+   "share_of_needs": 0.265,
+   "example_need": "Clarity on post-SIP investment management",
    "quotes": [
     {
-     "id": "play_store_941330607ac2",
-     "quote": "There should be a review section for mutual funds with categories like 'In-form', 'On-track', and 'Out-of-form'",
-     "source": "play_store",
-     "url": null
+     "id": "reddit_7334aa307c55",
+     "quote": "My XIRR is negative. Can anyone suggest what needs to be done any funds to be added or deleted from?",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1x4mtow/xirr_is_6/"
     }
    ],
-   "avg_severity": 1.52
-  },
-  {
-   "theme": "Faster, clearer redemptions",
-   "n": 23,
-   "share_of_needs": 0.176,
-   "example_need": "need timely credit of redeemed funds",
-   "quotes": [
-    {
-     "id": "play_store_3505c85fe391",
-     "quote": "there is no redemption option against the MF... not user friendly to use this app",
-     "source": "play_store",
-     "url": null
-    }
-   ],
-   "avg_severity": 2.09
-  },
-  {
-   "theme": "Reliable autopay and mandates",
-   "n": 22,
-   "share_of_needs": 0.168,
-   "example_need": "need autopay for quantity‑based SIP",
-   "quotes": [
-    {
-     "id": "tradingqna_a0863ed26207",
-     "quote": "sad to see that Autopay Isn’t available for quantity based SIP, Still have to manage with bank mandates and those charges of insufficient balance😭",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/introducing-updated-stock-sip-experience-on-kite-web/195837/9"
-    }
-   ],
-   "avg_severity": 1.5
+   "avg_severity": 1.39
   },
   {
    "theme": "Flexible SIP management controls",
-   "n": 20,
-   "share_of_needs": 0.153,
-   "example_need": "Ability to pause SIP without cancelling it",
+   "n": 37,
+   "share_of_needs": 0.158,
+   "example_need": "need clear information on next SIP date",
    "quotes": [
     {
-     "id": "play_store_9336bd1fa593",
-     "quote": "skills switch option nahi hai isme only pause option hai isme sudarna karni chahiye",
-     "source": "play_store",
-     "url": null
+     "id": "tradingqna_887459d58c62",
+     "quote": "All SIPs shud be auto paid to amcs via mandate and bse star Also most important make pause and modify feature available in AMC SIPs",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/bse-to-launch-e-mandate-facility-on-mutual-fund-platform/34955/5"
     }
    ],
-   "avg_severity": 1.3
+   "avg_severity": 1.57
+  },
+  {
+   "theme": "Reliable autopay and mandates",
+   "n": 35,
+   "share_of_needs": 0.15,
+   "example_need": "Explanation of mandate date fields",
+   "quotes": [
+    {
+     "id": "reddit_e03e463419ec",
+     "quote": "Cancel the mandate as Edelweiss has reached overseas investment limit.",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1wsf1qx/edelweiss_international_fund_sip_stopped/pcl11yx/"
+    }
+   ],
+   "avg_severity": 1.51
+  },
+  {
+   "theme": "Faster, clearer redemptions",
+   "n": 32,
+   "share_of_needs": 0.137,
+   "example_need": "needs guidance on redemption process",
+   "quotes": [
+    {
+     "id": "reddit_9fdc9cd162a4",
+     "quote": "So stopped sip to build emergency fund. And get myself a few kinda expensive items. Also planning a deposit for a flat in bangalore",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1xd3gs4/firsttimers_who_paused_or_stopped_a_sip_what/19riu1yyk6f1d/"
+    }
+   ],
+   "avg_severity": 2.0
   },
   {
    "theme": "Accurate data and app reliability",
-   "n": 17,
-   "share_of_needs": 0.13,
-   "example_need": "need reliable fund options after failure",
+   "n": 26,
+   "share_of_needs": 0.111,
+   "example_need": "need accurate redemption amount display",
    "quotes": [
     {
-     "id": "play_store_ff86f17c9e7e",
-     "quote": "App takes more Time in Showing Daily Gain/Loss of Mutual Funds.",
+     "id": "play_store_b87cac51412c",
+     "quote": "Not able to download mutual funds capital gains downloads. it's showing 'Downloading report but it's not downloading",
      "source": "play_store",
      "url": null
     }
    ],
-   "avg_severity": 1.82
+   "avg_severity": 1.81
   },
   {
    "theme": "Clear fees and refund policies",
-   "n": 14,
-   "share_of_needs": 0.107,
-   "example_need": "Clarity on penalty charges and pause mechanics",
+   "n": 23,
+   "share_of_needs": 0.098,
+   "example_need": "Transparency on bank charges for failed SIPs",
    "quotes": [
     {
      "id": "play_store_e24002834a10",
@@ -88,24 +88,24 @@
      "url": null
     }
    ],
-   "avg_severity": 1.86
+   "avg_severity": 1.78
   },
   {
    "theme": "Something else",
-   "n": 8,
-   "share_of_needs": 0.061,
-   "example_need": "Clarification on tax liability for fund transfer",
+   "n": 19,
+   "share_of_needs": 0.081,
+   "example_need": "Consolidated family portfolio view",
    "quotes": [
     {
-     "id": "tradingqna_82543297230e",
-     "quote": "please also include this - for tax loss harvesting in the console, consider the mutual fund portfolio",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/10-reasons-why-i-havent-yet-considered-zerodha-coin-for-mutual-fund-investments/59511/8"
+     "id": "play_store_e5f29cc067aa",
+     "quote": "Mutual fund screener option not good, foreign investment required",
+     "source": "play_store",
+     "url": null
     }
    ],
-   "avg_severity": 1.38
+   "avg_severity": 1.32
   }
  ],
- "posts_with_need": 131,
- "grouped": 131
+ "posts_with_need": 234,
+ "grouped": 234
 }

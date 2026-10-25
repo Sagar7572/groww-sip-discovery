@@ -1,240 +1,184 @@
 {
  "clusters": [
   {
-   "cluster": 5,
-   "label": "stop, cancel, sips, month, money",
-   "size": 56,
-   "share": 0.159,
-   "with_named_trigger": 0.589,
-   "avg_severity": 1.45,
-   "example_ids": [
-    "youtube_48dde4514569",
-    "youtube_ea59950266fa",
-    "tradingqna_94a3c8daa33f"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     13
-    ],
-    [
-     "mandate_payment_issue",
-     12
-    ],
-    [
-     "social_influence",
-     5
-    ]
-   ],
-   "name": "Stopping or cancelling SIPs"
-  },
-  {
    "cluster": 2,
-   "label": "coin, sips, amc, account, allows",
-   "size": 44,
-   "share": 0.125,
-   "with_named_trigger": 0.727,
-   "avg_severity": 1.39,
+   "label": "equity, investing, term, investors, portfolio",
+   "size": 99,
+   "share": 0.136,
+   "with_named_trigger": 0.333,
+   "avg_severity": 1.15,
    "example_ids": [
-    "tradingqna_d56985e27ca1",
-    "tradingqna_a87c26140dcb",
-    "tradingqna_a0863ed26207"
+    "tradingqna_8c5e60f65029",
+    "reddit_b5904a04108a",
+    "reddit_97f7d0517d3a"
    ],
    "top_triggers": [
     [
      "app_experience",
-     16
-    ],
-    [
-     "mandate_payment_issue",
-     13
+     9
     ],
     [
      "social_influence",
-     3
-    ]
-   ],
-   "name": "Autopay features for SIPs"
-  },
-  {
-   "cluster": 1,
-   "label": "band, mandate, dikhata, ennu, open ended",
-   "size": 40,
-   "share": 0.114,
-   "with_named_trigger": 0.45,
-   "avg_severity": 1.32,
-   "example_ids": [
-    "youtube_d17fc3dc7067",
-    "youtube_7dca35cde09f",
-    "play_store_4d3cabf0a420"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     7
-    ],
-    [
-     "mandate_payment_issue",
-     3
-    ],
-    [
-     "goal_change",
-     3
-    ]
-   ],
-   "name": "Managing SIP mandates and autopay"
-  },
-  {
-   "cluster": 4,
-   "label": "autopay, mandate, auto, auto pay, bank",
-   "size": 39,
-   "share": 0.111,
-   "with_named_trigger": 0.59,
-   "avg_severity": 1.26,
-   "example_ids": [
-    "tradingqna_fdca95ebb8e1",
-    "youtube_87c85b22edaf",
-    "tradingqna_d94175934965"
-   ],
-   "top_triggers": [
-    [
-     "mandate_payment_issue",
-     15
-    ],
-    [
-     "app_experience",
-     10
-    ],
-    [
-     "confusing_numbers",
-     2
-    ]
-   ],
-   "name": "Bank mandate setup issues"
-  },
-  {
-   "cluster": 7,
-   "label": "redemption, smallcases, year, cap, credited",
-   "size": 36,
-   "share": 0.102,
-   "with_named_trigger": 0.639,
-   "avg_severity": 1.61,
-   "example_ids": [
-    "play_store_ec1a5a1c3991",
-    "play_store_4ed20b8b1fc2",
-    "play_store_b6a1080441ac"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     11
-    ],
-    [
-     "trust_concern",
-     6
-    ],
-    [
-     "market_fall",
-     4
-    ]
-   ],
-   "name": "Redemption delays and blocked funds"
-  },
-  {
-   "cluster": 3,
-   "label": "equity, direct, plan, tax, years",
-   "size": 30,
-   "share": 0.085,
-   "with_named_trigger": 0.367,
-   "avg_severity": 1.17,
-   "example_ids": [
-    "tradingqna_7ab6240b553c",
-    "tradingqna_8c5e60f65029",
-    "tradingqna_d3bd0cff66ce"
-   ],
-   "top_triggers": [
-    [
-     "tax_or_lockin",
-     4
-    ],
-    [
-     "goal_change",
-     2
-    ],
-    [
-     "app_experience",
-     2
-    ]
-   ],
-   "name": "Direct plans and tax advice"
-  },
-  {
-   "cluster": 8,
-   "label": "market, portfolio, loss, diversified, diversified portfolio",
-   "size": 29,
-   "share": 0.082,
-   "with_named_trigger": 0.414,
-   "avg_severity": 1.38,
-   "example_ids": [
-    "tradingqna_cfd4ef548caa",
-    "tradingqna_8115de6c7a42",
-    "tradingqna_5d5b89b0efa9"
-   ],
-   "top_triggers": [
-    [
-     "market_fall",
      8
     ],
     [
-     "expectation_mismatch",
-     5
-    ],
-    [
      "underwhelming_returns",
-     4
+     5
     ]
    ],
-   "name": "Portfolio losses and market dips"
+   "name": "Long-term equity investment planning"
   },
   {
-   "cluster": 9,
-   "label": "redemption, colour, redeem, goes, loss",
-   "size": 29,
-   "share": 0.082,
-   "with_named_trigger": 0.724,
-   "avg_severity": 1.83,
+   "cluster": 0,
+   "label": "account, redemption, kuvera, ve, redeem",
+   "size": 90,
+   "share": 0.123,
+   "with_named_trigger": 0.622,
+   "avg_severity": 1.62,
    "example_ids": [
-    "play_store_8db945386f04",
-    "play_store_8b8cc2b4ca7d",
-    "play_store_e184623e329a"
+    "reddit_09e7c52145cf",
+    "reddit_ef2b96538c2d",
+    "reddit_4d700274b4d2"
    ],
    "top_triggers": [
     [
      "app_experience",
-     11
+     25
     ],
     [
      "mandate_payment_issue",
-     6
+     19
     ],
     [
      "trust_concern",
+     9
+    ]
+   ],
+   "name": "Redemption failures and fees"
+  },
+  {
+   "cluster": 4,
+   "label": "market, returns, years, inflation, time",
+   "size": 89,
+   "share": 0.122,
+   "with_named_trigger": 0.438,
+   "avg_severity": 1.21,
+   "example_ids": [
+    "tradingqna_cfd4ef548caa",
+    "reddit_6fbd102ac3a2",
+    "reddit_7bc8bd15a336"
+   ],
+   "top_triggers": [
+    [
+     "expectation_mismatch",
+     13
+    ],
+    [
+     "market_fall",
+     11
+    ],
+    [
+     "underwhelming_returns",
+     9
+    ]
+   ],
+   "name": "Expectations vs market returns"
+  },
+  {
+   "cluster": 7,
+   "label": "sips, cancel, stop, month, payment",
+   "size": 88,
+   "share": 0.121,
+   "with_named_trigger": 0.557,
+   "avg_severity": 1.43,
+   "example_ids": [
+    "youtube_48dde4514569",
+    "tradingqna_94a3c8daa33f",
+    "youtube_ea59950266fa"
+   ],
+   "top_triggers": [
+    [
+     "mandate_payment_issue",
+     23
+    ],
+    [
+     "app_experience",
+     17
+    ],
+    [
+     "cash_flow_strain",
+     8
+    ]
+   ],
+   "name": "How to stop or cancel SIP"
+  },
+  {
+   "cluster": 5,
+   "label": "regular, years, market, investing, direct",
+   "size": 83,
+   "share": 0.114,
+   "with_named_trigger": 0.566,
+   "avg_severity": 1.28,
+   "example_ids": [
+    "reddit_7334aa307c55",
+    "reddit_ea0523dd91bc",
+    "tradingqna_81ad3893c112"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     15
+    ],
+    [
+     "social_influence",
+     12
+    ],
+    [
+     "mandate_payment_issue",
+     10
+    ]
+   ],
+   "name": "SIP strategy and plan type discussion"
+  },
+  {
+   "cluster": 3,
+   "label": "coin, sips, mandate, bank, amc",
+   "size": 81,
+   "share": 0.111,
+   "with_named_trigger": 0.765,
+   "avg_severity": 1.48,
+   "example_ids": [
+    "tradingqna_1cd4637e4e03",
+    "tradingqna_eaf8136a432c",
+    "reddit_65208f2d5158"
+   ],
+   "top_triggers": [
+    [
+     "mandate_payment_issue",
+     38
+    ],
+    [
+     "app_experience",
+     33
+    ],
+    [
+     "cash_flow_strain",
      5
     ]
    ],
-   "name": "Redemption delays and value drops"
+   "name": "SIP scheduling and cancellation queries"
   },
   {
-   "cluster": 0,
-   "label": "bank, account, zerodha, coin, mandate",
-   "size": 28,
-   "share": 0.08,
-   "with_named_trigger": 0.643,
-   "avg_severity": 1.36,
+   "cluster": 8,
+   "label": "autopay, mandate, video, city, gift city",
+   "size": 60,
+   "share": 0.082,
+   "with_named_trigger": 0.333,
+   "avg_severity": 1.12,
    "example_ids": [
-    "tradingqna_eaf8136a432c",
-    "tradingqna_97df4b037865",
-    "tradingqna_bb2abe52014d"
+    "youtube_e3576b242d5c",
+    "youtube_6da954186106",
+    "youtube_5867e8d98391"
    ],
    "top_triggers": [
     [
@@ -243,42 +187,98 @@
     ],
     [
      "app_experience",
-     3
+     6
     ],
     [
-     "cash_flow_strain",
+     "confusing_numbers",
      3
     ]
    ],
-   "name": "Setting up SIPs on Coin"
+   "name": "Autopay and mandate basics"
   },
   {
-   "cluster": 6,
-   "label": "interface, stocks, ucits, children, trading",
-   "size": 21,
-   "share": 0.06,
-   "with_named_trigger": 0.238,
-   "avg_severity": 1.14,
+   "cluster": 1,
+   "label": "autopay, mandate, pay, auto pay, auto",
+   "size": 59,
+   "share": 0.081,
+   "with_named_trigger": 0.661,
+   "avg_severity": 1.27,
    "example_ids": [
-    "play_store_1dd6d633a413",
-    "play_store_ed5b6772286e",
-    "app_store_51f38d566627"
+    "tradingqna_fdca95ebb8e1",
+    "tradingqna_d94175934965",
+    "tradingqna_577bd77e81b4"
+   ],
+   "top_triggers": [
+    [
+     "mandate_payment_issue",
+     24
+    ],
+    [
+     "app_experience",
+     16
+    ],
+    [
+     "confusing_numbers",
+     4
+    ]
+   ],
+   "name": "Mandate and autopay errors"
+  },
+  {
+   "cluster": 9,
+   "label": "band, chalu, karenge, mandate, bank",
+   "size": 47,
+   "share": 0.064,
+   "with_named_trigger": 0.447,
+   "avg_severity": 1.32,
+   "example_ids": [
+    "youtube_d17fc3dc7067",
+    "youtube_c674176083b9",
+    "youtube_7dca35cde09f"
    ],
    "top_triggers": [
     [
      "app_experience",
+     8
+    ],
+    [
+     "mandate_payment_issue",
+     5
+    ],
+    [
+     "goal_change",
      4
+    ]
+   ],
+   "name": "Managing autopay and SIP duration"
+  },
+  {
+   "cluster": 6,
+   "label": "interface, easy, stocks, using, colour",
+   "size": 34,
+   "share": 0.047,
+   "with_named_trigger": 0.176,
+   "avg_severity": 1.06,
+   "example_ids": [
+    "play_store_ed5b6772286e",
+    "play_store_43da1dc08c24",
+    "play_store_5896e04da5c8"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     6
+    ],
+    [
+     "mandate_payment_issue",
+     1
     ],
     [
      "trust_concern",
      1
-    ],
-    [
-     "underwhelming_returns",
-     1
     ]
    ],
-   "name": "App interface and usability"
+   "name": "App usability praise"
   }
  ],
  "k": 10,
