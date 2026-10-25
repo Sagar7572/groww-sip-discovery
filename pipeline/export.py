@@ -165,28 +165,35 @@ def build_posts(records: list[dict], by_tagger: dict) -> list[dict]:
     return out
 
 
-def apply_corrections(posts: list[dict]) -> list[dict]:
+def apply_corrections(posts: list[dict]) -> tuple[list[dict], list[dict]]:
     """Apply the human corrections in data/manual/corrections.csv (columns: id, field, corrected_value, reason).
-    Each applied correction keeps the original value, so it can be shown and audited. Returns the log."""
+    Each applied correction keeps the original value, so it can be shown and audited. 'is_relevant' = no removes the post from
+    every count. Returns (posts, log)."""
     import csv
     if not CORRECTIONS_FILE.exists():
-        return []
+        return posts, []
     byid = {p["id"]: p for p in posts}
-    log = []
+    log, drop = [], set()
     with open(CORRECTIONS_FILE, newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             p, field = byid.get((row.get("id") or "").strip()), (row.get("field") or "").strip()
-            if p is None or field not in p:
+            raw = (row.get("corrected_value") or "").strip()
+            if p is None or (field not in p and field != "is_relevant"):
                 print(f"  correction skipped (post not in the relevant tagged posts, or unknown field): {row.get('id')} {field}")
                 continue
-            raw = (row.get("corrected_value") or "").strip()
+            if field == "is_relevant":
+                if raw.lower() in ("no", "false", "n", "0"):
+                    drop.add(p["id"])
+                    log.append({"id": p["id"], "source": p["source"], "url": p.get("url"), "field": "is_relevant", "original": "relevant",
+                                "corrected": "not relevant", "reason": (row.get("reason") or "").strip(), "post": p["text"][:240]})
+                continue
             old = p[field]
             new = [x.strip() for x in raw.split("|") if x.strip()] if field in LIST_FIELDS else (int(raw) if isinstance(old, int) else raw)
             p[field] = new
             p.setdefault("human_corrected", []).append(field)
             log.append({"id": p["id"], "source": p["source"], "url": p.get("url"), "field": field, "original": old, "corrected": new,
                         "reason": (row.get("reason") or "").strip(), "post": p["text"][:240]})
-    return log
+    return [p for p in posts if p["id"] not in drop], log
 
 
 # ---------------------------------------------------------------------------
@@ -571,7 +578,7 @@ def main() -> None:
             p["triggers_removed"] = sorted(set(p["triggers_removed"]) | {"market_fall"})
     print(f"  problem areas: {label_info['labelled']} of {label_info['candidates']} candidate posts labelled "
           f"({label_info['new_this_run']} new, {label_info['failed_this_run']} not labelled this run)")
-    human = apply_corrections(posts)
+    posts, human = apply_corrections(posts)
     print(f"  human corrections applied: {len(human)}")
     emb = embed_posts(posts)
     themes = find_themes(posts, embed_for_themes(posts))

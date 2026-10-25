@@ -155,6 +155,20 @@ it could pass the limit. Your own thread URLs can go in `data/manual/reddit_thre
 Usernames are never saved: author fields are dropped and usernames inside text and links are masked before anything is written.
 If a run finishes on Apify but the script stopped, `--recover <run id> <label>` takes it over without paying again.
 
+### Proofreading workbook (read every post and AI tag in a spreadsheet, and correct them)
+
+```
+python -m pipeline.review_export     # builds data/review/review_workbook.xlsx (local only, git-ignored)
+python -m pipeline.import_review     # after you edit and save it: copies your corrections into data/manual/corrections.csv
+python -m pipeline.export            # applies them and lists them on the Validation page as human corrections
+```
+
+Tabs: **Summary** (counts per source and instructions), **All tagged posts** (one row per post: the post, its context, every AI tag in plain English,
+the evidence quote and whether it was verified, then four orange REVIEW columns), **Not yet tagged**, **Dropped** (with the reason), **Allowed values**.
+To correct a row: set `REVIEW: correct? (Y/N)` to N, pick the field, pick or type the right value, add a note (it becomes the reason). Rows marked Y or
+left empty are ignored. The import reports every row it skipped and why. "Relevant = No" removes the post from all counts. Posts you corrected before
+are pre-filled in the workbook. Rebuild the workbook any time; it never overwrites your corrections file.
+
 ### Staff replies and human corrections
 
 - TradingQ&A replies written by the platform's own staff are excluded from every count. If you collect TradingQ&A again, run

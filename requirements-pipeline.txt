@@ -13,3 +13,4 @@ rapidfuzz>=3.6      # near-duplicate removal in pipeline/clean.py
 scikit-learn>=1.4   # theme clustering in pipeline/export.py
 fastembed>=0.4      # free local embeddings
 streamlit>=1.40     # to run the dashboard locally
+openpyxl>=3.1      # proofreading workbook (pipeline/review_export.py)

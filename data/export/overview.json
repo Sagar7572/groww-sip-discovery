@@ -1,6 +1,6 @@
 {
  "as_of": "2026-10-25",
- "exported_at": "2026-10-25T08:16+00:00",
+ "exported_at": "2026-10-25T09:12+00:00",
  "sources": {
   "play_store": {
    "raw_pulled": 32786,
@@ -66,8 +66,8 @@
    "raw_pulled": 5837,
    "raw_kept_by_keywords": 5837,
    "clean": 3806,
-   "filter_labelled": 1039,
-   "filter_kept": 562,
+   "filter_labelled": 1114,
+   "filter_kept": 600,
    "tagged": 170,
    "relevant": 148,
    "first_date": "2019-01-30",
@@ -107,9 +107,9 @@
  "funnel": {
   "raw_pulled": 40922,
   "clean": 5909,
-  "filter_labelled": 2698,
-  "filter_kept": 1687,
-  "in_tagging_queue": 1639,
+  "filter_labelled": 2773,
+  "filter_kept": 1725,
+  "in_tagging_queue": 1653,
   "tag_attempted": 865,
   "tagged_ok": 856,
   "relevant_tagged": 730,
@@ -154,7 +154,7 @@
   }
  ],
  "relevance_progress": {
-  "labelled": 2698,
+  "labelled": 2773,
   "of": 5909
  }
 }
