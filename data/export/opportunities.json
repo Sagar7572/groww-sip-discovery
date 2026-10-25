@@ -4,24 +4,25 @@
    "key": "mandate_payment_issue",
    "kind": "reason",
    "label": null,
-   "n": 54,
-   "share_of_tagged": 0.1593,
-   "avg_severity": 1.74,
+   "n": 60,
+   "share_of_tagged": 0.1705,
+   "avg_severity": 1.73,
    "branch": "B",
    "branch_name": "B. Involuntary lapse",
    "branch_weight": 1.0,
    "solvable": "yes",
    "solvable_why": "Reliable debits, clear failure messages and easy fixes need no advice and no pressure.",
    "solvable_weight": 1.0,
-   "score": 94.0,
-   "score_equal_weights": 94.0,
+   "score": 104.0,
+   "score_equal_weights": 104.0,
    "low_confidence": false,
-   "lapse_story_share": 0.593,
+   "lapse_story_share": 0.617,
    "sources": {
     "youtube": 12,
     "app_store": 3,
     "play_store": 19,
-    "tradingqna": 20
+    "tradingqna": 20,
+    "reddit": 6
    },
    "quotes": [
     {
@@ -46,7 +47,7 @@
    "kind": "app_sub_theme",
    "label": "App: autopay / mandate set-up and changes",
    "n": 15,
-   "share_of_tagged": 0.0442,
+   "share_of_tagged": 0.0426,
    "avg_severity": 1.93,
    "branch": "B",
    "branch_name": "B. Involuntary lapse",
@@ -80,54 +81,96 @@
    ],
    "rank": 2,
    "rank_equal_weights": 2,
-   "score_index": 31
+   "score_index": 28
   },
   {
    "key": "expectation_mismatch",
    "kind": "reason",
    "label": null,
-   "n": 10,
-   "share_of_tagged": 0.0295,
-   "avg_severity": 2.0,
+   "n": 12,
+   "share_of_tagged": 0.0341,
+   "avg_severity": 2.08,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "yes",
    "solvable_why": "Setting honest expectations early is education, not advice.",
    "solvable_weight": 1.0,
-   "score": 14.0,
-   "score_equal_weights": 20.0,
+   "score": 17.5,
+   "score_equal_weights": 25.0,
    "low_confidence": true,
-   "lapse_story_share": 0.4,
+   "lapse_story_share": 0.5,
    "sources": {
     "play_store": 2,
     "youtube": 3,
+    "reddit": 2,
     "tradingqna": 5
    },
    "quotes": [
+    {
+     "id": "reddit_4a316d605c4e",
+     "quote": "returns I see is not convincing me anymore",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
+    },
     {
      "id": "youtube_67e713e09373",
      "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
      "source": "youtube",
      "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
-    },
-    {
-     "id": "tradingqna_dc77e1295362",
-     "quote": "Is this a dip and I continue my SIP? or do I pause for a bit due to uncertainty ?",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/continue-investing-in-international-funds/140780/1"
     }
    ],
    "rank": 3,
    "rank_equal_weights": 6,
-   "score_index": 15
+   "score_index": 17
+  },
+  {
+   "key": "sip_controls",
+   "kind": "app_sub_theme",
+   "label": "App: cannot pause, skip, edit or cancel a SIP easily",
+   "n": 12,
+   "share_of_tagged": 0.0341,
+   "avg_severity": 1.58,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "yes",
+   "solvable_why": "An easy pause, skip, edit and cancel is a design fix.",
+   "solvable_weight": 1.0,
+   "score": 13.3,
+   "score_equal_weights": 19.0,
+   "low_confidence": true,
+   "lapse_story_share": 0.5,
+   "sources": {
+    "tradingqna": 6,
+    "play_store": 3,
+    "reddit": 2,
+    "youtube": 1
+   },
+   "quotes": [
+    {
+     "id": "play_store_494d59e487b1",
+     "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
+     "source": "play_store",
+     "url": null
+    },
+    {
+     "id": "tradingqna_dfed39312b7c",
+     "quote": "to stop this we are keep going to deactivate the SIP weekly at least once",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/zerodha-equity-sip-order-should-have-an-option-to-automatic-stop-or-execute-on-holiday-or-off-day/109320/1"
+    }
+   ],
+   "rank": 4,
+   "rank_equal_weights": 8,
+   "score_index": 13
   },
   {
    "key": "app_bugs",
    "kind": "app_sub_theme",
    "label": "App: app updates, bugs and slowness",
    "n": 7,
-   "share_of_tagged": 0.0206,
+   "share_of_tagged": 0.0199,
    "avg_severity": 1.86,
    "branch": "A",
    "branch_name": "A. Getting going",
@@ -158,69 +201,30 @@
      "url": "https://tradingqna.com/t/how-to-convert-coin-sip-to-coin-amc-sip/43784/12"
     }
    ],
-   "rank": 4,
-   "rank_equal_weights": 10,
-   "score_index": 12
-  },
-  {
-   "key": "sip_controls",
-   "kind": "app_sub_theme",
-   "label": "App: cannot pause, skip, edit or cancel a SIP easily",
-   "n": 10,
-   "share_of_tagged": 0.0295,
-   "avg_severity": 1.6,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "yes",
-   "solvable_why": "An easy pause, skip, edit and cancel is a design fix.",
-   "solvable_weight": 1.0,
-   "score": 11.2,
-   "score_equal_weights": 16.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.4,
-   "sources": {
-    "tradingqna": 6,
-    "play_store": 3,
-    "youtube": 1
-   },
-   "quotes": [
-    {
-     "id": "play_store_494d59e487b1",
-     "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
-     "source": "play_store",
-     "url": null
-    },
-    {
-     "id": "tradingqna_dfed39312b7c",
-     "quote": "to stop this we are keep going to deactivate the SIP weekly at least once",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/zerodha-equity-sip-order-should-have-an-option-to-automatic-stop-or-execute-on-holiday-or-off-day/109320/1"
-    }
-   ],
    "rank": 5,
-   "rank_equal_weights": 7,
-   "score_index": 12
+   "rank_equal_weights": 12,
+   "score_index": 11
   },
   {
    "key": "confusing_numbers",
    "kind": "reason",
    "label": null,
-   "n": 13,
-   "share_of_tagged": 0.0383,
-   "avg_severity": 1.08,
+   "n": 14,
+   "share_of_tagged": 0.0398,
+   "avg_severity": 1.07,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "yes",
    "solvable_why": "Explaining NAV, units and XIRR in plain words is not investment advice.",
    "solvable_weight": 1.0,
-   "score": 9.8,
-   "score_equal_weights": 14.0,
+   "score": 10.5,
+   "score_equal_weights": 15.0,
    "low_confidence": true,
-   "lapse_story_share": 0.077,
+   "lapse_story_share": 0.071,
    "sources": {
     "tradingqna": 7,
+    "reddit": 1,
     "play_store": 1,
     "youtube": 5
    },
@@ -232,22 +236,103 @@
      "url": "https://tradingqna.com/t/sip-cancel-on-mf/190338/1"
     },
     {
-     "id": "youtube_37993ae860e3",
-     "quote": "Your upi mandate for 25000. Its meaning kya hai sir?",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=MExMf8_g4CE"
+     "id": "reddit_b93c6b6b64e7",
+     "quote": "I have around ₹40k saved from internships",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/personalfinanceindia/comments/1vzkkdu/how_should_i_manageinvest_40k_as_a_college/"
     }
    ],
    "rank": 6,
-   "rank_equal_weights": 8,
+   "rank_equal_weights": 9,
    "score_index": 10
+  },
+  {
+   "key": "underwhelming_returns",
+   "kind": "reason",
+   "label": null,
+   "n": 13,
+   "share_of_tagged": 0.0369,
+   "avg_severity": 2.08,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
+   "solvable_weight": 0.5,
+   "score": 9.45,
+   "score_equal_weights": 27.0,
+   "low_confidence": true,
+   "lapse_story_share": 0.462,
+   "sources": {
+    "play_store": 4,
+    "youtube": 5,
+    "reddit": 2,
+    "tradingqna": 2
+   },
+   "quotes": [
+    {
+     "id": "reddit_4a316d605c4e",
+     "quote": "returns I see is not convincing me anymore",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
+    },
+    {
+     "id": "youtube_67e713e09373",
+     "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
+    }
+   ],
+   "rank": 7,
+   "rank_equal_weights": 3,
+   "score_index": 9
+  },
+  {
+   "key": "market_fall",
+   "kind": "reason",
+   "label": null,
+   "n": 15,
+   "share_of_tagged": 0.0426,
+   "avg_severity": 1.8,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Calm, factual context; fear-based or urgency nudges are not allowed.",
+   "solvable_weight": 0.5,
+   "score": 9.45,
+   "score_equal_weights": 27.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.467,
+   "sources": {
+    "reddit": 2,
+    "youtube": 2,
+    "tradingqna": 11
+   },
+   "quotes": [
+    {
+     "id": "reddit_762eec5cc492",
+     "quote": "my XIRR is not even 1% which is downright depressing",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1wvtr68/scared_to_invest_anymore/"
+    },
+    {
+     "id": "tradingqna_6396d49ac02f",
+     "quote": "Shocked to learn that returns are negative by more than 30pc.",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/is-sip-really-a-good-investment-method/62033/16"
+    }
+   ],
+   "rank": 8,
+   "rank_equal_weights": 4,
+   "score_index": 9
   },
   {
    "key": "trust_concern",
    "kind": "reason",
    "label": null,
    "n": 13,
-   "share_of_tagged": 0.0383,
+   "share_of_tagged": 0.0369,
    "avg_severity": 2.0,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -278,110 +363,32 @@
      "url": null
     }
    ],
-   "rank": 7,
-   "rank_equal_weights": 3,
-   "score_index": 10
-  },
-  {
-   "key": "market_fall",
-   "kind": "reason",
-   "label": null,
-   "n": 13,
-   "share_of_tagged": 0.0383,
-   "avg_severity": 1.77,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Calm, factual context; fear-based or urgency nudges are not allowed.",
-   "solvable_weight": 0.5,
-   "score": 8.05,
-   "score_equal_weights": 23.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.385,
-   "sources": {
-    "youtube": 2,
-    "tradingqna": 11
-   },
-   "quotes": [
-    {
-     "id": "tradingqna_6396d49ac02f",
-     "quote": "Shocked to learn that returns are negative by more than 30pc.",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/is-sip-really-a-good-investment-method/62033/16"
-    },
-    {
-     "id": "youtube_a72838ea1580",
-     "quote": "pichhle 3 saal se negative me hi -3&-4 ke bich me rhata hi. Abhi tak 40,000 invest kar chuka hun",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=CPEatoLkXNI"
-    }
-   ],
-   "rank": 8,
-   "rank_equal_weights": 4,
-   "score_index": 9
-  },
-  {
-   "key": "underwhelming_returns",
-   "kind": "reason",
-   "label": null,
-   "n": 11,
-   "share_of_tagged": 0.0324,
-   "avg_severity": 2.0,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
-   "solvable_weight": 0.5,
-   "score": 7.7,
-   "score_equal_weights": 22.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.364,
-   "sources": {
-    "play_store": 4,
-    "youtube": 5,
-    "tradingqna": 2
-   },
-   "quotes": [
-    {
-     "id": "youtube_67e713e09373",
-     "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
-    },
-    {
-     "id": "tradingqna_6396d49ac02f",
-     "quote": "Shocked to learn that returns are negative by more than 30pc.",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/is-sip-really-a-good-investment-method/62033/16"
-    }
-   ],
    "rank": 9,
    "rank_equal_weights": 5,
-   "score_index": 8
+   "score_index": 9
   },
   {
    "key": "cash_flow_strain",
    "kind": "reason",
    "label": null,
-   "n": 7,
-   "share_of_tagged": 0.0206,
-   "avg_severity": 1.86,
+   "n": 11,
+   "share_of_tagged": 0.0312,
+   "avg_severity": 1.91,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "partly",
    "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
    "solvable_weight": 0.5,
-   "score": 4.55,
-   "score_equal_weights": 13.0,
+   "score": 7.35,
+   "score_equal_weights": 21.0,
    "low_confidence": true,
-   "lapse_story_share": 0.857,
+   "lapse_story_share": 0.909,
    "sources": {
     "play_store": 2,
     "youtube": 2,
-    "tradingqna": 3
+    "tradingqna": 3,
+    "reddit": 4
    },
    "quotes": [
     {
@@ -398,15 +405,134 @@
     }
    ],
    "rank": 10,
-   "rank_equal_weights": 11,
+   "rank_equal_weights": 7,
+   "score_index": 7
+  },
+  {
+   "key": "disengaged_forgot",
+   "kind": "reason",
+   "label": null,
+   "n": 6,
+   "share_of_tagged": 0.017,
+   "avg_severity": 1.33,
+   "branch": "D",
+   "branch_name": "D. Disengagement",
+   "branch_weight": 0.6,
+   "solvable": "yes",
+   "solvable_why": "Gentle, non-urgent progress summaries; no FOMO.",
+   "solvable_weight": 1.0,
+   "score": 4.8,
+   "score_equal_weights": 8.0,
+   "low_confidence": true,
+   "lapse_story_share": 0.5,
+   "sources": {
+    "play_store": 1,
+    "reddit": 5
+   },
+   "quotes": [
+    {
+     "id": "reddit_762eec5cc492",
+     "quote": "my XIRR is not even 1% which is downright depressing",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1wvtr68/scared_to_invest_anymore/"
+    },
+    {
+     "id": "play_store_af44f88da46f",
+     "quote": "if a SIP gets started by mistake then they are saying that either I can stop it immediately or I can reduce the amount",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "rank": 11,
+   "rank_equal_weights": 17,
    "score_index": 5
+  },
+  {
+   "key": "social_influence",
+   "kind": "reason",
+   "label": null,
+   "n": 12,
+   "share_of_tagged": 0.0341,
+   "avg_severity": 1.08,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Happens outside the app; only neutral, non-urgent information is allowed.",
+   "solvable_weight": 0.5,
+   "score": 4.55,
+   "score_equal_weights": 13.0,
+   "low_confidence": true,
+   "lapse_story_share": 0.0,
+   "sources": {
+    "reddit": 2,
+    "youtube": 6,
+    "tradingqna": 4
+   },
+   "quotes": [
+    {
+     "id": "tradingqna_fa6e90ae7f7c",
+     "quote": "Unless I have some evidence, I will not go for it. Rather, I’ll stay away from SIP",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/is-sip-really-a-good-investment-method/62033/8"
+    },
+    {
+     "id": "reddit_b93c6b6b64e7",
+     "quote": "I have around ₹40k saved from internships",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/personalfinanceindia/comments/1vzkkdu/how_should_i_manageinvest_40k_as_a_college/"
+    }
+   ],
+   "rank": 12,
+   "rank_equal_weights": 13,
+   "score_index": 4
+  },
+  {
+   "key": "tax_or_lockin",
+   "kind": "reason",
+   "label": null,
+   "n": 9,
+   "share_of_tagged": 0.0256,
+   "avg_severity": 1.44,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
+   "solvable_weight": 0.5,
+   "score": 4.55,
+   "score_equal_weights": 13.0,
+   "low_confidence": true,
+   "lapse_story_share": 0.444,
+   "sources": {
+    "tradingqna": 6,
+    "reddit": 2,
+    "youtube": 1
+   },
+   "quotes": [
+    {
+     "id": "reddit_29bd0401c212",
+     "quote": "one of my SIP transactions bounced and I was charged around ₹590",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/personalfinanceindia/comments/1u8g0xl/got_nach_charges_from_icici_due_to_funds_blocked/"
+    },
+    {
+     "id": "tradingqna_61319bb3aa28",
+     "quote": "I don’t want to give ltgc tax so to get exact 1 lac capital gain",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/mutual-fund-regular-to-direct/168641/1"
+    }
+   ],
+   "rank": 13,
+   "rank_equal_weights": 14,
+   "score_index": 4
   },
   {
    "key": "missing_feature",
    "kind": "app_sub_theme",
    "label": "App: a feature the person wants is missing",
    "n": 10,
-   "share_of_tagged": 0.0295,
+   "share_of_tagged": 0.0284,
    "avg_severity": 1.4,
    "branch": "D",
    "branch_name": "D. Disengagement",
@@ -436,47 +562,8 @@
      "url": "https://tradingqna.com/t/stock-sip-missing-upi-autopay/189232/1"
     }
    ],
-   "rank": 11,
-   "rank_equal_weights": 9,
-   "score_index": 4
-  },
-  {
-   "key": "social_influence",
-   "kind": "reason",
-   "label": null,
-   "n": 10,
-   "share_of_tagged": 0.0295,
-   "avg_severity": 1.1,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Happens outside the app; only neutral, non-urgent information is allowed.",
-   "solvable_weight": 0.5,
-   "score": 3.85,
-   "score_equal_weights": 11.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.0,
-   "sources": {
-    "youtube": 6,
-    "tradingqna": 4
-   },
-   "quotes": [
-    {
-     "id": "tradingqna_fa6e90ae7f7c",
-     "quote": "Unless I have some evidence, I will not go for it. Rather, I’ll stay away from SIP",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/is-sip-really-a-good-investment-method/62033/8"
-    },
-    {
-     "id": "youtube_4ef7a2182f39",
-     "quote": "He is leftist, negative about Bharat he already made money... Ignore him.. continue sip",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=3NeW1eAqI3I"
-    }
-   ],
-   "rank": 12,
-   "rank_equal_weights": 12,
+   "rank": 14,
+   "rank_equal_weights": 10,
    "score_index": 4
   },
   {
@@ -484,7 +571,7 @@
    "kind": "app_sub_theme",
    "label": "App: support is unreachable or unhelpful",
    "n": 4,
-   "share_of_tagged": 0.0118,
+   "share_of_tagged": 0.0114,
    "avg_severity": 2.5,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -513,47 +600,8 @@
      "url": null
     }
    ],
-   "rank": 13,
-   "rank_equal_weights": 13,
-   "score_index": 4
-  },
-  {
-   "key": "tax_or_lockin",
-   "kind": "reason",
-   "label": null,
-   "n": 7,
-   "share_of_tagged": 0.0206,
-   "avg_severity": 1.29,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
-   "solvable_weight": 0.5,
-   "score": 3.15,
-   "score_equal_weights": 9.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.286,
-   "sources": {
-    "tradingqna": 6,
-    "youtube": 1
-   },
-   "quotes": [
-    {
-     "id": "tradingqna_61319bb3aa28",
-     "quote": "I don’t want to give ltgc tax so to get exact 1 lac capital gain",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/mutual-fund-regular-to-direct/168641/1"
-    },
-    {
-     "id": "youtube_3a9671613c41",
-     "quote": "I want stop my Elss sip because there no option to reduce amount so can I stop current and need to start new with lesser amount?",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=qxu7CBYR864"
-    }
-   ],
-   "rank": 14,
-   "rank_equal_weights": 14,
+   "rank": 15,
+   "rank_equal_weights": 16,
    "score_index": 3
   },
   {
@@ -561,7 +609,7 @@
    "kind": "app_sub_theme",
    "label": "App: portfolio and returns shown wrongly or slowly",
    "n": 3,
-   "share_of_tagged": 0.0088,
+   "share_of_tagged": 0.0085,
    "avg_severity": 1.67,
    "branch": "D",
    "branch_name": "D. Disengagement",
@@ -590,29 +638,30 @@
      "url": null
     }
    ],
-   "rank": 15,
-   "rank_equal_weights": 17,
+   "rank": 16,
+   "rank_equal_weights": 18,
    "score_index": 3
   },
   {
    "key": "life_event",
    "kind": "reason",
    "label": null,
-   "n": 2,
-   "share_of_tagged": 0.0059,
-   "avg_severity": 2.0,
+   "n": 3,
+   "share_of_tagged": 0.0085,
+   "avg_severity": 1.67,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "partly",
    "solvable_why": "A graceful pause and easy restart; the event itself is outside the product.",
    "solvable_weight": 0.5,
-   "score": 1.4,
-   "score_equal_weights": 4.0,
+   "score": 1.75,
+   "score_equal_weights": 5.0,
    "low_confidence": true,
-   "lapse_story_share": 0.5,
+   "lapse_story_share": 0.333,
    "sources": {
-    "play_store": 2
+    "play_store": 2,
+    "reddit": 1
    },
    "quotes": [
     {
@@ -622,55 +671,23 @@
      "url": null
     },
     {
-     "id": "play_store_cd6cd4128d99",
-     "quote": "you cannot directly edit an existing SIP to change the amount",
-     "source": "play_store",
-     "url": null
-    }
-   ],
-   "rank": 16,
-   "rank_equal_weights": 18,
-   "score_index": 1
-  },
-  {
-   "key": "disengaged_forgot",
-   "kind": "reason",
-   "label": null,
-   "n": 1,
-   "share_of_tagged": 0.0029,
-   "avg_severity": 1.0,
-   "branch": "D",
-   "branch_name": "D. Disengagement",
-   "branch_weight": 0.6,
-   "solvable": "yes",
-   "solvable_why": "Gentle, non-urgent progress summaries; no FOMO.",
-   "solvable_weight": 1.0,
-   "score": 0.6,
-   "score_equal_weights": 1.0,
-   "low_confidence": true,
-   "lapse_story_share": 1.0,
-   "sources": {
-    "play_store": 1
-   },
-   "quotes": [
-    {
-     "id": "play_store_af44f88da46f",
-     "quote": "if a SIP gets started by mistake then they are saying that either I can stop it immediately or I can reduce the amount",
-     "source": "play_store",
-     "url": null
+     "id": "reddit_b93c6b6b64e7",
+     "quote": "I have around ₹40k saved from internships",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/personalfinanceindia/comments/1vzkkdu/how_should_i_manageinvest_40k_as_a_college/"
     }
    ],
    "rank": 17,
    "rank_equal_weights": 19,
-   "score_index": 1
+   "score_index": 2
   },
   {
    "key": "goal_change",
    "kind": "reason",
    "label": null,
-   "n": 7,
-   "share_of_tagged": 0.0206,
-   "avg_severity": 1.14,
+   "n": 9,
+   "share_of_tagged": 0.0256,
+   "avg_severity": 1.44,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
@@ -678,25 +695,26 @@
    "solvable_why": "Often a valid reason to withdraw; the product should only make restarting easy.",
    "solvable_weight": 0.0,
    "score": 0.0,
-   "score_equal_weights": 8.0,
+   "score_equal_weights": 13.0,
    "low_confidence": true,
-   "lapse_story_share": 0.857,
+   "lapse_story_share": 0.778,
    "sources": {
     "youtube": 5,
-    "tradingqna": 2
+    "tradingqna": 2,
+    "reddit": 2
    },
    "quotes": [
+    {
+     "id": "reddit_4a316d605c4e",
+     "quote": "returns I see is not convincing me anymore",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
+    },
     {
      "id": "youtube_edd075346fb2",
      "quote": "Ager sirf cancel karu or paisa kai year bad widraw karu to chelga sir",
      "source": "youtube",
      "url": "https://www.youtube.com/watch?v=phs3OUy7ZWI"
-    },
-    {
-     "id": "tradingqna_d66a7b204f89",
-     "quote": "Hi Nithin, If i have completed 3 years ELSS SIP and i have stopped SIP now...",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/transfer-of-elss-mutual-funds-from-mirae-asset-to-zerodha-coin/165950/3"
     }
    ],
    "rank": 18,
@@ -707,9 +725,9 @@
    "key": "fund_switching",
    "kind": "reason",
    "label": null,
-   "n": 4,
-   "share_of_tagged": 0.0118,
-   "avg_severity": 1.75,
+   "n": 7,
+   "share_of_tagged": 0.0199,
+   "avg_severity": 2.0,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
@@ -717,30 +735,31 @@
    "solvable_why": "Addressing it would mean recommending funds, which is not allowed.",
    "solvable_weight": 0.0,
    "score": 0.0,
-   "score_equal_weights": 7.0,
+   "score_equal_weights": 14.0,
    "low_confidence": true,
-   "lapse_story_share": 0.75,
+   "lapse_story_share": 0.714,
    "sources": {
     "play_store": 1,
     "youtube": 2,
+    "reddit": 3,
     "tradingqna": 1
    },
    "quotes": [
+    {
+     "id": "reddit_4a316d605c4e",
+     "quote": "returns I see is not convincing me anymore",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
+    },
     {
      "id": "play_store_06009ab3e281",
      "quote": "You have lost the trust after launching prime plan",
      "source": "play_store",
      "url": null
-    },
-    {
-     "id": "youtube_fa5aae2c8aa0",
-     "quote": "maine glti se grow me ek hi fund me 2 sip start kr li wo ek band kaise hogi",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=phs3OUy7ZWI"
     }
    ],
    "rank": 19,
-   "rank_equal_weights": 16,
+   "rank_equal_weights": 11,
    "score_index": 0
   }
  ],
@@ -750,7 +769,7 @@
    "kind": "after_stop",
    "label": "Redemption, withdrawal or refund is slow or stuck",
    "n": 11,
-   "share_of_tagged": 0.0324,
+   "share_of_tagged": 0.0312,
    "avg_severity": 2.18,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -782,7 +801,7 @@
    "kind": "after_stop",
    "label": "Cannot find or complete a redemption",
    "n": 10,
-   "share_of_tagged": 0.0295,
+   "share_of_tagged": 0.0284,
    "avg_severity": 2.2,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -821,7 +840,7 @@
    "kind": "after_stop",
    "label": "Amount received differs from what the app showed",
    "n": 7,
-   "share_of_tagged": 0.0206,
+   "share_of_tagged": 0.0199,
    "avg_severity": 2.43,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -849,13 +868,13 @@
    "score_index": 71
   }
  ],
- "n_tagged": 339,
- "app_posts_total": 74,
- "app_posts_not_ranked": 17,
+ "n_tagged": 352,
+ "app_posts_total": 77,
+ "app_posts_not_ranked": 18,
  "exit_posts": 28,
  "label_info": {
-  "candidates": 124,
-  "labelled": 124,
+  "candidates": 128,
+  "labelled": 128,
   "new_this_run": 0,
   "failed_this_run": 0
  },

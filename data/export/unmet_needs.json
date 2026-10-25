@@ -1,9 +1,24 @@
 {
  "themes": [
   {
+   "theme": "Investment guidance and reassurance",
+   "n": 27,
+   "share_of_needs": 0.206,
+   "example_need": "Clarification on SIP strategy during market highs",
+   "quotes": [
+    {
+     "id": "play_store_941330607ac2",
+     "quote": "There should be a review section for mutual funds with categories like 'In-form', 'On-track', and 'Out-of-form'",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "avg_severity": 1.52
+  },
+  {
    "theme": "Faster, clearer redemptions",
    "n": 23,
-   "share_of_needs": 0.192,
+   "share_of_needs": 0.176,
    "example_need": "need timely credit of redeemed funds",
    "quotes": [
     {
@@ -16,25 +31,10 @@
    "avg_severity": 2.09
   },
   {
-   "theme": "Investment guidance and reassurance",
-   "n": 22,
-   "share_of_needs": 0.183,
-   "example_need": "Reassurance on fund safety and redemption process",
-   "quotes": [
-    {
-     "id": "play_store_941330607ac2",
-     "quote": "There should be a review section for mutual funds with categories like 'In-form', 'On-track', and 'Out-of-form'",
-     "source": "play_store",
-     "url": null
-    }
-   ],
-   "avg_severity": 1.41
-  },
-  {
    "theme": "Reliable autopay and mandates",
-   "n": 21,
-   "share_of_needs": 0.175,
-   "example_need": "Explanation of mandate date fields",
+   "n": 22,
+   "share_of_needs": 0.168,
+   "example_need": "need autopay for quantity‑based SIP",
    "quotes": [
     {
      "id": "tradingqna_a0863ed26207",
@@ -43,12 +43,12 @@
      "url": "https://tradingqna.com/t/introducing-updated-stock-sip-experience-on-kite-web/195837/9"
     }
    ],
-   "avg_severity": 1.48
+   "avg_severity": 1.5
   },
   {
    "theme": "Flexible SIP management controls",
-   "n": 18,
-   "share_of_needs": 0.15,
+   "n": 20,
+   "share_of_needs": 0.153,
    "example_need": "Ability to pause SIP without cancelling it",
    "quotes": [
     {
@@ -58,13 +58,13 @@
      "url": null
     }
    ],
-   "avg_severity": 1.33
+   "avg_severity": 1.3
   },
   {
    "theme": "Accurate data and app reliability",
-   "n": 16,
-   "share_of_needs": 0.133,
-   "example_need": "Display of XIRR instead of absolute returns",
+   "n": 17,
+   "share_of_needs": 0.13,
+   "example_need": "need reliable fund options after failure",
    "quotes": [
     {
      "id": "play_store_ff86f17c9e7e",
@@ -73,12 +73,12 @@
      "url": null
     }
    ],
-   "avg_severity": 1.81
+   "avg_severity": 1.82
   },
   {
    "theme": "Clear fees and refund policies",
-   "n": 13,
-   "share_of_needs": 0.108,
+   "n": 14,
+   "share_of_needs": 0.107,
    "example_need": "Clarity on penalty charges and pause mechanics",
    "quotes": [
     {
@@ -88,12 +88,12 @@
      "url": null
     }
    ],
-   "avg_severity": 1.85
+   "avg_severity": 1.86
   },
   {
    "theme": "Something else",
-   "n": 7,
-   "share_of_needs": 0.058,
+   "n": 8,
+   "share_of_needs": 0.061,
    "example_need": "Clarification on tax liability for fund transfer",
    "quotes": [
     {
@@ -103,9 +103,9 @@
      "url": "https://tradingqna.com/t/10-reasons-why-i-havent-yet-considered-zerodha-coin-for-mutual-fund-investments/59511/8"
     }
    ],
-   "avg_severity": 1.29
+   "avg_severity": 1.38
   }
  ],
- "posts_with_need": 120,
- "grouped": 120
+ "posts_with_need": 131,
+ "grouped": 131
 }

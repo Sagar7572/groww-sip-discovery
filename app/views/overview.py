@@ -73,7 +73,7 @@ def render(over: dict, posts: pd.DataFrame) -> None:
     rows = []
     for s, v in src.items():
         rows.append({"Source": C.SOURCE_NAMES.get(s, s), "Pulled": f"{v['raw_pulled']:,}" if v["raw_pulled"] else "not collected",
-                     "Cleaned": f"{v['clean']:,}", "Passed quick filter (so far)": f"{v['filter_kept']:,}", "Tagged": f"{v['tagged']:,}",
+                     "Cleaned": f"{v['clean']:,}", "Passed quick filter (so far)": "skipped, tagged first" if s == "reddit" else f"{v['filter_kept']:,}", "Tagged": f"{v['tagged']:,}",
                      "Relevant (analysed)": f"{v['relevant']:,}",
                      "First post": v["first_date"] or "n/a", "Latest post": v["last_date"] or "n/a"})
     st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")

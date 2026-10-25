@@ -1,6 +1,6 @@
 {
  "as_of": "2026-10-24",
- "exported_at": "2026-10-24T14:02+00:00",
+ "exported_at": "2026-10-24T14:09+00:00",
  "sources": {
   "play_store": {
    "raw_pulled": 32786,
@@ -84,13 +84,13 @@
    }
   },
   "reddit": {
-   "raw_pulled": null,
-   "raw_kept_by_keywords": null,
+   "raw_pulled": 374,
+   "raw_kept_by_keywords": 374,
    "clean": 335,
    "filter_labelled": 0,
    "filter_kept": 0,
-   "tagged": 0,
-   "relevant": 0,
+   "tagged": 20,
+   "relevant": 13,
    "first_date": "2021-05-08",
    "last_date": "2026-10-24",
    "by_year": {
@@ -105,15 +105,15 @@
  },
  "staff_excluded": 197,
  "funnel": {
-  "raw_pulled": 40548,
+  "raw_pulled": 40922,
   "clean": 5909,
   "filter_labelled": 1573,
   "filter_kept": 994,
   "in_tagging_queue": 1523,
-  "tag_attempted": 406,
-  "tagged_ok": 399,
-  "relevant_tagged": 339,
-  "tagged_not_relevant": 60
+  "tag_attempted": 426,
+  "tagged_ok": 419,
+  "relevant_tagged": 352,
+  "tagged_not_relevant": 67
  },
  "definitions": {
   "tagged": "A post the AI tagger has read and filled in the codebook for (it can still turn out not to be about SIPs).",
@@ -123,7 +123,7 @@
  },
  "by_tagger": {
   "gpt-oss-120b": {
-   "tagged": 156,
+   "tagged": 176,
    "failed": 0
   },
   "qwen": {

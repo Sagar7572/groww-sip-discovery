@@ -1,12 +1,40 @@
 {
  "clusters": [
   {
+   "cluster": 5,
+   "label": "stop, cancel, sips, month, money",
+   "size": 56,
+   "share": 0.159,
+   "with_named_trigger": 0.589,
+   "avg_severity": 1.45,
+   "example_ids": [
+    "youtube_48dde4514569",
+    "youtube_ea59950266fa",
+    "tradingqna_94a3c8daa33f"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     13
+    ],
+    [
+     "mandate_payment_issue",
+     12
+    ],
+    [
+     "social_influence",
+     5
+    ]
+   ],
+   "name": "Stopping or cancelling SIPs"
+  },
+  {
    "cluster": 2,
-   "label": "sips, coin, amc, initial, account",
-   "size": 55,
-   "share": 0.162,
-   "with_named_trigger": 0.673,
-   "avg_severity": 1.31,
+   "label": "coin, sips, amc, account, allows",
+   "size": 44,
+   "share": 0.125,
+   "with_named_trigger": 0.727,
+   "avg_severity": 1.39,
    "example_ids": [
     "tradingqna_d56985e27ca1",
     "tradingqna_a87c26140dcb",
@@ -15,166 +43,138 @@
    "top_triggers": [
     [
      "app_experience",
-     18
+     16
     ],
     [
      "mandate_payment_issue",
-     12
+     13
     ],
     [
      "social_influence",
-     7
+     3
     ]
    ],
-   "name": "SIP autopay feature feedback"
+   "name": "Autopay features for SIPs"
   },
   {
-   "cluster": 3,
-   "label": "cancel, sips, autopay, stop, band",
-   "size": 55,
-   "share": 0.162,
-   "with_named_trigger": 0.545,
-   "avg_severity": 1.44,
+   "cluster": 1,
+   "label": "band, mandate, dikhata, ennu, open ended",
+   "size": 40,
+   "share": 0.114,
+   "with_named_trigger": 0.45,
+   "avg_severity": 1.32,
    "example_ids": [
-    "youtube_48dde4514569",
-    "youtube_5097dbe68b6c",
-    "youtube_ea59950266fa"
+    "youtube_d17fc3dc7067",
+    "youtube_7dca35cde09f",
+    "play_store_4d3cabf0a420"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     7
+    ],
+    [
+     "mandate_payment_issue",
+     3
+    ],
+    [
+     "goal_change",
+     3
+    ]
+   ],
+   "name": "Managing SIP mandates and autopay"
+  },
+  {
+   "cluster": 4,
+   "label": "autopay, mandate, auto, auto pay, bank",
+   "size": 39,
+   "share": 0.111,
+   "with_named_trigger": 0.59,
+   "avg_severity": 1.26,
+   "example_ids": [
+    "tradingqna_fdca95ebb8e1",
+    "youtube_87c85b22edaf",
+    "tradingqna_d94175934965"
    ],
    "top_triggers": [
     [
      "mandate_payment_issue",
-     12
+     15
     ],
     [
      "app_experience",
      10
     ],
     [
-     "trust_concern",
-     3
-    ]
-   ],
-   "name": "Stopping or cancelling SIPs"
-  },
-  {
-   "cluster": 4,
-   "label": "direct, plan, regular, years, year",
-   "size": 38,
-   "share": 0.112,
-   "with_named_trigger": 0.474,
-   "avg_severity": 1.29,
-   "example_ids": [
-    "tradingqna_7ab6240b553c",
-    "tradingqna_aa0e75c22bed",
-    "tradingqna_81ad3893c112"
-   ],
-   "top_triggers": [
-    [
-     "tax_or_lockin",
-     5
-    ],
-    [
-     "mandate_payment_issue",
-     4
-    ],
-    [
      "confusing_numbers",
-     4
+     2
     ]
    ],
-   "name": "Direct vs regular plan advice"
+   "name": "Bank mandate setup issues"
   },
   {
-   "cluster": 1,
-   "label": "year, returns, pm, invested, equity",
-   "size": 32,
-   "share": 0.094,
-   "with_named_trigger": 0.562,
-   "avg_severity": 1.44,
+   "cluster": 7,
+   "label": "redemption, smallcases, year, cap, credited",
+   "size": 36,
+   "share": 0.102,
+   "with_named_trigger": 0.639,
+   "avg_severity": 1.61,
    "example_ids": [
-    "tradingqna_dc77e1295362",
-    "tradingqna_8c5e60f65029",
-    "tradingqna_380ab1caea11"
+    "play_store_ec1a5a1c3991",
+    "play_store_4ed20b8b1fc2",
+    "play_store_b6a1080441ac"
    ],
    "top_triggers": [
     [
      "app_experience",
-     9
+     11
     ],
     [
      "trust_concern",
-     4
+     6
     ],
     [
      "market_fall",
      4
     ]
    ],
-   "name": "Investment returns and portfolio issues"
+   "name": "Redemption delays and blocked funds"
   },
   {
-   "cluster": 5,
-   "label": "redemption, service, customer, redeem, account",
-   "size": 32,
-   "share": 0.094,
-   "with_named_trigger": 0.688,
-   "avg_severity": 1.91,
-   "example_ids": [
-    "play_store_8db945386f04",
-    "play_store_e184623e329a",
-    "play_store_0e01b46b9d64"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     15
-    ],
-    [
-     "trust_concern",
-     6
-    ],
-    [
-     "mandate_payment_issue",
-     5
-    ]
-   ],
-   "name": "Redemption delays and amount mismatches"
-  },
-  {
-   "cluster": 7,
-   "label": "mandate, upi, autopay, bank, pay",
+   "cluster": 3,
+   "label": "equity, direct, plan, tax, years",
    "size": 30,
-   "share": 0.088,
-   "with_named_trigger": 0.7,
-   "avg_severity": 1.4,
+   "share": 0.085,
+   "with_named_trigger": 0.367,
+   "avg_severity": 1.17,
    "example_ids": [
-    "tradingqna_fdca95ebb8e1",
-    "tradingqna_577bd77e81b4",
-    "tradingqna_f9db4c35d1d5"
+    "tradingqna_7ab6240b553c",
+    "tradingqna_8c5e60f65029",
+    "tradingqna_d3bd0cff66ce"
    ],
    "top_triggers": [
     [
-     "mandate_payment_issue",
-     15
+     "tax_or_lockin",
+     4
+    ],
+    [
+     "goal_change",
+     2
     ],
     [
      "app_experience",
-     6
-    ],
-    [
-     "confusing_numbers",
-     3
+     2
     ]
    ],
-   "name": "UPI mandate creation errors"
+   "name": "Direct plans and tax advice"
   },
   {
    "cluster": 8,
-   "label": "smallcases, market, portfolio, loss, returns",
-   "size": 30,
-   "share": 0.088,
-   "with_named_trigger": 0.433,
-   "avg_severity": 1.33,
+   "label": "market, portfolio, loss, diversified, diversified portfolio",
+   "size": 29,
+   "share": 0.082,
+   "with_named_trigger": 0.414,
+   "avg_severity": 1.38,
    "example_ids": [
     "tradingqna_cfd4ef548caa",
     "tradingqna_8115de6c7a42",
@@ -183,7 +183,7 @@
    "top_triggers": [
     [
      "market_fall",
-     7
+     8
     ],
     [
      "expectation_mismatch",
@@ -194,67 +194,71 @@
      4
     ]
    ],
-   "name": "Portfolio losses and rebalancing"
+   "name": "Portfolio losses and market dips"
   },
   {
    "cluster": 9,
-   "label": "band, open ended, ended, ennu, din",
+   "label": "redemption, colour, redeem, goes, loss",
    "size": 29,
-   "share": 0.086,
-   "with_named_trigger": 0.448,
-   "avg_severity": 1.31,
+   "share": 0.082,
+   "with_named_trigger": 0.724,
+   "avg_severity": 1.83,
    "example_ids": [
-    "youtube_d17fc3dc7067",
-    "youtube_40d39af4119d",
-    "youtube_7dca35cde09f"
+    "play_store_8db945386f04",
+    "play_store_8b8cc2b4ca7d",
+    "play_store_e184623e329a"
    ],
    "top_triggers": [
     [
      "app_experience",
+     11
+    ],
+    [
+     "mandate_payment_issue",
      6
     ],
     [
-     "goal_change",
-     3
-    ],
-    [
-     "cash_flow_strain",
-     2
+     "trust_concern",
+     5
     ]
    ],
-   "name": "Stopping SIP and withdrawing funds"
+   "name": "Redemption delays and value drops"
   },
   {
    "cluster": 0,
-   "label": "auto, autopay, auto pay, pay, setup",
-   "size": 20,
-   "share": 0.059,
-   "with_named_trigger": 0.4,
-   "avg_severity": 1.1,
+   "label": "bank, account, zerodha, coin, mandate",
+   "size": 28,
+   "share": 0.08,
+   "with_named_trigger": 0.643,
+   "avg_severity": 1.36,
    "example_ids": [
-    "youtube_76778572fc0f",
-    "youtube_e3576b242d5c",
-    "youtube_649f4a98046b"
+    "tradingqna_eaf8136a432c",
+    "tradingqna_97df4b037865",
+    "tradingqna_bb2abe52014d"
    ],
    "top_triggers": [
     [
      "mandate_payment_issue",
-     4
+     9
     ],
     [
      "app_experience",
-     4
+     3
+    ],
+    [
+     "cash_flow_strain",
+     3
     ]
    ],
-   "name": "Setting up SIP autopay"
+   "name": "Setting up SIPs on Coin"
   },
   {
    "cluster": 6,
-   "label": "trading, zerodha coin, zerodha, interface, children",
-   "size": 18,
-   "share": 0.053,
-   "with_named_trigger": 0.222,
-   "avg_severity": 1.17,
+   "label": "interface, stocks, ucits, children, trading",
+   "size": 21,
+   "share": 0.06,
+   "with_named_trigger": 0.238,
+   "avg_severity": 1.14,
    "example_ids": [
     "play_store_1dd6d633a413",
     "play_store_ed5b6772286e",
@@ -274,7 +278,7 @@
      1
     ]
    ],
-   "name": "Positive app interface reviews"
+   "name": "App interface and usability"
   }
  ],
  "k": 10,

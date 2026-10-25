@@ -275,6 +275,9 @@ class Groq:
             if resp.status_code >= 500:
                 time.sleep(5 * (attempt + 1))
                 continue
+            if resp.status_code == 400 and "json_validate_failed" in resp.text:
+                print("    the model produced malformed JSON for one batch; skipping it (those items are retried on the next pass)")
+                return "{}"
             if resp.status_code != 200:
                 sys.exit(f"Groq error {resp.status_code}: {resp.text[:300]}")
             self.tokens_used += resp.json().get("usage", {}).get("total_tokens", 0)
