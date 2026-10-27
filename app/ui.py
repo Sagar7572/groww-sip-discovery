@@ -63,6 +63,31 @@ def with_groups(opp: dict) -> list[dict]:
     return sorted(causes_of(opp) + list(opp.get("groups", [])), key=lambda a: -a["n"])
 
 
+def units_of(opp: dict) -> list[dict]:
+    """What the reasons chart ranks: every cause except the three that sit inside a combined group, plus the group
+    itself (with its members as `children`), ordered by posts."""
+    groups = [dict(g) for g in opp.get("groups", [])]
+    inside = {k for g in groups for k in g["members"]}
+    causes = causes_of(opp)
+    for g in groups:
+        g["children"] = [a for a in causes if a["key"] in g["members"]]
+    return sorted([a for a in causes if a["key"] not in inside] + groups, key=lambda a: -a["n"])
+
+
+def near_tie(units: list[dict], ratio: float = 0.85) -> bool:
+    """True when the second-largest reason has at least `ratio` of the posts of the largest."""
+    return len(units) >= 2 and units[1]["n"] >= ratio * units[0]["n"]
+
+
+# Fixed colour rule for the reasons chart (every page that colours a reason uses it): payment or app failure = orange,
+# the person's own choice = blue, other = grey. Data decides the colour except where the project has set a rule.
+KIND_RULE = {"trust_concern": "choice", "missing_feature": "unclear"}
+
+
+def area_kind(posts: pd.DataFrame, a: dict) -> str:
+    return KIND_RULE.get(a["key"]) or kind_of_group(area_posts(posts, a))
+
+
 def area_posts(posts: pd.DataFrame, a: dict) -> pd.DataFrame:
     if a["kind"] == "group":
         return posts[posts.triggers.apply(lambda t: any(k in t for k in a["members"]))]
@@ -283,7 +308,7 @@ table.src tr.total td { font-weight: 800; border-bottom: none; }
 /* link-style buttons */
 button[kind="tertiary"] { color: var(--blue) !important; font-weight: 700 !important; padding-left: 0 !important; }
 .st-key-reasons button[kind="tertiary"] { color: var(--ink) !important; justify-content: flex-start; text-align: left; padding: 0 !important; min-height: 0; }
-.st-key-reasons button[kind="tertiary"] p { font-weight: 700 !important; font-size: .95rem !important; line-height: 1.25; }
+.st-key-reasons button[kind="tertiary"] p { white-space: normal !important; overflow: visible !important; text-overflow: clip !important; font-weight: 700 !important; font-size: .95rem !important; line-height: 1.25; }
 [data-testid="stTopNavLink"], header { background: #fff; }
 @media (max-width: 640px) { h1 { font-size: 1.8rem !important; } .big { font-size: 2.4rem; } .banner { margin: 0 -.5rem 1rem; } }
 </style>

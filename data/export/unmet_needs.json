@@ -7,10 +7,10 @@
    "example_need": "should SIP start in up or down market",
    "quotes": [
     {
-     "id": "youtube_515c2c14a4a8",
-     "quote": "Sir please create a Detail video on Debt , Equity,Gold and Silver SIP funds video.",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=oIhGHb30rWo"
+     "id": "reddit_7334aa307c55",
+     "quote": "My XIRR is negative. Can anyone suggest what needs to be done any funds to be added or deleted from?",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1x4mtow/xirr_is_6/"
     }
    ],
    "avg_severity": 1.26
@@ -22,10 +22,10 @@
    "example_need": "asks minimum amount to start SIP",
    "quotes": [
     {
-     "id": "play_store_2dde31499622",
-     "quote": "u can't do small per day sip u can't track external funds in this app worst app ind money ia lot better now I am selling all my funds in this worst app",
-     "source": "play_store",
-     "url": null
+     "id": "tradingqna_4406a8ca0e49",
+     "quote": "if my mutual fund transferred to coin my SIP still continue or will stop",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/transfer-of-mutual-funds-and-charges/131244/5"
     }
    ],
    "avg_severity": 1.31
@@ -37,10 +37,10 @@
    "example_need": "resolution of reversed installment",
    "quotes": [
     {
-     "id": "reddit_e03e463419ec",
-     "quote": "Cancel the mandate as Edelweiss has reached overseas investment limit.",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/mutualfunds/comments/1wsf1qx/edelweiss_international_fund_sip_stopped/pcl11yx/"
+     "id": "tradingqna_683abb6728fa",
+     "quote": "I have to transfer money every month to continue my SIP and each time I have to pay Zerodha/payment gateway Rs 9",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/deducting-sip-amount-directly-from-bank/12675/5"
     }
    ],
    "avg_severity": 1.54
@@ -52,8 +52,8 @@
    "example_need": "Faster display of daily gain/loss data",
    "quotes": [
     {
-     "id": "play_store_9f3bfa863db2",
-     "quote": "unable to update external mf portfolio",
+     "id": "play_store_6459fe474a97",
+     "quote": "always technical issues.. my sip dashboard not proper show.. I always try to customer but always line is busy.",
      "source": "play_store",
      "url": null
     }
@@ -82,10 +82,10 @@
    "example_need": "Accurate and stable expense ratio data",
    "quotes": [
     {
-     "id": "play_store_e24002834a10",
-     "quote": "after SIP canceled still take charge for SIP bounce.",
-     "source": "play_store",
-     "url": null
+     "id": "reddit_762eec5cc492",
+     "quote": "my XIRR is not even 1% which is downright depressing",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1wvtr68/scared_to_invest_anymore/"
     }
    ],
    "avg_severity": 1.63
@@ -112,10 +112,10 @@
    "example_need": "Combined portfolio allocation view",
    "quotes": [
     {
-     "id": "reddit_9fdc9cd162a4",
-     "quote": "So stopped sip to build emergency fund. And get myself a few kinda expensive items. Also planning a deposit for a flat in bangalore",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/mutualfunds/comments/1xd3gs4/firsttimers_who_paused_or_stopped_a_sip_what/19riu1yyk6f1d/"
+     "id": "play_store_c317f018a3f0",
+     "quote": "Overall Good but must be a separate Section for all Portfolio. where I can see all my investment in one place",
+     "source": "play_store",
+     "url": null
     }
    ],
    "avg_severity": 1.37

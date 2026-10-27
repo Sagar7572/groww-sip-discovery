@@ -36,25 +36,36 @@ def render() -> None:
     over, posts = C.load_json("overview"), C.load_posts()
     opp, un = C.load_json("opportunities"), C.load_json("unmet_needs")
     f, n = over["funnel"], len(posts)
-    causes = ui.causes_of(opp)
-    top = causes[0]
 
     st.title("Why do first-time investors stop their SIPs?")
     st.markdown(f'<p class="sub">We read {f["raw_pulled"]:,} public reviews, forum threads and comments about SIPs in India. Four things stand out.</p>',
                 unsafe_allow_html=True)
 
-    # ---- 1. top cause -------------------------------------------------------
-    top_posts = ui.area_posts(posts, top)
-    wins, total = top_reason_everywhere(posts, top["key"]) if top["kind"] == "reason" else (0, 0)
-    name = ui.area_label(top)
-    first = ("Autopay and payment problems are" if top["key"] == "mandate_payment_issue" else f"“{name}” is") + " the #1 reason SIPs stop overall"
-    where = f", and the top reason in {wins} of {total} sources." if total else "."
+    # ---- 1. top cause(s) ----------------------------------------------------
+    units = ui.units_of(opp)
     c1, c2 = st.columns(2, gap="medium")
     with c1, st.container(key="card_cause"):
-        st.markdown(ui.label("Top cause", ui.FAIL) + ui.big(f"{100 * top['share_of_tagged']:.0f}%", "of posts")
-                    + f'<div class="lead">{ui.esc(first + where)}</div>', unsafe_allow_html=True)
-        for q in ui.pick_quotes(top_posts, 1, hints=ui.HINTS.get(top['key'])):
-            st.markdown(ui.quote_html(q), unsafe_allow_html=True)
+        if ui.near_tie(units):
+            u1, u2 = units[:2]
+            cmp = opp.get("group_compare") or {}
+            body = "".join(
+                f'<div style="flex:1;min-width:130px">{ui.big(f"{u['n']:,}", "posts")}<div style="font-weight:700;color:#161c28;margin-top:.15rem">{ui.esc(ui.area_label(u))}</div></div>'
+                for u in (u1, u2))
+            st.markdown(ui.label("Top causes", ui.FAIL) + f'<div class="lead" style="font-weight:800">Two problems, nearly tied</div>'
+                        f'<div style="display:flex;gap:1rem;flex-wrap:wrap;margin:.4rem 0">{body}</div>', unsafe_allow_html=True)
+            keys = {u1["key"], u2["key"]}
+            if keys == {"mandate_payment_issue", "making_sense_of_returns"} and cmp.get("first_time_posts"):
+                ft_g, ft_a = cmp["first_time_group"], cmp["first_time_autopay"]
+                word = "returns confusion is" if ft_g > ft_a else "payment problems are"
+                hi, lo = (ft_g, ft_a) if ft_g > ft_a else (ft_a, ft_g)
+                st.markdown(f'<div class="lead">Among first-time investors, {word} named in {hi} posts vs {lo} for '
+                            f'{"autopay" if ft_g > ft_a else "returns"}.</div>', unsafe_allow_html=True)
+        else:
+            top = units[0]
+            st.markdown(ui.label("Top cause", ui.FAIL) + ui.big(f"{top['n']:,}", "posts")
+                        + f'<div class="lead">{ui.esc(ui.area_label(top))} is the #1 reason SIPs stop.</div>', unsafe_allow_html=True)
+            for q in ui.pick_quotes(ui.area_posts(posts, top), 1, hints=ui.HINTS.get(top["key"])):
+                st.markdown(ui.quote_html(q), unsafe_allow_html=True)
         ui.go("See all reasons", "stops", "go_reasons")
 
     # ---- 2. first-time investors ------------------------------------------------

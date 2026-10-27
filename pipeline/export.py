@@ -476,7 +476,11 @@ def need_quote(items: list[dict], theme: str) -> list[dict]:
     cands = [p for p in items if p["quote_display"] and 25 <= len(p["quote_display"]) <= 220]
     if not cands:
         return []
-    best = max(cands, key=lambda p: (len(words(p["quote_display"]) & (words(p["unmet_need"]) | words(theme))), p["severity"], -len(p["quote_display"])))
+    # prefer a person saying they do not understand their own returns or want reassurance, over a request to a video maker
+    own = re.compile(r"\b(xirr|negative|my (returns?|sip|investment)|am i|is it (normal|ok|fine|correct)|worried|confus|understand|loss|red)\b", re.I)
+    ask_creator = re.compile(r"\b(sir|mam|madam|please (make|create|upload)|video|channel)\b", re.I)
+    best = max(cands, key=lambda p: (bool(own.search(p["quote_display"])) - bool(ask_creator.search(p["quote_display"])),
+                                     len(words(p["quote_display"]) & (words(p["unmet_need"]) | words(theme))), p["severity"], -len(p["quote_display"])))
     return [{"id": best["id"], "quote": best["quote_display"], "source": best["source"], "url": best["url"]}]
 
 

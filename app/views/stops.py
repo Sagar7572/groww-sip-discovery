@@ -10,25 +10,46 @@ import ui
 TOP = 8
 
 
+def one_row(posts: pd.DataFrame, a: dict, biggest: int, total: int, label: str, indent: bool = False) -> None:
+    col = ui.COLOUR[ui.area_kind(posts, a)]
+    pad, c1, c2, c3 = st.columns([0.45 if indent else 0.001, 3.6, 5.6, 1.6], vertical_alignment="center")
+    if c1.button(label, key=f"pick_{ui.area_id(a)}", type="tertiary"):
+        st.session_state["open_reason"] = ui.area_id(a)
+    c2.markdown(f'<div class="bar-track"><div class="bar-fill" style="width:{100 * a["n"] / biggest:.1f}%;background:{col}"></div></div>',
+                unsafe_allow_html=True)
+    c3.markdown(f'<div class="num">{a["n"]:,} <span>· {100 * a["n"] / total:.1f}%</span></div>', unsafe_allow_html=True)
+
+
 def reason_rows(posts: pd.DataFrame, areas: list[dict], total: int) -> None:
-    """One row per reason: a button with its name, a bar coloured by failure/choice, and 'count · share'."""
+    """One row per reason: a button with its name, a bar coloured by failure/choice, and 'count · share'.
+    A combined group is one row (each post counted once) with its reasons indented beneath it."""
     biggest = max(a["n"] for a in areas)
     with st.container(key="reasons"):
         for a in areas:
-            label = ui.area_label(a) + (f" ({len(a['members'])} reasons combined)" if a["kind"] == "group" else "")
-            col = ui.COLOUR[ui.kind_of_group(ui.area_posts(posts, a))]
-            c1, c2, c3 = st.columns([3.2, 6, 1.5], vertical_alignment="center")
-            if c1.button(label, key=f"pick_{ui.area_id(a)}", type="tertiary"):
-                st.session_state["open_reason"] = ui.area_id(a)
-            c2.markdown(f'<div class="bar-track"><div class="bar-fill" style="width:{100 * a["n"] / biggest:.1f}%;background:{col}"></div></div>',
-                        unsafe_allow_html=True)
-            c3.markdown(f'<div class="num">{a["n"]:,} <span>· {100 * a["n"] / total:.1f}%</span></div>', unsafe_allow_html=True)
+            if a["kind"] != "group":
+                one_row(posts, a, biggest, total, ui.area_label(a))
+                continue
+            one_row(posts, a, biggest, total, f"{a['label']} (combined, each post counted once)")
+            for ch in sorted(a["children"], key=lambda c: -c["n"]):
+                one_row(posts, ch, biggest, total, ui.area_label(ch), indent=True)
+
+
+SHORT_NAME = {"mandate_payment_issue": "payment problems", "making_sense_of_returns": "confusion about returns"}
+
+
+def title_for(units: list[dict]) -> str:
+    """Page title from the data: two near-tied reasons are named together, otherwise the top one alone."""
+    top = units[0]
+    if ui.near_tie(units):
+        a, b = (SHORT_NAME.get(u["key"]) or ui.soft_lower(ui.area_label(u)) for u in units[:2])
+        return f"{a[0].upper() + a[1:]} and {b} are the two biggest reasons SIPs stop"
+    return (f"“{ui.area_label(top)}” is the top reason SIPs stop" if top["key"] not in SHORT_NAME else f"{SHORT_NAME[top['key']].capitalize()} are the top reason SIPs stop")
 
 
 def group_note(opp: dict, top: dict) -> str:
     """One computed sentence comparing the combined 'making sense of returns' group with autopay, overall and for first-time investors."""
     c, g = opp.get("group_compare"), (opp.get("groups") or [None])[0]
-    if not c or not g or top["key"] != "mandate_payment_issue":
+    if not c or not g:
         return ""
     lead = ("Overall, autopay is named in more posts" if c["autopay"] > c["group_unique"] else
             "Overall, returns is named in more posts" if c["autopay"] < c["group_unique"] else "Overall, the two are named in the same number of posts")
@@ -47,16 +68,16 @@ def render() -> None:
     if excl:
         opp = opp.get("without_reddit", opp)
         posts = posts[posts.source != "reddit"]
-    causes, unsplit = ui.with_groups(opp), ui.unsplit_of(opp)
+    causes, unsplit = ui.units_of(opp), ui.unsplit_of(opp)
     after = sorted(opp.get("after_stop", []), key=lambda a: -a["n"])
     if not causes:
         st.info("Not enough labelled posts yet to rank reasons.")
         return
     total = opp["n_tagged"]
-    top = ui.causes_of(opp)[0]
+    top = causes[0]
     name = ui.area_label(top)
     with title_slot:
-        st.title(("Autopay and payment problems are" if top["key"] == "mandate_payment_issue" else f"“{name}” is") + " the top reason SIPs stop")
+        st.title(title_for(causes))
     head[0].markdown(f'<p class="sub" style="margin:0">The reasons people give, counted across {total:,} posts. Click a reason to read what people said.</p>',
                      unsafe_allow_html=True)
     note = group_note(opp, top)
@@ -67,17 +88,17 @@ def render() -> None:
     # ---- the chart ---------------------------------------------------------------
     show_all = st.session_state.get("show_all_reasons", False)
     shown = causes if show_all else causes[:TOP]
-    kinds = {ui.kind_of_group(ui.area_posts(posts, a)) for a in shown}
+    kinds = {ui.area_kind(posts, a) for a in shown}
     with st.container(key="card_reasons"):
         st.markdown(f'<div style="display:flex;justify-content:space-between;flex-wrap:wrap;align-items:baseline"><h3 style="margin:0">'
                     f'{"All" if show_all else f"Top {min(TOP, len(causes))}"} reasons SIPs stop</h3><div class="legend" style="font-size:.85rem;color:#3a4352">'
                     f'<span class="sw" style="background:{ui.FAIL}"></span>Payment or app failure'
                     f'<span class="sw" style="background:{ui.CHOICE}"></span>Person’s own choice'
-                    + (f'<span class="sw" style="background:{ui.UNCLEAR}"></span>Too few stories to say' if "unclear" in kinds else "") + "</div></div>",
+                    + (f'<span class="sw" style="background:{ui.UNCLEAR}"></span>Other or too few stories' if "unclear" in kinds else "") + "</div></div>",
                     unsafe_allow_html=True)
         reason_rows(posts, shown, total)
 
-        by_id = {ui.area_id(a): a for a in causes}
+        by_id = {ui.area_id(a): a for a in causes + [c for g in causes for c in g.get("children", [])]}
         opened = by_id.get(st.session_state.get("open_reason")) or top
         op = ui.area_posts(posts, opened)
         qs = ui.pick_quotes(op, 2, 160, hints=ui.HINTS.get(opened['key']))
