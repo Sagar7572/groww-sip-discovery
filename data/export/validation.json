@@ -686,6 +686,183 @@
    "corrected": "returns_display",
    "reason": "Area fix: an investment disappeared from the portfolio and two folios were created; a display problem, not autopay set-up.",
    "post": "I’m not sure what’s going on with the Groww app. My September investment in one of my mutual funds has disappeared, even though the NAV was already credited. Additionally, I’m facing an issue where two folios are being created for my SIP, d"
+  },
+  {
+   "id": "play_store_517522149cd6",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "underwhelming_returns"
+   ],
+   "corrected": [
+    "trust_concern"
+   ],
+   "reason": "Random check of 50: 'SIP money did not reach my account, Groww took it': a trust problem, not 'returns feel too small'.",
+   "post": "SIP का पैसा नही आया एकाउंट में GROWW ने अपने एकाउंट में ले लिया FAKE आप है GROWW isme koe sip mat karna"
+  },
+  {
+   "id": "play_store_517522149cd6",
+   "source": "play_store",
+   "url": null,
+   "field": "action",
+   "original": "stopped",
+   "corrected": "none",
+   "reason": "Random check of 50: same post: the person did not choose to stop.",
+   "post": "SIP का पैसा नही आया एकाउंट में GROWW ने अपने एकाउंट में ले लिया FAKE आप है GROWW isme koe sip mat karna"
+  },
+  {
+   "id": "play_store_517522149cd6",
+   "source": "play_store",
+   "url": null,
+   "field": "lapse_type",
+   "original": "voluntary",
+   "corrected": "not_applicable",
+   "reason": "Random check of 50: same post: not a stop story.",
+   "post": "SIP का पैसा नही आया एकाउंट में GROWW ने अपने एकाउंट में ले लिया FAKE आप है GROWW isme koe sip mat karna"
+  },
+  {
+   "id": "tradingqna_47e920c396f6",
+   "source": "tradingqna",
+   "url": "https://tradingqna.com/t/coin-sip-vs-amc-sip/127618/5",
+   "field": "triggers",
+   "original": [
+    "confusing_numbers",
+    "app_experience"
+   ],
+   "corrected": [
+    "none"
+   ],
+   "reason": "Random check of 50: a how-it-works question about SIP money transfer; 'confusing numbers' was wrong.",
+   "post": "The difference is clear now. Thank you. I have another question about money transfer from bank for SIP. When I setup SIP, money will be automatically deducted from my bank account or I need to transfer money in Coin before every SIP?"
+  },
+  {
+   "id": "youtube_68aab58e2e9d",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=MExMf8_g4CE",
+   "field": "triggers",
+   "original": [
+    "underwhelming_returns",
+    "expectation_mismatch"
+   ],
+   "corrected": [
+    "none"
+   ],
+   "reason": "Random check of 50: a reply saying returns are not guaranteed; an explanation to someone else, not the writer's own reason.",
+   "post": "Pallab ji koi bhi guarantee nahi hai ki return acha hi milega, ham sirf ummid rakhte hain pichhle returns ko dekh kar ki acha result milega. Market condition par hi nirbhar karta hai ultimately."
+  },
+  {
+   "id": "youtube_764ccd68716f",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=oIhGHb30rWo",
+   "field": "triggers",
+   "original": [
+    "underwhelming_returns",
+    "expectation_mismatch"
+   ],
+   "corrected": [
+    "none"
+   ],
+   "reason": "Random check of 50: a reply saying profit looks small in the first years; an explanation to someone else.",
+   "post": "Ek baat or pahle 1-2 saal me profit kafi kam dikhega lekin dhire dhire profit har din acha hone lag jayega."
+  },
+  {
+   "id": "reddit_f24d282ffb0c",
+   "source": "reddit",
+   "url": "https://www.reddit.com/r/IndiaInvestments/comments/xw8jw2/zerodha_how_do_i_set_up_autopay_for_mutual_fund/ir63p72/",
+   "field": "triggers",
+   "original": [
+    "mandate_payment_issue",
+    "cash_flow_strain"
+   ],
+   "corrected": [
+    "mandate_payment_issue"
+   ],
+   "reason": "Random check of 50: 'bulk payment does not work on AMC SIP' is a payment limit; 'money is tight' was wrong.",
+   "post": "Bulk payment doesn't work on amc sip though."
+  },
+  {
+   "id": "youtube_9be9a4eced62",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=MExMf8_g4CE",
+   "field": "triggers",
+   "original": [
+    "app_experience"
+   ],
+   "corrected": [
+    "none"
+   ],
+   "reason": "Random check of 50: a reply giving a video link for autopay; not the writer's own problem.",
+   "post": "Video me dikhay tarike se autopay to nahi hoga, Autopay ke lie ye video dekhiye isse har month apne aap payment hogi: https://www.youtube.com/watch?v=WwTPu9hHNrc"
+  },
+  {
+   "id": "play_store_3274104e0d25",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "app_experience",
+    "mandate_payment_issue"
+   ],
+   "corrected": [
+    "app_experience"
+   ],
+   "reason": "Random check of 50: autopay requests from IPO applications, not a SIP; borderline, set to app problem only.",
+   "post": "I've found out that to place *sell order of stocks at market price * user is not prompted to confirm and is instantaneous due to which I had accidentally placed order as a result of misclick. I hope this gets fixed. Edit : Recent Autopay re"
+  },
+  {
+   "id": "play_store_de9641ffc5b5",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "mandate_payment_issue",
+    "app_experience"
+   ],
+   "corrected": [
+    "app_experience"
+   ],
+   "reason": "Random check of 50: 'mutual fund setup very slow' names no payment; borderline, set to app problem only.",
+   "post": "mutual fund setup very slow and bad experience."
+  },
+  {
+   "id": "play_store_de9641ffc5b5",
+   "source": "play_store",
+   "url": null,
+   "field": "problem_area",
+   "original": "exit_delay",
+   "corrected": "app_bugs",
+   "reason": "Random check of 50: same post: a slow set-up is an app problem, not a withdrawal delay.",
+   "post": "mutual fund setup very slow and bad experience."
+  },
+  {
+   "id": "tradingqna_f9ac47782cba",
+   "source": "tradingqna",
+   "url": "https://tradingqna.com/t/where-to-invest-my-5l-to-pay-emis-of-the-loan/57440/10",
+   "field": "triggers",
+   "original": [
+    "none"
+   ],
+   "corrected": [
+    "underwhelming_returns"
+   ],
+   "reason": "Random check of 50: 'MF's are dead now a days 3-5 p.a' is a returns-too-small statement the AI missed.",
+   "post": "MF’s are dead now a days 3-5 p.a"
   }
- ]
+ ],
+ "accuracy_checks": {
+  "random": {
+   "n": 50,
+   "wrong": 6,
+   "wrong_with_borderline": 10,
+   "seed": 2026,
+   "date": "2026-10-27"
+  },
+  "severe": {
+   "n": 50,
+   "wrong": 24,
+   "date": "2026-10-27"
+  },
+  "main_errors": "most errors are replies or advice tagged as the writer's own problem, and extra reasons added to angry complaints about loans, withdrawals or demat."
+ }
 }

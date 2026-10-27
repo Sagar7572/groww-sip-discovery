@@ -136,14 +136,29 @@ def correct_triggers(text: str, triggers: list[str]) -> tuple[list[str], list[st
     return (kept or ["other"]), ["market_fall"]
 
 
+def load_t4() -> dict[str, dict]:
+    """Posts re-tagged with prompt t4 (pipeline/retag.py): their reasons, action and lapse type replace the t3 ones.
+    The human corrections are applied afterwards, so they always win."""
+    out = {}
+    for name in TAGGERS:
+        for r in load_jsonl(PROCESSED_DIR / f"tags_t4_{name}.jsonl"):
+            if r.get("status") == "ok" and r.get("tag_prompt_version") == "t4" and r.get("tags", {}).get("is_relevant"):
+                out[r["id"]] = r["tags"]
+    return out
+
+
 def build_posts(records: list[dict], by_tagger: dict) -> list[dict]:
+    t4 = load_t4()
     clean = {r["id"]: r for r in load_jsonl(PROCESSED_DIR / "clean.jsonl")}
     labels = results_for("v3")
     out = []
     for r in records:
         if r["status"] != "ok" or not r["tags"]["is_relevant"] or r["id"] not in clean:
             continue
-        c, t = clean[r["id"]], r["tags"]
+        c, t = clean[r["id"]], dict(r["tags"])
+        new = t4.get(r["id"])
+        if new:
+            t.update(stated_triggers=new["stated_triggers"], sip_action=new["sip_action"], lapse_type=new["lapse_type"])
         seg = t["segment_signals"]
         both = r["id"] in by_tagger["gpt-oss-120b"] and r["id"] in by_tagger["qwen"]
         triggers, removed = correct_triggers(c["text"], t["stated_triggers"])
@@ -154,6 +169,7 @@ def build_posts(records: list[dict], by_tagger: dict) -> list[dict]:
             "tagged_by": r.get("tagged_by", "gpt-oss-120b"), "second_tagger": both,
             "filter_label": labels[r["id"]]["relevant"] if r["id"] in labels else "not_filtered",
             "investor_type": t["investor_type"], "stage": t["journey_stage"], "action": t["sip_action"],
+            "retagged_t4": bool(new), "is_own_experience": new.get("is_own_experience") if new else None,
             "lapse_type": t["lapse_type"], "triggers": triggers, "triggers_removed": removed,
             "reason": t["underlying_reason"], "checking": t["checking_behaviour"],
             "checks": t["what_they_check"], "emotion": t["emotion"], "outside": t["outside_app_actions"],
@@ -618,6 +634,9 @@ def main() -> None:
     over = overview(posts, records, by_tagger)
     val = validation(by_tagger)
     val["human_corrections"] = human
+    checks = ROOT / "data" / "manual" / "accuracy_checks.json"      # hand-entered results of the accuracy checks
+    if checks.exists():
+        val["accuracy_checks"] = json.loads(checks.read_text(encoding="utf-8"))
 
     with open(EXPORT_DIR / "posts.jsonl", "w", encoding="utf-8") as f:
         for p in posts:

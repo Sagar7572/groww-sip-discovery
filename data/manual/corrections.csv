@@ -40,3 +40,15 @@ play_store_02f432d06581,problem_area,returns_display,"Area fix: the person canno
 reddit_5f1afe2635d1,problem_area,autopay_setup,Area fix: the person cancelled a SIP and was still debited; a problem post about autopay / mandates.
 play_store_dc41aee4c5fa,problem_area,sip_controls,"Area fix: after changing the amount the funds were credited to demat against the person's opt-out; closest area is SIP controls, not 'missing feature'."
 play_store_4623ffdcadd8,problem_area,returns_display,"Area fix: an investment disappeared from the portfolio and two folios were created; a display problem, not autopay set-up."
+play_store_517522149cd6,triggers,trust_concern,"Random check of 50: 'SIP money did not reach my account, Groww took it': a trust problem, not 'returns feel too small'."
+play_store_517522149cd6,action,none,Random check of 50: same post: the person did not choose to stop.
+play_store_517522149cd6,lapse_type,not_applicable,Random check of 50: same post: not a stop story.
+tradingqna_47e920c396f6,triggers,none,Random check of 50: a how-it-works question about SIP money transfer; 'confusing numbers' was wrong.
+youtube_68aab58e2e9d,triggers,none,"Random check of 50: a reply saying returns are not guaranteed; an explanation to someone else, not the writer's own reason."
+youtube_764ccd68716f,triggers,none,Random check of 50: a reply saying profit looks small in the first years; an explanation to someone else.
+reddit_f24d282ffb0c,triggers,mandate_payment_issue,Random check of 50: 'bulk payment does not work on AMC SIP' is a payment limit; 'money is tight' was wrong.
+youtube_9be9a4eced62,triggers,none,Random check of 50: a reply giving a video link for autopay; not the writer's own problem.
+play_store_3274104e0d25,triggers,app_experience,"Random check of 50: autopay requests from IPO applications, not a SIP; borderline, set to app problem only."
+play_store_de9641ffc5b5,triggers,app_experience,"Random check of 50: 'mutual fund setup very slow' names no payment; borderline, set to app problem only."
+play_store_de9641ffc5b5,problem_area,app_bugs,"Random check of 50: same post: a slow set-up is an app problem, not a withdrawal delay."
+tradingqna_f9ac47782cba,triggers,underwhelming_returns,Random check of 50: 'MF's are dead now a days 3-5 p.a' is a returns-too-small statement the AI missed.

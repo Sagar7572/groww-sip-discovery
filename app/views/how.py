@@ -119,6 +119,15 @@ def render() -> None:
         t3.markdown("<div style='height:.6rem'></div>" + tile(f"{market}", "wrong “market fell” labels removed by a rule"), unsafe_allow_html=True)
         t4.markdown("<div style='height:.6rem'></div>" + tile(f"{golden['agree']} / {golden['n']}" if golden else "[X / 20]",
                                                              "posts where the AI matched a person’s labels" + ("" if golden else " (coming)")), unsafe_allow_html=True)
+        acc = val.get("accuracy_checks", {}).get("random")
+        if acc:
+            wrong, n = 100 * acc["wrong"] / acc["n"], acc["n"]
+            st.markdown("<div style='height:.6rem'></div>" + tile(f"{wrong:.0f} in 100",
+                        f"posts have a wrong reason tag in a random check of {n}; up to {100 * acc['wrong_with_borderline'] / n:.0f} counting borderline cases"),
+                        unsafe_allow_html=True)
+            st.markdown(f'<p style="color:#3a4352;font-size:.92rem;margin-top:.8rem">In the most severe complaints the rate was higher: '
+                        f'{val["accuracy_checks"]["severe"]["wrong"]} of {val["accuracy_checks"]["severe"]["n"]} had a wrong reason. '
+                        f'{ui.esc(val["accuracy_checks"].get("main_errors", "").capitalize())}</p>', unsafe_allow_html=True)
         st.markdown('<p style="color:#3a4352;font-size:.92rem;margin-top:.8rem">Every quote shown is checked to be the post’s exact words. '
                     'Usernames and personal numbers are removed.</p>', unsafe_allow_html=True)
 

@@ -51,7 +51,7 @@
     ],
     [
      "mandate_payment_issue",
-     19
+     18
     ]
    ],
    "name": "Redemption and portfolio discrepancy concerns"
@@ -61,7 +61,7 @@
    "label": "saal, band, bahut, acha, din",
    "size": 190,
    "share": 0.108,
-   "with_named_trigger": 0.537,
+   "with_named_trigger": 0.521,
    "avg_severity": 1.22,
    "example_ids": [
     "youtube_1332357692c1",
@@ -71,7 +71,7 @@
    "top_triggers": [
     [
      "app_experience",
-     53
+     52
     ],
     [
      "confusing_numbers",
@@ -103,7 +103,7 @@
     ],
     [
      "mandate_payment_issue",
-     52
+     51
     ],
     [
      "confusing_numbers",
@@ -117,7 +117,7 @@
    "label": "coin, account, bank, mandate, sips",
    "size": 181,
    "share": 0.103,
-   "with_named_trigger": 0.757,
+   "with_named_trigger": 0.751,
    "avg_severity": 1.49,
    "example_ids": [
     "tradingqna_efb3a6f285f0",
@@ -131,11 +131,11 @@
     ],
     [
      "app_experience",
-     71
+     70
     ],
     [
      "cash_flow_strain",
-     15
+     14
     ]
    ],
    "name": "Coin platform mandate and funding"
@@ -173,7 +173,7 @@
    "label": "equity, years, investing, year, term",
    "size": 156,
    "share": 0.089,
-   "with_named_trigger": 0.244,
+   "with_named_trigger": 0.25,
    "avg_severity": 1.09,
    "example_ids": [
     "tradingqna_8c5e60f65029",
@@ -191,7 +191,7 @@
     ],
     [
      "underwhelming_returns",
-     8
+     9
     ]
    ],
    "name": "Long‑term equity fund investment plans"

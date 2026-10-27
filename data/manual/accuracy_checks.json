@@ -1,0 +1,5 @@
+{
+ "random": {"n": 50, "wrong": 6, "wrong_with_borderline": 10, "seed": 2026, "date": "2026-10-27"},
+ "severe": {"n": 50, "wrong": 24, "date": "2026-10-27"},
+ "main_errors": "most errors are replies or advice tagged as the writer's own problem, and extra reasons added to angry complaints about loans, withdrawals or demat."
+}

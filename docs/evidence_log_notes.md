@@ -483,3 +483,10 @@ One correction was a reviewer decision, not a clear AI error: a dashboard value 
 | First-time investors: returns group vs autopay | 69 vs 27 | 69 vs 27 |
 
 **Caution:** these 50 are the most severe posts, so this is the worst-case error rate, not the overall one. A random check follows (next entry).
+
+## Entry 20: Random accuracy check, and the t4 re-tag (2026-10-27, in progress)
+
+**Random check (50 posts, seed 2026, spread over all five sources, none of the 50 severe posts):** 6 posts (12%) had at least one wrong reason tag; 10 (20%) counting borderline cases. Among only the 21 posts that got any reason, 6 were wrong (29%). Of 7 posts carrying one of the three "making sense of returns" reasons, 4 were clearly wrong; of 3 carrying autopay, 2 were borderline.
+**What fails:** replies, advice or explanations to someone else tagged as if they were the writer's own problem (4 posts); a "money not received" complaint tagged as returns; a how-it-works question tagged as confusing numbers. Plus the pattern in Entry 19: extra reasons on angry loan, withdrawal and demat complaints.
+**Applied:** 8 corrections (+1 missed tag) with reasons in `corrections.csv`. Autopay 234 → 233, making sense of returns 229 → 226 unique posts; first-time returns vs autopay 69 vs 27 → 67 vs 27.
+**Next (t4 re-tag):** a new prompt version with four rules (only the writer's own stop reasons; replies and advice get none; loan / withdrawal / demat / KYC / OTP / support complaints get none unless they made the writer stop; "money not received" is a withdrawal problem) and a new field `is_own_experience`. First tested on the 100 hand-checked posts; the full re-tag of the roughly 420 posts carrying autopay or a returns reason runs only if the random 50 error rate falls under 10%. Results are written to separate files and the hand corrections stay on top.
