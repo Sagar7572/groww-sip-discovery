@@ -58,7 +58,14 @@ def area_id(a: dict) -> str:
     return f"{a['kind']}:{a['key']}"
 
 
+def with_groups(opp: dict) -> list[dict]:
+    """The ranked causes plus the combined groups (each group counts a post once), in one list ordered by posts."""
+    return sorted(causes_of(opp) + list(opp.get("groups", [])), key=lambda a: -a["n"])
+
+
 def area_posts(posts: pd.DataFrame, a: dict) -> pd.DataFrame:
+    if a["kind"] == "group":
+        return posts[posts.triggers.apply(lambda t: any(k in t for k in a["members"]))]
     if a["kind"] == "reason":
         return posts[posts.triggers.apply(lambda t: a["key"] in t)]
     return posts[posts.problem_area == a["key"]]

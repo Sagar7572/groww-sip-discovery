@@ -1,40 +1,40 @@
 {
  "themes": [
   {
-   "theme": "Investment guidance and reassurance",
-   "n": 62,
-   "share_of_needs": 0.265,
-   "example_need": "Clarity on post-SIP investment management",
+   "theme": "Investment guidance and education",
+   "n": 185,
+   "share_of_needs": 0.282,
+   "example_need": "should SIP start in up or down market",
    "quotes": [
     {
-     "id": "reddit_7334aa307c55",
-     "quote": "My XIRR is negative. Can anyone suggest what needs to be done any funds to be added or deleted from?",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/mutualfunds/comments/1x4mtow/xirr_is_6/"
+     "id": "youtube_515c2c14a4a8",
+     "quote": "Sir please create a Detail video on Debt , Equity,Gold and Silver SIP funds video.",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=oIhGHb30rWo"
     }
    ],
-   "avg_severity": 1.39
+   "avg_severity": 1.26
   },
   {
-   "theme": "Flexible SIP management controls",
-   "n": 37,
-   "share_of_needs": 0.158,
-   "example_need": "need clear information on next SIP date",
+   "theme": "SIP setup, modification and pause features",
+   "n": 132,
+   "share_of_needs": 0.201,
+   "example_need": "asks minimum amount to start SIP",
    "quotes": [
     {
-     "id": "tradingqna_887459d58c62",
-     "quote": "All SIPs shud be auto paid to amcs via mandate and bse star Also most important make pause and modify feature available in AMC SIPs",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/bse-to-launch-e-mandate-facility-on-mutual-fund-platform/34955/5"
+     "id": "play_store_2dde31499622",
+     "quote": "u can't do small per day sip u can't track external funds in this app worst app ind money ia lot better now I am selling all my funds in this worst app",
+     "source": "play_store",
+     "url": null
     }
    ],
-   "avg_severity": 1.57
+   "avg_severity": 1.31
   },
   {
-   "theme": "Reliable autopay and mandates",
-   "n": 35,
-   "share_of_needs": 0.15,
-   "example_need": "Explanation of mandate date fields",
+   "theme": "Payment, autopay and mandate reliability",
+   "n": 83,
+   "share_of_needs": 0.126,
+   "example_need": "resolution of reversed installment",
    "quotes": [
     {
      "id": "reddit_e03e463419ec",
@@ -43,43 +43,43 @@
      "url": "https://www.reddit.com/r/mutualfunds/comments/1wsf1qx/edelweiss_international_fund_sip_stopped/pcl11yx/"
     }
    ],
-   "avg_severity": 1.51
+   "avg_severity": 1.54
   },
   {
-   "theme": "Faster, clearer redemptions",
-   "n": 32,
-   "share_of_needs": 0.137,
-   "example_need": "needs guidance on redemption process",
+   "theme": "Platform reliability, bugs and UI issues",
+   "n": 76,
+   "share_of_needs": 0.116,
+   "example_need": "Faster display of daily gain/loss data",
    "quotes": [
     {
-     "id": "reddit_9fdc9cd162a4",
-     "quote": "So stopped sip to build emergency fund. And get myself a few kinda expensive items. Also planning a deposit for a flat in bangalore",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/mutualfunds/comments/1xd3gs4/firsttimers_who_paused_or_stopped_a_sip_what/19riu1yyk6f1d/"
-    }
-   ],
-   "avg_severity": 2.0
-  },
-  {
-   "theme": "Accurate data and app reliability",
-   "n": 26,
-   "share_of_needs": 0.111,
-   "example_need": "need accurate redemption amount display",
-   "quotes": [
-    {
-     "id": "play_store_b87cac51412c",
-     "quote": "Not able to download mutual funds capital gains downloads. it's showing 'Downloading report but it's not downloading",
+     "id": "play_store_9f3bfa863db2",
+     "quote": "unable to update external mf portfolio",
      "source": "play_store",
      "url": null
     }
    ],
-   "avg_severity": 1.81
+   "avg_severity": 1.84
   },
   {
-   "theme": "Clear fees and refund policies",
-   "n": 23,
-   "share_of_needs": 0.098,
-   "example_need": "Transparency on bank charges for failed SIPs",
+   "theme": "Faster redemption processing",
+   "n": 41,
+   "share_of_needs": 0.062,
+   "example_need": "Information on redemption timeline",
+   "quotes": [
+    {
+     "id": "tradingqna_334be3423c93",
+     "quote": "Thanks Karthik for your reply. I’m aware about both FIFO and ELSS withdrawal. My Question is very simple, Does Coin provide support for withdrawal from my non ELSS SIP based on FIFO while keeping my SIP in active state ?",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/coin-withdraw-question-to-avoid-tax/15909/3"
+    }
+   ],
+   "avg_severity": 1.83
+  },
+  {
+   "theme": "Transparent fees, pricing and charge explanations",
+   "n": 35,
+   "share_of_needs": 0.053,
+   "example_need": "Accurate and stable expense ratio data",
    "quotes": [
     {
      "id": "play_store_e24002834a10",
@@ -88,24 +88,39 @@
      "url": null
     }
    ],
-   "avg_severity": 1.78
+   "avg_severity": 1.63
+  },
+  {
+   "theme": "Alerts, reminders and notifications",
+   "n": 11,
+   "share_of_needs": 0.017,
+   "example_need": "need clear information on next SIP date",
+   "quotes": [
+    {
+     "id": "tradingqna_179db7f60a42",
+     "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
+    }
+   ],
+   "avg_severity": 1.82
   },
   {
    "theme": "Something else",
-   "n": 19,
-   "share_of_needs": 0.081,
-   "example_need": "Consolidated family portfolio view",
+   "n": 94,
+   "share_of_needs": 0.143,
+   "example_need": "Combined portfolio allocation view",
    "quotes": [
     {
-     "id": "play_store_e5f29cc067aa",
-     "quote": "Mutual fund screener option not good, foreign investment required",
-     "source": "play_store",
-     "url": null
+     "id": "reddit_9fdc9cd162a4",
+     "quote": "So stopped sip to build emergency fund. And get myself a few kinda expensive items. Also planning a deposit for a flat in bangalore",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1xd3gs4/firsttimers_who_paused_or_stopped_a_sip_what/19riu1yyk6f1d/"
     }
    ],
-   "avg_severity": 1.32
+   "avg_severity": 1.37
   }
  ],
- "posts_with_need": 592,
- "grouped": 234
+ "posts_with_need": 657,
+ "grouped": 657
 }

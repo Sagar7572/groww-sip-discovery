@@ -15,13 +15,27 @@ def reason_rows(posts: pd.DataFrame, areas: list[dict], total: int) -> None:
     biggest = max(a["n"] for a in areas)
     with st.container(key="reasons"):
         for a in areas:
+            label = ui.area_label(a) + (f" ({len(a['members'])} reasons combined)" if a["kind"] == "group" else "")
             col = ui.COLOUR[ui.kind_of_group(ui.area_posts(posts, a))]
             c1, c2, c3 = st.columns([3.2, 6, 1.5], vertical_alignment="center")
-            if c1.button(ui.area_label(a), key=f"pick_{ui.area_id(a)}", type="tertiary"):
+            if c1.button(label, key=f"pick_{ui.area_id(a)}", type="tertiary"):
                 st.session_state["open_reason"] = ui.area_id(a)
             c2.markdown(f'<div class="bar-track"><div class="bar-fill" style="width:{100 * a["n"] / biggest:.1f}%;background:{col}"></div></div>',
                         unsafe_allow_html=True)
             c3.markdown(f'<div class="num">{a["n"]:,} <span>· {100 * a["n"] / total:.1f}%</span></div>', unsafe_allow_html=True)
+
+
+def group_note(opp: dict, top: dict) -> str:
+    """One computed sentence comparing the combined 'making sense of returns' group with autopay, overall and for first-time investors."""
+    c, g = opp.get("group_compare"), (opp.get("groups") or [None])[0]
+    if not c or not g or top["key"] != "mandate_payment_issue":
+        return ""
+    lead = ("Overall, autopay is named in more posts" if c["autopay"] > c["group_unique"] else
+            "Overall, returns is named in more posts" if c["autopay"] < c["group_unique"] else "Overall, the two are named in the same number of posts")
+    return (f"<b>{ui.esc(g['label'])}</b> combines three reasons: confusing numbers, returns feel too small and expected faster growth. "
+            f"Each post is counted once, so it is {c['group_unique']:,} posts, not {c['group_sum_of_parts']:,}. Autopay: {c['autopay']:,}. "
+            f"{lead}, but among {c['first_time_posts']:,} first-time investors it is <b>{c['first_time_group']:,}</b> posts for returns vs "
+            f"<b>{c['first_time_autopay']:,}</b> for autopay.")
 
 
 def render() -> None:
@@ -33,18 +47,21 @@ def render() -> None:
     if excl:
         opp = opp.get("without_reddit", opp)
         posts = posts[posts.source != "reddit"]
-    causes, unsplit = ui.causes_of(opp), ui.unsplit_of(opp)
+    causes, unsplit = ui.with_groups(opp), ui.unsplit_of(opp)
     after = sorted(opp.get("after_stop", []), key=lambda a: -a["n"])
     if not causes:
         st.info("Not enough labelled posts yet to rank reasons.")
         return
     total = opp["n_tagged"]
-    top = causes[0]
+    top = ui.causes_of(opp)[0]
     name = ui.area_label(top)
     with title_slot:
         st.title(("Autopay and payment problems are" if top["key"] == "mandate_payment_issue" else f"“{name}” is") + " the top reason SIPs stop")
     head[0].markdown(f'<p class="sub" style="margin:0">The reasons people give, counted across {total:,} posts. Click a reason to read what people said.</p>',
                      unsafe_allow_html=True)
+    note = group_note(opp, top)
+    if note:
+        st.markdown(f'<div class="qbox" style="margin:.8rem 0 0;background:#f4f6fa">{note}</div>', unsafe_allow_html=True)
     st.write("")
 
     # ---- the chart ---------------------------------------------------------------

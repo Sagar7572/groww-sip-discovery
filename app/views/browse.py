@@ -66,7 +66,7 @@ def ask_panel(posts: pd.DataFrame) -> None:
         raw = answer
         answer, ok, removed = A.check_citations(raw, len(hits))
         if ok:
-            box = ui.esc(answer)
+            box = ui.esc(answer.replace("**", ""))
         else:
             box = "The data doesn’t cover this. The closest posts are listed below."
     with st.container(key="card_answer"):
@@ -81,7 +81,7 @@ def ask_panel(posts: pd.DataFrame) -> None:
 
 def reason_options() -> dict[str, str]:
     opp = C.load_json("opportunities")
-    areas = ui.causes_of(opp) + sorted(opp.get("after_stop", []), key=lambda a: -a["n"])
+    areas = ui.with_groups(opp) + sorted(opp.get("after_stop", []), key=lambda a: -a["n"])
     return {ui.area_id(a): ui.area_label(a) for a in areas}
 
 
@@ -101,6 +101,7 @@ def post_card(r) -> str:
 def browse_panel(posts: pd.DataFrame) -> None:
     st.markdown("<hr style='border:none;border-top:1px solid #e3e7ee;margin:2rem 0 1rem'>", unsafe_allow_html=True)
     opts = reason_options()
+    opp_groups = C.load_json("opportunities").get("groups", [])
     h, f1, f2, f3 = st.columns([2.2, 1.3, 1.5, 1.2], vertical_alignment="bottom")
     h.markdown("## Browse the posts")
     source = f1.selectbox("Source", ["all"] + list(ui.SHORT), format_func=lambda s: "All sources" if s == "all" else ui.SHORT[s], key="f_source")
@@ -121,7 +122,11 @@ def browse_panel(posts: pd.DataFrame) -> None:
         df = df[df.source == source]
     if reason != "all":
         kind, key = reason.split(":", 1)
-        df = df[df.triggers.apply(lambda t: key in t)] if kind == "reason" else df[df.problem_area == key]
+        if kind == "group":
+            members = next(g["members"] for g in opp_groups if g["key"] == key)
+            df = df[df.triggers.apply(lambda t: any(k in t for k in members))]
+        else:
+            df = df[df.triggers.apply(lambda t: key in t)] if kind == "reason" else df[df.problem_area == key]
     if year == "2021 onward":
         df = df[df.year >= 2021]
     elif year != "All years":

@@ -453,3 +453,11 @@ People found the eight-page dashboard overwhelming, so it was rebuilt as five pa
 - **Chips on the nine questions** ("Clear in posts" / "Needs interviews") follow one written rule: at least 10% of relevant posts speak to the question. Today Q1, Q4, Q6 and Q8 need interviews.
 - **Environment problem found:** the Groq key line had been overwritten in `.env` by pasted text, so any new run could not call Groq (the running jobs kept working because they loaded the key earlier). The AI sub-theme and unmet-need grouping were therefore not refreshed for the newest posts in this export.
 
+
+## Entry 18: Combined group, unmet-need regrouping, and a card-wording fix (2026-10-27)
+
+- **Home card 1 wording** is now fully computed: "#1 reason SIPs stop overall, and the top reason in X of N sources" (today 1 of 4). The old "in every source" branch is gone.
+- **New combined group "Making sense of returns"** = posts giving ANY of: confusing numbers, returns feel too small, expected faster growth. Each post counted once (235 unique posts, not 277 if the three counts were added). Autopay: 241. Overall autopay is slightly ahead, but among first-time investors (252 posts) the returns group has 69 posts vs 27 for autopay. Same counting rules as the ranked causes (posts about getting money out are left out). It is shown as its own row next to autopay and is not part of the opportunity score ranking.
+- **Unmet-need grouping rebuilt from scratch** (old theme list backed up locally): 657 posts state a need, all 657 grouped into 8 themes (the old list had 7). Top theme is now "Investment guidance and education" (185), replacing "Investment guidance and reassurance" (227). Theme names and counts moved because the AI wrote a new list, so these are not comparable one for one.
+- **Ask the data, browser test:** "Why do autopay payments fail?" gave a cited answer from 8 posts. The off-topic "What is the capital of France?" correctly said the data does not cover it. Bug found: the AI's bold marks (`**`) showed as literal asterisks; they are now stripped.
+- `.env` tidied: the stray pasted lines were deleted; every key line was kept.

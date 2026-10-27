@@ -47,8 +47,8 @@ def render() -> None:
     top_posts = ui.area_posts(posts, top)
     wins, total = top_reason_everywhere(posts, top["key"]) if top["kind"] == "reason" else (0, 0)
     name = ui.area_label(top)
-    first = ("Autopay and payment problems are" if top["key"] == "mandate_payment_issue" else f"“{name}” is") + " the #1 reason SIPs stop"
-    where = " in every source we checked." if total and wins == total else (f" overall; it is the top reason in {wins} of {total} sources." if total else ".")
+    first = ("Autopay and payment problems are" if top["key"] == "mandate_payment_issue" else f"“{name}” is") + " the #1 reason SIPs stop overall"
+    where = f", and the top reason in {wins} of {total} sources." if total else "."
     c1, c2 = st.columns(2, gap="medium")
     with c1, st.container(key="card_cause"):
         st.markdown(ui.label("Top cause", ui.FAIL) + ui.big(f"{100 * top['share_of_tagged']:.0f}%", "of posts")

@@ -1,12 +1,12 @@
 {
  "clusters": [
   {
-   "cluster": 2,
-   "label": "market, years, month, time, sips",
-   "size": 239,
-   "share": 0.144,
-   "with_named_trigger": 0.527,
-   "avg_severity": 1.22,
+   "cluster": 3,
+   "label": "years, month, market, sips, time",
+   "size": 242,
+   "share": 0.138,
+   "with_named_trigger": 0.55,
+   "avg_severity": 1.25,
    "example_ids": [
     "reddit_7334aa307c55",
     "tradingqna_665c3184eb2d",
@@ -15,110 +15,54 @@
    "top_triggers": [
     [
      "app_experience",
-     51
+     61
     ],
     [
      "mandate_payment_issue",
-     32
+     35
     ],
     [
      "social_influence",
-     21
-    ]
-   ],
-   "name": null
-  },
-  {
-   "cluster": 8,
-   "label": "market, equity, years, returns, inflation",
-   "size": 185,
-   "share": 0.112,
-   "with_named_trigger": 0.378,
-   "avg_severity": 1.21,
-   "example_ids": [
-    "reddit_6fbd102ac3a2",
-    "tradingqna_cbcdda062e88",
-    "tradingqna_960bf382becc"
-   ],
-   "top_triggers": [
-    [
-     "expectation_mismatch",
-     21
-    ],
-    [
-     "market_fall",
-     18
-    ],
-    [
-     "underwhelming_returns",
-     17
-    ]
-   ],
-   "name": null
-  },
-  {
-   "cluster": 7,
-   "label": "coin, bank, account, mandate, sips",
-   "size": 183,
-   "share": 0.111,
-   "with_named_trigger": 0.76,
-   "avg_severity": 1.55,
-   "example_ids": [
-    "tradingqna_efb3a6f285f0",
-    "tradingqna_888f0b0c52c0",
-    "reddit_6ba818604afb"
-   ],
-   "top_triggers": [
-    [
-     "mandate_payment_issue",
-     90
-    ],
-    [
-     "app_experience",
-     68
-    ],
-    [
-     "cash_flow_strain",
      20
     ]
    ],
-   "name": null
+   "name": "SIP scheduling and payment problems"
   },
   {
-   "cluster": 0,
-   "label": "mf, mandate, bank, autopay, pay",
-   "size": 175,
-   "share": 0.106,
-   "with_named_trigger": 0.594,
-   "avg_severity": 1.37,
+   "cluster": 9,
+   "label": "account, redemption, portfolio, coin, mf",
+   "size": 218,
+   "share": 0.124,
+   "with_named_trigger": 0.624,
+   "avg_severity": 1.51,
    "example_ids": [
-    "reddit_b14fa6000076",
-    "reddit_4834124ed159",
-    "reddit_c8672a25888f"
+    "play_store_2591b9cd3517",
+    "play_store_78d23abd9396",
+    "play_store_4ed20b8b1fc2"
    ],
    "top_triggers": [
     [
      "app_experience",
-     55
+     90
+    ],
+    [
+     "trust_concern",
+     25
     ],
     [
      "mandate_payment_issue",
-     45
-    ],
-    [
-     "confusing_numbers",
-     17
+     22
     ]
    ],
-   "name": null
+   "name": "Redemption and portfolio discrepancy concerns"
   },
   {
-   "cluster": 4,
-   "label": "saal, bahut, band, muje, acha",
-   "size": 175,
-   "share": 0.106,
-   "with_named_trigger": 0.566,
-   "avg_severity": 1.23,
+   "cluster": 2,
+   "label": "saal, band, bahut, acha, din",
+   "size": 190,
+   "share": 0.108,
+   "with_named_trigger": 0.537,
+   "avg_severity": 1.22,
    "example_ids": [
     "youtube_1332357692c1",
     "youtube_2b30806ad1a4",
@@ -127,7 +71,7 @@
    "top_triggers": [
     [
      "app_experience",
-     50
+     53
     ],
     [
      "confusing_numbers",
@@ -135,102 +79,130 @@
     ],
     [
      "mandate_payment_issue",
-     18
+     19
     ]
    ],
-   "name": null
+   "name": "Basic SIP queries in Hindi"
   },
   {
-   "cluster": 1,
-   "label": "account, redemption, days, mf, portfolio",
-   "size": 169,
-   "share": 0.102,
-   "with_named_trigger": 0.716,
-   "avg_severity": 1.67,
+   "cluster": 5,
+   "label": "mf, mandate, bank, autopay, account",
+   "size": 184,
+   "share": 0.105,
+   "with_named_trigger": 0.598,
+   "avg_severity": 1.36,
    "example_ids": [
-    "play_store_0e51a600dc72",
-    "play_store_abb440c76cd7",
-    "play_store_4ed20b8b1fc2"
+    "reddit_b14fa6000076",
+    "reddit_c8672a25888f",
+    "youtube_7dd529dde861"
    ],
    "top_triggers": [
     [
      "app_experience",
-     79
+     58
     ],
     [
      "mandate_payment_issue",
-     27
+     52
     ],
     [
-     "trust_concern",
-     25
+     "confusing_numbers",
+     17
     ]
    ],
-   "name": null
+   "name": "Mandate and autopay fee details"
   },
   {
-   "cluster": 6,
-   "label": "best, stop, sips, want, option",
-   "size": 144,
-   "share": 0.087,
-   "with_named_trigger": 0.347,
-   "avg_severity": 1.1,
+   "cluster": 7,
+   "label": "coin, account, bank, mandate, sips",
+   "size": 181,
+   "share": 0.103,
+   "with_named_trigger": 0.757,
+   "avg_severity": 1.49,
+   "example_ids": [
+    "tradingqna_efb3a6f285f0",
+    "tradingqna_888f0b0c52c0",
+    "tradingqna_683abb6728fa"
+   ],
+   "top_triggers": [
+    [
+     "mandate_payment_issue",
+     89
+    ],
+    [
+     "app_experience",
+     69
+    ],
+    [
+     "cash_flow_strain",
+     17
+    ]
+   ],
+   "name": "Coin platform mandate and funding"
+  },
+  {
+   "cluster": 4,
+   "label": "best, sips, stop, start, good",
+   "size": 176,
+   "share": 0.1,
+   "with_named_trigger": 0.369,
+   "avg_severity": 1.12,
    "example_ids": [
     "play_store_23f8e55b1bdf",
     "youtube_1f2998ea36b7",
-    "play_store_5e4e040086c8"
+    "youtube_5aec8d0eee3a"
    ],
    "top_triggers": [
     [
      "app_experience",
-     28
+     31
     ],
     [
      "mandate_payment_issue",
-     12
+     17
     ],
     [
-     "fund_switching",
-     5
+     "confusing_numbers",
+     10
     ]
    ],
-   "name": null
+   "name": "General interest in starting SIP"
   },
   {
-   "cluster": 9,
-   "label": "cap, stocks, investing, term, equity",
-   "size": 139,
-   "share": 0.084,
-   "with_named_trigger": 0.36,
-   "avg_severity": 1.12,
+   "cluster": 8,
+   "label": "equity, years, investing, year, term",
+   "size": 156,
+   "share": 0.089,
+   "with_named_trigger": 0.244,
+   "avg_severity": 1.09,
    "example_ids": [
-    "youtube_33672e73968b",
-    "play_store_b9b2ccad5d28",
-    "play_store_0ba72aa5a609"
+    "tradingqna_8c5e60f65029",
+    "reddit_b5904a04108a",
+    "youtube_6a02c6eb7fc1"
    ],
    "top_triggers": [
     [
      "app_experience",
-     33
+     11
     ],
     [
      "social_influence",
-     12
+     10
     ],
     [
-     "expectation_mismatch",
-     7
+     "underwhelming_returns",
+     8
     ]
    ],
-   "name": null
+   "name": "Long‑term equity fund investment plans"
   },
   {
-   "cluster": 3,
-   "label": "stocks, interface, easy, beginners, friendly",
-   "size": 136,
-   "share": 0.082,
-   "with_named_trigger": 0.301,
-   "avg_severity": 1.1,
+   "cluster": 1,
+   "label": "stocks, easy, interface, beginners, friendly",
+   "size": 142,
+   "share": 0.081,
+   "with_named_trigger": 0.331,
+   "avg_severity": 1.14,
    "example_ids": [
     "play_store_417913830bed",
     "play_store_0e0dcccad5ee",
@@ -239,30 +211,58 @@
    "top_triggers": [
     [
      "app_experience",
-     36
+     41
     ],
     [
      "trust_concern",
-     3
+     5
+    ],
+    [
+     "mandate_payment_issue",
+     4
+    ]
+   ],
+   "name": "User‑friendly app experience"
+  },
+  {
+   "cluster": 0,
+   "label": "market, years, inflation, money, returns",
+   "size": 137,
+   "share": 0.078,
+   "with_named_trigger": 0.423,
+   "avg_severity": 1.27,
+   "example_ids": [
+    "tradingqna_cbcdda062e88",
+    "tradingqna_cfd4ef548caa",
+    "tradingqna_960bf382becc"
+   ],
+   "top_triggers": [
+    [
+     "market_fall",
+     17
+    ],
+    [
+     "expectation_mismatch",
+     16
     ],
     [
      "underwhelming_returns",
-     3
+     14
     ]
    ],
-   "name": null
+   "name": "Market cycle and return expectations"
   },
   {
-   "cluster": 5,
-   "label": "बह, ആയ, रह, आपक, आप",
-   "size": 109,
-   "share": 0.066,
-   "with_named_trigger": 0.44,
+   "cluster": 6,
+   "label": "ആയ, बह, എന, रह, nikal",
+   "size": 131,
+   "share": 0.075,
+   "with_named_trigger": 0.458,
    "avg_severity": 1.15,
    "example_ids": [
+    "youtube_4f840fd8ecd9",
     "youtube_ab65878f1d73",
-    "youtube_d4f837e9e094",
-    "youtube_0244f4557c7b"
+    "youtube_d4f837e9e094"
    ],
    "top_triggers": [
     [
@@ -271,17 +271,17 @@
     ],
     [
      "underwhelming_returns",
-     11
+     13
     ],
     [
-     "expectation_mismatch",
-     9
+     "confusing_numbers",
+     13
     ]
    ],
-   "name": null
+   "name": "Personal SIP queries and fund advice"
   }
  ],
  "k": 10,
- "named_by_ai": 0,
+ "named_by_ai": 10,
  "note": "Themes are groups of posts that mean similar things, found automatically after removing Hindi, Hinglish and Malayalam filler words. Each name is written by an AI model from the group's words and example posts. A theme where few posts have a named reason is one the codebook did not anticipate."
 }

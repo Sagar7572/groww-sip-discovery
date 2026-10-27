@@ -341,6 +341,29 @@ def rank_table(areas: list[dict]) -> list[dict]:
     return areas
 
 
+RETURNS_GROUP = ("confusing_numbers", "underwhelming_returns", "expectation_mismatch")
+
+
+def combined_group(posts: list[dict], exit_ids: set, n_all: int) -> tuple[list[dict], dict]:
+    """'Making sense of returns': posts that give ANY of three related reasons, each post counted once. Same rules as the
+    ranked causes (posts about getting money out are left out). Also compares it with autopay, overall and for first-timers."""
+    in_group = lambda p: any(t in p["triggers"] for t in RETURNS_GROUP)
+    pool = [p for p in posts if p["id"] not in exit_ids]
+    items = [p for p in pool if in_group(p)]
+    first = [p for p in pool if p.get("investor_type") == "first_time"]
+    autopay = lambda d: sum("mandate_payment_issue" in p["triggers"] for p in d)
+    area = []
+    if items:
+        a = make_area("making_sense_of_returns", "Making sense of returns", items, TRIGGER_BRANCH["underwhelming_returns"],
+                      *SOLVABLE["underwhelming_returns"], n_all, "group")
+        a["members"] = list(RETURNS_GROUP)
+        area = [a]
+    compare = {"group_unique": len(items), "group_sum_of_parts": sum(t in p["triggers"] for p in pool for t in RETURNS_GROUP),
+               "autopay": autopay(pool), "posts": len(pool),
+               "first_time_posts": len(first), "first_time_group": sum(in_group(p) for p in first), "first_time_autopay": autopay(first)}
+    return area, compare
+
+
 def opportunities(posts: list[dict], label_info: dict) -> dict:
     """Two ranked tables. Causes: why people stop or never get going (the stated reasons, with 'Hard to use the app'
     split into sub-themes). After stopping: problems getting money out (redemption, withdrawal, refund). A post about
@@ -376,8 +399,10 @@ def opportunities(posts: list[dict], label_info: dict) -> dict:
         if items:
             branch, solv, why = SUB_AREA[key]
             after.append(make_area(key, label, items, branch, solv, why, n_all, "after_stop"))
+    groups, group_compare = combined_group(posts, exit_ids, n_all)
     return {
         "causes": rank_table(causes), "after_stop": rank_table(after), "n_tagged": n_all,
+        "groups": groups, "group_compare": group_compare,
         "app_posts_total": sum(1 for p in posts if "app_experience" in p["triggers"]),
         "app_posts_not_ranked": len(not_problem),
         "exit_posts": len(exit_posts), "label_info": label_info,
