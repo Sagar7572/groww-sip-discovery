@@ -461,3 +461,25 @@ People found the eight-page dashboard overwhelming, so it was rebuilt as five pa
 - **Unmet-need grouping rebuilt from scratch** (old theme list backed up locally): 657 posts state a need, all 657 grouped into 8 themes (the old list had 7). Top theme is now "Investment guidance and education" (185), replacing "Investment guidance and reassurance" (227). Theme names and counts moved because the AI wrote a new list, so these are not comparable one for one.
 - **Ask the data, browser test:** "Why do autopay payments fail?" gave a cited answer from 8 posts. The off-topic "What is the capital of France?" correctly said the data does not cover it. Bug found: the AI's bold marks (`**`) showed as literal asterisks; they are now stripped.
 - `.env` tidied: the stray pasted lines were deleted; every key line was kept.
+
+## Entry 19: AI added plausible but wrong second reasons on severe complaints: 24 of the 50 most severe posts corrected (2026-10-27)
+
+**Check:** the 50 posts shown first on Ask & browse (most serious first, 2021 onward) were re-read in full by a person (with Claude doing the reading, the user deciding which changes to keep).
+
+**Result:** 24 of the 50 posts (48%) had at least one wrong reason tag, and 4 more posts had a wrong problem area (fixed too). 39 rows were added to `data/manual/corrections.csv`; each keeps the AI's original value and the reason for the change.
+
+**What the AI did wrong:** it added a plausible second or third reason to an angry app complaint. Typical errors:
+- loan against mutual fund, withdrawal not credited, OTP not received, KYC pending and demat-without-consent complaints tagged "needs the money / goal changed", "returns feel too small", "forgot or lost interest" or "autopay / payment problem" (none of these were said);
+- "my SIP is not deducted" tagged "money is tight" and "chose to stop" when it is a failed payment;
+- the sale-price complaint tagged "market fell".
+One correction was a reviewer decision, not a clear AI error: a dashboard value that dropped after cancelling a SIP was set to "confusing numbers" because the person is confused by what the dashboard shows.
+
+**Effect on the headline numbers:**
+
+| | Before | After |
+|---|---|---|
+| Autopay / payment problem (unique posts) | 241 | 234 |
+| Making sense of returns (unique posts) | 235 | 229 |
+| First-time investors: returns group vs autopay | 69 vs 27 | 69 vs 27 |
+
+**Caution:** these 50 are the most severe posts, so this is the worst-case error rate, not the overall one. A random check follows (next entry).

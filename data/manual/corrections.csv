@@ -1,3 +1,42 @@
 id,field,corrected_value,reason
 play_store_9051f4885dd2,triggers,underwhelming_returns|trust_concern,"Human review: the review complains that the app showed an 11% gain that became an 11% loss at redemption. That is a display / trust problem, not the market falling. The AI had added 'market_fall' because the post contains the word 'loss'."
 tradingqna_e45f14885793,investor_type,unclear,"Human review: the post pastes a news article about first-time investors in general (Moneycontrol, 2019); the writer does not say they are a first-time investor. Found while reading the quotes in the first-time-investor box on the Segments page."
+play_store_4d3cabf0a420,triggers,trust_concern|app_experience,"Top-50 severity check: fund house switched and sold the person's funds without permission; that is a trust problem, not 'expected faster growth'."
+play_store_ec1a5a1c3991,triggers,trust_concern,Top-50 severity check: loan against mutual fund repaid but redemption blocked; 'needs the money / goal changed' is wrong.
+play_store_b660e29b94c1,triggers,none,"Top-50 severity check: redemption processed but not credited for 30 days is an after-stopping withdrawal problem, not 'needs the money / goal changed'."
+play_store_defa06affc8c,triggers,confusing_numbers|app_experience,Top-50 severity check: person is confused by the dashboard value dropping after cancelling one SIP (set to 'confusing numbers' on the reviewer's decision); 'returns too small' and 'expected faster growth' were wrong.
+reddit_4a316d605c4e,triggers,underwhelming_returns|expectation_mismatch|goal_change|social_influence,Top-50 severity check: the writer started because a friend promised returns (influence); 'switching to another fund' is not what the post is about.
+play_store_3301215418be,triggers,trust_concern,Top-50 severity check: bank account blocked after an unexpected credit; 'money is tight' is a consequence and the SIP did not fail because of autopay.
+play_store_91de10a09c03,triggers,app_experience,"Top-50 severity check: the payment worked and units were allotted; the units were not visible in the app. This is a display problem, not a payment failure."
+play_store_91de10a09c03,action,none,"Top-50 severity check: the payment worked and units were allotted; the units were not visible in the app. This is a display problem, not a payment failure."
+play_store_91de10a09c03,lapse_type,not_applicable,"Top-50 severity check: the payment worked and units were allotted; the units were not visible in the app. This is a display problem, not a payment failure."
+play_store_b81a6b8a1dc0,triggers,trust_concern,"Top-50 severity check: withdrawal OTP never arrived; a withdrawal problem, not autopay or payment."
+play_store_718c0bf2308f,triggers,mandate_payment_issue,"Top-50 severity check: 'my SIP is not deducted' is a failed payment, not 'money is tight' and not the person's own choice."
+play_store_718c0bf2308f,action,instalment_failed,"Top-50 severity check: 'my SIP is not deducted' is a failed payment, not 'money is tight' and not the person's own choice."
+play_store_718c0bf2308f,lapse_type,involuntary,"Top-50 severity check: 'my SIP is not deducted' is a failed payment, not 'money is tight' and not the person's own choice."
+play_store_4851adbb3c21,triggers,trust_concern|tax_or_lockin,Top-50 severity check: complaint about being sold regular funds; 'returns feel too small' is not said.
+play_store_ed8a7db63fd7,triggers,mandate_payment_issue,"Top-50 severity check: 'sip nhii ho rahi' means the SIP is not going through, not 'money is tight' and not the person's choice."
+play_store_ed8a7db63fd7,action,instalment_failed,"Top-50 severity check: 'sip nhii ho rahi' means the SIP is not going through, not 'money is tight' and not the person's choice."
+play_store_ed8a7db63fd7,lapse_type,involuntary,"Top-50 severity check: 'sip nhii ho rahi' means the SIP is not going through, not 'money is tight' and not the person's choice."
+play_store_ab0febfd639a,triggers,trust_concern|app_experience,"Top-50 severity check: compulsory demat created a new folio on restart; this is an app / consent problem, not a payment problem."
+play_store_965eea598bf0,triggers,trust_concern,Top-50 severity check: two companies pointing at each other during an emergency; 'influenced by others' and 'returns feel too small' were wrong.
+play_store_483b578c8eca,triggers,trust_concern,Top-50 severity check: loan against mutual fund closed but the ticket is still open; not about returns or losing interest.
+play_store_5f14fd8457e3,triggers,trust_concern,"Top-50 severity check: mutual funds moved to demat without consent and high brokerage; a trust problem, not 'needs the money', 'forgot' or 'returns too small'."
+play_store_1e73e710fae9,triggers,trust_concern,Top-50 severity check: unexplained charges on a loan against mutual funds; not about returns or losing interest.
+play_store_9a11b9bd44a1,triggers,app_experience,"Top-50 severity check: general app and support complaints (exit load, wrong graph, crashes); autopay, goal change, forgetting and returns tags were all wrong."
+play_store_04b1c24bb87e,triggers,app_experience,"Top-50 severity check: a purchase order showing 'pending' for 4 days is an order-processing delay, not an autopay problem."
+play_store_2437c67d26b3,triggers,trust_concern|app_experience,Top-50 severity check: redemption stuck for 10 days; 'returns feel too small' was wrong.
+play_store_2dde31499622,triggers,app_experience,"Top-50 severity check: cannot do a small daily SIP and cannot track external funds: a missing feature, not returns or autopay."
+play_store_2dde31499622,problem_area,missing_feature,"Top-50 severity check: cannot do a small daily SIP and cannot track external funds: a missing feature, not returns or autopay."
+youtube_bfc18418b91f,triggers,expectation_mismatch|trust_concern,Top-50 severity check: opinion that SIP is a trick; no numbers are confused and no SIP was paused.
+youtube_bfc18418b91f,action,none,Top-50 severity check: opinion that SIP is a trick; no numbers are confused and no SIP was paused.
+play_store_6123b6a3dede,triggers,confusing_numbers|trust_concern,Top-50 severity check: the person says the wrong NAV / price was applied to their sale; 'market fell' was wrong (it is about the price applied).
+play_store_e5f75ad3c83b,triggers,none,"Top-50 severity check: money not received after 48 hours is a withdrawal or refund problem, not an autopay problem."
+play_store_e5f75ad3c83b,problem_area,exit_delay,"Top-50 severity check: money not received after 48 hours is a withdrawal or refund problem, not an autopay problem."
+play_store_e5f75ad3c83b,lapse_type,not_applicable,"Top-50 severity check: money not received after 48 hours is a withdrawal or refund problem, not an autopay problem."
+play_store_ebb86fb3d541,triggers,app_experience,"Top-50 severity check: KYC pending for 6 days so the SIP cannot start; an onboarding problem, not a payment failure."
+play_store_ebb86fb3d541,lapse_type,not_applicable,"Top-50 severity check: KYC pending for 6 days so the SIP cannot start; an onboarding problem, not a payment failure."
+play_store_02f432d06581,problem_area,returns_display,"Area fix: the person cannot see their portfolio status; it is a problem post, not 'not a problem'."
+reddit_5f1afe2635d1,problem_area,autopay_setup,Area fix: the person cancelled a SIP and was still debited; a problem post about autopay / mandates.
+play_store_dc41aee4c5fa,problem_area,sip_controls,"Area fix: after changing the amount the funds were credited to demat against the person's opt-out; closest area is SIP controls, not 'missing feature'."
+play_store_4623ffdcadd8,problem_area,returns_display,"Area fix: an investment disappeared from the portfolio and two folios were created; a display problem, not autopay set-up."

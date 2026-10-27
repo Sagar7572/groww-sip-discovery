@@ -151,6 +151,541 @@
    "corrected": "unclear",
    "reason": "Human review: the post pastes a news article about first-time investors in general (Moneycontrol, 2019); the writer does not say they are a first-time investor. Found while reading the quotes in the first-time-investor box on the Segments page.",
    "post": "The last one year has been nothing short of a roller-coaster ride in the markets. Here’s how they have fared image 1274×593 70.9 KB Plenty of first-time investors who started in the last couple of years might very well have stopped investin"
+  },
+  {
+   "id": "play_store_4d3cabf0a420",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "expectation_mismatch",
+    "app_experience"
+   ],
+   "corrected": [
+    "trust_concern",
+    "app_experience"
+   ],
+   "reason": "Top-50 severity check: fund house switched and sold the person's funds without permission; that is a trust problem, not 'expected faster growth'.",
+   "post": "Big disappointing me 3 sal se sip kar rha tha or sb shi Chal rha tha pr jbse inkaa MF Prime aaya h vo meri sabse badi galti thi usme phle to meri auto Sip kam ki bina permission or 10-12 bar switch krne ko bola kr bi diya mere chune Sip ko "
+  },
+  {
+   "id": "play_store_ec1a5a1c3991",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "trust_concern",
+    "goal_change"
+   ],
+   "corrected": [
+    "trust_concern"
+   ],
+   "reason": "Top-50 severity check: loan against mutual fund repaid but redemption blocked; 'needs the money / goal changed' is wrong.",
+   "post": "I repaid my dues on time, but despite three redemption requests my mutual fund is still blocked and I haven't received my money. I had taken a loan against my mutual fund through Grow and fully repaid it, yet customer support has given no s"
+  },
+  {
+   "id": "play_store_b660e29b94c1",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "goal_change"
+   ],
+   "corrected": [
+    "none"
+   ],
+   "reason": "Top-50 severity check: redemption processed but not credited for 30 days is an after-stopping withdrawal problem, not 'needs the money / goal changed'.",
+   "post": "Extremely poor support experience from Groww. Redemption processed bataya gaya but amount 30 days baad bhi credit nahi hua. Multiple follow-ups ke baad bhi issue unresolved hai."
+  },
+  {
+   "id": "play_store_defa06affc8c",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "underwhelming_returns",
+    "expectation_mismatch",
+    "app_experience"
+   ],
+   "corrected": [
+    "confusing_numbers",
+    "app_experience"
+   ],
+   "reason": "Top-50 severity check: person is confused by the dashboard value dropping after cancelling one SIP (set to 'confusing numbers' on the reviewer's decision); 'returns too small' and 'expected faster growth' were wrong.",
+   "post": "it's the worst, I was investing for like 13 months in two SIP's and cancelled one of them today but after doing this my dashboard is showing less than 50% of my invested amount. Before cancelling one of my SIP my dashboard showed 5000 somet"
+  },
+  {
+   "id": "reddit_4a316d605c4e",
+   "source": "reddit",
+   "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/",
+   "field": "triggers",
+   "original": [
+    "underwhelming_returns",
+    "expectation_mismatch",
+    "goal_change",
+    "fund_switching",
+    "other"
+   ],
+   "corrected": [
+    "underwhelming_returns",
+    "expectation_mismatch",
+    "goal_change",
+    "social_influence"
+   ],
+   "reason": "Top-50 severity check: the writer started because a friend promised returns (influence); 'switching to another fund' is not what the post is about.",
+   "post": "I started my SIP journey in 2020 Jan and added 6L till 2024 Jan . Then with hike in salary I added another 18L till today ( Oct 2026) . Though I redemed 3 L in Jan 2026 to buy Car. But returns I see is not convincing me anymore. I was of pl"
+  },
+  {
+   "id": "play_store_3301215418be",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "trust_concern",
+    "cash_flow_strain",
+    "mandate_payment_issue"
+   ],
+   "corrected": [
+    "trust_concern"
+   ],
+   "reason": "Top-50 severity check: bank account blocked after an unexpected credit; 'money is tight' is a consequence and the SIP did not fail because of autopay.",
+   "post": "My bank account has been blocked due to an unexpected transaction from Groww. I did not initiate or withdraw any money, yet funds were automatically credited to my account. It has been almost a month, and my account is still blocked. As a r"
+  },
+  {
+   "id": "play_store_91de10a09c03",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "mandate_payment_issue",
+    "app_experience"
+   ],
+   "corrected": [
+    "app_experience"
+   ],
+   "reason": "Top-50 severity check: the payment worked and units were allotted; the units were not visible in the app. This is a display problem, not a payment failure.",
+   "post": "I invested Rs 40,000 in a Bank of India mutual fund yesterday. Today morning, I received a message from the AMC regarding allotment of units to me. The units became visible in my Kfinkart app from that time. Now its 6:30 pm in the evening a"
+  },
+  {
+   "id": "play_store_91de10a09c03",
+   "source": "play_store",
+   "url": null,
+   "field": "action",
+   "original": "instalment_failed",
+   "corrected": "none",
+   "reason": "Top-50 severity check: the payment worked and units were allotted; the units were not visible in the app. This is a display problem, not a payment failure.",
+   "post": "I invested Rs 40,000 in a Bank of India mutual fund yesterday. Today morning, I received a message from the AMC regarding allotment of units to me. The units became visible in my Kfinkart app from that time. Now its 6:30 pm in the evening a"
+  },
+  {
+   "id": "play_store_91de10a09c03",
+   "source": "play_store",
+   "url": null,
+   "field": "lapse_type",
+   "original": "involuntary",
+   "corrected": "not_applicable",
+   "reason": "Top-50 severity check: the payment worked and units were allotted; the units were not visible in the app. This is a display problem, not a payment failure.",
+   "post": "I invested Rs 40,000 in a Bank of India mutual fund yesterday. Today morning, I received a message from the AMC regarding allotment of units to me. The units became visible in my Kfinkart app from that time. Now its 6:30 pm in the evening a"
+  },
+  {
+   "id": "play_store_b81a6b8a1dc0",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "mandate_payment_issue",
+    "trust_concern"
+   ],
+   "corrected": [
+    "trust_concern"
+   ],
+   "reason": "Top-50 severity check: withdrawal OTP never arrived; a withdrawal problem, not autopay or payment.",
+   "post": "I have been investing in mutual funds through Groww, but my experience has been disappointing. When I tried to withdraw my money, I never received the OTP required for verification. Despite multiple follow-ups, the issue was not resolved, a"
+  },
+  {
+   "id": "play_store_718c0bf2308f",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "cash_flow_strain",
+    "mandate_payment_issue"
+   ],
+   "corrected": [
+    "mandate_payment_issue"
+   ],
+   "reason": "Top-50 severity check: 'my SIP is not deducted' is a failed payment, not 'money is tight' and not the person's own choice.",
+   "post": "I am using groww from 2021 onwards but this month my SIP is not deducted and your coustomer service is very poor"
+  },
+  {
+   "id": "play_store_718c0bf2308f",
+   "source": "play_store",
+   "url": null,
+   "field": "action",
+   "original": "stopped",
+   "corrected": "instalment_failed",
+   "reason": "Top-50 severity check: 'my SIP is not deducted' is a failed payment, not 'money is tight' and not the person's own choice.",
+   "post": "I am using groww from 2021 onwards but this month my SIP is not deducted and your coustomer service is very poor"
+  },
+  {
+   "id": "play_store_718c0bf2308f",
+   "source": "play_store",
+   "url": null,
+   "field": "lapse_type",
+   "original": "voluntary",
+   "corrected": "involuntary",
+   "reason": "Top-50 severity check: 'my SIP is not deducted' is a failed payment, not 'money is tight' and not the person's own choice.",
+   "post": "I am using groww from 2021 onwards but this month my SIP is not deducted and your coustomer service is very poor"
+  },
+  {
+   "id": "play_store_4851adbb3c21",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "trust_concern",
+    "tax_or_lockin",
+    "underwhelming_returns"
+   ],
+   "corrected": [
+    "trust_concern",
+    "tax_or_lockin"
+   ],
+   "reason": "Top-50 severity check: complaint about being sold regular funds; 'returns feel too small' is not said.",
+   "post": "Do not join groww MF Prime. They offer only regular funds. You can't invest in Direct funds. Who the hell offers regular fund these days. I felt cheated when my money got into regular fund . Now Iam supposed to pay STCG tax and 1% exit load"
+  },
+  {
+   "id": "play_store_ed8a7db63fd7",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "cash_flow_strain",
+    "mandate_payment_issue"
+   ],
+   "corrected": [
+    "mandate_payment_issue"
+   ],
+   "reason": "Top-50 severity check: 'sip nhii ho rahi' means the SIP is not going through, not 'money is tight' and not the person's choice.",
+   "post": "sip nhii ho rahi he kya Karu"
+  },
+  {
+   "id": "play_store_ed8a7db63fd7",
+   "source": "play_store",
+   "url": null,
+   "field": "action",
+   "original": "stopped",
+   "corrected": "instalment_failed",
+   "reason": "Top-50 severity check: 'sip nhii ho rahi' means the SIP is not going through, not 'money is tight' and not the person's choice.",
+   "post": "sip nhii ho rahi he kya Karu"
+  },
+  {
+   "id": "play_store_ed8a7db63fd7",
+   "source": "play_store",
+   "url": null,
+   "field": "lapse_type",
+   "original": "voluntary",
+   "corrected": "involuntary",
+   "reason": "Top-50 severity check: 'sip nhii ho rahi' means the SIP is not going through, not 'money is tight' and not the person's choice.",
+   "post": "sip nhii ho rahi he kya Karu"
+  },
+  {
+   "id": "play_store_ab0febfd639a",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "mandate_payment_issue",
+    "trust_concern"
+   ],
+   "corrected": [
+    "trust_concern",
+    "app_experience"
+   ],
+   "reason": "Top-50 severity check: compulsory demat created a new folio on restart; this is an app / consent problem, not a payment problem.",
+   "post": "Worst app after demat option is made compulsory all existing folio of SoA when i restart my sip in it . This app creates new folio in demat account instead of existing SoA folios"
+  },
+  {
+   "id": "play_store_965eea598bf0",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "trust_concern",
+    "social_influence",
+    "underwhelming_returns"
+   ],
+   "corrected": [
+    "trust_concern"
+   ],
+   "reason": "Top-50 severity check: two companies pointing at each other during an emergency; 'influenced by others' and 'returns feel too small' were wrong.",
+   "post": "Very disappointing experience with Groww and Axis Mutual Fund. During a financial emergency, Groww asked me to contact Axis, while Axis asked me to go back to Groww. For over two weeks, both kept shifting responsibility instead of helping. "
+  },
+  {
+   "id": "play_store_483b578c8eca",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "underwhelming_returns",
+    "trust_concern",
+    "disengaged_forgot"
+   ],
+   "corrected": [
+    "trust_concern"
+   ],
+   "reason": "Top-50 severity check: loan against mutual fund closed but the ticket is still open; not about returns or losing interest.",
+   "post": "worst experience with Groww. I had taken a loan against a mutual fund and I also closed that loan but their team is saying they are checking with that backend team for the past 4 days. I have raised a ticket and still there is no closure."
+  },
+  {
+   "id": "play_store_5f14fd8457e3",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "goal_change",
+    "disengaged_forgot",
+    "underwhelming_returns"
+   ],
+   "corrected": [
+    "trust_concern"
+   ],
+   "reason": "Top-50 severity check: mutual funds moved to demat without consent and high brokerage; a trust problem, not 'needs the money', 'forgot' or 'returns too small'.",
+   "post": "For high brokerages and changing my Mutual funds to Demat without my consent."
+  },
+  {
+   "id": "play_store_1e73e710fae9",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "trust_concern",
+    "underwhelming_returns",
+    "disengaged_forgot"
+   ],
+   "corrected": [
+    "trust_concern"
+   ],
+   "reason": "Top-50 severity check: unexplained charges on a loan against mutual funds; not about returns or losing interest.",
+   "post": "I have been investing in mutual funds for the last year. A few months ago, I took a loan against my mutual fund through Groww. I borrowed 10k and repaid it within a week, but they charged more than 1.1k. They did not provide any proper docu"
+  },
+  {
+   "id": "play_store_9a11b9bd44a1",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "app_experience",
+    "mandate_payment_issue",
+    "none",
+    "goal_change",
+    "disengaged_forgot",
+    "underwhelming_returns"
+   ],
+   "corrected": [
+    "app_experience"
+   ],
+   "reason": "Top-50 severity check: general app and support complaints (exit load, wrong graph, crashes); autopay, goal change, forgetting and returns tags were all wrong.",
+   "post": "u r standards have drastically come down, Support response poor and u have not updated exit load for all MF and certain are updated incorrectly, portfolio graph has incorrect mapping, reported 3 months still not resolved some times is crash"
+  },
+  {
+   "id": "play_store_04b1c24bb87e",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "mandate_payment_issue",
+    "app_experience",
+    "none"
+   ],
+   "corrected": [
+    "app_experience"
+   ],
+   "reason": "Top-50 severity check: a purchase order showing 'pending' for 4 days is an order-processing delay, not an autopay problem.",
+   "post": "A useless app, its not worth to invest via this app in mutual funds, it's been 4 days but still showing pending while in other app allocation done same days or max to max 24 hours. Will not recommend this.."
+  },
+  {
+   "id": "play_store_2437c67d26b3",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "app_experience",
+    "underwhelming_returns",
+    "trust_concern"
+   ],
+   "corrected": [
+    "trust_concern",
+    "app_experience"
+   ],
+   "reason": "Top-50 severity check: redemption stuck for 10 days; 'returns feel too small' was wrong.",
+   "post": "VERY BAD SERVICES AT GROW THEY DONT CARE MY FUNDS ARE STUCK WITH THEM FOR MY MF REDWMPTIONS FOR MORE THAN 10 DAYS AND NO PROPER REPLY AND SUDDENLY GOT EMAIL FEOM AMC TO SWND CHQS WHATTS GOING KN I SAID DO MOT SEND ANYTHING PHYSICAL JUST INI"
+  },
+  {
+   "id": "play_store_2dde31499622",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "underwhelming_returns",
+    "app_experience",
+    "mandate_payment_issue"
+   ],
+   "corrected": [
+    "app_experience"
+   ],
+   "reason": "Top-50 severity check: cannot do a small daily SIP and cannot track external funds: a missing feature, not returns or autopay.",
+   "post": "u can't do small per day sip u can't track external funds in this app worst app ind money ia lot better now I am selling all my funds in this worst app"
+  },
+  {
+   "id": "play_store_2dde31499622",
+   "source": "play_store",
+   "url": null,
+   "field": "problem_area",
+   "original": "sip_controls",
+   "corrected": "missing_feature",
+   "reason": "Top-50 severity check: cannot do a small daily SIP and cannot track external funds: a missing feature, not returns or autopay.",
+   "post": "u can't do small per day sip u can't track external funds in this app worst app ind money ia lot better now I am selling all my funds in this worst app"
+  },
+  {
+   "id": "youtube_bfc18418b91f",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs",
+   "field": "triggers",
+   "original": [
+    "expectation_mismatch",
+    "confusing_numbers",
+    "trust_concern"
+   ],
+   "corrected": [
+    "expectation_mismatch",
+    "trust_concern"
+   ],
+   "reason": "Top-50 severity check: opinion that SIP is a trick; no numbers are confused and no SIP was paused.",
+   "post": "SIP IS TRICK TO FOOL ORDINARY PEOPLE ONLY AMC MAKE ME ONEY OFF IT , LUMPSUMP IS THE BEST WAY TO INVEST FOR 5 TO 10-15 YEAR"
+  },
+  {
+   "id": "youtube_bfc18418b91f",
+   "source": "youtube",
+   "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs",
+   "field": "action",
+   "original": "paused",
+   "corrected": "none",
+   "reason": "Top-50 severity check: opinion that SIP is a trick; no numbers are confused and no SIP was paused.",
+   "post": "SIP IS TRICK TO FOOL ORDINARY PEOPLE ONLY AMC MAKE ME ONEY OFF IT , LUMPSUMP IS THE BEST WAY TO INVEST FOR 5 TO 10-15 YEAR"
+  },
+  {
+   "id": "play_store_6123b6a3dede",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "market_fall",
+    "trust_concern"
+   ],
+   "corrected": [
+    "confusing_numbers",
+    "trust_concern"
+   ],
+   "reason": "Top-50 severity check: the person says the wrong NAV / price was applied to their sale; 'market fell' was wrong (it is about the price applied).",
+   "post": "ek no. de thug ne , mai ek mutual fund 2 saal tak rakheya , jido oh negtive mai hor rupee add karda gya , jido 2 din to Positive ch aaya, mai mutual sell (redeam) karta , mai 8/07/2026 nu sell kita per doje din 9/07/2026 nu oh mutual fund p"
+  },
+  {
+   "id": "play_store_e5f75ad3c83b",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "mandate_payment_issue"
+   ],
+   "corrected": [
+    "none"
+   ],
+   "reason": "Top-50 severity check: money not received after 48 hours is a withdrawal or refund problem, not an autopay problem.",
+   "post": "I didn't receive my money yet. I checked my bank statement and everything. I tired to contact support team and everyone is saying wait 48 hrs since 6 may and today is 18 may. And my money is invested in Mutual fund they are saying we sent m"
+  },
+  {
+   "id": "play_store_e5f75ad3c83b",
+   "source": "play_store",
+   "url": null,
+   "field": "problem_area",
+   "original": null,
+   "corrected": "exit_delay",
+   "reason": "Top-50 severity check: money not received after 48 hours is a withdrawal or refund problem, not an autopay problem.",
+   "post": "I didn't receive my money yet. I checked my bank statement and everything. I tired to contact support team and everyone is saying wait 48 hrs since 6 may and today is 18 may. And my money is invested in Mutual fund they are saying we sent m"
+  },
+  {
+   "id": "play_store_e5f75ad3c83b",
+   "source": "play_store",
+   "url": null,
+   "field": "lapse_type",
+   "original": "involuntary",
+   "corrected": "not_applicable",
+   "reason": "Top-50 severity check: money not received after 48 hours is a withdrawal or refund problem, not an autopay problem.",
+   "post": "I didn't receive my money yet. I checked my bank statement and everything. I tired to contact support team and everyone is saying wait 48 hrs since 6 may and today is 18 may. And my money is invested in Mutual fund they are saying we sent m"
+  },
+  {
+   "id": "play_store_ebb86fb3d541",
+   "source": "play_store",
+   "url": null,
+   "field": "triggers",
+   "original": [
+    "mandate_payment_issue"
+   ],
+   "corrected": [
+    "app_experience"
+   ],
+   "reason": "Top-50 severity check: KYC pending for 6 days so the SIP cannot start; an onboarding problem, not a payment failure.",
+   "post": "WORST EXPERIENCE EVER. 6 days and my KYC is still pending. Your support team LIED to me on email - promised activation by 9 PM on 8th Oct 2026. It's 9:50 PM now, still blocked. I am losing money every day because I cannot start my SIP due t"
+  },
+  {
+   "id": "play_store_ebb86fb3d541",
+   "source": "play_store",
+   "url": null,
+   "field": "lapse_type",
+   "original": "involuntary",
+   "corrected": "not_applicable",
+   "reason": "Top-50 severity check: KYC pending for 6 days so the SIP cannot start; an onboarding problem, not a payment failure.",
+   "post": "WORST EXPERIENCE EVER. 6 days and my KYC is still pending. Your support team LIED to me on email - promised activation by 9 PM on 8th Oct 2026. It's 9:50 PM now, still blocked. I am losing money every day because I cannot start my SIP due t"
+  },
+  {
+   "id": "play_store_02f432d06581",
+   "source": "play_store",
+   "url": null,
+   "field": "problem_area",
+   "original": "not_a_problem",
+   "corrected": "returns_display",
+   "reason": "Area fix: the person cannot see their portfolio status; it is a problem post, not 'not a problem'.",
+   "post": "nowadays they are doing cheating with their customers, I had mutual fund account in groww for many years which is free ,now they are forcing me to open their stock account too so they charged me account opening charges and later on annual m"
+  },
+  {
+   "id": "reddit_5f1afe2635d1",
+   "source": "reddit",
+   "url": "https://www.reddit.com/r/mutualfunds/comments/1wxxz8t/sbimf_deducted_sip_amount_despite_cancellation_of/",
+   "field": "problem_area",
+   "original": "not_a_problem",
+   "corrected": "autopay_setup",
+   "reason": "Area fix: the person cancelled a SIP and was still debited; a problem post about autopay / mandates.",
+   "post": "Hi , I’m an account holder at SBI and through my relationship manager I got into SIPs through him. Initially I wasn’t aware much about this and gave it all to my relationship manager to decide the funds for me. Recently I got to know about "
+  },
+  {
+   "id": "play_store_dc41aee4c5fa",
+   "source": "play_store",
+   "url": null,
+   "field": "problem_area",
+   "original": "missing_feature",
+   "corrected": "sip_controls",
+   "reason": "Area fix: after changing the amount the funds were credited to demat against the person's opt-out; closest area is SIP controls, not 'missing feature'.",
+   "post": "Don’t use this app. I opted out of linking my mutual funds to a demat account last year, yet after changing my MF amount this month, the funds were automatically credited to the demat account. It feels like they’re deliberately forcing cust"
+  },
+  {
+   "id": "play_store_4623ffdcadd8",
+   "source": "play_store",
+   "url": null,
+   "field": "problem_area",
+   "original": "autopay_setup",
+   "corrected": "returns_display",
+   "reason": "Area fix: an investment disappeared from the portfolio and two folios were created; a display problem, not autopay set-up.",
+   "post": "I’m not sure what’s going on with the Groww app. My September investment in one of my mutual funds has disappeared, even though the NAV was already credited. Additionally, I’m facing an issue where two folios are being created for my SIP, d"
   }
  ]
 }

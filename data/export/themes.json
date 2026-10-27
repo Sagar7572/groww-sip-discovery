@@ -23,7 +23,7 @@
     ],
     [
      "social_influence",
-     20
+     21
     ]
    ],
    "name": "SIP scheduling and payment problems"
@@ -33,7 +33,7 @@
    "label": "account, redemption, portfolio, coin, mf",
    "size": 218,
    "share": 0.124,
-   "with_named_trigger": 0.624,
+   "with_named_trigger": 0.619,
    "avg_severity": 1.51,
    "example_ids": [
     "play_store_2591b9cd3517",
@@ -47,11 +47,11 @@
     ],
     [
      "trust_concern",
-     25
+     26
     ],
     [
      "mandate_payment_issue",
-     22
+     19
     ]
    ],
    "name": "Redemption and portfolio discrepancy concerns"
@@ -75,7 +75,7 @@
     ],
     [
      "confusing_numbers",
-     25
+     26
     ],
     [
      "mandate_payment_issue",
@@ -89,7 +89,7 @@
    "label": "mf, mandate, bank, autopay, account",
    "size": 184,
    "share": 0.105,
-   "with_named_trigger": 0.598,
+   "with_named_trigger": 0.592,
    "avg_severity": 1.36,
    "example_ids": [
     "reddit_b14fa6000076",
@@ -127,15 +127,15 @@
    "top_triggers": [
     [
      "mandate_payment_issue",
-     89
+     86
     ],
     [
      "app_experience",
-     69
+     71
     ],
     [
      "cash_flow_strain",
-     17
+     15
     ]
    ],
    "name": "Coin platform mandate and funding"
@@ -218,8 +218,8 @@
      5
     ],
     [
-     "mandate_payment_issue",
-     4
+     "confusing_numbers",
+     3
     ]
    ],
    "name": "User‑friendly app experience"
@@ -247,7 +247,7 @@
     ],
     [
      "underwhelming_returns",
-     14
+     13
     ]
    ],
    "name": "Market cycle and return expectations"
