@@ -136,8 +136,9 @@ pip install -r requirements.txt
 streamlit run app/streamlit_app.py
 ```
 
-For "Ask the data" locally the Groq key is read from `.env` (never printed). Pages: overview and how it works, opportunity ranking,
-the nine brief questions, metric tree, segments and sources, evidence explorer, ask the data, validation and limitations.
+For "Ask the data" locally the Groq key is read from `.env` (never printed). The app has five pages in a top navigation bar: Key findings, What stops SIPs, 9 questions, Ask & browse, How it works
+(the earlier eight-page version is kept as the git tag `v1-full-dashboard`). Design helpers are in `app/ui.py`; every number, headline and quote is computed
+from `data/export/`, never typed in.
 
 ### Reddit through Apify (paid per result, so it has cost guards)
 

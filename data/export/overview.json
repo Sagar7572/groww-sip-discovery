@@ -1,15 +1,15 @@
 {
- "as_of": "2026-10-25",
- "exported_at": "2026-10-25T09:12+00:00",
+ "as_of": "2026-10-27",
+ "exported_at": "2026-10-27T05:10+00:00",
  "sources": {
   "play_store": {
    "raw_pulled": 32786,
    "raw_kept_by_keywords": 621,
    "clean": 613,
-   "filter_labelled": 603,
-   "filter_kept": 440,
-   "tagged": 118,
-   "relevant": 105,
+   "filter_labelled": 613,
+   "filter_kept": 445,
+   "tagged": 442,
+   "relevant": 415,
    "first_date": "2018-12-16",
    "last_date": "2026-10-22",
    "by_year": {
@@ -30,7 +30,7 @@
    "clean": 28,
    "filter_labelled": 28,
    "filter_kept": 15,
-   "tagged": 15,
+   "tagged": 16,
    "relevant": 14,
    "first_date": "2026-09-02",
    "last_date": "2026-10-21",
@@ -42,10 +42,10 @@
    "raw_pulled": 1425,
    "raw_kept_by_keywords": 1425,
    "clean": 1127,
-   "filter_labelled": 693,
-   "filter_kept": 411,
-   "tagged": 220,
-   "relevant": 167,
+   "filter_labelled": 1080,
+   "filter_kept": 695,
+   "tagged": 500,
+   "relevant": 377,
    "first_date": "2014-12-11",
    "last_date": "2026-10-19",
    "by_year": {
@@ -66,10 +66,10 @@
    "raw_pulled": 5837,
    "raw_kept_by_keywords": 5837,
    "clean": 3806,
-   "filter_labelled": 1114,
-   "filter_kept": 600,
-   "tagged": 170,
-   "relevant": 148,
+   "filter_labelled": 3653,
+   "filter_kept": 2690,
+   "tagged": 578,
+   "relevant": 552,
    "first_date": "2019-01-30",
    "last_date": "2026-10-24",
    "by_year": {
@@ -107,13 +107,13 @@
  "funnel": {
   "raw_pulled": 40922,
   "clean": 5909,
-  "filter_labelled": 2773,
-  "filter_kept": 1725,
-  "in_tagging_queue": 1653,
-  "tag_attempted": 865,
-  "tagged_ok": 856,
-  "relevant_tagged": 730,
-  "tagged_not_relevant": 126
+  "filter_labelled": 5709,
+  "filter_kept": 4104,
+  "in_tagging_queue": 2342,
+  "tag_attempted": 1882,
+  "tagged_ok": 1869,
+  "relevant_tagged": 1654,
+  "tagged_not_relevant": 215
  },
  "definitions": {
   "tagged": "A post the AI tagger has read and filled in the codebook for (it can still turn out not to be about SIPs).",
@@ -123,12 +123,12 @@
  },
  "by_tagger": {
   "gpt-oss-120b": {
-   "tagged": 436,
+   "tagged": 1194,
    "failed": 0
   },
   "qwen": {
-   "tagged": 451,
-   "failed": 10
+   "tagged": 707,
+   "failed": 14
   }
  },
  "models": [
@@ -154,7 +154,7 @@
   }
  ],
  "relevance_progress": {
-  "labelled": 2773,
+  "labelled": 5709,
   "of": 5909
  }
 }

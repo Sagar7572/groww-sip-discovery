@@ -442,3 +442,14 @@ Snapshot: 856 tagged, 730 relevant posts (Reddit 296, TradingQ&A 167, YouTube 14
 **Human correction (second row in `data/manual/corrections.csv`).** While reading the quotes in the new box, one "first-time investor" quote was a pasted 2019 news article about first-time investors in general, not a person describing themselves. Its `investor_type` was corrected from first_time to unclear (reason recorded in the file and shown on the Validation page). It had counted as a first-time lapse story (n went from 63 to 62, lapse stories from 17 to 16).
 
 **Evidence explorer defaults.** It now opens on 2021 onward (clear the year filter for older posts) and is sorted by severity, highest first, then newest year first.
+
+## Entry 17: Dashboard simplified to five pages; claims in the design mock-up checked against the data (2026-10-27)
+
+People found the eight-page dashboard overwhelming, so it was rebuilt as five pages from a design mock-up (old version kept as git tag `v1-full-dashboard`). Rule kept: every number, headline and quote is computed from the exported data, never typed in. Where the mock-up's wording did not hold on the data, the data won:
+
+- **"Autopay is the #1 reason in every source we checked"** (mock-up wording): not true on the data. Autopay is the most common stated reason overall, and the top one in only 1 of 4 sources with enough posts. The card now says exactly that, and the wording is chosen by code (it only says "in every source" if that is the case).
+- **A 'not yet split into sub-themes' row** appeared as the top cause after the latest export (297 posts about "hard to use the app" that the AI had not yet sorted into specific problems, because the AI step could not run). It is a to-do list for the AI, not a finding, so the dashboard leaves it out of the ranking and says so in a note.
+- **Example quotes:** the first example for "Autopay / payment problem" was a post about a fund house stopping SIPs in some funds, tagged as a failed instalment by the AI. Example quotes now have to contain a word that fits the reason (a short word list per reason, in `app/ui.py`), so a mis-tagged post is less likely to be the example. The tag itself is not changed.
+- **Chips on the nine questions** ("Clear in posts" / "Needs interviews") follow one written rule: at least 10% of relevant posts speak to the question. Today Q1, Q4, Q6 and Q8 need interviews.
+- **Environment problem found:** the Groq key line had been overwritten in `.env` by pasted text, so any new run could not call Groq (the running jobs kept working because they loaded the key earlier). The AI sub-theme and unmet-need grouping were therefore not refreshed for the newest posts in this export.
+

@@ -2,286 +2,286 @@
  "clusters": [
   {
    "cluster": 2,
-   "label": "equity, investing, term, investors, portfolio",
-   "size": 99,
-   "share": 0.136,
-   "with_named_trigger": 0.333,
-   "avg_severity": 1.15,
+   "label": "market, years, month, time, sips",
+   "size": 239,
+   "share": 0.144,
+   "with_named_trigger": 0.527,
+   "avg_severity": 1.22,
    "example_ids": [
-    "tradingqna_8c5e60f65029",
-    "reddit_b5904a04108a",
-    "reddit_97f7d0517d3a"
+    "reddit_7334aa307c55",
+    "tradingqna_665c3184eb2d",
+    "tradingqna_eaf8136a432c"
    ],
    "top_triggers": [
     [
      "app_experience",
-     9
-    ],
-    [
-     "social_influence",
-     8
-    ],
-    [
-     "underwhelming_returns",
-     5
-    ]
-   ],
-   "name": "Long-term equity investment planning"
-  },
-  {
-   "cluster": 0,
-   "label": "account, redemption, kuvera, ve, redeem",
-   "size": 90,
-   "share": 0.123,
-   "with_named_trigger": 0.622,
-   "avg_severity": 1.62,
-   "example_ids": [
-    "reddit_09e7c52145cf",
-    "reddit_ef2b96538c2d",
-    "reddit_4d700274b4d2"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     25
+     51
     ],
     [
      "mandate_payment_issue",
-     19
+     32
     ],
     [
-     "trust_concern",
-     9
+     "social_influence",
+     21
     ]
    ],
-   "name": "Redemption failures and fees"
+   "name": null
   },
   {
-   "cluster": 4,
-   "label": "market, returns, years, inflation, time",
-   "size": 89,
-   "share": 0.122,
-   "with_named_trigger": 0.438,
+   "cluster": 8,
+   "label": "market, equity, years, returns, inflation",
+   "size": 185,
+   "share": 0.112,
+   "with_named_trigger": 0.378,
    "avg_severity": 1.21,
    "example_ids": [
-    "tradingqna_cfd4ef548caa",
     "reddit_6fbd102ac3a2",
-    "reddit_7bc8bd15a336"
+    "tradingqna_cbcdda062e88",
+    "tradingqna_960bf382becc"
    ],
    "top_triggers": [
     [
      "expectation_mismatch",
-     13
+     21
     ],
     [
      "market_fall",
-     11
+     18
     ],
     [
      "underwhelming_returns",
-     9
+     17
     ]
    ],
-   "name": "Expectations vs market returns"
+   "name": null
   },
   {
    "cluster": 7,
-   "label": "sips, cancel, stop, month, payment",
-   "size": 88,
-   "share": 0.121,
-   "with_named_trigger": 0.557,
-   "avg_severity": 1.43,
+   "label": "coin, bank, account, mandate, sips",
+   "size": 183,
+   "share": 0.111,
+   "with_named_trigger": 0.76,
+   "avg_severity": 1.55,
    "example_ids": [
-    "youtube_48dde4514569",
-    "tradingqna_94a3c8daa33f",
-    "youtube_ea59950266fa"
+    "tradingqna_efb3a6f285f0",
+    "tradingqna_888f0b0c52c0",
+    "reddit_6ba818604afb"
    ],
    "top_triggers": [
     [
      "mandate_payment_issue",
-     23
+     90
     ],
     [
      "app_experience",
-     17
+     68
     ],
     [
      "cash_flow_strain",
-     8
+     20
     ]
    ],
-   "name": "How to stop or cancel SIP"
+   "name": null
   },
   {
-   "cluster": 5,
-   "label": "regular, years, market, investing, direct",
-   "size": 83,
-   "share": 0.114,
-   "with_named_trigger": 0.566,
-   "avg_severity": 1.28,
+   "cluster": 0,
+   "label": "mf, mandate, bank, autopay, pay",
+   "size": 175,
+   "share": 0.106,
+   "with_named_trigger": 0.594,
+   "avg_severity": 1.37,
    "example_ids": [
-    "reddit_7334aa307c55",
-    "reddit_ea0523dd91bc",
-    "tradingqna_81ad3893c112"
+    "reddit_b14fa6000076",
+    "reddit_4834124ed159",
+    "reddit_c8672a25888f"
    ],
    "top_triggers": [
     [
      "app_experience",
-     15
+     55
+    ],
+    [
+     "mandate_payment_issue",
+     45
+    ],
+    [
+     "confusing_numbers",
+     17
+    ]
+   ],
+   "name": null
+  },
+  {
+   "cluster": 4,
+   "label": "saal, bahut, band, muje, acha",
+   "size": 175,
+   "share": 0.106,
+   "with_named_trigger": 0.566,
+   "avg_severity": 1.23,
+   "example_ids": [
+    "youtube_1332357692c1",
+    "youtube_2b30806ad1a4",
+    "youtube_9eb79bebd56a"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     50
+    ],
+    [
+     "confusing_numbers",
+     25
+    ],
+    [
+     "mandate_payment_issue",
+     18
+    ]
+   ],
+   "name": null
+  },
+  {
+   "cluster": 1,
+   "label": "account, redemption, days, mf, portfolio",
+   "size": 169,
+   "share": 0.102,
+   "with_named_trigger": 0.716,
+   "avg_severity": 1.67,
+   "example_ids": [
+    "play_store_0e51a600dc72",
+    "play_store_abb440c76cd7",
+    "play_store_4ed20b8b1fc2"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     79
+    ],
+    [
+     "mandate_payment_issue",
+     27
+    ],
+    [
+     "trust_concern",
+     25
+    ]
+   ],
+   "name": null
+  },
+  {
+   "cluster": 6,
+   "label": "best, stop, sips, want, option",
+   "size": 144,
+   "share": 0.087,
+   "with_named_trigger": 0.347,
+   "avg_severity": 1.1,
+   "example_ids": [
+    "play_store_23f8e55b1bdf",
+    "youtube_1f2998ea36b7",
+    "play_store_5e4e040086c8"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     28
+    ],
+    [
+     "mandate_payment_issue",
+     12
+    ],
+    [
+     "fund_switching",
+     5
+    ]
+   ],
+   "name": null
+  },
+  {
+   "cluster": 9,
+   "label": "cap, stocks, investing, term, equity",
+   "size": 139,
+   "share": 0.084,
+   "with_named_trigger": 0.36,
+   "avg_severity": 1.12,
+   "example_ids": [
+    "youtube_33672e73968b",
+    "play_store_b9b2ccad5d28",
+    "play_store_0ba72aa5a609"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     33
     ],
     [
      "social_influence",
      12
     ],
     [
-     "mandate_payment_issue",
-     10
+     "expectation_mismatch",
+     7
     ]
    ],
-   "name": "SIP strategy and plan type discussion"
+   "name": null
   },
   {
    "cluster": 3,
-   "label": "coin, sips, mandate, bank, amc",
-   "size": 81,
-   "share": 0.111,
-   "with_named_trigger": 0.765,
-   "avg_severity": 1.48,
-   "example_ids": [
-    "tradingqna_1cd4637e4e03",
-    "tradingqna_eaf8136a432c",
-    "reddit_65208f2d5158"
-   ],
-   "top_triggers": [
-    [
-     "mandate_payment_issue",
-     38
-    ],
-    [
-     "app_experience",
-     33
-    ],
-    [
-     "cash_flow_strain",
-     5
-    ]
-   ],
-   "name": "SIP scheduling and cancellation queries"
-  },
-  {
-   "cluster": 8,
-   "label": "autopay, mandate, video, city, gift city",
-   "size": 60,
+   "label": "stocks, interface, easy, beginners, friendly",
+   "size": 136,
    "share": 0.082,
-   "with_named_trigger": 0.333,
-   "avg_severity": 1.12,
+   "with_named_trigger": 0.301,
+   "avg_severity": 1.1,
    "example_ids": [
-    "youtube_e3576b242d5c",
-    "youtube_6da954186106",
-    "youtube_5867e8d98391"
-   ],
-   "top_triggers": [
-    [
-     "mandate_payment_issue",
-     9
-    ],
-    [
-     "app_experience",
-     6
-    ],
-    [
-     "confusing_numbers",
-     3
-    ]
-   ],
-   "name": "Autopay and mandate basics"
-  },
-  {
-   "cluster": 1,
-   "label": "autopay, mandate, pay, auto pay, auto",
-   "size": 59,
-   "share": 0.081,
-   "with_named_trigger": 0.661,
-   "avg_severity": 1.27,
-   "example_ids": [
-    "tradingqna_fdca95ebb8e1",
-    "tradingqna_d94175934965",
-    "tradingqna_577bd77e81b4"
-   ],
-   "top_triggers": [
-    [
-     "mandate_payment_issue",
-     24
-    ],
-    [
-     "app_experience",
-     16
-    ],
-    [
-     "confusing_numbers",
-     4
-    ]
-   ],
-   "name": "Mandate and autopay errors"
-  },
-  {
-   "cluster": 9,
-   "label": "band, chalu, karenge, mandate, bank",
-   "size": 47,
-   "share": 0.064,
-   "with_named_trigger": 0.447,
-   "avg_severity": 1.32,
-   "example_ids": [
-    "youtube_d17fc3dc7067",
-    "youtube_c674176083b9",
-    "youtube_7dca35cde09f"
+    "play_store_417913830bed",
+    "play_store_0e0dcccad5ee",
+    "play_store_3ace4f665353"
    ],
    "top_triggers": [
     [
      "app_experience",
-     8
-    ],
-    [
-     "mandate_payment_issue",
-     5
-    ],
-    [
-     "goal_change",
-     4
-    ]
-   ],
-   "name": "Managing autopay and SIP duration"
-  },
-  {
-   "cluster": 6,
-   "label": "interface, easy, stocks, using, colour",
-   "size": 34,
-   "share": 0.047,
-   "with_named_trigger": 0.176,
-   "avg_severity": 1.06,
-   "example_ids": [
-    "play_store_ed5b6772286e",
-    "play_store_43da1dc08c24",
-    "play_store_5896e04da5c8"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     6
-    ],
-    [
-     "mandate_payment_issue",
-     1
+     36
     ],
     [
      "trust_concern",
-     1
+     3
+    ],
+    [
+     "underwhelming_returns",
+     3
     ]
    ],
-   "name": "App usability praise"
+   "name": null
+  },
+  {
+   "cluster": 5,
+   "label": "बह, ആയ, रह, आपक, आप",
+   "size": 109,
+   "share": 0.066,
+   "with_named_trigger": 0.44,
+   "avg_severity": 1.15,
+   "example_ids": [
+    "youtube_ab65878f1d73",
+    "youtube_d4f837e9e094",
+    "youtube_0244f4557c7b"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     27
+    ],
+    [
+     "underwhelming_returns",
+     11
+    ],
+    [
+     "expectation_mismatch",
+     9
+    ]
+   ],
+   "name": null
   }
  ],
  "k": 10,
- "named_by_ai": 10,
+ "named_by_ai": 0,
  "note": "Themes are groups of posts that mean similar things, found automatically after removing Hindi, Hinglish and Malayalam filler words. Each name is written by an AI model from the group's words and example posts. A theme where few posts have a named reason is one the codebook did not anticipate."
 }

@@ -1,4 +1,4 @@
-"""Page 7: Ask the data. Retrieval over the tagged posts with a free local embedding model, then a Groq model
+"""Ask the data (the engine behind the Ask box on the Ask & browse page). Retrieval over the tagged posts with a free local embedding model, then a Groq model
 writes an answer using ONLY the retrieved posts, with numbered citations. Capped per session and per day."""
 from __future__ import annotations
 
@@ -121,79 +121,3 @@ def check_citations(answer: str, n_hits: int) -> tuple[str, bool, int]:
         elif sentence.strip():
             removed += 1
     return " ".join(kept), bool(kept), removed
-
-
-def render(over: dict, posts: pd.DataFrame) -> None:
-    st.title("Ask the data: answers come only from the relevant tagged posts, with the posts shown as sources")
-    st.warning(C.STATUS_NOTE + " Questions asking what to buy, sell or do will not be answered as advice.")
-    mat, _ = C.load_embeddings()
-    if mat is None:
-        st.info("Search is not available in this build (no embeddings file). Run `python -m pipeline.export`.")
-        return
-
-    used = st.session_state.get("asked", 0)
-    status = st.empty()
-
-    def show_status() -> None:
-        left = PER_SESSION - st.session_state.get("asked", 0)
-        status.caption(f"{left} of {PER_SESSION} questions left in this session · {max(PER_DAY - today_used(), 0)} left today across all visitors. "
-                       "Answers use free AI models, so the tool can be busy.")
-    show_status()
-    examples = ["Why do autopay payments fail?", "What do people say about returns in the first year?", "Why do people pause their SIP?",
-                "What confuses people about NAV or XIRR?"]
-    cols = st.columns(len(examples))
-    for col, ex in zip(cols, examples):
-        if col.button(ex, width="stretch"):
-            st.session_state["q"] = ex
-    question = st.text_input("Your question about what investors say", key="q", max_chars=300)
-    go = st.button("Ask", type="primary")
-    if not (go and question.strip()):
-        return
-
-    if used >= PER_SESSION:
-        st.error("You have used the 10 questions available in this session. Please come back later.")
-        return
-    if today_used() >= PER_DAY:
-        st.error("The daily limit for this tool has been reached. Please try again tomorrow.")
-        return
-
-    with st.spinner("Searching the posts (the first search loads a small local model and can take a minute)..."):
-        hits = retrieve(question, posts)
-    if not hits or hits[0][1] < MIN_SIMILARITY:
-        count_question()
-        show_status()
-        st.markdown("**The data doesn't cover this.** None of the relevant tagged posts are close enough to the question to answer it.")
-        if hits:
-            st.caption(f"Closest match score {hits[0][1]:.2f}, below the {MIN_SIMILARITY} needed.")
-        return
-
-    with st.spinner("Writing an answer from the closest posts..."):
-        answer, model = ask_groq(question, hits, posts)
-    if answer is None:
-        if model == "no_key":
-            st.error("The answer service is not configured (no Groq key). The closest posts are listed below.")
-        else:
-            st.warning("The free AI services are busy right now. Please try again in a minute. The closest posts are listed below.")
-    else:
-        count_question()
-        show_status()
-        raw = answer
-        answer, ok, removed = check_citations(raw, len(hits))
-        if "doesn't cover" in raw and not ok:
-            st.markdown("**The data doesn't cover this.** The closest posts are listed below.")
-        elif ok:
-            st.markdown("### Answer")
-            st.write(answer)
-            st.caption(f"Written by {model} from the {len(hits)} posts below. Numbers in brackets point to those posts."
-                       + (f" {removed} sentence(s) without a citation were removed." if removed else ""))
-        else:
-            st.markdown("**The data doesn't cover this** (the AI answer could not be tied to the posts, so it is not shown).")
-
-    st.markdown("### Posts used")
-    for n, (i, sim) in enumerate(hits, 1):
-        r = posts.iloc[i]
-        year = f", {int(r.year)}" if pd.notna(r.year) else ""
-        link = f" · [open post]({r.url})" if r.url else ""
-        with st.expander(f"[{n}] {C.SOURCE_NAMES.get(r.source, r.source)}{year} (match {sim:.2f})"):
-            st.write(r.text[:900])
-            st.caption(f"Tags (AI): {C.nice(r.stage)} · {C.nice_action(r.action)} · reasons: {', '.join(C.nice(t) for t in r.triggers if t != 'none') or 'none given'}{link}")

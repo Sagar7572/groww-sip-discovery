@@ -4,38 +4,38 @@
    "key": "mandate_payment_issue",
    "kind": "reason",
    "label": null,
-   "n": 127,
-   "share_of_tagged": 0.174,
-   "avg_severity": 1.74,
+   "n": 239,
+   "share_of_tagged": 0.1445,
+   "avg_severity": 1.72,
    "branch": "B",
    "branch_name": "B. Involuntary lapse",
    "branch_weight": 1.0,
    "solvable": "yes",
    "solvable_why": "Reliable debits, clear failure messages and easy fixes need no advice and no pressure.",
    "solvable_weight": 1.0,
-   "score": 221.0,
-   "score_equal_weights": 221.0,
+   "score": 410.0,
+   "score_equal_weights": 410.0,
    "low_confidence": false,
-   "lapse_story_share": 0.677,
+   "lapse_story_share": 0.481,
    "sources": {
-    "youtube": 16,
+    "youtube": 53,
     "app_store": 4,
-    "play_store": 20,
-    "tradingqna": 33,
+    "play_store": 64,
+    "tradingqna": 64,
     "reddit": 54
    },
    "quotes": [
+    {
+     "id": "play_store_ed8a7db63fd7",
+     "quote": "sip nhii ho rahi he kya Karu",
+     "source": "play_store",
+     "url": null
+    },
     {
      "id": "app_store_6b8743617d36",
      "quote": "new sip activation is not working properly,",
      "source": "app_store",
      "url": null
-    },
-    {
-     "id": "tradingqna_662ce37ce7e3",
-     "quote": "[USER] Why SIP also cancelled for the above mutual funds…",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/motilal-oswal-temporary-suspension-of-lumpsum-investments/125471/4"
     }
    ],
    "rank": 1,
@@ -43,11 +43,216 @@
    "score_index": 100
   },
   {
+   "key": "app_unsplit",
+   "kind": "app_sub_theme",
+   "label": "App: not yet split into sub-themes",
+   "n": 297,
+   "share_of_tagged": 0.1796,
+   "avg_severity": 1.37,
+   "branch": "A",
+   "branch_name": "A. Getting going",
+   "branch_weight": 0.9,
+   "solvable": "yes",
+   "solvable_why": "Making SIPs easy to find, pause and change is a design fix.",
+   "solvable_weight": 1.0,
+   "score": 366.3,
+   "score_equal_weights": 407.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.057,
+   "sources": {
+    "tradingqna": 64,
+    "play_store": 131,
+    "youtube": 102
+   },
+   "quotes": [
+    {
+     "id": "play_store_91de10a09c03",
+     "quote": "I invested Rs 40,000 in a Bank of India mutual fund yesterday",
+     "source": "play_store",
+     "url": null
+    },
+    {
+     "id": "tradingqna_179db7f60a42",
+     "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
+    }
+   ],
+   "rank": 2,
+   "rank_equal_weights": 2,
+   "score_index": 89
+  },
+  {
+   "key": "confusing_numbers",
+   "kind": "reason",
+   "label": null,
+   "n": 110,
+   "share_of_tagged": 0.0665,
+   "avg_severity": 1.13,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "yes",
+   "solvable_why": "Explaining NAV, units and XIRR in plain words is not investment advice.",
+   "solvable_weight": 1.0,
+   "score": 86.8,
+   "score_equal_weights": 124.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.045,
+   "sources": {
+    "tradingqna": 19,
+    "reddit": 14,
+    "youtube": 63,
+    "play_store": 14
+   },
+   "quotes": [
+    {
+     "id": "youtube_bfc18418b91f",
+     "quote": "SIP IS TRICK TO FOOL ORDINARY PEOPLE ONLY AMC MAKE ME ONEY OFF IT , LUMPSUMP IS THE BEST WAY TO INVEST FOR 5 TO 10-15 YEAR",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
+    },
+    {
+     "id": "play_store_86ee3cee8a63",
+     "quote": "mutual fund data not updated on apps please check",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "rank": 3,
+   "rank_equal_weights": 5,
+   "score_index": 21
+  },
+  {
+   "key": "expectation_mismatch",
+   "kind": "reason",
+   "label": null,
+   "n": 68,
+   "share_of_tagged": 0.0411,
+   "avg_severity": 1.63,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "yes",
+   "solvable_why": "Setting honest expectations early is education, not advice.",
+   "solvable_weight": 1.0,
+   "score": 77.7,
+   "score_equal_weights": 111.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.235,
+   "sources": {
+    "play_store": 9,
+    "youtube": 35,
+    "reddit": 12,
+    "tradingqna": 12
+   },
+   "quotes": [
+    {
+     "id": "reddit_4a316d605c4e",
+     "quote": "returns I see is not convincing me anymore",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
+    },
+    {
+     "id": "youtube_67e713e09373",
+     "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
+    }
+   ],
+   "rank": 4,
+   "rank_equal_weights": 6,
+   "score_index": 19
+  },
+  {
+   "key": "underwhelming_returns",
+   "kind": "reason",
+   "label": null,
+   "n": 82,
+   "share_of_tagged": 0.0496,
+   "avg_severity": 1.99,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
+   "solvable_weight": 0.5,
+   "score": 57.05,
+   "score_equal_weights": 163.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.28,
+   "sources": {
+    "play_store": 23,
+    "youtube": 33,
+    "reddit": 11,
+    "tradingqna": 15
+   },
+   "quotes": [
+    {
+     "id": "reddit_4a316d605c4e",
+     "quote": "returns I see is not convincing me anymore",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
+    },
+    {
+     "id": "youtube_67e713e09373",
+     "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
+    }
+   ],
+   "rank": 5,
+   "rank_equal_weights": 3,
+   "score_index": 14
+  },
+  {
+   "key": "trust_concern",
+   "kind": "reason",
+   "label": null,
+   "n": 65,
+   "share_of_tagged": 0.0393,
+   "avg_severity": 2.23,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Transparency helps; trust also depends on things outside the app.",
+   "solvable_weight": 0.5,
+   "score": 50.75,
+   "score_equal_weights": 145.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.338,
+   "sources": {
+    "play_store": 42,
+    "youtube": 10,
+    "reddit": 6,
+    "tradingqna": 6,
+    "app_store": 1
+   },
+   "quotes": [
+    {
+     "id": "play_store_6123b6a3dede",
+     "quote": "jido oh negtive mai hor rupee add karda gya",
+     "source": "play_store",
+     "url": null
+    },
+    {
+     "id": "youtube_67e713e09373",
+     "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
+    }
+   ],
+   "rank": 6,
+   "rank_equal_weights": 4,
+   "score_index": 12
+  },
+  {
    "key": "autopay_setup",
    "kind": "app_sub_theme",
    "label": "App: autopay / mandate set-up and changes",
    "n": 21,
-   "share_of_tagged": 0.0288,
+   "share_of_tagged": 0.0127,
    "avg_severity": 1.9,
    "branch": "B",
    "branch_name": "B. Involuntary lapse",
@@ -80,98 +285,98 @@
      "url": null
     }
    ],
-   "rank": 2,
-   "rank_equal_weights": 6,
-   "score_index": 18
-  },
-  {
-   "key": "expectation_mismatch",
-   "kind": "reason",
-   "label": null,
-   "n": 24,
-   "share_of_tagged": 0.0329,
-   "avg_severity": 1.79,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "yes",
-   "solvable_why": "Setting honest expectations early is education, not advice.",
-   "solvable_weight": 1.0,
-   "score": 30.1,
-   "score_equal_weights": 43.0,
-   "low_confidence": false,
-   "lapse_story_share": 0.292,
-   "sources": {
-    "play_store": 2,
-    "youtube": 3,
-    "reddit": 12,
-    "tradingqna": 7
-   },
-   "quotes": [
-    {
-     "id": "reddit_4a316d605c4e",
-     "quote": "returns I see is not convincing me anymore",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
-    },
-    {
-     "id": "youtube_67e713e09373",
-     "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
-    }
-   ],
-   "rank": 3,
-   "rank_equal_weights": 5,
-   "score_index": 14
-  },
-  {
-   "key": "confusing_numbers",
-   "kind": "reason",
-   "label": null,
-   "n": 31,
-   "share_of_tagged": 0.0425,
-   "avg_severity": 1.06,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "yes",
-   "solvable_why": "Explaining NAV, units and XIRR in plain words is not investment advice.",
-   "solvable_weight": 1.0,
-   "score": 23.1,
-   "score_equal_weights": 33.0,
-   "low_confidence": false,
-   "lapse_story_share": 0.032,
-   "sources": {
-    "tradingqna": 9,
-    "reddit": 14,
-    "youtube": 7,
-    "play_store": 1
-   },
-   "quotes": [
-    {
-     "id": "reddit_c8672a25888f",
-     "quote": "I'm trying to figure out how to transfer that over to Kuvera",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/IndiaInvestments/comments/xw8jw2/zerodha_how_do_i_set_up_autopay_for_mutual_fund/irb5qqd/"
-    },
-    {
-     "id": "tradingqna_05dec1e4a8f2",
-     "quote": "I started my first sip on mutual fund after completing online payment but I am confused about next sip installment",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/sip-cancel-on-mf/190338/1"
-    }
-   ],
-   "rank": 4,
-   "rank_equal_weights": 10,
+   "rank": 7,
+   "rank_equal_weights": 13,
    "score_index": 10
+  },
+  {
+   "key": "social_influence",
+   "kind": "reason",
+   "label": null,
+   "n": 72,
+   "share_of_tagged": 0.0435,
+   "avg_severity": 1.28,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Happens outside the app; only neutral, non-urgent information is allowed.",
+   "solvable_weight": 0.5,
+   "score": 32.2,
+   "score_equal_weights": 92.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.111,
+   "sources": {
+    "reddit": 15,
+    "tradingqna": 30,
+    "play_store": 3,
+    "youtube": 24
+   },
+   "quotes": [
+    {
+     "id": "play_store_965eea598bf0",
+     "quote": "Very disappointing experience with Groww and Axis Mutual Fund. During a financial emergency, Groww asked me to contact Axis, while Axis asked me to go back to Groww.",
+     "source": "play_store",
+     "url": null
+    },
+    {
+     "id": "youtube_456a456341f9",
+     "quote": "Cancer karne ke bad kaise chalu kar sakte hain kya",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=phs3OUy7ZWI"
+    }
+   ],
+   "rank": 8,
+   "rank_equal_weights": 7,
+   "score_index": 8
+  },
+  {
+   "key": "cash_flow_strain",
+   "kind": "reason",
+   "label": null,
+   "n": 48,
+   "share_of_tagged": 0.029,
+   "avg_severity": 1.9,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
+   "solvable_weight": 0.5,
+   "score": 31.85,
+   "score_equal_weights": 91.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.729,
+   "sources": {
+    "play_store": 9,
+    "youtube": 14,
+    "tradingqna": 8,
+    "reddit": 17
+   },
+   "quotes": [
+    {
+     "id": "play_store_ed8a7db63fd7",
+     "quote": "sip nhii ho rahi he kya Karu",
+     "source": "play_store",
+     "url": null
+    },
+    {
+     "id": "tradingqna_57b8b7ee3734",
+     "quote": "Banks are charging arm and a leg for unfilled SIP transactions",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/an-appeal-to-zerodha-investor-awareness/168343/1"
+    }
+   ],
+   "rank": 9,
+   "rank_equal_weights": 8,
+   "score_index": 8
   },
   {
    "key": "app_bugs",
    "kind": "app_sub_theme",
    "label": "App: app updates, bugs and slowness",
    "n": 13,
-   "share_of_tagged": 0.0178,
+   "share_of_tagged": 0.0079,
    "avg_severity": 1.77,
    "branch": "A",
    "branch_name": "A. Getting going",
@@ -203,16 +408,16 @@
      "url": "https://www.reddit.com/r/IndiaInvestments/comments/z2o926/comment/ixii6lc/"
     }
    ],
-   "rank": 5,
-   "rank_equal_weights": 13,
-   "score_index": 9
+   "rank": 10,
+   "rank_equal_weights": 16,
+   "score_index": 5
   },
   {
    "key": "sip_controls",
    "kind": "app_sub_theme",
    "label": "App: cannot pause, skip, edit or cancel a SIP easily",
    "n": 16,
-   "share_of_tagged": 0.0219,
+   "share_of_tagged": 0.0097,
    "avg_severity": 1.62,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -244,180 +449,57 @@
      "url": "https://www.reddit.com/r/IndiaInvestments/comments/xw8jw2/zerodha_how_do_i_set_up_autopay_for_mutual_fund/j9dutth/"
     }
    ],
-   "rank": 6,
-   "rank_equal_weights": 12,
-   "score_index": 8
+   "rank": 11,
+   "rank_equal_weights": 15,
+   "score_index": 4
   },
   {
-   "key": "cash_flow_strain",
+   "key": "disengaged_forgot",
    "kind": "reason",
    "label": null,
-   "n": 26,
-   "share_of_tagged": 0.0356,
-   "avg_severity": 1.92,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
-   "solvable_weight": 0.5,
-   "score": 17.5,
-   "score_equal_weights": 50.0,
-   "low_confidence": false,
-   "lapse_story_share": 0.923,
-   "sources": {
-    "play_store": 2,
-    "youtube": 2,
-    "tradingqna": 5,
-    "reddit": 17
-   },
-   "quotes": [
-    {
-     "id": "tradingqna_57b8b7ee3734",
-     "quote": "Banks are charging arm and a leg for unfilled SIP transactions",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/an-appeal-to-zerodha-investor-awareness/168343/1"
-    },
-    {
-     "id": "play_store_494d59e487b1",
-     "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
-     "source": "play_store",
-     "url": null
-    }
-   ],
-   "rank": 7,
-   "rank_equal_weights": 2,
-   "score_index": 8
-  },
-  {
-   "key": "underwhelming_returns",
-   "kind": "reason",
-   "label": null,
-   "n": 24,
-   "share_of_tagged": 0.0329,
-   "avg_severity": 2.0,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
-   "solvable_weight": 0.5,
-   "score": 16.8,
-   "score_equal_weights": 48.0,
+   "n": 16,
+   "share_of_tagged": 0.0097,
+   "avg_severity": 1.88,
+   "branch": "D",
+   "branch_name": "D. Disengagement",
+   "branch_weight": 0.6,
+   "solvable": "yes",
+   "solvable_why": "Gentle, non-urgent progress summaries; no FOMO.",
+   "solvable_weight": 1.0,
+   "score": 18.0,
+   "score_equal_weights": 30.0,
    "low_confidence": false,
    "lapse_story_share": 0.375,
    "sources": {
-    "play_store": 4,
-    "youtube": 5,
-    "reddit": 11,
-    "tradingqna": 4
+    "play_store": 5,
+    "reddit": 8,
+    "youtube": 1,
+    "tradingqna": 2
    },
    "quotes": [
     {
-     "id": "reddit_4a316d605c4e",
-     "quote": "returns I see is not convincing me anymore",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
-    },
-    {
-     "id": "youtube_67e713e09373",
-     "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
-    }
-   ],
-   "rank": 8,
-   "rank_equal_weights": 4,
-   "score_index": 8
-  },
-  {
-   "key": "social_influence",
-   "kind": "reason",
-   "label": null,
-   "n": 33,
-   "share_of_tagged": 0.0452,
-   "avg_severity": 1.21,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Happens outside the app; only neutral, non-urgent information is allowed.",
-   "solvable_weight": 0.5,
-   "score": 14.0,
-   "score_equal_weights": 40.0,
-   "low_confidence": false,
-   "lapse_story_share": 0.212,
-   "sources": {
-    "reddit": 15,
-    "tradingqna": 12,
-    "youtube": 6
-   },
-   "quotes": [
-    {
-     "id": "tradingqna_814031f49881",
-     "quote": "Stop the regular SIP and start an SIP into the direct variant.",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/about-mf-regular-plan/111699/13"
-    },
-    {
-     "id": "reddit_9c19a2050248",
-     "quote": "Invest in Edelweiss Equity Savings Fund",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/mutualfunds/comments/1wuzfiy/should_i_shift_my_fathers_sip_from_ppfc_to_a/pd8o4zh/"
-    }
-   ],
-   "rank": 9,
-   "rank_equal_weights": 7,
-   "score_index": 6
-  },
-  {
-   "key": "trust_concern",
-   "kind": "reason",
-   "label": null,
-   "n": 20,
-   "share_of_tagged": 0.0274,
-   "avg_severity": 1.8,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Transparency helps; trust also depends on things outside the app.",
-   "solvable_weight": 0.5,
-   "score": 12.6,
-   "score_equal_weights": 36.0,
-   "low_confidence": false,
-   "lapse_story_share": 0.4,
-   "sources": {
-    "play_store": 6,
-    "youtube": 3,
-    "reddit": 6,
-    "tradingqna": 4,
-    "app_store": 1
-   },
-   "quotes": [
-    {
-     "id": "youtube_67e713e09373",
-     "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
-    },
-    {
-     "id": "play_store_470101033c2e",
-     "quote": "Groww app hanged from 2.30pm onwards today while I was trying to redeem mutual funds",
+     "id": "play_store_5f14fd8457e3",
+     "quote": "For high brokerages and changing my Mutual funds to Demat without my consent.",
      "source": "play_store",
      "url": null
+    },
+    {
+     "id": "tradingqna_179db7f60a42",
+     "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
     }
    ],
-   "rank": 10,
-   "rank_equal_weights": 8,
-   "score_index": 6
+   "rank": 12,
+   "rank_equal_weights": 14,
+   "score_index": 4
   },
   {
    "key": "market_fall",
    "kind": "reason",
    "label": null,
-   "n": 20,
-   "share_of_tagged": 0.0274,
+   "n": 28,
+   "share_of_tagged": 0.0169,
    "avg_severity": 1.75,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -425,78 +507,81 @@
    "solvable": "partly",
    "solvable_why": "Calm, factual context; fear-based or urgency nudges are not allowed.",
    "solvable_weight": 0.5,
-   "score": 12.25,
-   "score_equal_weights": 35.0,
+   "score": 17.15,
+   "score_equal_weights": 49.0,
    "low_confidence": false,
-   "lapse_story_share": 0.4,
+   "lapse_story_share": 0.286,
    "sources": {
     "reddit": 7,
-    "youtube": 2,
-    "tradingqna": 11
+    "tradingqna": 14,
+    "youtube": 5,
+    "play_store": 2
    },
    "quotes": [
     {
-     "id": "reddit_762eec5cc492",
-     "quote": "my XIRR is not even 1% which is downright depressing",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/mutualfunds/comments/1wvtr68/scared_to_invest_anymore/"
-    },
-    {
-     "id": "tradingqna_6396d49ac02f",
-     "quote": "Shocked to learn that returns are negative by more than 30pc.",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/is-sip-really-a-good-investment-method/62033/16"
-    }
-   ],
-   "rank": 11,
-   "rank_equal_weights": 9,
-   "score_index": 6
-  },
-  {
-   "key": "disengaged_forgot",
-   "kind": "reason",
-   "label": null,
-   "n": 9,
-   "share_of_tagged": 0.0123,
-   "avg_severity": 1.33,
-   "branch": "D",
-   "branch_name": "D. Disengagement",
-   "branch_weight": 0.6,
-   "solvable": "yes",
-   "solvable_why": "Gentle, non-urgent progress summaries; no FOMO.",
-   "solvable_weight": 1.0,
-   "score": 7.2,
-   "score_equal_weights": 12.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.444,
-   "sources": {
-    "play_store": 1,
-    "reddit": 8
-   },
-   "quotes": [
-    {
-     "id": "reddit_762eec5cc492",
-     "quote": "my XIRR is not even 1% which is downright depressing",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/mutualfunds/comments/1wvtr68/scared_to_invest_anymore/"
-    },
-    {
-     "id": "play_store_af44f88da46f",
-     "quote": "if a SIP gets started by mistake then they are saying that either I can stop it immediately or I can reduce the amount",
+     "id": "play_store_6123b6a3dede",
+     "quote": "jido oh negtive mai hor rupee add karda gya",
      "source": "play_store",
      "url": null
+    },
+    {
+     "id": "tradingqna_e7ad9f5458c9",
+     "quote": "I started investing in Smallcase last year",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/smallcase-returns-loss/47686/1"
     }
    ],
-   "rank": 12,
-   "rank_equal_weights": 16,
-   "score_index": 3
+   "rank": 13,
+   "rank_equal_weights": 11,
+   "score_index": 4
+  },
+  {
+   "key": "tax_or_lockin",
+   "kind": "reason",
+   "label": null,
+   "n": 27,
+   "share_of_tagged": 0.0163,
+   "avg_severity": 1.67,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
+   "solvable_weight": 0.5,
+   "score": 15.75,
+   "score_equal_weights": 45.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.333,
+   "sources": {
+    "tradingqna": 11,
+    "reddit": 2,
+    "youtube": 10,
+    "play_store": 4
+   },
+   "quotes": [
+    {
+     "id": "play_store_4851adbb3c21",
+     "quote": "I felt cheated when my money got into regular fund . Now Iam supposed to pay STCG tax and 1% exit load",
+     "source": "play_store",
+     "url": null
+    },
+    {
+     "id": "tradingqna_179db7f60a42",
+     "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
+    }
+   ],
+   "rank": 14,
+   "rank_equal_weights": 12,
+   "score_index": 4
   },
   {
    "key": "missing_feature",
    "kind": "app_sub_theme",
    "label": "App: a feature the person wants is missing",
    "n": 15,
-   "share_of_tagged": 0.0205,
+   "share_of_tagged": 0.0091,
    "avg_severity": 1.4,
    "branch": "D",
    "branch_name": "D. Disengagement",
@@ -527,48 +612,8 @@
      "url": "https://tradingqna.com/t/auto-pause-resume-of-sip/147023/1"
     }
    ],
-   "rank": 13,
-   "rank_equal_weights": 14,
-   "score_index": 3
-  },
-  {
-   "key": "tax_or_lockin",
-   "kind": "reason",
-   "label": null,
-   "n": 10,
-   "share_of_tagged": 0.0137,
-   "avg_severity": 1.5,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
-   "solvable_weight": 0.5,
-   "score": 5.25,
-   "score_equal_weights": 15.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.5,
-   "sources": {
-    "tradingqna": 6,
-    "reddit": 2,
-    "youtube": 2
-   },
-   "quotes": [
-    {
-     "id": "reddit_29bd0401c212",
-     "quote": "one of my SIP transactions bounced and I was charged around ₹590",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/personalfinanceindia/comments/1u8g0xl/got_nach_charges_from_icici_due_to_funds_blocked/"
-    },
-    {
-     "id": "tradingqna_61319bb3aa28",
-     "quote": "I don’t want to give ltgc tax so to get exact 1 lac capital gain",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/mutual-fund-regular-to-direct/168641/1"
-    }
-   ],
-   "rank": 14,
-   "rank_equal_weights": 15,
+   "rank": 15,
+   "rank_equal_weights": 17,
    "score_index": 2
   },
   {
@@ -576,7 +621,7 @@
    "kind": "app_sub_theme",
    "label": "App: support is unreachable or unhelpful",
    "n": 5,
-   "share_of_tagged": 0.0068,
+   "share_of_tagged": 0.003,
    "avg_severity": 2.2,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -606,16 +651,57 @@
      "url": null
     }
    ],
-   "rank": 15,
-   "rank_equal_weights": 17,
-   "score_index": 2
+   "rank": 16,
+   "rank_equal_weights": 18,
+   "score_index": 1
+  },
+  {
+   "key": "life_event",
+   "kind": "reason",
+   "label": null,
+   "n": 6,
+   "share_of_tagged": 0.0036,
+   "avg_severity": 1.67,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "A graceful pause and easy restart; the event itself is outside the product.",
+   "solvable_weight": 0.5,
+   "score": 3.5,
+   "score_equal_weights": 10.0,
+   "low_confidence": true,
+   "lapse_story_share": 0.333,
+   "sources": {
+    "play_store": 2,
+    "reddit": 1,
+    "tradingqna": 2,
+    "youtube": 1
+   },
+   "quotes": [
+    {
+     "id": "play_store_494d59e487b1",
+     "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
+     "source": "play_store",
+     "url": null
+    },
+    {
+     "id": "tradingqna_fea1d35fc486",
+     "quote": "Ppl shut SIP accounts for various reasons - Could market slowdown be a red herring? Food inflation has been high of late...",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/sip-data-indicates-retailers-now-hitting-panic-button/144606/2"
+    }
+   ],
+   "rank": 17,
+   "rank_equal_weights": 19,
+   "score_index": 1
   },
   {
    "key": "returns_display",
    "kind": "app_sub_theme",
    "label": "App: portfolio and returns shown wrongly or slowly",
    "n": 3,
-   "share_of_tagged": 0.0041,
+   "share_of_tagged": 0.0018,
    "avg_severity": 1.67,
    "branch": "D",
    "branch_name": "D. Disengagement",
@@ -644,69 +730,30 @@
      "url": null
     }
    ],
-   "rank": 16,
-   "rank_equal_weights": 19,
-   "score_index": 1
-  },
-  {
-   "key": "life_event",
-   "kind": "reason",
-   "label": null,
-   "n": 4,
-   "share_of_tagged": 0.0055,
-   "avg_severity": 1.75,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "A graceful pause and easy restart; the event itself is outside the product.",
-   "solvable_weight": 0.5,
-   "score": 2.45,
-   "score_equal_weights": 7.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.25,
-   "sources": {
-    "play_store": 2,
-    "reddit": 1,
-    "tradingqna": 1
-   },
-   "quotes": [
-    {
-     "id": "play_store_494d59e487b1",
-     "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
-     "source": "play_store",
-     "url": null
-    },
-    {
-     "id": "tradingqna_fea1d35fc486",
-     "quote": "Ppl shut SIP accounts for various reasons - Could market slowdown be a red herring? Food inflation has been high of late...",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/sip-data-indicates-retailers-now-hitting-panic-button/144606/2"
-    }
-   ],
-   "rank": 17,
-   "rank_equal_weights": 18,
+   "rank": 18,
+   "rank_equal_weights": 20,
    "score_index": 1
   },
   {
    "key": "irregular_income",
    "kind": "reason",
    "label": null,
-   "n": 1,
-   "share_of_tagged": 0.0014,
-   "avg_severity": 2.0,
+   "n": 2,
+   "share_of_tagged": 0.0012,
+   "avg_severity": 1.5,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "partly",
    "solvable_why": "Flexible date or amount helps; the income itself cannot be changed.",
    "solvable_weight": 0.5,
-   "score": 0.7,
-   "score_equal_weights": 2.0,
+   "score": 1.05,
+   "score_equal_weights": 3.0,
    "low_confidence": true,
-   "lapse_story_share": 1.0,
+   "lapse_story_share": 0.5,
    "sources": {
-    "tradingqna": 1
+    "tradingqna": 1,
+    "youtube": 1
    },
    "quotes": [
     {
@@ -714,19 +761,25 @@
      "quote": "but the SIP didn’t execute and I found that it was reporting insufficient funds. Wondering if I am doing this the wrong way",
      "source": "tradingqna",
      "url": "https://tradingqna.com/t/right-way-to-setup-etf-sips-without-bank-mandates/149685/1"
+    },
+    {
+     "id": "youtube_cbafc9137d61",
+     "quote": "People donot have jobs so how you think SIP will grow. Inflation causes no money left in your pocket to invest",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=3NeW1eAqI3I"
     }
    ],
-   "rank": 18,
-   "rank_equal_weights": 20,
+   "rank": 19,
+   "rank_equal_weights": 21,
    "score_index": 0
   },
   {
    "key": "goal_change",
    "kind": "reason",
    "label": null,
-   "n": 28,
-   "share_of_tagged": 0.0384,
-   "avg_severity": 1.75,
+   "n": 52,
+   "share_of_tagged": 0.0314,
+   "avg_severity": 1.69,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
@@ -734,13 +787,14 @@
    "solvable_why": "Often a valid reason to withdraw; the product should only make restarting easy.",
    "solvable_weight": 0.0,
    "score": 0.0,
-   "score_equal_weights": 49.0,
+   "score_equal_weights": 88.0,
    "low_confidence": false,
-   "lapse_story_share": 0.786,
+   "lapse_story_share": 0.5,
    "sources": {
-    "youtube": 9,
-    "tradingqna": 9,
-    "reddit": 10
+    "youtube": 29,
+    "tradingqna": 10,
+    "reddit": 10,
+    "play_store": 3
    },
    "quotes": [
     {
@@ -750,23 +804,23 @@
      "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
     },
     {
-     "id": "tradingqna_814031f49881",
-     "quote": "Stop the regular SIP and start an SIP into the direct variant.",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/about-mf-regular-plan/111699/13"
+     "id": "play_store_5f14fd8457e3",
+     "quote": "For high brokerages and changing my Mutual funds to Demat without my consent.",
+     "source": "play_store",
+     "url": null
     }
    ],
-   "rank": 19,
-   "rank_equal_weights": 3,
+   "rank": 20,
+   "rank_equal_weights": 9,
    "score_index": 0
   },
   {
    "key": "fund_switching",
    "kind": "reason",
    "label": null,
-   "n": 16,
-   "share_of_tagged": 0.0219,
-   "avg_severity": 1.69,
+   "n": 40,
+   "share_of_tagged": 0.0242,
+   "avg_severity": 1.4,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
@@ -774,14 +828,14 @@
    "solvable_why": "Addressing it would mean recommending funds, which is not allowed.",
    "solvable_weight": 0.0,
    "score": 0.0,
-   "score_equal_weights": 27.0,
+   "score_equal_weights": 56.0,
    "low_confidence": false,
-   "lapse_story_share": 0.75,
+   "lapse_story_share": 0.35,
    "sources": {
     "play_store": 1,
-    "youtube": 2,
+    "youtube": 17,
     "reddit": 12,
-    "tradingqna": 1
+    "tradingqna": 10
    },
    "quotes": [
     {
@@ -791,14 +845,14 @@
      "url": "https://www.reddit.com/r/mutualfunds/comments/1xdybj4/any_dream_achievable_using_sip_mutual_fund_game/"
     },
     {
-     "id": "play_store_06009ab3e281",
-     "quote": "You have lost the trust after launching prime plan",
-     "source": "play_store",
-     "url": null
+     "id": "tradingqna_179db7f60a42",
+     "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
     }
    ],
-   "rank": 20,
-   "rank_equal_weights": 11,
+   "rank": 21,
+   "rank_equal_weights": 10,
    "score_index": 0
   }
  ],
@@ -808,7 +862,7 @@
    "kind": "after_stop",
    "label": "Redemption, withdrawal or refund is slow or stuck",
    "n": 14,
-   "share_of_tagged": 0.0192,
+   "share_of_tagged": 0.0085,
    "avg_severity": 2.07,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -848,7 +902,7 @@
    "kind": "after_stop",
    "label": "Cannot find or complete a redemption",
    "n": 11,
-   "share_of_tagged": 0.0151,
+   "share_of_tagged": 0.0067,
    "avg_severity": 2.18,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -888,7 +942,7 @@
    "kind": "after_stop",
    "label": "Amount received differs from what the app showed",
    "n": 8,
-   "share_of_tagged": 0.011,
+   "share_of_tagged": 0.0048,
    "avg_severity": 2.38,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -923,15 +977,15 @@
    "score_index": 66
   }
  ],
- "n_tagged": 730,
- "app_posts_total": 138,
+ "n_tagged": 1654,
+ "app_posts_total": 435,
  "app_posts_not_ranked": 56,
  "exit_posts": 33,
  "label_info": {
-  "candidates": 227,
+  "candidates": 552,
   "labelled": 227,
   "new_this_run": 0,
-  "failed_this_run": 0
+  "failed_this_run": 325
  },
  "assumptions": {
   "branch_weight": {
@@ -951,40 +1005,39 @@
  "without_reddit": {
   "causes": [
    {
-    "key": "mandate_payment_issue",
-    "kind": "reason",
-    "label": null,
-    "n": 73,
-    "share_of_tagged": 0.1682,
-    "avg_severity": 1.77,
-    "branch": "B",
-    "branch_name": "B. Involuntary lapse",
-    "branch_weight": 1.0,
+    "key": "app_unsplit",
+    "kind": "app_sub_theme",
+    "label": "App: not yet split into sub-themes",
+    "n": 297,
+    "share_of_tagged": 0.2187,
+    "avg_severity": 1.37,
+    "branch": "A",
+    "branch_name": "A. Getting going",
+    "branch_weight": 0.9,
     "solvable": "yes",
-    "solvable_why": "Reliable debits, clear failure messages and easy fixes need no advice and no pressure.",
+    "solvable_why": "Making SIPs easy to find, pause and change is a design fix.",
     "solvable_weight": 1.0,
-    "score": 129.0,
-    "score_equal_weights": 129.0,
+    "score": 366.3,
+    "score_equal_weights": 407.0,
     "low_confidence": false,
-    "lapse_story_share": 0.603,
+    "lapse_story_share": 0.057,
     "sources": {
-     "youtube": 16,
-     "app_store": 4,
-     "play_store": 20,
-     "tradingqna": 33
+     "tradingqna": 64,
+     "play_store": 131,
+     "youtube": 102
     },
     "quotes": [
      {
-      "id": "app_store_6b8743617d36",
-      "quote": "new sip activation is not working properly,",
-      "source": "app_store",
+      "id": "play_store_91de10a09c03",
+      "quote": "I invested Rs 40,000 in a Bank of India mutual fund yesterday",
+      "source": "play_store",
       "url": null
      },
      {
-      "id": "tradingqna_662ce37ce7e3",
-      "quote": "[USER] Why SIP also cancelled for the above mutual funds…",
+      "id": "tradingqna_179db7f60a42",
+      "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
       "source": "tradingqna",
-      "url": "https://tradingqna.com/t/motilal-oswal-temporary-suspension-of-lumpsum-investments/125471/4"
+      "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
      }
     ],
     "rank": 1,
@@ -992,11 +1045,213 @@
     "score_index": 100
    },
    {
+    "key": "mandate_payment_issue",
+    "kind": "reason",
+    "label": null,
+    "n": 185,
+    "share_of_tagged": 0.1362,
+    "avg_severity": 1.72,
+    "branch": "B",
+    "branch_name": "B. Involuntary lapse",
+    "branch_weight": 1.0,
+    "solvable": "yes",
+    "solvable_why": "Reliable debits, clear failure messages and easy fixes need no advice and no pressure.",
+    "solvable_weight": 1.0,
+    "score": 318.0,
+    "score_equal_weights": 318.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.395,
+    "sources": {
+     "youtube": 53,
+     "app_store": 4,
+     "play_store": 64,
+     "tradingqna": 64
+    },
+    "quotes": [
+     {
+      "id": "play_store_ed8a7db63fd7",
+      "quote": "sip nhii ho rahi he kya Karu",
+      "source": "play_store",
+      "url": null
+     },
+     {
+      "id": "app_store_6b8743617d36",
+      "quote": "new sip activation is not working properly,",
+      "source": "app_store",
+      "url": null
+     }
+    ],
+    "rank": 2,
+    "rank_equal_weights": 2,
+    "score_index": 87
+   },
+   {
+    "key": "confusing_numbers",
+    "kind": "reason",
+    "label": null,
+    "n": 96,
+    "share_of_tagged": 0.0707,
+    "avg_severity": 1.14,
+    "branch": "C",
+    "branch_name": "C. Voluntary lapse",
+    "branch_weight": 0.7,
+    "solvable": "yes",
+    "solvable_why": "Explaining NAV, units and XIRR in plain words is not investment advice.",
+    "solvable_weight": 1.0,
+    "score": 76.3,
+    "score_equal_weights": 109.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.052,
+    "sources": {
+     "tradingqna": 19,
+     "youtube": 63,
+     "play_store": 14
+    },
+    "quotes": [
+     {
+      "id": "youtube_bfc18418b91f",
+      "quote": "SIP IS TRICK TO FOOL ORDINARY PEOPLE ONLY AMC MAKE ME ONEY OFF IT , LUMPSUMP IS THE BEST WAY TO INVEST FOR 5 TO 10-15 YEAR",
+      "source": "youtube",
+      "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
+     },
+     {
+      "id": "play_store_86ee3cee8a63",
+      "quote": "mutual fund data not updated on apps please check",
+      "source": "play_store",
+      "url": null
+     }
+    ],
+    "rank": 3,
+    "rank_equal_weights": 5,
+    "score_index": 21
+   },
+   {
+    "key": "expectation_mismatch",
+    "kind": "reason",
+    "label": null,
+    "n": 56,
+    "share_of_tagged": 0.0412,
+    "avg_severity": 1.64,
+    "branch": "C",
+    "branch_name": "C. Voluntary lapse",
+    "branch_weight": 0.7,
+    "solvable": "yes",
+    "solvable_why": "Setting honest expectations early is education, not advice.",
+    "solvable_weight": 1.0,
+    "score": 64.4,
+    "score_equal_weights": 92.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.232,
+    "sources": {
+     "play_store": 9,
+     "youtube": 35,
+     "tradingqna": 12
+    },
+    "quotes": [
+     {
+      "id": "youtube_67e713e09373",
+      "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
+      "source": "youtube",
+      "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
+     },
+     {
+      "id": "tradingqna_e7ad9f5458c9",
+      "quote": "I started investing in Smallcase last year",
+      "source": "tradingqna",
+      "url": "https://tradingqna.com/t/smallcase-returns-loss/47686/1"
+     }
+    ],
+    "rank": 4,
+    "rank_equal_weights": 6,
+    "score_index": 18
+   },
+   {
+    "key": "underwhelming_returns",
+    "kind": "reason",
+    "label": null,
+    "n": 71,
+    "share_of_tagged": 0.0523,
+    "avg_severity": 1.99,
+    "branch": "C",
+    "branch_name": "C. Voluntary lapse",
+    "branch_weight": 0.7,
+    "solvable": "partly",
+    "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
+    "solvable_weight": 0.5,
+    "score": 49.35,
+    "score_equal_weights": 141.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.254,
+    "sources": {
+     "play_store": 23,
+     "youtube": 33,
+     "tradingqna": 15
+    },
+    "quotes": [
+     {
+      "id": "youtube_67e713e09373",
+      "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
+      "source": "youtube",
+      "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
+     },
+     {
+      "id": "play_store_5f14fd8457e3",
+      "quote": "For high brokerages and changing my Mutual funds to Demat without my consent.",
+      "source": "play_store",
+      "url": null
+     }
+    ],
+    "rank": 5,
+    "rank_equal_weights": 3,
+    "score_index": 13
+   },
+   {
+    "key": "trust_concern",
+    "kind": "reason",
+    "label": null,
+    "n": 59,
+    "share_of_tagged": 0.0434,
+    "avg_severity": 2.32,
+    "branch": "C",
+    "branch_name": "C. Voluntary lapse",
+    "branch_weight": 0.7,
+    "solvable": "partly",
+    "solvable_why": "Transparency helps; trust also depends on things outside the app.",
+    "solvable_weight": 0.5,
+    "score": 47.95,
+    "score_equal_weights": 137.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.339,
+    "sources": {
+     "play_store": 42,
+     "youtube": 10,
+     "tradingqna": 6,
+     "app_store": 1
+    },
+    "quotes": [
+     {
+      "id": "play_store_6123b6a3dede",
+      "quote": "jido oh negtive mai hor rupee add karda gya",
+      "source": "play_store",
+      "url": null
+     },
+     {
+      "id": "youtube_67e713e09373",
+      "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
+      "source": "youtube",
+      "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
+     }
+    ],
+    "rank": 6,
+    "rank_equal_weights": 4,
+    "score_index": 13
+   },
+   {
     "key": "autopay_setup",
     "kind": "app_sub_theme",
     "label": "App: autopay / mandate set-up and changes",
     "n": 18,
-    "share_of_tagged": 0.0415,
+    "share_of_tagged": 0.0133,
     "avg_severity": 2.0,
     "branch": "B",
     "branch_name": "B. Involuntary lapse",
@@ -1028,16 +1283,96 @@
       "url": null
      }
     ],
-    "rank": 2,
-    "rank_equal_weights": 2,
-    "score_index": 28
+    "rank": 7,
+    "rank_equal_weights": 12,
+    "score_index": 10
+   },
+   {
+    "key": "social_influence",
+    "kind": "reason",
+    "label": null,
+    "n": 57,
+    "share_of_tagged": 0.042,
+    "avg_severity": 1.35,
+    "branch": "C",
+    "branch_name": "C. Voluntary lapse",
+    "branch_weight": 0.7,
+    "solvable": "partly",
+    "solvable_why": "Happens outside the app; only neutral, non-urgent information is allowed.",
+    "solvable_weight": 0.5,
+    "score": 26.95,
+    "score_equal_weights": 77.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.123,
+    "sources": {
+     "tradingqna": 30,
+     "play_store": 3,
+     "youtube": 24
+    },
+    "quotes": [
+     {
+      "id": "play_store_965eea598bf0",
+      "quote": "Very disappointing experience with Groww and Axis Mutual Fund. During a financial emergency, Groww asked me to contact Axis, while Axis asked me to go back to Groww.",
+      "source": "play_store",
+      "url": null
+     },
+     {
+      "id": "youtube_456a456341f9",
+      "quote": "Cancer karne ke bad kaise chalu kar sakte hain kya",
+      "source": "youtube",
+      "url": "https://www.youtube.com/watch?v=phs3OUy7ZWI"
+     }
+    ],
+    "rank": 8,
+    "rank_equal_weights": 7,
+    "score_index": 7
+   },
+   {
+    "key": "cash_flow_strain",
+    "kind": "reason",
+    "label": null,
+    "n": 31,
+    "share_of_tagged": 0.0228,
+    "avg_severity": 1.87,
+    "branch": "C",
+    "branch_name": "C. Voluntary lapse",
+    "branch_weight": 0.7,
+    "solvable": "partly",
+    "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
+    "solvable_weight": 0.5,
+    "score": 20.3,
+    "score_equal_weights": 58.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.581,
+    "sources": {
+     "play_store": 9,
+     "youtube": 14,
+     "tradingqna": 8
+    },
+    "quotes": [
+     {
+      "id": "play_store_ed8a7db63fd7",
+      "quote": "sip nhii ho rahi he kya Karu",
+      "source": "play_store",
+      "url": null
+     },
+     {
+      "id": "tradingqna_57b8b7ee3734",
+      "quote": "Banks are charging arm and a leg for unfilled SIP transactions",
+      "source": "tradingqna",
+      "url": "https://tradingqna.com/t/an-appeal-to-zerodha-investor-awareness/168343/1"
+     }
+    ],
+    "rank": 9,
+    "rank_equal_weights": 9,
+    "score_index": 6
    },
    {
     "key": "app_bugs",
     "kind": "app_sub_theme",
     "label": "App: app updates, bugs and slowness",
     "n": 12,
-    "share_of_tagged": 0.0276,
+    "share_of_tagged": 0.0088,
     "avg_severity": 1.75,
     "branch": "A",
     "branch_name": "A. Getting going",
@@ -1068,96 +1403,96 @@
       "url": "https://tradingqna.com/t/how-to-convert-coin-sip-to-coin-amc-sip/43784/12"
      }
     ],
-    "rank": 3,
-    "rank_equal_weights": 9,
-    "score_index": 15
+    "rank": 10,
+    "rank_equal_weights": 14,
+    "score_index": 5
    },
    {
-    "key": "expectation_mismatch",
+    "key": "tax_or_lockin",
     "kind": "reason",
     "label": null,
-    "n": 12,
-    "share_of_tagged": 0.0276,
-    "avg_severity": 2.0,
+    "n": 25,
+    "share_of_tagged": 0.0184,
+    "avg_severity": 1.64,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
-    "solvable": "yes",
-    "solvable_why": "Setting honest expectations early is education, not advice.",
-    "solvable_weight": 1.0,
-    "score": 16.8,
-    "score_equal_weights": 24.0,
-    "low_confidence": true,
-    "lapse_story_share": 0.333,
-    "sources": {
-     "play_store": 2,
-     "youtube": 3,
-     "tradingqna": 7
-    },
-    "quotes": [
-     {
-      "id": "youtube_67e713e09373",
-      "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
-      "source": "youtube",
-      "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
-     },
-     {
-      "id": "tradingqna_dc77e1295362",
-      "quote": "Is this a dip and I continue my SIP? or do I pause for a bit due to uncertainty ?",
-      "source": "tradingqna",
-      "url": "https://tradingqna.com/t/continue-investing-in-international-funds/140780/1"
-     }
-    ],
-    "rank": 4,
-    "rank_equal_weights": 7,
-    "score_index": 13
-   },
-   {
-    "key": "confusing_numbers",
-    "kind": "reason",
-    "label": null,
-    "n": 17,
-    "share_of_tagged": 0.0392,
-    "avg_severity": 1.06,
-    "branch": "C",
-    "branch_name": "C. Voluntary lapse",
-    "branch_weight": 0.7,
-    "solvable": "yes",
-    "solvable_why": "Explaining NAV, units and XIRR in plain words is not investment advice.",
-    "solvable_weight": 1.0,
-    "score": 12.6,
-    "score_equal_weights": 18.0,
+    "solvable": "partly",
+    "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
+    "solvable_weight": 0.5,
+    "score": 14.35,
+    "score_equal_weights": 41.0,
     "low_confidence": false,
-    "lapse_story_share": 0.059,
+    "lapse_story_share": 0.28,
     "sources": {
-     "tradingqna": 9,
-     "youtube": 7,
-     "play_store": 1
+     "tradingqna": 11,
+     "youtube": 10,
+     "play_store": 4
     },
     "quotes": [
      {
-      "id": "tradingqna_05dec1e4a8f2",
-      "quote": "I started my first sip on mutual fund after completing online payment but I am confused about next sip installment",
-      "source": "tradingqna",
-      "url": "https://tradingqna.com/t/sip-cancel-on-mf/190338/1"
+      "id": "play_store_4851adbb3c21",
+      "quote": "I felt cheated when my money got into regular fund . Now Iam supposed to pay STCG tax and 1% exit load",
+      "source": "play_store",
+      "url": null
      },
      {
-      "id": "youtube_37993ae860e3",
-      "quote": "Your upi mandate for 25000. Its meaning kya hai sir?",
-      "source": "youtube",
-      "url": "https://www.youtube.com/watch?v=MExMf8_g4CE"
+      "id": "tradingqna_179db7f60a42",
+      "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
+      "source": "tradingqna",
+      "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
      }
     ],
-    "rank": 5,
+    "rank": 11,
+    "rank_equal_weights": 10,
+    "score_index": 4
+   },
+   {
+    "key": "market_fall",
+    "kind": "reason",
+    "label": null,
+    "n": 21,
+    "share_of_tagged": 0.0155,
+    "avg_severity": 1.76,
+    "branch": "C",
+    "branch_name": "C. Voluntary lapse",
+    "branch_weight": 0.7,
+    "solvable": "partly",
+    "solvable_why": "Calm, factual context; fear-based or urgency nudges are not allowed.",
+    "solvable_weight": 0.5,
+    "score": 12.95,
+    "score_equal_weights": 37.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.238,
+    "sources": {
+     "tradingqna": 14,
+     "youtube": 5,
+     "play_store": 2
+    },
+    "quotes": [
+     {
+      "id": "play_store_6123b6a3dede",
+      "quote": "jido oh negtive mai hor rupee add karda gya",
+      "source": "play_store",
+      "url": null
+     },
+     {
+      "id": "tradingqna_e7ad9f5458c9",
+      "quote": "I started investing in Smallcase last year",
+      "source": "tradingqna",
+      "url": "https://tradingqna.com/t/smallcase-returns-loss/47686/1"
+     }
+    ],
+    "rank": 12,
     "rank_equal_weights": 11,
-    "score_index": 10
+    "score_index": 4
    },
    {
     "key": "sip_controls",
     "kind": "app_sub_theme",
     "label": "App: cannot pause, skip, edit or cancel a SIP easily",
     "n": 11,
-    "share_of_tagged": 0.0253,
+    "share_of_tagged": 0.0081,
     "avg_severity": 1.64,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
@@ -1188,175 +1523,56 @@
       "url": "https://tradingqna.com/t/zerodha-equity-sip-order-should-have-an-option-to-automatic-stop-or-execute-on-holiday-or-off-day/109320/1"
      }
     ],
-    "rank": 6,
-    "rank_equal_weights": 12,
-    "score_index": 10
+    "rank": 13,
+    "rank_equal_weights": 17,
+    "score_index": 3
    },
    {
-    "key": "trust_concern",
+    "key": "disengaged_forgot",
     "kind": "reason",
     "label": null,
-    "n": 14,
-    "share_of_tagged": 0.0323,
-    "avg_severity": 2.0,
-    "branch": "C",
-    "branch_name": "C. Voluntary lapse",
-    "branch_weight": 0.7,
-    "solvable": "partly",
-    "solvable_why": "Transparency helps; trust also depends on things outside the app.",
-    "solvable_weight": 0.5,
-    "score": 9.8,
-    "score_equal_weights": 28.0,
+    "n": 8,
+    "share_of_tagged": 0.0059,
+    "avg_severity": 2.38,
+    "branch": "D",
+    "branch_name": "D. Disengagement",
+    "branch_weight": 0.6,
+    "solvable": "yes",
+    "solvable_why": "Gentle, non-urgent progress summaries; no FOMO.",
+    "solvable_weight": 1.0,
+    "score": 11.4,
+    "score_equal_weights": 19.0,
     "low_confidence": true,
-    "lapse_story_share": 0.429,
+    "lapse_story_share": 0.375,
     "sources": {
-     "play_store": 6,
-     "youtube": 3,
-     "tradingqna": 4,
-     "app_store": 1
+     "play_store": 5,
+     "youtube": 1,
+     "tradingqna": 2
     },
     "quotes": [
      {
-      "id": "youtube_67e713e09373",
-      "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
-      "source": "youtube",
-      "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
-     },
-     {
-      "id": "play_store_470101033c2e",
-      "quote": "Groww app hanged from 2.30pm onwards today while I was trying to redeem mutual funds",
+      "id": "play_store_5f14fd8457e3",
+      "quote": "For high brokerages and changing my Mutual funds to Demat without my consent.",
       "source": "play_store",
       "url": null
-     }
-    ],
-    "rank": 7,
-    "rank_equal_weights": 4,
-    "score_index": 8
-   },
-   {
-    "key": "underwhelming_returns",
-    "kind": "reason",
-    "label": null,
-    "n": 13,
-    "share_of_tagged": 0.03,
-    "avg_severity": 2.0,
-    "branch": "C",
-    "branch_name": "C. Voluntary lapse",
-    "branch_weight": 0.7,
-    "solvable": "partly",
-    "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
-    "solvable_weight": 0.5,
-    "score": 9.1,
-    "score_equal_weights": 26.0,
-    "low_confidence": true,
-    "lapse_story_share": 0.308,
-    "sources": {
-     "play_store": 4,
-     "youtube": 5,
-     "tradingqna": 4
-    },
-    "quotes": [
-     {
-      "id": "youtube_67e713e09373",
-      "quote": "Maine 2021 me dala tha ab vo paisa 2024 me nikla aur SIP band kar diya",
-      "source": "youtube",
-      "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
      },
      {
-      "id": "tradingqna_6396d49ac02f",
-      "quote": "Shocked to learn that returns are negative by more than 30pc.",
+      "id": "tradingqna_179db7f60a42",
+      "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
       "source": "tradingqna",
-      "url": "https://tradingqna.com/t/is-sip-really-a-good-investment-method/62033/16"
+      "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
      }
     ],
-    "rank": 8,
-    "rank_equal_weights": 5,
-    "score_index": 7
-   },
-   {
-    "key": "social_influence",
-    "kind": "reason",
-    "label": null,
-    "n": 18,
-    "share_of_tagged": 0.0415,
-    "avg_severity": 1.39,
-    "branch": "C",
-    "branch_name": "C. Voluntary lapse",
-    "branch_weight": 0.7,
-    "solvable": "partly",
-    "solvable_why": "Happens outside the app; only neutral, non-urgent information is allowed.",
-    "solvable_weight": 0.5,
-    "score": 8.75,
-    "score_equal_weights": 25.0,
-    "low_confidence": false,
-    "lapse_story_share": 0.333,
-    "sources": {
-     "tradingqna": 12,
-     "youtube": 6
-    },
-    "quotes": [
-     {
-      "id": "tradingqna_814031f49881",
-      "quote": "Stop the regular SIP and start an SIP into the direct variant.",
-      "source": "tradingqna",
-      "url": "https://tradingqna.com/t/about-mf-regular-plan/111699/13"
-     },
-     {
-      "id": "youtube_4ef7a2182f39",
-      "quote": "He is leftist, negative about Bharat he already made money... Ignore him.. continue sip",
-      "source": "youtube",
-      "url": "https://www.youtube.com/watch?v=3NeW1eAqI3I"
-     }
-    ],
-    "rank": 9,
-    "rank_equal_weights": 6,
-    "score_index": 7
-   },
-   {
-    "key": "market_fall",
-    "kind": "reason",
-    "label": null,
-    "n": 13,
-    "share_of_tagged": 0.03,
-    "avg_severity": 1.77,
-    "branch": "C",
-    "branch_name": "C. Voluntary lapse",
-    "branch_weight": 0.7,
-    "solvable": "partly",
-    "solvable_why": "Calm, factual context; fear-based or urgency nudges are not allowed.",
-    "solvable_weight": 0.5,
-    "score": 8.05,
-    "score_equal_weights": 23.0,
-    "low_confidence": true,
-    "lapse_story_share": 0.385,
-    "sources": {
-     "youtube": 2,
-     "tradingqna": 11
-    },
-    "quotes": [
-     {
-      "id": "tradingqna_6396d49ac02f",
-      "quote": "Shocked to learn that returns are negative by more than 30pc.",
-      "source": "tradingqna",
-      "url": "https://tradingqna.com/t/is-sip-really-a-good-investment-method/62033/16"
-     },
-     {
-      "id": "youtube_a72838ea1580",
-      "quote": "pichhle 3 saal se negative me hi -3&-4 ke bich me rhata hi. Abhi tak 40,000 invest kar chuka hun",
-      "source": "youtube",
-      "url": "https://www.youtube.com/watch?v=CPEatoLkXNI"
-     }
-    ],
-    "rank": 10,
-    "rank_equal_weights": 8,
-    "score_index": 6
+    "rank": 14,
+    "rank_equal_weights": 16,
+    "score_index": 3
    },
    {
     "key": "missing_feature",
     "kind": "app_sub_theme",
     "label": "App: a feature the person wants is missing",
     "n": 15,
-    "share_of_tagged": 0.0346,
+    "share_of_tagged": 0.011,
     "avg_severity": 1.4,
     "branch": "D",
     "branch_name": "D. Disengagement",
@@ -1387,95 +1603,16 @@
       "url": "https://tradingqna.com/t/auto-pause-resume-of-sip/147023/1"
      }
     ],
-    "rank": 11,
-    "rank_equal_weights": 10,
-    "score_index": 5
-   },
-   {
-    "key": "cash_flow_strain",
-    "kind": "reason",
-    "label": null,
-    "n": 9,
-    "share_of_tagged": 0.0207,
-    "avg_severity": 1.89,
-    "branch": "C",
-    "branch_name": "C. Voluntary lapse",
-    "branch_weight": 0.7,
-    "solvable": "partly",
-    "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
-    "solvable_weight": 0.5,
-    "score": 5.95,
-    "score_equal_weights": 17.0,
-    "low_confidence": true,
-    "lapse_story_share": 0.778,
-    "sources": {
-     "play_store": 2,
-     "youtube": 2,
-     "tradingqna": 5
-    },
-    "quotes": [
-     {
-      "id": "tradingqna_57b8b7ee3734",
-      "quote": "Banks are charging arm and a leg for unfilled SIP transactions",
-      "source": "tradingqna",
-      "url": "https://tradingqna.com/t/an-appeal-to-zerodha-investor-awareness/168343/1"
-     },
-     {
-      "id": "play_store_494d59e487b1",
-      "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
-      "source": "play_store",
-      "url": null
-     }
-    ],
-    "rank": 12,
-    "rank_equal_weights": 13,
-    "score_index": 5
-   },
-   {
-    "key": "tax_or_lockin",
-    "kind": "reason",
-    "label": null,
-    "n": 8,
-    "share_of_tagged": 0.0184,
-    "avg_severity": 1.38,
-    "branch": "C",
-    "branch_name": "C. Voluntary lapse",
-    "branch_weight": 0.7,
-    "solvable": "partly",
-    "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
-    "solvable_weight": 0.5,
-    "score": 3.85,
-    "score_equal_weights": 11.0,
-    "low_confidence": true,
-    "lapse_story_share": 0.375,
-    "sources": {
-     "tradingqna": 6,
-     "youtube": 2
-    },
-    "quotes": [
-     {
-      "id": "tradingqna_61319bb3aa28",
-      "quote": "I don’t want to give ltgc tax so to get exact 1 lac capital gain",
-      "source": "tradingqna",
-      "url": "https://tradingqna.com/t/mutual-fund-regular-to-direct/168641/1"
-     },
-     {
-      "id": "youtube_d870ce30ceb5",
-      "quote": "sir mutual fund redeem karte samay tax kaise katega.. use khud bharna parta hai ya apne cut hoke account me ata haai?",
-      "source": "youtube",
-      "url": "https://www.youtube.com/watch?v=CPEatoLkXNI"
-     }
-    ],
-    "rank": 13,
-    "rank_equal_weights": 14,
-    "score_index": 3
+    "rank": 15,
+    "rank_equal_weights": 15,
+    "score_index": 2
    },
    {
     "key": "support",
     "kind": "app_sub_theme",
     "label": "App: support is unreachable or unhelpful",
     "n": 5,
-    "share_of_tagged": 0.0115,
+    "share_of_tagged": 0.0037,
     "avg_severity": 2.2,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
@@ -1505,16 +1642,56 @@
       "url": null
      }
     ],
-    "rank": 14,
-    "rank_equal_weights": 15,
-    "score_index": 3
+    "rank": 16,
+    "rank_equal_weights": 18,
+    "score_index": 1
+   },
+   {
+    "key": "life_event",
+    "kind": "reason",
+    "label": null,
+    "n": 5,
+    "share_of_tagged": 0.0037,
+    "avg_severity": 1.8,
+    "branch": "C",
+    "branch_name": "C. Voluntary lapse",
+    "branch_weight": 0.7,
+    "solvable": "partly",
+    "solvable_why": "A graceful pause and easy restart; the event itself is outside the product.",
+    "solvable_weight": 0.5,
+    "score": 3.15,
+    "score_equal_weights": 9.0,
+    "low_confidence": true,
+    "lapse_story_share": 0.4,
+    "sources": {
+     "play_store": 2,
+     "tradingqna": 2,
+     "youtube": 1
+    },
+    "quotes": [
+     {
+      "id": "play_store_494d59e487b1",
+      "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
+      "source": "play_store",
+      "url": null
+     },
+     {
+      "id": "tradingqna_fea1d35fc486",
+      "quote": "Ppl shut SIP accounts for various reasons - Could market slowdown be a red herring? Food inflation has been high of late...",
+      "source": "tradingqna",
+      "url": "https://tradingqna.com/t/sip-data-indicates-retailers-now-hitting-panic-button/144606/2"
+     }
+    ],
+    "rank": 17,
+    "rank_equal_weights": 19,
+    "score_index": 1
    },
    {
     "key": "returns_display",
     "kind": "app_sub_theme",
     "label": "App: portfolio and returns shown wrongly or slowly",
     "n": 3,
-    "share_of_tagged": 0.0069,
+    "share_of_tagged": 0.0022,
     "avg_severity": 1.67,
     "branch": "D",
     "branch_name": "D. Disengagement",
@@ -1543,68 +1720,30 @@
       "url": null
      }
     ],
-    "rank": 15,
-    "rank_equal_weights": 18,
-    "score_index": 2
-   },
-   {
-    "key": "life_event",
-    "kind": "reason",
-    "label": null,
-    "n": 3,
-    "share_of_tagged": 0.0069,
-    "avg_severity": 2.0,
-    "branch": "C",
-    "branch_name": "C. Voluntary lapse",
-    "branch_weight": 0.7,
-    "solvable": "partly",
-    "solvable_why": "A graceful pause and easy restart; the event itself is outside the product.",
-    "solvable_weight": 0.5,
-    "score": 2.1,
-    "score_equal_weights": 6.0,
-    "low_confidence": true,
-    "lapse_story_share": 0.333,
-    "sources": {
-     "play_store": 2,
-     "tradingqna": 1
-    },
-    "quotes": [
-     {
-      "id": "play_store_494d59e487b1",
-      "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
-      "source": "play_store",
-      "url": null
-     },
-     {
-      "id": "tradingqna_fea1d35fc486",
-      "quote": "Ppl shut SIP accounts for various reasons - Could market slowdown be a red herring? Food inflation has been high of late...",
-      "source": "tradingqna",
-      "url": "https://tradingqna.com/t/sip-data-indicates-retailers-now-hitting-panic-button/144606/2"
-     }
-    ],
-    "rank": 16,
-    "rank_equal_weights": 17,
-    "score_index": 2
+    "rank": 18,
+    "rank_equal_weights": 20,
+    "score_index": 1
    },
    {
     "key": "irregular_income",
     "kind": "reason",
     "label": null,
-    "n": 1,
-    "share_of_tagged": 0.0023,
-    "avg_severity": 2.0,
+    "n": 2,
+    "share_of_tagged": 0.0015,
+    "avg_severity": 1.5,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "partly",
     "solvable_why": "Flexible date or amount helps; the income itself cannot be changed.",
     "solvable_weight": 0.5,
-    "score": 0.7,
-    "score_equal_weights": 2.0,
+    "score": 1.05,
+    "score_equal_weights": 3.0,
     "low_confidence": true,
-    "lapse_story_share": 1.0,
+    "lapse_story_share": 0.5,
     "sources": {
-     "tradingqna": 1
+     "tradingqna": 1,
+     "youtube": 1
     },
     "quotes": [
      {
@@ -1612,51 +1751,25 @@
       "quote": "but the SIP didn’t execute and I found that it was reporting insufficient funds. Wondering if I am doing this the wrong way",
       "source": "tradingqna",
       "url": "https://tradingqna.com/t/right-way-to-setup-etf-sips-without-bank-mandates/149685/1"
-     }
-    ],
-    "rank": 17,
-    "rank_equal_weights": 19,
-    "score_index": 1
-   },
-   {
-    "key": "disengaged_forgot",
-    "kind": "reason",
-    "label": null,
-    "n": 1,
-    "share_of_tagged": 0.0023,
-    "avg_severity": 1.0,
-    "branch": "D",
-    "branch_name": "D. Disengagement",
-    "branch_weight": 0.6,
-    "solvable": "yes",
-    "solvable_why": "Gentle, non-urgent progress summaries; no FOMO.",
-    "solvable_weight": 1.0,
-    "score": 0.6,
-    "score_equal_weights": 1.0,
-    "low_confidence": true,
-    "lapse_story_share": 1.0,
-    "sources": {
-     "play_store": 1
-    },
-    "quotes": [
+     },
      {
-      "id": "play_store_af44f88da46f",
-      "quote": "if a SIP gets started by mistake then they are saying that either I can stop it immediately or I can reduce the amount",
-      "source": "play_store",
-      "url": null
+      "id": "youtube_cbafc9137d61",
+      "quote": "People donot have jobs so how you think SIP will grow. Inflation causes no money left in your pocket to invest",
+      "source": "youtube",
+      "url": "https://www.youtube.com/watch?v=3NeW1eAqI3I"
      }
     ],
-    "rank": 18,
-    "rank_equal_weights": 20,
+    "rank": 19,
+    "rank_equal_weights": 21,
     "score_index": 0
    },
    {
     "key": "goal_change",
     "kind": "reason",
     "label": null,
-    "n": 18,
-    "share_of_tagged": 0.0415,
-    "avg_severity": 1.61,
+    "n": 42,
+    "share_of_tagged": 0.0309,
+    "avg_severity": 1.62,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
@@ -1664,38 +1777,39 @@
     "solvable_why": "Often a valid reason to withdraw; the product should only make restarting easy.",
     "solvable_weight": 0.0,
     "score": 0.0,
-    "score_equal_weights": 29.0,
+    "score_equal_weights": 68.0,
     "low_confidence": false,
-    "lapse_story_share": 0.833,
+    "lapse_story_share": 0.452,
     "sources": {
-     "youtube": 9,
-     "tradingqna": 9
+     "youtube": 29,
+     "tradingqna": 10,
+     "play_store": 3
     },
     "quotes": [
+     {
+      "id": "play_store_5f14fd8457e3",
+      "quote": "For high brokerages and changing my Mutual funds to Demat without my consent.",
+      "source": "play_store",
+      "url": null
+     },
      {
       "id": "tradingqna_814031f49881",
       "quote": "Stop the regular SIP and start an SIP into the direct variant.",
       "source": "tradingqna",
       "url": "https://tradingqna.com/t/about-mf-regular-plan/111699/13"
-     },
-     {
-      "id": "youtube_edd075346fb2",
-      "quote": "Ager sirf cancel karu or paisa kai year bad widraw karu to chelga sir",
-      "source": "youtube",
-      "url": "https://www.youtube.com/watch?v=phs3OUy7ZWI"
      }
     ],
-    "rank": 19,
-    "rank_equal_weights": 3,
+    "rank": 20,
+    "rank_equal_weights": 8,
     "score_index": 0
    },
    {
     "key": "fund_switching",
     "kind": "reason",
     "label": null,
-    "n": 4,
-    "share_of_tagged": 0.0092,
-    "avg_severity": 1.75,
+    "n": 28,
+    "share_of_tagged": 0.0206,
+    "avg_severity": 1.29,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
@@ -1703,30 +1817,30 @@
     "solvable_why": "Addressing it would mean recommending funds, which is not allowed.",
     "solvable_weight": 0.0,
     "score": 0.0,
-    "score_equal_weights": 7.0,
-    "low_confidence": true,
-    "lapse_story_share": 0.75,
+    "score_equal_weights": 36.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.179,
     "sources": {
      "play_store": 1,
-     "youtube": 2,
-     "tradingqna": 1
+     "youtube": 17,
+     "tradingqna": 10
     },
     "quotes": [
+     {
+      "id": "tradingqna_179db7f60a42",
+      "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
+      "source": "tradingqna",
+      "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
+     },
      {
       "id": "play_store_06009ab3e281",
       "quote": "You have lost the trust after launching prime plan",
       "source": "play_store",
       "url": null
-     },
-     {
-      "id": "youtube_fa5aae2c8aa0",
-      "quote": "maine glti se grow me ek hi fund me 2 sip start kr li wo ek band kaise hogi",
-      "source": "youtube",
-      "url": "https://www.youtube.com/watch?v=phs3OUy7ZWI"
      }
     ],
-    "rank": 20,
-    "rank_equal_weights": 16,
+    "rank": 21,
+    "rank_equal_weights": 13,
     "score_index": 0
    }
   ],
@@ -1736,7 +1850,7 @@
     "kind": "after_stop",
     "label": "Redemption, withdrawal or refund is slow or stuck",
     "n": 12,
-    "share_of_tagged": 0.0276,
+    "share_of_tagged": 0.0088,
     "avg_severity": 2.17,
     "branch": "E",
     "branch_name": "E. Recovery",
@@ -1775,7 +1889,7 @@
     "kind": "after_stop",
     "label": "Cannot find or complete a redemption",
     "n": 10,
-    "share_of_tagged": 0.023,
+    "share_of_tagged": 0.0074,
     "avg_severity": 2.2,
     "branch": "E",
     "branch_name": "E. Recovery",
@@ -1814,7 +1928,7 @@
     "kind": "after_stop",
     "label": "Amount received differs from what the app showed",
     "n": 8,
-    "share_of_tagged": 0.0184,
+    "share_of_tagged": 0.0059,
     "avg_severity": 2.38,
     "branch": "E",
     "branch_name": "E. Recovery",
@@ -1849,15 +1963,15 @@
     "score_index": 73
    }
   ],
-  "n_tagged": 434,
-  "app_posts_total": 108,
+  "n_tagged": 1358,
+  "app_posts_total": 405,
   "app_posts_not_ranked": 36,
   "exit_posts": 30,
   "label_info": {
-   "candidates": 227,
+   "candidates": 552,
    "labelled": 227,
    "new_this_run": 0,
-   "failed_this_run": 0
+   "failed_this_run": 325
   },
   "assumptions": {
    "branch_weight": {
