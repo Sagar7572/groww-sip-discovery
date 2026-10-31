@@ -81,7 +81,7 @@ def near_tie(units: list[dict], ratio: float = 0.85) -> bool:
 
 # Fixed colour rule for the reasons chart (every page that colours a reason uses it): payment or app failure = orange,
 # the person's own choice = blue, other = grey. Data decides the colour except where the project has set a rule.
-KIND_RULE = {"trust_concern": "choice", "missing_feature": "unclear"}
+KIND_RULE = {"trust_concern": "choice", "missing_feature": "unclear", "cash_flow_strain": "choice"}
 
 
 def area_kind(posts: pd.DataFrame, a: dict) -> str:

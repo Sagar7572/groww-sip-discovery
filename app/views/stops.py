@@ -91,7 +91,7 @@ def render() -> None:
     kinds = {ui.area_kind(posts, a) for a in shown}
     with st.container(key="card_reasons"):
         st.markdown(f'<div style="display:flex;justify-content:space-between;flex-wrap:wrap;align-items:baseline"><h3 style="margin:0">'
-                    f'{"All" if show_all else f"Top {min(TOP, len(causes))}"} reasons SIPs stop</h3><div class="legend" style="font-size:.85rem;color:#3a4352">'
+                    f'{"All" if show_all else "Top"} reasons SIPs stop</h3><div class="legend" style="font-size:.85rem;color:#3a4352">'
                     f'<span class="sw" style="background:{ui.FAIL}"></span>Payment or app failure'
                     f'<span class="sw" style="background:{ui.CHOICE}"></span>Person’s own choice'
                     + (f'<span class="sw" style="background:{ui.UNCLEAR}"></span>Other or too few stories' if "unclear" in kinds else "") + "</div></div>",

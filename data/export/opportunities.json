@@ -1033,7 +1033,7 @@
  "label_info": {
   "candidates": 601,
   "labelled": 601,
-  "new_this_run": 47,
+  "new_this_run": 0,
   "failed_this_run": 0
  },
  "assumptions": {
@@ -2067,7 +2067,7 @@
   "label_info": {
    "candidates": 601,
    "labelled": 601,
-   "new_this_run": 47,
+   "new_this_run": 0,
    "failed_this_run": 0
   },
   "assumptions": {
