@@ -30,8 +30,7 @@ data/processed/*
 # local proofreading workbook (contains every post and your review notes)
 data/review/
 
-# local review screenshots
-docs/screenshots/
+# (docs/screenshots/ is committed: the five dashboard pages)
 docs/mockups/
 
 # golden-set labelling sheet and hidden AI answers (do not publish)
