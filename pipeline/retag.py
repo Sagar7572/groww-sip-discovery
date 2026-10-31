@@ -116,11 +116,11 @@ def prepare() -> tuple[dict, dict]:
     return cb, maps
 
 
-def items_for(ids: list[str], tagger: str) -> list[dict]:
+def items_for(ids: list[str], tagger: str, split: bool = True) -> list[dict]:
     clean = {r["id"]: r for r in load_jsonl(tag.CLEAN_FILE)}
     rel = tag.results_for("v3")
     return [{**clean[i], "relevance": rel[i]["relevant"] if i in rel else "yes"} for i in ids
-            if i in clean and tag.tagger_of(i) == tagger]
+            if i in clean and (not split or tag.tagger_of(i) == tagger)]
 
 
 def target_ids(which: str) -> list[str]:
@@ -133,7 +133,7 @@ def target_ids(which: str) -> list[str]:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--set", choices=["test", "all"])
+    ap.add_argument("--set", choices=["test", "all", "golden"])
     ap.add_argument("--tagger", default="gpt-oss-120b", choices=sorted(TAGGERS))
     ap.add_argument("--auto-resume", action="store_true")
     ap.add_argument("--report", action="store_true")
@@ -148,7 +148,11 @@ def main() -> None:
     cb, maps = prepare()
     tag.use_tagger(args.tagger)
     tag.TAGS_FILE = t4_file(args.tagger)
-    items = items_for(target_ids(args.set), args.tagger)
+    if args.set == "golden":  # the 20 golden-set posts, all by one tagger, into data/golden/ (not mixed into the other t4 files)
+        tag.TAGS_FILE = PROCESSED_DIR.parent / "golden" / f"tags_t4_golden_{args.tagger}.jsonl"
+        items = items_for(json.loads((PROCESSED_DIR.parent / "golden" / "v2_final_ids.json").read_text()), args.tagger, split=False)
+    else:
+        items = items_for(target_ids(args.set), args.tagger)
     print(f"[{args.tagger}] t4 re-tag, set={args.set}: {len(items)} posts for this tagger")
     while True:
         client = tag.run(items, cb, maps)

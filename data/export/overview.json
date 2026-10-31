@@ -1,6 +1,6 @@
 {
- "as_of": "2026-10-27",
- "exported_at": "2026-10-27T17:47+00:00",
+ "as_of": "2026-10-29",
+ "exported_at": "2026-10-31T18:31+00:00",
  "sources": {
   "play_store": {
    "raw_pulled": 32786,
@@ -8,8 +8,8 @@
    "clean": 613,
    "filter_labelled": 613,
    "filter_kept": 445,
-   "tagged": 442,
-   "relevant": 415,
+   "tagged": 450,
+   "relevant": 423,
    "first_date": "2018-12-16",
    "last_date": "2026-10-22",
    "by_year": {
@@ -44,8 +44,8 @@
    "clean": 1127,
    "filter_labelled": 1127,
    "filter_kept": 734,
-   "tagged": 527,
-   "relevant": 403,
+   "tagged": 686,
+   "relevant": 554,
    "first_date": "2014-12-11",
    "last_date": "2026-10-19",
    "by_year": {
@@ -68,8 +68,8 @@
    "clean": 3806,
    "filter_labelled": 3806,
    "filter_kept": 2821,
-   "tagged": 655,
-   "relevant": 629,
+   "tagged": 801,
+   "relevant": 775,
    "first_date": "2019-01-30",
    "last_date": "2026-10-24",
    "by_year": {
@@ -110,10 +110,10 @@
   "filter_labelled": 5909,
   "filter_kept": 4274,
   "in_tagging_queue": 2377,
-  "tag_attempted": 1987,
-  "tagged_ok": 1973,
-  "relevant_tagged": 1757,
-  "tagged_not_relevant": 216
+  "tag_attempted": 2305,
+  "tagged_ok": 2286,
+  "relevant_tagged": 2062,
+  "tagged_not_relevant": 224
  },
  "definitions": {
   "tagged": "A post the AI tagger has read and filled in the codebook for (it can still turn out not to be about SIPs).",
@@ -127,8 +127,8 @@
    "failed": 0
   },
   "qwen": {
-   "tagged": 786,
-   "failed": 15
+   "tagged": 1101,
+   "failed": 20
   }
  },
  "models": [

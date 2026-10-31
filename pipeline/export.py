@@ -637,6 +637,9 @@ def main() -> None:
     checks = ROOT / "data" / "manual" / "accuracy_checks.json"      # hand-entered results of the accuracy checks
     if checks.exists():
         val["accuracy_checks"] = json.loads(checks.read_text(encoding="utf-8"))
+    golden = ROOT / "data" / "manual" / "golden_results.json"       # hand-entered summary of the golden-set scoring (no post text)
+    if golden.exists():
+        val["golden"] = json.loads(golden.read_text(encoding="utf-8"))
 
     with open(EXPORT_DIR / "posts.jsonl", "w", encoding="utf-8") as f:
         for p in posts:

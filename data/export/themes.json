@@ -1,264 +1,180 @@
 {
  "clusters": [
   {
-   "cluster": 3,
-   "label": "years, month, market, sips, time",
-   "size": 242,
-   "share": 0.138,
-   "with_named_trigger": 0.55,
-   "avg_severity": 1.25,
+   "cluster": 0,
+   "label": "market, years, month, time, sips",
+   "size": 296,
+   "share": 0.144,
+   "with_named_trigger": 0.459,
+   "avg_severity": 1.23,
    "example_ids": [
     "reddit_7334aa307c55",
-    "tradingqna_665c3184eb2d",
-    "tradingqna_eaf8136a432c"
+    "tradingqna_63d5ce085af8",
+    "tradingqna_0ee6858f5051"
    ],
    "top_triggers": [
     [
      "app_experience",
-     61
+     48
     ],
     [
      "mandate_payment_issue",
-     35
+     29
     ],
     [
      "social_influence",
-     21
+     29
     ]
    ],
-   "name": "SIP scheduling and payment problems"
-  },
-  {
-   "cluster": 9,
-   "label": "account, redemption, portfolio, coin, mf",
-   "size": 218,
-   "share": 0.124,
-   "with_named_trigger": 0.619,
-   "avg_severity": 1.51,
-   "example_ids": [
-    "play_store_2591b9cd3517",
-    "play_store_78d23abd9396",
-    "play_store_4ed20b8b1fc2"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     90
-    ],
-    [
-     "trust_concern",
-     26
-    ],
-    [
-     "mandate_payment_issue",
-     18
-    ]
-   ],
-   "name": "Redemption and portfolio discrepancy concerns"
-  },
-  {
-   "cluster": 2,
-   "label": "saal, band, bahut, acha, din",
-   "size": 190,
-   "share": 0.108,
-   "with_named_trigger": 0.521,
-   "avg_severity": 1.22,
-   "example_ids": [
-    "youtube_1332357692c1",
-    "youtube_2b30806ad1a4",
-    "youtube_9eb79bebd56a"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     52
-    ],
-    [
-     "confusing_numbers",
-     26
-    ],
-    [
-     "mandate_payment_issue",
-     19
-    ]
-   ],
-   "name": "Basic SIP queries in Hindi"
-  },
-  {
-   "cluster": 5,
-   "label": "mf, mandate, bank, autopay, account",
-   "size": 184,
-   "share": 0.105,
-   "with_named_trigger": 0.592,
-   "avg_severity": 1.36,
-   "example_ids": [
-    "reddit_b14fa6000076",
-    "reddit_c8672a25888f",
-    "youtube_7dd529dde861"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     58
-    ],
-    [
-     "mandate_payment_issue",
-     51
-    ],
-    [
-     "confusing_numbers",
-     17
-    ]
-   ],
-   "name": "Mandate and autopay fee details"
+   "name": "Long-term SIP strategy discussion"
   },
   {
    "cluster": 7,
-   "label": "coin, account, bank, mandate, sips",
-   "size": 181,
-   "share": 0.103,
-   "with_named_trigger": 0.751,
-   "avg_severity": 1.49,
+   "label": "index, portfolio, coin, mf, investing",
+   "size": 251,
+   "share": 0.122,
+   "with_named_trigger": 0.47,
+   "avg_severity": 1.31,
+   "example_ids": [
+    "tradingqna_73b204195f95",
+    "tradingqna_c804f7f88758",
+    "tradingqna_2eb7a1fdc092"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     78
+    ],
+    [
+     "trust_concern",
+     18
+    ],
+    [
+     "confusing_numbers",
+     18
+    ]
+   ],
+   "name": "Choosing active vs passive fund mix"
+  },
+  {
+   "cluster": 8,
+   "label": "saal, band, video, din, muje",
+   "size": 235,
+   "share": 0.114,
+   "with_named_trigger": 0.506,
+   "avg_severity": 1.19,
+   "example_ids": [
+    "youtube_9eb79bebd56a",
+    "youtube_74d4d4a5c021",
+    "youtube_1332357692c1"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     62
+    ],
+    [
+     "confusing_numbers",
+     26
+    ],
+    [
+     "mandate_payment_issue",
+     22
+    ]
+   ],
+   "name": "Hindi queries on SIP amounts and tenure"
+  },
+  {
+   "cluster": 4,
+   "label": "coin, account, bank, sips, month",
+   "size": 227,
+   "share": 0.11,
+   "with_named_trigger": 0.727,
+   "avg_severity": 1.37,
    "example_ids": [
     "tradingqna_efb3a6f285f0",
-    "tradingqna_888f0b0c52c0",
-    "tradingqna_683abb6728fa"
+    "tradingqna_7322321db25f",
+    "tradingqna_888f0b0c52c0"
    ],
    "top_triggers": [
     [
      "mandate_payment_issue",
-     86
+     93
     ],
     [
      "app_experience",
-     70
+     87
     ],
     [
      "cash_flow_strain",
      14
     ]
    ],
-   "name": "Coin platform mandate and funding"
+   "name": "SIP payment and cancellation on Zerodha Coin"
   },
   {
-   "cluster": 4,
-   "label": "best, sips, stop, start, good",
-   "size": 176,
-   "share": 0.1,
-   "with_named_trigger": 0.369,
-   "avg_severity": 1.12,
+   "cluster": 9,
+   "label": "account, mf, bank, payment, redemption",
+   "size": 220,
+   "share": 0.107,
+   "with_named_trigger": 0.605,
+   "avg_severity": 1.47,
    "example_ids": [
-    "play_store_23f8e55b1bdf",
-    "youtube_1f2998ea36b7",
-    "youtube_5aec8d0eee3a"
+    "reddit_09e7c52145cf",
+    "reddit_b14fa6000076",
+    "reddit_3fbc855a723d"
    ],
    "top_triggers": [
     [
      "app_experience",
-     31
+     67
     ],
     [
      "mandate_payment_issue",
-     17
+     62
     ],
     [
      "confusing_numbers",
-     10
+     17
     ]
    ],
-   "name": "General interest in starting SIP"
-  },
-  {
-   "cluster": 8,
-   "label": "equity, years, investing, year, term",
-   "size": 156,
-   "share": 0.089,
-   "with_named_trigger": 0.25,
-   "avg_severity": 1.09,
-   "example_ids": [
-    "tradingqna_8c5e60f65029",
-    "reddit_b5904a04108a",
-    "youtube_6a02c6eb7fc1"
-   ],
-   "top_triggers": [
-    [
-     "app_experience",
-     11
-    ],
-    [
-     "social_influence",
-     10
-    ],
-    [
-     "underwhelming_returns",
-     9
-    ]
-   ],
-   "name": "Long‑term equity fund investment plans"
+   "name": "SIP fees and payment processing problems"
   },
   {
    "cluster": 1,
-   "label": "stocks, easy, interface, beginners, friendly",
-   "size": 142,
-   "share": 0.081,
-   "with_named_trigger": 0.331,
+   "label": "best, start, sips, month, option",
+   "size": 210,
+   "share": 0.102,
+   "with_named_trigger": 0.376,
    "avg_severity": 1.14,
    "example_ids": [
-    "play_store_417913830bed",
-    "play_store_0e0dcccad5ee",
-    "play_store_3ace4f665353"
+    "play_store_23f8e55b1bdf",
+    "youtube_1f2998ea36b7",
+    "youtube_cc730e79a701"
    ],
    "top_triggers": [
     [
      "app_experience",
-     41
+     38
     ],
     [
-     "trust_concern",
-     5
+     "mandate_payment_issue",
+     24
     ],
     [
      "confusing_numbers",
-     3
+     12
     ]
    ],
-   "name": "User‑friendly app experience"
+   "name": "Basic SIP interest statements"
   },
   {
-   "cluster": 0,
-   "label": "market, years, inflation, money, returns",
-   "size": 137,
-   "share": 0.078,
-   "with_named_trigger": 0.423,
-   "avg_severity": 1.27,
-   "example_ids": [
-    "tradingqna_cbcdda062e88",
-    "tradingqna_cfd4ef548caa",
-    "tradingqna_960bf382becc"
-   ],
-   "top_triggers": [
-    [
-     "market_fall",
-     17
-    ],
-    [
-     "expectation_mismatch",
-     16
-    ],
-    [
-     "underwhelming_returns",
-     13
-    ]
-   ],
-   "name": "Market cycle and return expectations"
-  },
-  {
-   "cluster": 6,
-   "label": "ആയ, बह, എന, रह, nikal",
-   "size": 131,
-   "share": 0.075,
-   "with_named_trigger": 0.458,
-   "avg_severity": 1.15,
+   "cluster": 2,
+   "label": "बह, सर, video, ആയ, എന",
+   "size": 172,
+   "share": 0.083,
+   "with_named_trigger": 0.407,
+   "avg_severity": 1.13,
    "example_ids": [
     "youtube_4f840fd8ecd9",
     "youtube_ab65878f1d73",
@@ -267,18 +183,102 @@
    "top_triggers": [
     [
      "app_experience",
-     27
+     30
+    ],
+    [
+     "confusing_numbers",
+     17
     ],
     [
      "underwhelming_returns",
      13
+    ]
+   ],
+   "name": "Starting or closing SIP in regional language"
+  },
+  {
+   "cluster": 6,
+   "label": "market, years, portfolio, stocks, returns",
+   "size": 168,
+   "share": 0.081,
+   "with_named_trigger": 0.381,
+   "avg_severity": 1.23,
+   "example_ids": [
+    "tradingqna_cbcdda062e88",
+    "tradingqna_cfd4ef548caa",
+    "reddit_6fbd102ac3a2"
+   ],
+   "top_triggers": [
+    [
+     "market_fall",
+     18
     ],
     [
-     "confusing_numbers",
+     "expectation_mismatch",
+     16
+    ],
+    [
+     "trust_concern",
      13
     ]
    ],
-   "name": "Personal SIP queries and fund advice"
+   "name": "Market volatility and long-term expectations"
+  },
+  {
+   "cluster": 3,
+   "label": "interface, stocks, easy, beginners, friendly",
+   "size": 163,
+   "share": 0.079,
+   "with_named_trigger": 0.362,
+   "avg_severity": 1.18,
+   "example_ids": [
+    "play_store_417913830bed",
+    "play_store_f83e0a7ffb79",
+    "play_store_0e0dcccad5ee"
+   ],
+   "top_triggers": [
+    [
+     "app_experience",
+     48
+    ],
+    [
+     "trust_concern",
+     7
+    ],
+    [
+     "mandate_payment_issue",
+     6
+    ]
+   ],
+   "name": "Positive app experience for investing"
+  },
+  {
+   "cluster": 5,
+   "label": "debt, equity, years, money, month",
+   "size": 120,
+   "share": 0.058,
+   "with_named_trigger": 0.267,
+   "avg_severity": 1.07,
+   "example_ids": [
+    "tradingqna_8c5e60f65029",
+    "tradingqna_b85902a45251",
+    "tradingqna_38dfbbfd7839"
+   ],
+   "top_triggers": [
+    [
+     "social_influence",
+     8
+    ],
+    [
+     "confusing_numbers",
+     7
+    ],
+    [
+     "expectation_mismatch",
+     6
+    ]
+   ],
+   "name": "Equity SIP planning and loan considerations"
   }
  ],
  "k": 10,

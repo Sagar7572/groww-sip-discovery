@@ -2,9 +2,9 @@
  "themes": [
   {
    "theme": "Investment guidance and education",
-   "n": 185,
-   "share_of_needs": 0.282,
-   "example_need": "should SIP start in up or down market",
+   "n": 212,
+   "share_of_needs": 0.277,
+   "example_need": "Guidance on SIP amount for 18k income",
    "quotes": [
     {
      "id": "reddit_7334aa307c55",
@@ -13,13 +13,13 @@
      "url": "https://www.reddit.com/r/mutualfunds/comments/1x4mtow/xirr_is_6/"
     }
    ],
-   "avg_severity": 1.26
+   "avg_severity": 1.23
   },
   {
    "theme": "SIP setup, modification and pause features",
-   "n": 132,
-   "share_of_needs": 0.201,
-   "example_need": "asks minimum amount to start SIP",
+   "n": 162,
+   "share_of_needs": 0.212,
+   "example_need": "Help finding long-term SIP option",
    "quotes": [
     {
      "id": "tradingqna_4406a8ca0e49",
@@ -28,13 +28,13 @@
      "url": "https://tradingqna.com/t/transfer-of-mutual-funds-and-charges/131244/5"
     }
    ],
-   "avg_severity": 1.31
+   "avg_severity": 1.28
   },
   {
    "theme": "Payment, autopay and mandate reliability",
-   "n": 83,
-   "share_of_needs": 0.126,
-   "example_need": "resolution of reversed installment",
+   "n": 100,
+   "share_of_needs": 0.131,
+   "example_need": "need autopay for quantity‑based SIP",
    "quotes": [
     {
      "id": "tradingqna_683abb6728fa",
@@ -43,13 +43,13 @@
      "url": "https://tradingqna.com/t/deducting-sip-amount-directly-from-bank/12675/5"
     }
    ],
-   "avg_severity": 1.54
+   "avg_severity": 1.51
   },
   {
    "theme": "Platform reliability, bugs and UI issues",
-   "n": 76,
-   "share_of_needs": 0.116,
-   "example_need": "Faster display of daily gain/loss data",
+   "n": 83,
+   "share_of_needs": 0.108,
+   "example_need": "need accurate redemption amount display",
    "quotes": [
     {
      "id": "play_store_6459fe474a97",
@@ -62,9 +62,9 @@
   },
   {
    "theme": "Faster redemption processing",
-   "n": 41,
-   "share_of_needs": 0.062,
-   "example_need": "Information on redemption timeline",
+   "n": 46,
+   "share_of_needs": 0.06,
+   "example_need": "need timely credit of redeemed funds",
    "quotes": [
     {
      "id": "tradingqna_334be3423c93",
@@ -73,13 +73,13 @@
      "url": "https://tradingqna.com/t/coin-withdraw-question-to-avoid-tax/15909/3"
     }
    ],
-   "avg_severity": 1.83
+   "avg_severity": 1.74
   },
   {
    "theme": "Transparent fees, pricing and charge explanations",
-   "n": 35,
-   "share_of_needs": 0.053,
-   "example_need": "Accurate and stable expense ratio data",
+   "n": 43,
+   "share_of_needs": 0.056,
+   "example_need": "Transparent pricing and better navigation",
    "quotes": [
     {
      "id": "reddit_762eec5cc492",
@@ -88,11 +88,11 @@
      "url": "https://www.reddit.com/r/mutualfunds/comments/1wvtr68/scared_to_invest_anymore/"
     }
    ],
-   "avg_severity": 1.63
+   "avg_severity": 1.58
   },
   {
    "theme": "Alerts, reminders and notifications",
-   "n": 11,
+   "n": 13,
    "share_of_needs": 0.017,
    "example_need": "need clear information on next SIP date",
    "quotes": [
@@ -103,13 +103,13 @@
      "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
     }
    ],
-   "avg_severity": 1.82
+   "avg_severity": 1.69
   },
   {
    "theme": "Something else",
-   "n": 94,
-   "share_of_needs": 0.143,
-   "example_need": "Combined portfolio allocation view",
+   "n": 106,
+   "share_of_needs": 0.139,
+   "example_need": "Information on investment platforms",
    "quotes": [
     {
      "id": "play_store_c317f018a3f0",
@@ -118,9 +118,9 @@
      "url": null
     }
    ],
-   "avg_severity": 1.37
+   "avg_severity": 1.38
   }
  ],
- "posts_with_need": 657,
- "grouped": 657
+ "posts_with_need": 765,
+ "grouped": 765
 }

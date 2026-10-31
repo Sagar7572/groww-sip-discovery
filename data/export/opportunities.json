@@ -4,24 +4,24 @@
    "key": "mandate_payment_issue",
    "kind": "reason",
    "label": null,
-   "n": 233,
-   "share_of_tagged": 0.1326,
-   "avg_severity": 1.64,
+   "n": 250,
+   "share_of_tagged": 0.1212,
+   "avg_severity": 1.62,
    "branch": "B",
    "branch_name": "B. Involuntary lapse",
    "branch_weight": 1.0,
    "solvable": "yes",
    "solvable_why": "Reliable debits, clear failure messages and easy fixes need no advice and no pressure.",
    "solvable_weight": 1.0,
-   "score": 382.0,
-   "score_equal_weights": 382.0,
+   "score": 406.0,
+   "score_equal_weights": 406.0,
    "low_confidence": false,
-   "lapse_story_share": 0.472,
+   "lapse_story_share": 0.464,
    "sources": {
-    "youtube": 53,
+    "youtube": 62,
     "app_store": 4,
     "play_store": 52,
-    "tradingqna": 70,
+    "tradingqna": 78,
     "reddit": 54
    },
    "quotes": [
@@ -46,24 +46,24 @@
    "key": "confusing_numbers",
    "kind": "reason",
    "label": null,
-   "n": 123,
-   "share_of_tagged": 0.07,
-   "avg_severity": 1.13,
+   "n": 140,
+   "share_of_tagged": 0.0679,
+   "avg_severity": 1.12,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "yes",
    "solvable_why": "Explaining NAV, units and XIRR in plain words is not investment advice.",
    "solvable_weight": 1.0,
-   "score": 97.3,
-   "score_equal_weights": 139.0,
+   "score": 109.9,
+   "score_equal_weights": 157.0,
    "low_confidence": false,
-   "lapse_story_share": 0.041,
+   "lapse_story_share": 0.036,
    "sources": {
-    "tradingqna": 21,
+    "tradingqna": 30,
     "play_store": 16,
     "reddit": 14,
-    "youtube": 72
+    "youtube": 80
    },
    "quotes": [
     {
@@ -80,29 +80,29 @@
     }
    ],
    "rank": 2,
-   "rank_equal_weights": 3,
-   "score_index": 25
+   "rank_equal_weights": 2,
+   "score_index": 27
   },
   {
    "key": "expectation_mismatch",
    "kind": "reason",
    "label": null,
-   "n": 69,
-   "share_of_tagged": 0.0393,
-   "avg_severity": 1.57,
+   "n": 71,
+   "share_of_tagged": 0.0344,
+   "avg_severity": 1.54,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "yes",
    "solvable_why": "Setting honest expectations early is education, not advice.",
    "solvable_weight": 1.0,
-   "score": 75.6,
-   "score_equal_weights": 108.0,
+   "score": 76.3,
+   "score_equal_weights": 109.0,
    "low_confidence": false,
-   "lapse_story_share": 0.217,
+   "lapse_story_share": 0.211,
    "sources": {
     "play_store": 8,
-    "youtube": 37,
+    "youtube": 39,
     "reddit": 12,
     "tradingqna": 12
    },
@@ -122,72 +122,71 @@
    ],
    "rank": 3,
    "rank_equal_weights": 5,
-   "score_index": 20
+   "score_index": 19
   },
   {
-   "key": "autopay_setup",
+   "key": "app_bugs",
    "kind": "app_sub_theme",
-   "label": "App: autopay / mandate set-up and changes",
-   "n": 30,
-   "share_of_tagged": 0.0171,
-   "avg_severity": 1.73,
-   "branch": "B",
-   "branch_name": "B. Involuntary lapse",
-   "branch_weight": 1.0,
+   "label": "App: app updates, bugs and slowness",
+   "n": 38,
+   "share_of_tagged": 0.0184,
+   "avg_severity": 1.76,
+   "branch": "A",
+   "branch_name": "A. Getting going",
+   "branch_weight": 0.9,
    "solvable": "yes",
-   "solvable_why": "Clear set-up steps and failure messages for autopay need no advice and no pressure.",
+   "solvable_why": "Fixing crashes, slowness and bad updates is engineering work.",
    "solvable_weight": 1.0,
-   "score": 52.0,
-   "score_equal_weights": 52.0,
+   "score": 60.3,
+   "score_equal_weights": 67.0,
    "low_confidence": false,
-   "lapse_story_share": 0.433,
+   "lapse_story_share": 0.053,
    "sources": {
-    "app_store": 4,
-    "play_store": 10,
-    "tradingqna": 9,
-    "reddit": 3,
-    "youtube": 4
+    "play_store": 25,
+    "tradingqna": 5,
+    "youtube": 7,
+    "reddit": 1
    },
    "quotes": [
     {
-     "id": "app_store_6b8743617d36",
-     "quote": "new sip activation is not working properly,",
-     "source": "app_store",
+     "id": "play_store_ab0febfd639a",
+     "quote": "creates new folio in demat account instead of existing SoA folios",
+     "source": "play_store",
      "url": null
     },
     {
-     "id": "play_store_18e599ae6da4",
-     "quote": "Too slow in processing SIP orders. Deadline for completing the MF order gets violate",
-     "source": "play_store",
-     "url": null
+     "id": "tradingqna_5fff5e28ac60",
+     "quote": "It said sorry try again later. EDIT: Same issue on the website.",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/introducing-upi-autopay-for-sip-payments/173064/4"
     }
    ],
    "rank": 4,
-   "rank_equal_weights": 13,
-   "score_index": 14
+   "rank_equal_weights": 11,
+   "score_index": 15
   },
   {
    "key": "trust_concern",
    "kind": "reason",
    "label": null,
-   "n": 68,
-   "share_of_tagged": 0.0387,
-   "avg_severity": 2.18,
+   "n": 77,
+   "share_of_tagged": 0.0373,
+   "avg_severity": 1.97,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "partly",
    "solvable_why": "Transparency helps; trust also depends on things outside the app.",
    "solvable_weight": 0.5,
-   "score": 51.8,
-   "score_equal_weights": 148.0,
+   "score": 53.2,
+   "score_equal_weights": 152.0,
    "low_confidence": false,
-   "lapse_story_share": 0.324,
+   "lapse_story_share": 0.182,
    "sources": {
-    "play_store": 42,
-    "youtube": 13,
+    "play_store": 38,
+    "youtube": 15,
     "reddit": 6,
-    "tradingqna": 6,
+    "tradingqna": 17,
     "app_store": 1
    },
    "quotes": [
@@ -205,48 +204,7 @@
     }
    ],
    "rank": 5,
-   "rank_equal_weights": 2,
-   "score_index": 14
-  },
-  {
-   "key": "app_bugs",
-   "kind": "app_sub_theme",
-   "label": "App: app updates, bugs and slowness",
-   "n": 33,
-   "share_of_tagged": 0.0188,
-   "avg_severity": 1.73,
-   "branch": "A",
-   "branch_name": "A. Getting going",
-   "branch_weight": 0.9,
-   "solvable": "yes",
-   "solvable_why": "Fixing crashes, slowness and bad updates is engineering work.",
-   "solvable_weight": 1.0,
-   "score": 51.3,
-   "score_equal_weights": 57.0,
-   "low_confidence": false,
-   "lapse_story_share": 0.091,
-   "sources": {
-    "play_store": 24,
-    "tradingqna": 4,
-    "youtube": 4,
-    "reddit": 1
-   },
-   "quotes": [
-    {
-     "id": "play_store_470101033c2e",
-     "quote": "Groww app hanged from 2.30pm onwards today while I was trying to redeem mutual funds",
-     "source": "play_store",
-     "url": null
-    },
-    {
-     "id": "reddit_fec44082b324",
-     "quote": "The problem is that Kuvera doesn't let you retry a transaction in lumpsum. You have to retry for each fund!",
-     "source": "reddit",
-     "url": "https://www.reddit.com/r/IndiaInvestments/comments/z2o926/comment/ixii6lc/"
-    }
-   ],
-   "rank": 6,
-   "rank_equal_weights": 11,
+   "rank_equal_weights": 3,
    "score_index": 13
   },
   {
@@ -254,21 +212,21 @@
    "kind": "app_sub_theme",
    "label": "App: portfolio and returns shown wrongly or slowly",
    "n": 40,
-   "share_of_tagged": 0.0228,
-   "avg_severity": 1.95,
+   "share_of_tagged": 0.0194,
+   "avg_severity": 1.9,
    "branch": "D",
    "branch_name": "D. Disengagement",
    "branch_weight": 0.6,
    "solvable": "yes",
    "solvable_why": "Showing portfolio and returns correctly and quickly is a design and engineering fix.",
    "solvable_weight": 1.0,
-   "score": 46.8,
-   "score_equal_weights": 78.0,
+   "score": 45.6,
+   "score_equal_weights": 76.0,
    "low_confidence": false,
-   "lapse_story_share": 0.1,
+   "lapse_story_share": 0.075,
    "sources": {
-    "play_store": 36,
-    "youtube": 4
+    "play_store": 35,
+    "youtube": 5
    },
    "quotes": [
     {
@@ -284,16 +242,16 @@
      "url": "https://www.youtube.com/watch?v=1HaRWsK88fM"
     }
    ],
-   "rank": 7,
+   "rank": 6,
    "rank_equal_weights": 10,
-   "score_index": 12
+   "score_index": 11
   },
   {
    "key": "underwhelming_returns",
    "kind": "reason",
    "label": null,
-   "n": 72,
-   "share_of_tagged": 0.041,
+   "n": 71,
+   "share_of_tagged": 0.0344,
    "avg_severity": 1.83,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -301,13 +259,13 @@
    "solvable": "partly",
    "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
    "solvable_weight": 0.5,
-   "score": 46.2,
-   "score_equal_weights": 132.0,
+   "score": 45.5,
+   "score_equal_weights": 130.0,
    "low_confidence": false,
-   "lapse_story_share": 0.278,
+   "lapse_story_share": 0.296,
    "sources": {
     "play_store": 12,
-    "youtube": 33,
+    "youtube": 32,
     "reddit": 11,
     "tradingqna": 16
    },
@@ -325,32 +283,74 @@
      "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs"
     }
    ],
-   "rank": 8,
+   "rank": 7,
    "rank_equal_weights": 4,
-   "score_index": 12
+   "score_index": 11
+  },
+  {
+   "key": "autopay_setup",
+   "kind": "app_sub_theme",
+   "label": "App: autopay / mandate set-up and changes",
+   "n": 28,
+   "share_of_tagged": 0.0136,
+   "avg_severity": 1.57,
+   "branch": "B",
+   "branch_name": "B. Involuntary lapse",
+   "branch_weight": 1.0,
+   "solvable": "yes",
+   "solvable_why": "Clear set-up steps and failure messages for autopay need no advice and no pressure.",
+   "solvable_weight": 1.0,
+   "score": 44.0,
+   "score_equal_weights": 44.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.357,
+   "sources": {
+    "app_store": 2,
+    "play_store": 9,
+    "tradingqna": 9,
+    "reddit": 3,
+    "youtube": 5
+   },
+   "quotes": [
+    {
+     "id": "tradingqna_133a4a934948",
+     "quote": "The eNACH mandate does not work properly with the daily SIPs - it only debits money once and then stops",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/coin-sips-trigger-even-on-holidays/189842/4"
+    },
+    {
+     "id": "play_store_ff5adc6a98b3",
+     "quote": "stop forcing Autopay idiots, after this update I can't invest my money without Autopay",
+     "source": "play_store",
+     "url": null
+    }
+   ],
+   "rank": 8,
+   "rank_equal_weights": 16,
+   "score_index": 11
   },
   {
    "key": "sip_controls",
    "kind": "app_sub_theme",
    "label": "App: cannot pause, skip, edit or cancel a SIP easily",
-   "n": 34,
-   "share_of_tagged": 0.0194,
-   "avg_severity": 1.53,
+   "n": 41,
+   "share_of_tagged": 0.0199,
+   "avg_severity": 1.44,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "yes",
    "solvable_why": "An easy pause, skip, edit and cancel is a design fix.",
    "solvable_weight": 1.0,
-   "score": 36.4,
-   "score_equal_weights": 52.0,
+   "score": 41.3,
+   "score_equal_weights": 59.0,
    "low_confidence": false,
-   "lapse_story_share": 0.324,
+   "lapse_story_share": 0.268,
    "sources": {
-    "tradingqna": 16,
+    "tradingqna": 17,
     "play_store": 8,
     "reddit": 5,
-    "youtube": 5
+    "youtube": 11
    },
    "quotes": [
     {
@@ -367,31 +367,31 @@
     }
    ],
    "rank": 9,
-   "rank_equal_weights": 14,
+   "rank_equal_weights": 12,
    "score_index": 10
   },
   {
    "key": "social_influence",
    "kind": "reason",
    "label": null,
-   "n": 74,
-   "share_of_tagged": 0.0421,
-   "avg_severity": 1.28,
+   "n": 82,
+   "share_of_tagged": 0.0398,
+   "avg_severity": 1.26,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "partly",
    "solvable_why": "Happens outside the app; only neutral, non-urgent information is allowed.",
    "solvable_weight": 0.5,
-   "score": 33.25,
-   "score_equal_weights": 95.0,
+   "score": 36.05,
+   "score_equal_weights": 103.0,
    "low_confidence": false,
-   "lapse_story_share": 0.135,
+   "lapse_story_share": 0.122,
    "sources": {
     "reddit": 16,
-    "tradingqna": 30,
+    "tradingqna": 37,
     "play_store": 2,
-    "youtube": 26
+    "youtube": 27
    },
    "quotes": [
     {
@@ -415,23 +415,23 @@
    "key": "missing_feature",
    "kind": "app_sub_theme",
    "label": "App: a feature the person wants is missing",
-   "n": 69,
-   "share_of_tagged": 0.0393,
-   "avg_severity": 1.41,
+   "n": 76,
+   "share_of_tagged": 0.0369,
+   "avg_severity": 1.38,
    "branch": "D",
    "branch_name": "D. Disengagement",
    "branch_weight": 0.6,
    "solvable": "partly",
    "solvable_why": "Depends on the feature; some would need advice, which is not allowed.",
    "solvable_weight": 0.5,
-   "score": 29.1,
-   "score_equal_weights": 97.0,
+   "score": 31.5,
+   "score_equal_weights": 105.0,
    "low_confidence": false,
-   "lapse_story_share": 0.072,
+   "lapse_story_share": 0.079,
    "sources": {
-    "play_store": 48,
-    "tradingqna": 15,
-    "youtube": 6
+    "play_store": 46,
+    "tradingqna": 19,
+    "youtube": 11
    },
    "quotes": [
     {
@@ -455,21 +455,21 @@
    "key": "cash_flow_strain",
    "kind": "reason",
    "label": null,
-   "n": 45,
-   "share_of_tagged": 0.0256,
-   "avg_severity": 1.82,
+   "n": 44,
+   "share_of_tagged": 0.0213,
+   "avg_severity": 1.8,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "partly",
    "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
    "solvable_weight": 0.5,
-   "score": 28.7,
-   "score_equal_weights": 82.0,
+   "score": 27.65,
+   "score_equal_weights": 79.0,
    "low_confidence": false,
-   "lapse_story_share": 0.711,
+   "lapse_story_share": 0.705,
    "sources": {
-    "play_store": 6,
+    "play_store": 5,
     "youtube": 15,
     "tradingqna": 8,
     "reddit": 16
@@ -482,22 +482,63 @@
      "url": "https://tradingqna.com/t/an-appeal-to-zerodha-investor-awareness/168343/1"
     },
     {
-     "id": "play_store_494d59e487b1",
-     "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
-     "source": "play_store",
-     "url": null
+     "id": "reddit_659e1d06d136",
+     "quote": "I received this email today as well for my SIP",
+     "source": "reddit",
+     "url": "https://www.reddit.com/r/IndiaInvestments/comments/z2o926/comment/ixic2rj/"
     }
    ],
    "rank": 12,
    "rank_equal_weights": 8,
-   "score_index": 8
+   "score_index": 7
+  },
+  {
+   "key": "tax_or_lockin",
+   "kind": "reason",
+   "label": null,
+   "n": 35,
+   "share_of_tagged": 0.017,
+   "avg_severity": 1.51,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
+   "solvable_weight": 0.5,
+   "score": 18.55,
+   "score_equal_weights": 53.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.229,
+   "sources": {
+    "tradingqna": 12,
+    "reddit": 2,
+    "youtube": 17,
+    "play_store": 4
+   },
+   "quotes": [
+    {
+     "id": "play_store_4851adbb3c21",
+     "quote": "I felt cheated when my money got into regular fund . Now Iam supposed to pay STCG tax and 1% exit load",
+     "source": "play_store",
+     "url": null
+    },
+    {
+     "id": "tradingqna_179db7f60a42",
+     "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
+    }
+   ],
+   "rank": 13,
+   "rank_equal_weights": 13,
+   "score_index": 5
   },
   {
    "key": "market_fall",
    "kind": "reason",
    "label": null,
    "n": 28,
-   "share_of_tagged": 0.0159,
+   "share_of_tagged": 0.0136,
    "avg_severity": 1.68,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -529,97 +570,48 @@
      "url": "https://www.reddit.com/r/mutualfunds/comments/1wvtr68/scared_to_invest_anymore/"
     }
    ],
-   "rank": 13,
+   "rank": 14,
    "rank_equal_weights": 15,
    "score_index": 4
   },
   {
-   "key": "tax_or_lockin",
-   "kind": "reason",
-   "label": null,
-   "n": 27,
-   "share_of_tagged": 0.0154,
-   "avg_severity": 1.67,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
-   "solvable_weight": 0.5,
-   "score": 15.75,
-   "score_equal_weights": 45.0,
-   "low_confidence": false,
+   "key": "app_unsplit",
+   "kind": "app_sub_theme",
+   "label": "App: not yet split into sub-themes",
+   "n": 6,
+   "share_of_tagged": 0.0029,
+   "avg_severity": 2.83,
+   "branch": "A",
+   "branch_name": "A. Getting going",
+   "branch_weight": 0.9,
+   "solvable": "yes",
+   "solvable_why": "Making SIPs easy to find, pause and change is a design fix.",
+   "solvable_weight": 1.0,
+   "score": 15.3,
+   "score_equal_weights": 17.0,
+   "low_confidence": true,
    "lapse_story_share": 0.333,
    "sources": {
-    "tradingqna": 11,
-    "reddit": 2,
-    "youtube": 10,
-    "play_store": 4
+    "play_store": 6
    },
    "quotes": [
     {
-     "id": "play_store_4851adbb3c21",
-     "quote": "I felt cheated when my money got into regular fund . Now Iam supposed to pay STCG tax and 1% exit load",
+     "id": "play_store_ebb86fb3d541",
+     "quote": "I am losing money every day because I cannot start my SIP due to YOUR incompetence.",
      "source": "play_store",
      "url": null
-    },
-    {
-     "id": "tradingqna_179db7f60a42",
-     "quote": "two of my SIPs were rejected, even though money is deducted from bank. Didn’t got any communication from Paytm nor money refunded. Now chasing them",
-     "source": "tradingqna",
-     "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
-    }
-   ],
-   "rank": 14,
-   "rank_equal_weights": 16,
-   "score_index": 4
-  },
-  {
-   "key": "support",
-   "kind": "app_sub_theme",
-   "label": "App: support is unreachable or unhelpful",
-   "n": 17,
-   "share_of_tagged": 0.0097,
-   "avg_severity": 1.88,
-   "branch": "C",
-   "branch_name": "C. Voluntary lapse",
-   "branch_weight": 0.7,
-   "solvable": "partly",
-   "solvable_why": "Better support helps, but part of it is staffing outside the product.",
-   "solvable_weight": 0.5,
-   "score": 11.2,
-   "score_equal_weights": 32.0,
-   "low_confidence": false,
-   "lapse_story_share": 0.294,
-   "sources": {
-    "play_store": 10,
-    "tradingqna": 3,
-    "youtube": 4
-   },
-   "quotes": [
-    {
-     "id": "play_store_297be8816cb2",
-     "quote": "they redeem my amount in my freeze account.i call customer care they ask me your amount not transferred in",
-     "source": "play_store",
-     "url": null
-    },
-    {
-     "id": "youtube_9aaa13563c96",
-     "quote": "pancard details lo date of birthmismatch Ayindi danini recfifed elacheyali please suggestion sir",
-     "source": "youtube",
-     "url": "https://www.youtube.com/watch?v=1HaRWsK88fM"
     }
    ],
    "rank": 15,
-   "rank_equal_weights": 17,
-   "score_index": 3
+   "rank_equal_weights": 19,
+   "score_index": 4
   },
   {
    "key": "disengaged_forgot",
    "kind": "reason",
    "label": null,
    "n": 12,
-   "share_of_tagged": 0.0068,
+   "share_of_tagged": 0.0058,
    "avg_severity": 1.5,
    "branch": "D",
    "branch_name": "D. Disengagement",
@@ -656,64 +648,66 @@
    "score_index": 3
   },
   {
-   "key": "app_unsplit",
+   "key": "support",
    "kind": "app_sub_theme",
-   "label": "App: not yet split into sub-themes",
-   "n": 2,
-   "share_of_tagged": 0.0011,
-   "avg_severity": 3.0,
-   "branch": "A",
-   "branch_name": "A. Getting going",
-   "branch_weight": 0.9,
-   "solvable": "yes",
-   "solvable_why": "Making SIPs easy to find, pause and change is a design fix.",
-   "solvable_weight": 1.0,
-   "score": 5.4,
-   "score_equal_weights": 6.0,
-   "low_confidence": true,
-   "lapse_story_share": 0.5,
+   "label": "App: support is unreachable or unhelpful",
+   "n": 16,
+   "share_of_tagged": 0.0078,
+   "avg_severity": 1.75,
+   "branch": "C",
+   "branch_name": "C. Voluntary lapse",
+   "branch_weight": 0.7,
+   "solvable": "partly",
+   "solvable_why": "Better support helps, but part of it is staffing outside the product.",
+   "solvable_weight": 0.5,
+   "score": 9.8,
+   "score_equal_weights": 28.0,
+   "low_confidence": false,
+   "lapse_story_share": 0.188,
    "sources": {
-    "play_store": 2
+    "play_store": 7,
+    "tradingqna": 5,
+    "youtube": 4
    },
    "quotes": [
     {
-     "id": "play_store_ab0febfd639a",
-     "quote": "creates new folio in demat account instead of existing SoA folios",
-     "source": "play_store",
-     "url": null
+     "id": "tradingqna_3c64eaa0b053",
+     "quote": "what’s the point of raising a ticket if ultimately I’ve to again raise the issue here on this forum to get the matter checked!?",
+     "source": "tradingqna",
+     "url": "https://tradingqna.com/t/motilal-oswal-temporary-suspension-of-lumpsum-investments/125471/7"
     },
     {
-     "id": "play_store_ebb86fb3d541",
-     "quote": "I am losing money every day because I cannot start my SIP due to YOUR incompetence.",
-     "source": "play_store",
-     "url": null
+     "id": "youtube_9aaa13563c96",
+     "quote": "pancard details lo date of birthmismatch Ayindi danini recfifed elacheyali please suggestion sir",
+     "source": "youtube",
+     "url": "https://www.youtube.com/watch?v=1HaRWsK88fM"
     }
    ],
    "rank": 17,
-   "rank_equal_weights": 20,
-   "score_index": 1
+   "rank_equal_weights": 17,
+   "score_index": 2
   },
   {
    "key": "life_event",
    "kind": "reason",
    "label": null,
-   "n": 9,
-   "share_of_tagged": 0.0051,
-   "avg_severity": 1.56,
+   "n": 10,
+   "share_of_tagged": 0.0048,
+   "avg_severity": 1.5,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "partly",
    "solvable_why": "A graceful pause and easy restart; the event itself is outside the product.",
    "solvable_weight": 0.5,
-   "score": 4.9,
-   "score_equal_weights": 14.0,
+   "score": 5.25,
+   "score_equal_weights": 15.0,
    "low_confidence": true,
-   "lapse_story_share": 0.222,
+   "lapse_story_share": 0.2,
    "sources": {
     "play_store": 2,
     "reddit": 1,
-    "tradingqna": 4,
+    "tradingqna": 5,
     "youtube": 2
    },
    "quotes": [
@@ -731,7 +725,7 @@
     }
    ],
    "rank": 18,
-   "rank_equal_weights": 19,
+   "rank_equal_weights": 20,
    "score_index": 1
   },
   {
@@ -739,7 +733,7 @@
    "kind": "reason",
    "label": null,
    "n": 2,
-   "share_of_tagged": 0.0011,
+   "share_of_tagged": 0.001,
    "avg_severity": 1.5,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -777,9 +771,9 @@
    "key": "goal_change",
    "kind": "reason",
    "label": null,
-   "n": 50,
-   "share_of_tagged": 0.0285,
-   "avg_severity": 1.64,
+   "n": 49,
+   "share_of_tagged": 0.0238,
+   "avg_severity": 1.61,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
@@ -787,13 +781,13 @@
    "solvable_why": "Often a valid reason to withdraw; the product should only make restarting easy.",
    "solvable_weight": 0.0,
    "score": 0.0,
-   "score_equal_weights": 82.0,
+   "score_equal_weights": 79.0,
    "low_confidence": false,
-   "lapse_story_share": 0.52,
+   "lapse_story_share": 0.51,
    "sources": {
     "youtube": 29,
     "tradingqna": 10,
-    "reddit": 10,
+    "reddit": 9,
     "play_store": 1
    },
    "quotes": [
@@ -819,7 +813,7 @@
    "kind": "reason",
    "label": null,
    "n": 39,
-   "share_of_tagged": 0.0222,
+   "share_of_tagged": 0.0189,
    "avg_severity": 1.36,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
@@ -852,7 +846,7 @@
     }
    ],
    "rank": 21,
-   "rank_equal_weights": 12,
+   "rank_equal_weights": 14,
    "score_index": 0
   }
  ],
@@ -862,22 +856,23 @@
    "kind": "after_stop",
    "label": "Redemption, withdrawal or refund is slow or stuck",
    "n": 22,
-   "share_of_tagged": 0.0125,
-   "avg_severity": 2.18,
+   "share_of_tagged": 0.0107,
+   "avg_severity": 2.0,
    "branch": "E",
    "branch_name": "E. Recovery",
    "branch_weight": 0.8,
    "solvable": "yes",
    "solvable_why": "Clear timelines and status tracking for money coming out need no advice.",
    "solvable_weight": 1.0,
-   "score": 38.4,
-   "score_equal_weights": 48.0,
+   "score": 35.2,
+   "score_equal_weights": 44.0,
    "low_confidence": false,
-   "lapse_story_share": 0.227,
+   "lapse_story_share": 0.273,
    "sources": {
-    "play_store": 17,
+    "play_store": 14,
     "reddit": 2,
-    "youtube": 3
+    "youtube": 4,
+    "tradingqna": 2
    },
    "quotes": [
     {
@@ -887,8 +882,8 @@
      "url": null
     },
     {
-     "id": "youtube_f5b02ecadc87",
-     "quote": "Bhaiya Mera mutual fund payment \"in progress\" dikha rahai!! Kitne din main successful hoyajega ??",
+     "id": "youtube_a304d6f487ab",
+     "quote": "bhai mene invest karke withdraw kiya aur app pe withdraw successful dikha rha he par bank pe paise nhi aa rhe",
      "source": "youtube",
      "url": "https://www.youtube.com/watch?v=MExMf8_g4CE"
     }
@@ -902,7 +897,7 @@
    "kind": "after_stop",
    "label": "Cannot find or complete a redemption",
    "n": 12,
-   "share_of_tagged": 0.0068,
+   "share_of_tagged": 0.0058,
    "avg_severity": 2.17,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -913,7 +908,7 @@
    "score": 20.8,
    "score_equal_weights": 26.0,
    "low_confidence": true,
-   "lapse_story_share": 0.333,
+   "lapse_story_share": 0.25,
    "sources": {
     "play_store": 9,
     "tradingqna": 2,
@@ -935,14 +930,14 @@
    ],
    "rank": 2,
    "rank_equal_weights": 2,
-   "score_index": 54
+   "score_index": 59
   },
   {
    "key": "exit_amount",
    "kind": "after_stop",
    "label": "Amount received differs from what the app showed",
    "n": 9,
-   "share_of_tagged": 0.0051,
+   "share_of_tagged": 0.0044,
    "avg_severity": 2.44,
    "branch": "E",
    "branch_name": "E. Recovery",
@@ -953,7 +948,7 @@
    "score": 17.6,
    "score_equal_weights": 22.0,
    "low_confidence": true,
-   "lapse_story_share": 0.667,
+   "lapse_story_share": 0.333,
    "sources": {
     "play_store": 8,
     "youtube": 1
@@ -974,32 +969,32 @@
    ],
    "rank": 3,
    "rank_equal_weights": 3,
-   "score_index": 46
+   "score_index": 50
   }
  ],
- "n_tagged": 1757,
+ "n_tagged": 2062,
  "groups": [
   {
    "key": "making_sense_of_returns",
    "kind": "group",
    "label": "Making sense of returns",
-   "n": 226,
-   "share_of_tagged": 0.1286,
-   "avg_severity": 1.38,
+   "n": 245,
+   "share_of_tagged": 0.1188,
+   "avg_severity": 1.35,
    "branch": "C",
    "branch_name": "C. Voluntary lapse",
    "branch_weight": 0.7,
    "solvable": "partly",
    "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
    "solvable_weight": 0.5,
-   "score": 109.2,
-   "score_equal_weights": 312.0,
+   "score": 115.85,
+   "score_equal_weights": 331.0,
    "low_confidence": false,
-   "lapse_story_share": 0.124,
+   "lapse_story_share": 0.114,
    "sources": {
-    "tradingqna": 43,
+    "tradingqna": 52,
     "play_store": 33,
-    "youtube": 119,
+    "youtube": 129,
     "reddit": 31
    },
    "quotes": [
@@ -1024,21 +1019,21 @@
   }
  ],
  "group_compare": {
-  "group_unique": 226,
-  "group_sum_of_parts": 264,
-  "autopay": 233,
-  "posts": 1714,
-  "first_time_posts": 252,
-  "first_time_group": 67,
-  "first_time_autopay": 27
+  "group_unique": 245,
+  "group_sum_of_parts": 282,
+  "autopay": 250,
+  "posts": 2019,
+  "first_time_posts": 271,
+  "first_time_group": 70,
+  "first_time_autopay": 29
  },
- "app_posts_total": 448,
- "app_posts_not_ranked": 206,
+ "app_posts_total": 473,
+ "app_posts_not_ranked": 213,
  "exit_posts": 43,
  "label_info": {
-  "candidates": 571,
-  "labelled": 571,
-  "new_this_run": 0,
+  "candidates": 601,
+  "labelled": 601,
+  "new_this_run": 47,
   "failed_this_run": 0
  },
  "assumptions": {
@@ -1062,24 +1057,24 @@
     "key": "mandate_payment_issue",
     "kind": "reason",
     "label": null,
-    "n": 179,
-    "share_of_tagged": 0.1225,
-    "avg_severity": 1.62,
+    "n": 196,
+    "share_of_tagged": 0.111,
+    "avg_severity": 1.6,
     "branch": "B",
     "branch_name": "B. Involuntary lapse",
     "branch_weight": 1.0,
     "solvable": "yes",
     "solvable_why": "Reliable debits, clear failure messages and easy fixes need no advice and no pressure.",
     "solvable_weight": 1.0,
-    "score": 290.0,
-    "score_equal_weights": 290.0,
+    "score": 314.0,
+    "score_equal_weights": 314.0,
     "low_confidence": false,
-    "lapse_story_share": 0.38,
+    "lapse_story_share": 0.383,
     "sources": {
-     "youtube": 53,
+     "youtube": 62,
      "app_store": 4,
      "play_store": 52,
-     "tradingqna": 70
+     "tradingqna": 78
     },
     "quotes": [
      {
@@ -1103,23 +1098,23 @@
     "key": "confusing_numbers",
     "kind": "reason",
     "label": null,
-    "n": 109,
-    "share_of_tagged": 0.0746,
-    "avg_severity": 1.14,
+    "n": 126,
+    "share_of_tagged": 0.0713,
+    "avg_severity": 1.13,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "yes",
     "solvable_why": "Explaining NAV, units and XIRR in plain words is not investment advice.",
     "solvable_weight": 1.0,
-    "score": 86.8,
-    "score_equal_weights": 124.0,
+    "score": 99.4,
+    "score_equal_weights": 142.0,
     "low_confidence": false,
-    "lapse_story_share": 0.046,
+    "lapse_story_share": 0.04,
     "sources": {
-     "tradingqna": 21,
+     "tradingqna": 30,
      "play_store": 16,
-     "youtube": 72
+     "youtube": 80
     },
     "quotes": [
      {
@@ -1137,28 +1132,28 @@
     ],
     "rank": 2,
     "rank_equal_weights": 3,
-    "score_index": 30
+    "score_index": 32
    },
    {
     "key": "expectation_mismatch",
     "kind": "reason",
     "label": null,
-    "n": 57,
-    "share_of_tagged": 0.039,
-    "avg_severity": 1.56,
+    "n": 59,
+    "share_of_tagged": 0.0334,
+    "avg_severity": 1.53,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "yes",
     "solvable_why": "Setting honest expectations early is education, not advice.",
     "solvable_weight": 1.0,
-    "score": 62.3,
-    "score_equal_weights": 89.0,
+    "score": 63.0,
+    "score_equal_weights": 90.0,
     "low_confidence": false,
-    "lapse_story_share": 0.211,
+    "lapse_story_share": 0.186,
     "sources": {
      "play_store": 8,
-     "youtube": 37,
+     "youtube": 39,
      "tradingqna": 12
     },
     "quotes": [
@@ -1177,69 +1172,69 @@
     ],
     "rank": 3,
     "rank_equal_weights": 6,
-    "score_index": 21
+    "score_index": 20
    },
    {
     "key": "app_bugs",
     "kind": "app_sub_theme",
     "label": "App: app updates, bugs and slowness",
-    "n": 32,
-    "share_of_tagged": 0.0219,
-    "avg_severity": 1.72,
+    "n": 37,
+    "share_of_tagged": 0.021,
+    "avg_severity": 1.76,
     "branch": "A",
     "branch_name": "A. Getting going",
     "branch_weight": 0.9,
     "solvable": "yes",
     "solvable_why": "Fixing crashes, slowness and bad updates is engineering work.",
     "solvable_weight": 1.0,
-    "score": 49.5,
-    "score_equal_weights": 55.0,
+    "score": 58.5,
+    "score_equal_weights": 65.0,
     "low_confidence": false,
-    "lapse_story_share": 0.062,
+    "lapse_story_share": 0.027,
     "sources": {
-     "play_store": 24,
-     "tradingqna": 4,
-     "youtube": 4
+     "play_store": 25,
+     "tradingqna": 5,
+     "youtube": 7
     },
     "quotes": [
      {
-      "id": "play_store_470101033c2e",
-      "quote": "Groww app hanged from 2.30pm onwards today while I was trying to redeem mutual funds",
+      "id": "play_store_ab0febfd639a",
+      "quote": "creates new folio in demat account instead of existing SoA folios",
       "source": "play_store",
       "url": null
      },
      {
-      "id": "tradingqna_2cf9326fbdc6",
-      "quote": "Hi [USER] , This fund Emerging Bluechip Fund is not showing in Coin Web UI ,but I can see the same in Coin Android APP.Is this intentional or some sort of bug??",
+      "id": "tradingqna_5fff5e28ac60",
+      "quote": "It said sorry try again later. EDIT: Same issue on the website.",
       "source": "tradingqna",
-      "url": "https://tradingqna.com/t/how-to-convert-coin-sip-to-coin-amc-sip/43784/12"
+      "url": "https://tradingqna.com/t/introducing-upi-autopay-for-sip-payments/173064/4"
      }
     ],
     "rank": 4,
-    "rank_equal_weights": 10,
-    "score_index": 17
+    "rank_equal_weights": 9,
+    "score_index": 19
    },
    {
     "key": "trust_concern",
     "kind": "reason",
     "label": null,
-    "n": 62,
-    "share_of_tagged": 0.0424,
-    "avg_severity": 2.26,
+    "n": 71,
+    "share_of_tagged": 0.0402,
+    "avg_severity": 2.03,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "partly",
     "solvable_why": "Transparency helps; trust also depends on things outside the app.",
     "solvable_weight": 0.5,
-    "score": 49.0,
-    "score_equal_weights": 140.0,
+    "score": 50.4,
+    "score_equal_weights": 144.0,
     "low_confidence": false,
-    "lapse_story_share": 0.323,
+    "lapse_story_share": 0.169,
     "sources": {
-     "play_store": 42,
-     "youtube": 13,
-     "tradingqna": 6,
+     "play_store": 38,
+     "youtube": 15,
+     "tradingqna": 17,
      "app_store": 1
     },
     "quotes": [
@@ -1258,69 +1253,28 @@
     ],
     "rank": 5,
     "rank_equal_weights": 2,
-    "score_index": 17
-   },
-   {
-    "key": "autopay_setup",
-    "kind": "app_sub_theme",
-    "label": "App: autopay / mandate set-up and changes",
-    "n": 27,
-    "share_of_tagged": 0.0185,
-    "avg_severity": 1.78,
-    "branch": "B",
-    "branch_name": "B. Involuntary lapse",
-    "branch_weight": 1.0,
-    "solvable": "yes",
-    "solvable_why": "Clear set-up steps and failure messages for autopay need no advice and no pressure.",
-    "solvable_weight": 1.0,
-    "score": 48.0,
-    "score_equal_weights": 48.0,
-    "low_confidence": false,
-    "lapse_story_share": 0.444,
-    "sources": {
-     "app_store": 4,
-     "play_store": 10,
-     "tradingqna": 9,
-     "youtube": 4
-    },
-    "quotes": [
-     {
-      "id": "app_store_6b8743617d36",
-      "quote": "new sip activation is not working properly,",
-      "source": "app_store",
-      "url": null
-     },
-     {
-      "id": "play_store_18e599ae6da4",
-      "quote": "Too slow in processing SIP orders. Deadline for completing the MF order gets violate",
-      "source": "play_store",
-      "url": null
-     }
-    ],
-    "rank": 6,
-    "rank_equal_weights": 12,
-    "score_index": 17
+    "score_index": 16
    },
    {
     "key": "returns_display",
     "kind": "app_sub_theme",
     "label": "App: portfolio and returns shown wrongly or slowly",
     "n": 40,
-    "share_of_tagged": 0.0274,
-    "avg_severity": 1.95,
+    "share_of_tagged": 0.0227,
+    "avg_severity": 1.9,
     "branch": "D",
     "branch_name": "D. Disengagement",
     "branch_weight": 0.6,
     "solvable": "yes",
     "solvable_why": "Showing portfolio and returns correctly and quickly is a design and engineering fix.",
     "solvable_weight": 1.0,
-    "score": 46.8,
-    "score_equal_weights": 78.0,
+    "score": 45.6,
+    "score_equal_weights": 76.0,
     "low_confidence": false,
-    "lapse_story_share": 0.1,
+    "lapse_story_share": 0.075,
     "sources": {
-     "play_store": 36,
-     "youtube": 4
+     "play_store": 35,
+     "youtube": 5
     },
     "quotes": [
      {
@@ -1336,16 +1290,57 @@
       "url": "https://www.youtube.com/watch?v=1HaRWsK88fM"
      }
     ],
+    "rank": 6,
+    "rank_equal_weights": 8,
+    "score_index": 15
+   },
+   {
+    "key": "autopay_setup",
+    "kind": "app_sub_theme",
+    "label": "App: autopay / mandate set-up and changes",
+    "n": 25,
+    "share_of_tagged": 0.0142,
+    "avg_severity": 1.6,
+    "branch": "B",
+    "branch_name": "B. Involuntary lapse",
+    "branch_weight": 1.0,
+    "solvable": "yes",
+    "solvable_why": "Clear set-up steps and failure messages for autopay need no advice and no pressure.",
+    "solvable_weight": 1.0,
+    "score": 40.0,
+    "score_equal_weights": 40.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.36,
+    "sources": {
+     "app_store": 2,
+     "play_store": 9,
+     "tradingqna": 9,
+     "youtube": 5
+    },
+    "quotes": [
+     {
+      "id": "tradingqna_133a4a934948",
+      "quote": "The eNACH mandate does not work properly with the daily SIPs - it only debits money once and then stops",
+      "source": "tradingqna",
+      "url": "https://tradingqna.com/t/coin-sips-trigger-even-on-holidays/189842/4"
+     },
+     {
+      "id": "play_store_ff5adc6a98b3",
+      "quote": "stop forcing Autopay idiots, after this update I can't invest my money without Autopay",
+      "source": "play_store",
+      "url": null
+     }
+    ],
     "rank": 7,
-    "rank_equal_weights": 7,
-    "score_index": 16
+    "rank_equal_weights": 14,
+    "score_index": 13
    },
    {
     "key": "underwhelming_returns",
     "kind": "reason",
     "label": null,
-    "n": 61,
-    "share_of_tagged": 0.0418,
+    "n": 60,
+    "share_of_tagged": 0.034,
     "avg_severity": 1.8,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
@@ -1353,13 +1348,13 @@
     "solvable": "partly",
     "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
     "solvable_weight": 0.5,
-    "score": 38.5,
-    "score_equal_weights": 110.0,
+    "score": 37.8,
+    "score_equal_weights": 108.0,
     "low_confidence": false,
-    "lapse_story_share": 0.246,
+    "lapse_story_share": 0.25,
     "sources": {
      "play_store": 12,
-     "youtube": 33,
+     "youtube": 32,
      "tradingqna": 16
     },
     "quotes": [
@@ -1378,29 +1373,29 @@
     ],
     "rank": 8,
     "rank_equal_weights": 4,
-    "score_index": 13
+    "score_index": 12
    },
    {
     "key": "sip_controls",
     "kind": "app_sub_theme",
     "label": "App: cannot pause, skip, edit or cancel a SIP easily",
-    "n": 29,
-    "share_of_tagged": 0.0198,
-    "avg_severity": 1.52,
+    "n": 36,
+    "share_of_tagged": 0.0204,
+    "avg_severity": 1.42,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "yes",
     "solvable_why": "An easy pause, skip, edit and cancel is a design fix.",
     "solvable_weight": 1.0,
-    "score": 30.8,
-    "score_equal_weights": 44.0,
+    "score": 35.7,
+    "score_equal_weights": 51.0,
     "low_confidence": false,
-    "lapse_story_share": 0.276,
+    "lapse_story_share": 0.222,
     "sources": {
-     "tradingqna": 16,
+     "tradingqna": 17,
      "play_store": 8,
-     "youtube": 5
+     "youtube": 11
     },
     "quotes": [
      {
@@ -1417,30 +1412,30 @@
      }
     ],
     "rank": 9,
-    "rank_equal_weights": 13,
+    "rank_equal_weights": 11,
     "score_index": 11
    },
    {
     "key": "missing_feature",
     "kind": "app_sub_theme",
     "label": "App: a feature the person wants is missing",
-    "n": 69,
-    "share_of_tagged": 0.0472,
-    "avg_severity": 1.41,
+    "n": 76,
+    "share_of_tagged": 0.043,
+    "avg_severity": 1.38,
     "branch": "D",
     "branch_name": "D. Disengagement",
     "branch_weight": 0.6,
     "solvable": "partly",
     "solvable_why": "Depends on the feature; some would need advice, which is not allowed.",
     "solvable_weight": 0.5,
-    "score": 29.1,
-    "score_equal_weights": 97.0,
+    "score": 31.5,
+    "score_equal_weights": 105.0,
     "low_confidence": false,
-    "lapse_story_share": 0.072,
+    "lapse_story_share": 0.079,
     "sources": {
-     "play_store": 48,
-     "tradingqna": 15,
-     "youtube": 6
+     "play_store": 46,
+     "tradingqna": 19,
+     "youtube": 11
     },
     "quotes": [
      {
@@ -1464,23 +1459,23 @@
     "key": "social_influence",
     "kind": "reason",
     "label": null,
-    "n": 58,
-    "share_of_tagged": 0.0397,
-    "avg_severity": 1.33,
+    "n": 66,
+    "share_of_tagged": 0.0374,
+    "avg_severity": 1.29,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "partly",
     "solvable_why": "Happens outside the app; only neutral, non-urgent information is allowed.",
     "solvable_weight": 0.5,
-    "score": 26.95,
-    "score_equal_weights": 77.0,
+    "score": 29.75,
+    "score_equal_weights": 85.0,
     "low_confidence": false,
-    "lapse_story_share": 0.138,
+    "lapse_story_share": 0.121,
     "sources": {
-     "tradingqna": 30,
+     "tradingqna": 37,
      "play_store": 2,
-     "youtube": 26
+     "youtube": 27
     },
     "quotes": [
      {
@@ -1497,69 +1492,29 @@
      }
     ],
     "rank": 11,
-    "rank_equal_weights": 8,
+    "rank_equal_weights": 7,
     "score_index": 9
-   },
-   {
-    "key": "cash_flow_strain",
-    "kind": "reason",
-    "label": null,
-    "n": 29,
-    "share_of_tagged": 0.0198,
-    "avg_severity": 1.76,
-    "branch": "C",
-    "branch_name": "C. Voluntary lapse",
-    "branch_weight": 0.7,
-    "solvable": "partly",
-    "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
-    "solvable_weight": 0.5,
-    "score": 17.85,
-    "score_equal_weights": 51.0,
-    "low_confidence": false,
-    "lapse_story_share": 0.552,
-    "sources": {
-     "play_store": 6,
-     "youtube": 15,
-     "tradingqna": 8
-    },
-    "quotes": [
-     {
-      "id": "tradingqna_57b8b7ee3734",
-      "quote": "Banks are charging arm and a leg for unfilled SIP transactions",
-      "source": "tradingqna",
-      "url": "https://tradingqna.com/t/an-appeal-to-zerodha-investor-awareness/168343/1"
-     },
-     {
-      "id": "play_store_494d59e487b1",
-      "quote": "lot to skip my sips for a month and it shows it can be done 2 days before sip date, but even before 2 days",
-      "source": "play_store",
-      "url": null
-     }
-    ],
-    "rank": 12,
-    "rank_equal_weights": 11,
-    "score_index": 6
    },
    {
     "key": "tax_or_lockin",
     "kind": "reason",
     "label": null,
-    "n": 25,
-    "share_of_tagged": 0.0171,
-    "avg_severity": 1.64,
+    "n": 33,
+    "share_of_tagged": 0.0187,
+    "avg_severity": 1.48,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "partly",
     "solvable_why": "Plain explanation of lock-in and exit load; no tax advice.",
     "solvable_weight": 0.5,
-    "score": 14.35,
-    "score_equal_weights": 41.0,
+    "score": 17.15,
+    "score_equal_weights": 49.0,
     "low_confidence": false,
-    "lapse_story_share": 0.28,
+    "lapse_story_share": 0.182,
     "sources": {
-     "tradingqna": 11,
-     "youtube": 10,
+     "tradingqna": 12,
+     "youtube": 17,
      "play_store": 4
     },
     "quotes": [
@@ -1576,8 +1531,80 @@
       "url": "https://tradingqna.com/t/best-alternative-to-zerodha-coin/136294/7"
      }
     ],
+    "rank": 12,
+    "rank_equal_weights": 12,
+    "score_index": 5
+   },
+   {
+    "key": "cash_flow_strain",
+    "kind": "reason",
+    "label": null,
+    "n": 28,
+    "share_of_tagged": 0.0159,
+    "avg_severity": 1.71,
+    "branch": "C",
+    "branch_name": "C. Voluntary lapse",
+    "branch_weight": 0.7,
+    "solvable": "partly",
+    "solvable_why": "Flexible debit dates or a pause that is easy to resume; no urgency messages.",
+    "solvable_weight": 0.5,
+    "score": 16.8,
+    "score_equal_weights": 48.0,
+    "low_confidence": false,
+    "lapse_story_share": 0.536,
+    "sources": {
+     "play_store": 5,
+     "youtube": 15,
+     "tradingqna": 8
+    },
+    "quotes": [
+     {
+      "id": "tradingqna_57b8b7ee3734",
+      "quote": "Banks are charging arm and a leg for unfilled SIP transactions",
+      "source": "tradingqna",
+      "url": "https://tradingqna.com/t/an-appeal-to-zerodha-investor-awareness/168343/1"
+     },
+     {
+      "id": "youtube_456a456341f9",
+      "quote": "Cancer karne ke bad kaise chalu kar sakte hain kya",
+      "source": "youtube",
+      "url": "https://www.youtube.com/watch?v=phs3OUy7ZWI"
+     }
+    ],
     "rank": 13,
-    "rank_equal_weights": 14,
+    "rank_equal_weights": 13,
+    "score_index": 5
+   },
+   {
+    "key": "app_unsplit",
+    "kind": "app_sub_theme",
+    "label": "App: not yet split into sub-themes",
+    "n": 6,
+    "share_of_tagged": 0.0034,
+    "avg_severity": 2.83,
+    "branch": "A",
+    "branch_name": "A. Getting going",
+    "branch_weight": 0.9,
+    "solvable": "yes",
+    "solvable_why": "Making SIPs easy to find, pause and change is a design fix.",
+    "solvable_weight": 1.0,
+    "score": 15.3,
+    "score_equal_weights": 17.0,
+    "low_confidence": true,
+    "lapse_story_share": 0.333,
+    "sources": {
+     "play_store": 6
+    },
+    "quotes": [
+     {
+      "id": "play_store_ebb86fb3d541",
+      "quote": "I am losing money every day because I cannot start my SIP due to YOUR incompetence.",
+      "source": "play_store",
+      "url": null
+     }
+    ],
+    "rank": 14,
+    "rank_equal_weights": 18,
     "score_index": 5
    },
    {
@@ -1585,7 +1612,7 @@
     "kind": "reason",
     "label": null,
     "n": 21,
-    "share_of_tagged": 0.0144,
+    "share_of_tagged": 0.0119,
     "avg_severity": 1.67,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
@@ -1616,7 +1643,7 @@
       "url": "https://www.youtube.com/watch?v=oIhGHb30rWo"
      }
     ],
-    "rank": 14,
+    "rank": 15,
     "rank_equal_weights": 16,
     "score_index": 4
    },
@@ -1624,30 +1651,30 @@
     "key": "support",
     "kind": "app_sub_theme",
     "label": "App: support is unreachable or unhelpful",
-    "n": 17,
-    "share_of_tagged": 0.0116,
-    "avg_severity": 1.88,
+    "n": 16,
+    "share_of_tagged": 0.0091,
+    "avg_severity": 1.75,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "partly",
     "solvable_why": "Better support helps, but part of it is staffing outside the product.",
     "solvable_weight": 0.5,
-    "score": 11.2,
-    "score_equal_weights": 32.0,
+    "score": 9.8,
+    "score_equal_weights": 28.0,
     "low_confidence": false,
-    "lapse_story_share": 0.294,
+    "lapse_story_share": 0.188,
     "sources": {
-     "play_store": 10,
-     "tradingqna": 3,
+     "play_store": 7,
+     "tradingqna": 5,
      "youtube": 4
     },
     "quotes": [
      {
-      "id": "play_store_297be8816cb2",
-      "quote": "they redeem my amount in my freeze account.i call customer care they ask me your amount not transferred in",
-      "source": "play_store",
-      "url": null
+      "id": "tradingqna_3c64eaa0b053",
+      "quote": "what’s the point of raising a ticket if ultimately I’ve to again raise the issue here on this forum to get the matter checked!?",
+      "source": "tradingqna",
+      "url": "https://tradingqna.com/t/motilal-oswal-temporary-suspension-of-lumpsum-investments/125471/7"
      },
      {
       "id": "youtube_9aaa13563c96",
@@ -1656,68 +1683,30 @@
       "url": "https://www.youtube.com/watch?v=1HaRWsK88fM"
      }
     ],
-    "rank": 15,
-    "rank_equal_weights": 17,
-    "score_index": 4
-   },
-   {
-    "key": "app_unsplit",
-    "kind": "app_sub_theme",
-    "label": "App: not yet split into sub-themes",
-    "n": 2,
-    "share_of_tagged": 0.0014,
-    "avg_severity": 3.0,
-    "branch": "A",
-    "branch_name": "A. Getting going",
-    "branch_weight": 0.9,
-    "solvable": "yes",
-    "solvable_why": "Making SIPs easy to find, pause and change is a design fix.",
-    "solvable_weight": 1.0,
-    "score": 5.4,
-    "score_equal_weights": 6.0,
-    "low_confidence": true,
-    "lapse_story_share": 0.5,
-    "sources": {
-     "play_store": 2
-    },
-    "quotes": [
-     {
-      "id": "play_store_ab0febfd639a",
-      "quote": "creates new folio in demat account instead of existing SoA folios",
-      "source": "play_store",
-      "url": null
-     },
-     {
-      "id": "play_store_ebb86fb3d541",
-      "quote": "I am losing money every day because I cannot start my SIP due to YOUR incompetence.",
-      "source": "play_store",
-      "url": null
-     }
-    ],
     "rank": 16,
-    "rank_equal_weights": 20,
-    "score_index": 2
+    "rank_equal_weights": 17,
+    "score_index": 3
    },
    {
     "key": "life_event",
     "kind": "reason",
     "label": null,
-    "n": 8,
-    "share_of_tagged": 0.0055,
-    "avg_severity": 1.62,
+    "n": 9,
+    "share_of_tagged": 0.0051,
+    "avg_severity": 1.56,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "partly",
     "solvable_why": "A graceful pause and easy restart; the event itself is outside the product.",
     "solvable_weight": 0.5,
-    "score": 4.55,
-    "score_equal_weights": 13.0,
+    "score": 4.9,
+    "score_equal_weights": 14.0,
     "low_confidence": true,
-    "lapse_story_share": 0.25,
+    "lapse_story_share": 0.222,
     "sources": {
      "play_store": 2,
-     "tradingqna": 4,
+     "tradingqna": 5,
      "youtube": 2
     },
     "quotes": [
@@ -1735,7 +1724,7 @@
      }
     ],
     "rank": 17,
-    "rank_equal_weights": 18,
+    "rank_equal_weights": 19,
     "score_index": 2
    },
    {
@@ -1743,7 +1732,7 @@
     "kind": "reason",
     "label": null,
     "n": 4,
-    "share_of_tagged": 0.0027,
+    "share_of_tagged": 0.0023,
     "avg_severity": 1.75,
     "branch": "D",
     "branch_name": "D. Disengagement",
@@ -1775,7 +1764,7 @@
      }
     ],
     "rank": 18,
-    "rank_equal_weights": 19,
+    "rank_equal_weights": 20,
     "score_index": 1
    },
    {
@@ -1783,7 +1772,7 @@
     "kind": "reason",
     "label": null,
     "n": 2,
-    "share_of_tagged": 0.0014,
+    "share_of_tagged": 0.0011,
     "avg_severity": 1.5,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
@@ -1822,7 +1811,7 @@
     "kind": "reason",
     "label": null,
     "n": 40,
-    "share_of_tagged": 0.0274,
+    "share_of_tagged": 0.0227,
     "avg_severity": 1.55,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
@@ -1854,7 +1843,7 @@
      }
     ],
     "rank": 20,
-    "rank_equal_weights": 9,
+    "rank_equal_weights": 10,
     "score_index": 0
    },
    {
@@ -1862,7 +1851,7 @@
     "kind": "reason",
     "label": null,
     "n": 28,
-    "share_of_tagged": 0.0192,
+    "share_of_tagged": 0.0159,
     "avg_severity": 1.29,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
@@ -1904,21 +1893,22 @@
     "kind": "after_stop",
     "label": "Redemption, withdrawal or refund is slow or stuck",
     "n": 20,
-    "share_of_tagged": 0.0137,
-    "avg_severity": 2.25,
+    "share_of_tagged": 0.0113,
+    "avg_severity": 2.05,
     "branch": "E",
     "branch_name": "E. Recovery",
     "branch_weight": 0.8,
     "solvable": "yes",
     "solvable_why": "Clear timelines and status tracking for money coming out need no advice.",
     "solvable_weight": 1.0,
-    "score": 36.0,
-    "score_equal_weights": 45.0,
+    "score": 32.8,
+    "score_equal_weights": 41.0,
     "low_confidence": false,
-    "lapse_story_share": 0.2,
+    "lapse_story_share": 0.25,
     "sources": {
-     "play_store": 17,
-     "youtube": 3
+     "play_store": 14,
+     "youtube": 4,
+     "tradingqna": 2
     },
     "quotes": [
      {
@@ -1928,8 +1918,8 @@
       "url": null
      },
      {
-      "id": "youtube_f5b02ecadc87",
-      "quote": "Bhaiya Mera mutual fund payment \"in progress\" dikha rahai!! Kitne din main successful hoyajega ??",
+      "id": "youtube_a304d6f487ab",
+      "quote": "bhai mene invest karke withdraw kiya aur app pe withdraw successful dikha rha he par bank pe paise nhi aa rhe",
       "source": "youtube",
       "url": "https://www.youtube.com/watch?v=MExMf8_g4CE"
      }
@@ -1943,7 +1933,7 @@
     "kind": "after_stop",
     "label": "Cannot find or complete a redemption",
     "n": 11,
-    "share_of_tagged": 0.0075,
+    "share_of_tagged": 0.0062,
     "avg_severity": 2.18,
     "branch": "E",
     "branch_name": "E. Recovery",
@@ -1954,7 +1944,7 @@
     "score": 19.2,
     "score_equal_weights": 24.0,
     "low_confidence": true,
-    "lapse_story_share": 0.273,
+    "lapse_story_share": 0.182,
     "sources": {
      "play_store": 9,
      "tradingqna": 2
@@ -1975,14 +1965,14 @@
     ],
     "rank": 2,
     "rank_equal_weights": 2,
-    "score_index": 53
+    "score_index": 59
    },
    {
     "key": "exit_amount",
     "kind": "after_stop",
     "label": "Amount received differs from what the app showed",
     "n": 9,
-    "share_of_tagged": 0.0062,
+    "share_of_tagged": 0.0051,
     "avg_severity": 2.44,
     "branch": "E",
     "branch_name": "E. Recovery",
@@ -1993,7 +1983,7 @@
     "score": 17.6,
     "score_equal_weights": 22.0,
     "low_confidence": true,
-    "lapse_story_share": 0.667,
+    "lapse_story_share": 0.333,
     "sources": {
      "play_store": 8,
      "youtube": 1
@@ -2014,32 +2004,32 @@
     ],
     "rank": 3,
     "rank_equal_weights": 3,
-    "score_index": 49
+    "score_index": 54
    }
   ],
-  "n_tagged": 1461,
+  "n_tagged": 1766,
   "groups": [
    {
     "key": "making_sense_of_returns",
     "kind": "group",
     "label": "Making sense of returns",
-    "n": 195,
-    "share_of_tagged": 0.1335,
-    "avg_severity": 1.37,
+    "n": 214,
+    "share_of_tagged": 0.1212,
+    "avg_severity": 1.34,
     "branch": "C",
     "branch_name": "C. Voluntary lapse",
     "branch_weight": 0.7,
     "solvable": "partly",
     "solvable_why": "Plain-language context on early results; cannot promise or recommend funds.",
     "solvable_weight": 0.5,
-    "score": 93.8,
-    "score_equal_weights": 268.0,
+    "score": 100.45,
+    "score_equal_weights": 287.0,
     "low_confidence": false,
-    "lapse_story_share": 0.113,
+    "lapse_story_share": 0.098,
     "sources": {
-     "tradingqna": 43,
+     "tradingqna": 52,
      "play_store": 33,
-     "youtube": 119
+     "youtube": 129
     },
     "quotes": [
      {
@@ -2063,21 +2053,21 @@
    }
   ],
   "group_compare": {
-   "group_unique": 195,
-   "group_sum_of_parts": 227,
-   "autopay": 179,
-   "posts": 1421,
-   "first_time_posts": 231,
-   "first_time_group": 62,
-   "first_time_autopay": 26
+   "group_unique": 214,
+   "group_sum_of_parts": 245,
+   "autopay": 196,
+   "posts": 1726,
+   "first_time_posts": 250,
+   "first_time_group": 65,
+   "first_time_autopay": 28
   },
-  "app_posts_total": 418,
-  "app_posts_not_ranked": 186,
+  "app_posts_total": 443,
+  "app_posts_not_ranked": 193,
   "exit_posts": 40,
   "label_info": {
-   "candidates": 571,
-   "labelled": 571,
-   "new_this_run": 0,
+   "candidates": 601,
+   "labelled": 601,
+   "new_this_run": 47,
    "failed_this_run": 0
   },
   "assumptions": {

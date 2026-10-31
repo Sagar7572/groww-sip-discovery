@@ -73,7 +73,13 @@ def full_details(posts: pd.DataFrame, val: dict, ag: dict) -> None:
                                 "Why": c["reason"]} for c in hc]))
     else:
         st.caption("No human corrections have been recorded yet.")
-    st.markdown("**Hand-labelled golden set:** coming. About 20 posts labelled by hand without seeing the AI’s labels; this page will then show how often the engine agreed.")
+    gold = val.get("golden")
+    if gold:
+        per = " · ".join(f"{q['question'].split('. ', 1)[-1].rstrip('?')} {q['agree']}/{q['n']} ({q['pct']}%)" for q in gold["per_question"])
+        st.markdown(f"**Hand-labelled golden set ({gold['n']} posts, labelled without seeing the AI’s answers):** agreement per question: {per}. "
+                    "A small, deliberately mixed set, so read it as a check on kinds of posts, not an overall accuracy figure.")
+    else:
+        st.markdown("**Hand-labelled golden set:** coming. About 20 posts labelled by hand without seeing the AI’s labels; this page will then show how often the engine agreed.")
     log = C.EXPORT / "evidence_log.md"
     if log.exists():
         entries = [e for e in log_entries(log.read_text(encoding="utf-8")) if re.search(r"Entry [5-9]|Entry \d{2}", e[0])]
@@ -115,16 +121,22 @@ def render() -> None:
         t1, t2 = st.columns(2)
         t1.markdown(tile(agree, "agreement when two AI models labelled the same posts"), unsafe_allow_html=True)
         t2.markdown(tile(f"{versions} rounds", "of prompt versions compared after people read the AI’s first answers"), unsafe_allow_html=True)
+        acc = val.get("accuracy_checks", {}).get("random")
         t3, t4 = st.columns(2)
         t3.markdown("<div style='height:.6rem'></div>" + tile(f"{market}", "wrong “market fell” labels removed by a rule"), unsafe_allow_html=True)
-        t4.markdown("<div style='height:.6rem'></div>" + tile(f"{golden['agree']} / {golden['n']}" if golden else "[X / 20]",
-                                                             "posts where the AI matched a person’s labels" + ("" if golden else " (coming)")), unsafe_allow_html=True)
-        acc = val.get("accuracy_checks", {}).get("random")
         if acc:
             wrong, n = 100 * acc["wrong"] / acc["n"], acc["n"]
-            st.markdown("<div style='height:.6rem'></div>" + tile(f"{wrong:.0f} in 100",
+            t4.markdown("<div style='height:.6rem'></div>" + tile(f"{wrong:.0f} in 100",
                         f"posts have a wrong reason tag in a random check of {n}; up to {100 * acc['wrong_with_borderline'] / n:.0f} counting borderline cases"),
                         unsafe_allow_html=True)
+        if golden:
+            short = {"1": "About SIPs", "2": "Own experience", "3": "Type of story", "4": "Main reason"}
+            line = " · ".join(f"{short[q['question'][0]]} {q['pct']}%" for q in golden["per_question"])
+            st.markdown("<div style='height:.6rem'></div>" + f'<div class="tile"><div class="t" style="font-size:1.25rem">{ui.esc(line)}</div>'
+                        f'<div class="d">AI agreement with a person on {golden["n"]} posts, labelled by hand</div></div>', unsafe_allow_html=True)
+        else:
+            st.markdown("<div style='height:.6rem'></div>" + tile("[X / 20]", "posts where the AI matched a person’s labels (coming)"), unsafe_allow_html=True)
+        if acc:
             st.markdown(f'<p style="color:#3a4352;font-size:.92rem;margin-top:.8rem">In the most severe complaints the rate was higher: '
                         f'{val["accuracy_checks"]["severe"]["wrong"]} of {val["accuracy_checks"]["severe"]["n"]} had a wrong reason. '
                         f'{ui.esc(val["accuracy_checks"].get("main_errors", "").capitalize())}</p>', unsafe_allow_html=True)

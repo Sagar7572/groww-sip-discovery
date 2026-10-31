@@ -53,18 +53,18 @@
   }
  ],
  "agreement": {
-  "n_items": 33,
+  "n_items": 35,
   "fields": {
-   "investor_type": 88,
-   "journey_stage": 67,
-   "sip_action": 88,
-   "lapse_type": 67,
-   "stated_triggers": 52,
+   "investor_type": 89,
+   "journey_stage": 66,
+   "sip_action": 86,
+   "lapse_type": 69,
+   "stated_triggers": 51,
    "checking_behaviour": 100,
-   "what_they_check": 88,
-   "emotion": 76,
-   "outside_app_actions": 85,
-   "severity": 82,
+   "what_they_check": 89,
+   "emotion": 74,
+   "outside_app_actions": 86,
+   "severity": 83,
    "income_stability": 100,
    "age_band": 100,
    "money_source": 100,
@@ -158,7 +158,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "expectation_mismatch",
+    "fund_switching",
     "app_experience"
    ],
    "corrected": [
@@ -174,8 +174,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "trust_concern",
-    "goal_change"
+    "none"
    ],
    "corrected": [
     "trust_concern"
@@ -189,7 +188,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "goal_change"
+    "none"
    ],
    "corrected": [
     "none"
@@ -203,9 +202,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "underwhelming_returns",
-    "expectation_mismatch",
-    "app_experience"
+    "none"
    ],
    "corrected": [
     "confusing_numbers",
@@ -221,10 +218,7 @@
    "field": "triggers",
    "original": [
     "underwhelming_returns",
-    "expectation_mismatch",
-    "goal_change",
-    "fund_switching",
-    "other"
+    "expectation_mismatch"
    ],
    "corrected": [
     "underwhelming_returns",
@@ -241,9 +235,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "trust_concern",
-    "cash_flow_strain",
-    "mandate_payment_issue"
+    "trust_concern"
    ],
    "corrected": [
     "trust_concern"
@@ -257,7 +249,6 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "mandate_payment_issue",
     "app_experience"
    ],
    "corrected": [
@@ -271,7 +262,7 @@
    "source": "play_store",
    "url": null,
    "field": "action",
-   "original": "instalment_failed",
+   "original": "none",
    "corrected": "none",
    "reason": "Top-50 severity check: the payment worked and units were allotted; the units were not visible in the app. This is a display problem, not a payment failure.",
    "post": "I invested Rs 40,000 in a Bank of India mutual fund yesterday. Today morning, I received a message from the AMC regarding allotment of units to me. The units became visible in my Kfinkart app from that time. Now its 6:30 pm in the evening a"
@@ -281,7 +272,7 @@
    "source": "play_store",
    "url": null,
    "field": "lapse_type",
-   "original": "involuntary",
+   "original": "not_applicable",
    "corrected": "not_applicable",
    "reason": "Top-50 severity check: the payment worked and units were allotted; the units were not visible in the app. This is a display problem, not a payment failure.",
    "post": "I invested Rs 40,000 in a Bank of India mutual fund yesterday. Today morning, I received a message from the AMC regarding allotment of units to me. The units became visible in my Kfinkart app from that time. Now its 6:30 pm in the evening a"
@@ -292,8 +283,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "mandate_payment_issue",
-    "trust_concern"
+    "app_experience"
    ],
    "corrected": [
     "trust_concern"
@@ -307,7 +297,6 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "cash_flow_strain",
     "mandate_payment_issue"
    ],
    "corrected": [
@@ -321,7 +310,7 @@
    "source": "play_store",
    "url": null,
    "field": "action",
-   "original": "stopped",
+   "original": "instalment_failed",
    "corrected": "instalment_failed",
    "reason": "Top-50 severity check: 'my SIP is not deducted' is a failed payment, not 'money is tight' and not the person's own choice.",
    "post": "I am using groww from 2021 onwards but this month my SIP is not deducted and your coustomer service is very poor"
@@ -331,7 +320,7 @@
    "source": "play_store",
    "url": null,
    "field": "lapse_type",
-   "original": "voluntary",
+   "original": "involuntary",
    "corrected": "involuntary",
    "reason": "Top-50 severity check: 'my SIP is not deducted' is a failed payment, not 'money is tight' and not the person's own choice.",
    "post": "I am using groww from 2021 onwards but this month my SIP is not deducted and your coustomer service is very poor"
@@ -342,9 +331,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "trust_concern",
-    "tax_or_lockin",
-    "underwhelming_returns"
+    "trust_concern"
    ],
    "corrected": [
     "trust_concern",
@@ -359,7 +346,6 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "cash_flow_strain",
     "mandate_payment_issue"
    ],
    "corrected": [
@@ -373,7 +359,7 @@
    "source": "play_store",
    "url": null,
    "field": "action",
-   "original": "stopped",
+   "original": "instalment_failed",
    "corrected": "instalment_failed",
    "reason": "Top-50 severity check: 'sip nhii ho rahi' means the SIP is not going through, not 'money is tight' and not the person's choice.",
    "post": "sip nhii ho rahi he kya Karu"
@@ -383,7 +369,7 @@
    "source": "play_store",
    "url": null,
    "field": "lapse_type",
-   "original": "voluntary",
+   "original": "involuntary",
    "corrected": "involuntary",
    "reason": "Top-50 severity check: 'sip nhii ho rahi' means the SIP is not going through, not 'money is tight' and not the person's choice.",
    "post": "sip nhii ho rahi he kya Karu"
@@ -394,8 +380,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "mandate_payment_issue",
-    "trust_concern"
+    "app_experience"
    ],
    "corrected": [
     "trust_concern",
@@ -410,9 +395,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "trust_concern",
-    "social_influence",
-    "underwhelming_returns"
+    "trust_concern"
    ],
    "corrected": [
     "trust_concern"
@@ -426,9 +409,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "underwhelming_returns",
-    "trust_concern",
-    "disengaged_forgot"
+    "none"
    ],
    "corrected": [
     "trust_concern"
@@ -442,9 +423,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "goal_change",
-    "disengaged_forgot",
-    "underwhelming_returns"
+    "trust_concern"
    ],
    "corrected": [
     "trust_concern"
@@ -458,9 +437,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "trust_concern",
-    "underwhelming_returns",
-    "disengaged_forgot"
+    "none"
    ],
    "corrected": [
     "trust_concern"
@@ -474,12 +451,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "app_experience",
-    "mandate_payment_issue",
-    "none",
-    "goal_change",
-    "disengaged_forgot",
-    "underwhelming_returns"
+    "none"
    ],
    "corrected": [
     "app_experience"
@@ -493,9 +465,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "mandate_payment_issue",
-    "app_experience",
-    "none"
+    "mandate_payment_issue"
    ],
    "corrected": [
     "app_experience"
@@ -509,9 +479,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "app_experience",
-    "underwhelming_returns",
-    "trust_concern"
+    "none"
    ],
    "corrected": [
     "trust_concern",
@@ -526,9 +494,8 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "underwhelming_returns",
-    "app_experience",
-    "mandate_payment_issue"
+    "cash_flow_strain",
+    "underwhelming_returns"
    ],
    "corrected": [
     "app_experience"
@@ -541,7 +508,7 @@
    "source": "play_store",
    "url": null,
    "field": "problem_area",
-   "original": "sip_controls",
+   "original": null,
    "corrected": "missing_feature",
    "reason": "Top-50 severity check: cannot do a small daily SIP and cannot track external funds: a missing feature, not returns or autopay.",
    "post": "u can't do small per day sip u can't track external funds in this app worst app ind money ia lot better now I am selling all my funds in this worst app"
@@ -552,9 +519,7 @@
    "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs",
    "field": "triggers",
    "original": [
-    "expectation_mismatch",
-    "confusing_numbers",
-    "trust_concern"
+    "none"
    ],
    "corrected": [
     "expectation_mismatch",
@@ -568,7 +533,7 @@
    "source": "youtube",
    "url": "https://www.youtube.com/watch?v=VYFkr_kuJQs",
    "field": "action",
-   "original": "paused",
+   "original": "none",
    "corrected": "none",
    "reason": "Top-50 severity check: opinion that SIP is a trick; no numbers are confused and no SIP was paused.",
    "post": "SIP IS TRICK TO FOOL ORDINARY PEOPLE ONLY AMC MAKE ME ONEY OFF IT , LUMPSUMP IS THE BEST WAY TO INVEST FOR 5 TO 10-15 YEAR"
@@ -579,8 +544,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "market_fall",
-    "trust_concern"
+    "other"
    ],
    "corrected": [
     "confusing_numbers",
@@ -652,7 +616,7 @@
    "source": "play_store",
    "url": null,
    "field": "problem_area",
-   "original": "not_a_problem",
+   "original": null,
    "corrected": "returns_display",
    "reason": "Area fix: the person cannot see their portfolio status; it is a problem post, not 'not a problem'.",
    "post": "nowadays they are doing cheating with their customers, I had mutual fund account in groww for many years which is free ,now they are forcing me to open their stock account too so they charged me account opening charges and later on annual m"
@@ -693,7 +657,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "underwhelming_returns"
+    "mandate_payment_issue"
    ],
    "corrected": [
     "trust_concern"
@@ -727,8 +691,7 @@
    "url": "https://tradingqna.com/t/coin-sip-vs-amc-sip/127618/5",
    "field": "triggers",
    "original": [
-    "confusing_numbers",
-    "app_experience"
+    "none"
    ],
    "corrected": [
     "none"
@@ -742,8 +705,7 @@
    "url": "https://www.youtube.com/watch?v=MExMf8_g4CE",
    "field": "triggers",
    "original": [
-    "underwhelming_returns",
-    "expectation_mismatch"
+    "none"
    ],
    "corrected": [
     "none"
@@ -757,8 +719,7 @@
    "url": "https://www.youtube.com/watch?v=oIhGHb30rWo",
    "field": "triggers",
    "original": [
-    "underwhelming_returns",
-    "expectation_mismatch"
+    "none"
    ],
    "corrected": [
     "none"
@@ -772,8 +733,7 @@
    "url": "https://www.reddit.com/r/IndiaInvestments/comments/xw8jw2/zerodha_how_do_i_set_up_autopay_for_mutual_fund/ir63p72/",
    "field": "triggers",
    "original": [
-    "mandate_payment_issue",
-    "cash_flow_strain"
+    "none"
    ],
    "corrected": [
     "mandate_payment_issue"
@@ -787,7 +747,7 @@
    "url": "https://www.youtube.com/watch?v=MExMf8_g4CE",
    "field": "triggers",
    "original": [
-    "app_experience"
+    "none"
    ],
    "corrected": [
     "none"
@@ -801,8 +761,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "app_experience",
-    "mandate_payment_issue"
+    "none"
    ],
    "corrected": [
     "app_experience"
@@ -816,8 +775,7 @@
    "url": null,
    "field": "triggers",
    "original": [
-    "mandate_payment_issue",
-    "app_experience"
+    "none"
    ],
    "corrected": [
     "app_experience"
@@ -830,7 +788,7 @@
    "source": "play_store",
    "url": null,
    "field": "problem_area",
-   "original": "exit_delay",
+   "original": null,
    "corrected": "app_bugs",
    "reason": "Random check of 50: same post: a slow set-up is an app problem, not a withdrawal delay.",
    "post": "mutual fund setup very slow and bad experience."
@@ -864,5 +822,37 @@
    "date": "2026-10-27"
   },
   "main_errors": "most errors are replies or advice tagged as the writer's own problem, and extra reasons added to angry complaints about loans, withdrawals or demat."
+ },
+ "golden": {
+  "date": "2026-10-31",
+  "n": 20,
+  "agree": 3,
+  "per_question": [
+   {
+    "question": "1. About SIPs?",
+    "agree": 19,
+    "n": 20,
+    "pct": 95
+   },
+   {
+    "question": "2. Writer's own experience?",
+    "agree": 15,
+    "n": 20,
+    "pct": 75
+   },
+   {
+    "question": "3. What kind of story?",
+    "agree": 11,
+    "n": 20,
+    "pct": 55
+   },
+   {
+    "question": "4. Main reason they give",
+    "agree": 9,
+    "n": 20,
+    "pct": 45
+   }
+  ],
+  "note": "20 posts labelled by hand without seeing the AI's answers. 'agree' = posts where the AI matched all four labels. Own-experience answers come from a single t4 run on these 20 posts."
  }
 }

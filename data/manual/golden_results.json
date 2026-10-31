@@ -1,0 +1,32 @@
+{
+ "date": "2026-10-31",
+ "n": 20,
+ "agree": 3,
+ "per_question": [
+  {
+   "question": "1. About SIPs?",
+   "agree": 19,
+   "n": 20,
+   "pct": 95
+  },
+  {
+   "question": "2. Writer's own experience?",
+   "agree": 15,
+   "n": 20,
+   "pct": 75
+  },
+  {
+   "question": "3. What kind of story?",
+   "agree": 11,
+   "n": 20,
+   "pct": 55
+  },
+  {
+   "question": "4. Main reason they give",
+   "agree": 9,
+   "n": 20,
+   "pct": 45
+  }
+ ],
+ "note": "20 posts labelled by hand without seeing the AI's answers. 'agree' = posts where the AI matched all four labels. Own-experience answers come from a single t4 run on these 20 posts."
+}

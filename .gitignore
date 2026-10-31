@@ -33,3 +33,6 @@ data/review/
 # local review screenshots
 docs/screenshots/
 docs/mockups/
+
+# golden-set labelling sheet and hidden AI answers (do not publish)
+data/golden/

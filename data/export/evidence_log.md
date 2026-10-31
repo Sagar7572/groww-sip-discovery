@@ -490,3 +490,33 @@ One correction was a reviewer decision, not a clear AI error: a dashboard value 
 **What fails:** replies, advice or explanations to someone else tagged as if they were the writer's own problem (4 posts); a "money not received" complaint tagged as returns; a how-it-works question tagged as confusing numbers. Plus the pattern in Entry 19: extra reasons on angry loan, withdrawal and demat complaints.
 **Applied:** 8 corrections (+1 missed tag) with reasons in `corrections.csv`. Autopay 234 → 233, making sense of returns 229 → 226 unique posts; first-time returns vs autopay 69 vs 27 → 67 vs 27.
 **Next (t4 re-tag):** a new prompt version with four rules (only the writer's own stop reasons; replies and advice get none; loan / withdrawal / demat / KYC / OTP / support complaints get none unless they made the writer stop; "money not received" is a withdrawal problem) and a new field `is_own_experience`. First tested on the 100 hand-checked posts; the full re-tag of the roughly 420 posts carrying autopay or a returns reason runs only if the random 50 error rate falls under 10%. Results are written to separate files and the hand corrections stay on top.
+
+
+## Entry 21: Golden set, 20 posts labelled by hand without seeing the AI's answers (2026-10-31)
+
+**Method.** 20 posts picked by plain code (no AI), after leaving out every post used in earlier checks (the 100 hand-checked posts, the two pilots, the 30-post two-model check, all hand-corrected posts). 2021 onward, relevant posts only, mixed on purpose: payment failures, choices to stop, returns confusion, replies and advice, Hinglish / Malayalam, plain questions, praise, a withdrawal complaint, and at least one post per source (App Store has only one, because only three unused App Store posts exist). I labelled four questions per post with the AI's answers hidden: (1) about SIPs? (2) writer's own experience? (3) what kind of story? (4) main reason they give. Non-English posts had a literal translation beside them. The AI's own-experience answer was produced after labelling, by one t4 request (2 calls, `gpt-oss-120b`) on just these 20 posts. Scoring is plain code (`pipeline/score_golden.py`).
+
+**Agreement per question.**
+
+| Question | Agreed | Of | % |
+|---|---|---|---|
+| 1. About SIPs? | 19 | 20 | 95% |
+| 2. Writer's own experience? | 15 | 20 | 75% |
+| 3. What kind of story? | 11 | 20 | 55% |
+| 4. Main reason they give | 9 | 20 | 45% |
+
+Only 3 of 20 posts matched on all four questions. 26 disagreements in all. Question 4 counts as a match if my main reason appears anywhere in the AI's list (the AI does not rank its reasons), so 45% is the lenient figure.
+
+**Slip corrections after scoring.** I re-read posts 3, 7 and 19, the three where my own answers looked questionable. No answer in the saved sheet was changed, so the figures above are the final ones. (Checked: the sheet was last saved before the first scoring run and the answers for those posts are identical in the re-run.)
+
+**The Q3 wording difference on failed-payment posts.** On posts 8, 9 and 20 I answered "No stop story" and the AI answered "Payment or app failure". In 9 and 20 the writer describes a bounced or failed debit of their own; in 8 an instalment shows "in progress". I read question 3 as "did the SIP stop?"; the AI's field (`lapse_type`) counts a failed payment even when the SIP did not stop. This is a difference in how the question is read, not clearly an AI error. If those three counted as matches, question 3 would be 14 of 20 (70%). The headline stays 55%, because the sheet's rules were written first.
+
+**Example disagreements.**
+- **Post 8 (Play Store, Hinglish):** the writer praises the app and asks Groww to fix instalments showing "in progress" after payment. The AI added "Autopay / payment problem" and "Returns too small" as reasons; I gave "None given". The "returns" reason has no support in the text. It is the known pattern of extra, plausible reasons (Entries 19 and 20).
+- **Post 13 (YouTube, Hinglish):** "Cancer karne ke bad kaise chalu kar sakte hain kya" (how can it be restarted after cancelling; "cancer" is a typo for "cancel"). The AI gave three reasons (money is tight, autopay problem, influenced by others) for a one-line question and judged it not the writer's own experience. I said own experience, reason "Hard to use app".
+- **Post 4 (App Store):** a plain praise review. I said not about SIPs; the AI said it is. I also marked it as the writer's own experience; the AI said it is not. The first is a judgement on how strictly "about SIPs" is read for general praise of a mutual-fund app.
+- **Post 19 (TradingQ&A):** "You could stop the sip and start a new sip with regular plan…" is advice to someone else. The AI said it is not the writer's own experience; I answered Yes. The text reads as advice, so this is a case where the AI looks right and my answer is the odd one out (left unchanged). The AI also listed two reasons ("influenced by others", "needs the money") for advice.
+
+**What this shows.** The AI agrees with a person on whether a post is about SIPs (95%) and mostly on whose experience it is (75%). It is weakest on the main reason (45%), mostly by adding reasons the writer did not give, so reason counts on the dashboard should be read as upper bounds. The most reliable fields in this set are the first two.
+
+**Limits.** 20 posts, deliberately mixed (not a random sample), one labeller, and some question wordings (3 and 4) allow more than one reasonable reading. Agreement here is a check on specific kinds of posts, not an overall accuracy rate. Own-experience came from one model on one run.
