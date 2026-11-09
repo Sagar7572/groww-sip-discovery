@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 import re
+import sys
 from datetime import datetime, timezone
 
 import numpy as np
@@ -63,7 +64,7 @@ def count_question() -> None:
 def api_key() -> str | None:
     """Hosted: the key comes from Streamlit's Secrets. Local: from the environment or the .env file (never printed)."""
     try:
-        return st.secrets["GROQ_API_KEY"]
+        return clean_key(st.secrets["GROQ_API_KEY"])
     except Exception:
         pass
     if not os.environ.get("GROQ_API_KEY"):
@@ -72,7 +73,18 @@ def api_key() -> str | None:
             load_dotenv(C.EXPORT.parent.parent / ".env")
         except ImportError:
             pass
-    return os.environ.get("GROQ_API_KEY")
+    return clean_key(os.environ.get("GROQ_API_KEY"))
+
+
+def clean_key(k) -> str | None:
+    """A pasted key can carry spaces, quotes or a line break, which makes the HTTP header invalid. Trim them."""
+    k = str(k or "").strip().strip("\"'").strip()
+    return k or None
+
+
+def log_error(model: str, what: str) -> None:
+    """One line in the host's logs (Manage app -> logs). Never includes the key."""
+    print(f"[ask-the-data] model={model} {what}", file=sys.stderr, flush=True)
 
 
 def retrieve(question: str, posts: pd.DataFrame) -> list[tuple[int, float]]:
@@ -98,12 +110,16 @@ def ask_groq(question: str, hits: list[tuple[int, float]], posts: pd.DataFrame) 
     for model, extra in ANSWER_MODELS:
         try:
             r = requests.post(GROQ_URL, json={**body, "model": model, **extra}, headers={"Authorization": f"Bearer {key}"}, timeout=60)
-        except requests.RequestException:
+        except requests.RequestException as e:
+            log_error(model, f"request failed: {type(e).__name__}: {str(e)[:200]}")
             continue
         if r.status_code == 200:
             return r.json()["choices"][0]["message"]["content"].strip(), model
-        if r.status_code not in (413, 429, 500, 502, 503):
-            continue
+        try:
+            err = r.json().get("error", {})
+            log_error(model, f"HTTP {r.status_code} type={err.get('type')} code={err.get('code')} message={str(err.get('message'))[:200]}")
+        except ValueError:
+            log_error(model, f"HTTP {r.status_code} non-JSON body: {r.text[:120]!r}")
     return None, "busy"
 
 
